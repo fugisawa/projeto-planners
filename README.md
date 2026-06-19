@@ -67,6 +67,10 @@ Para conferir se deu certo, digite `claude --version` (deve aparecer um número 
 O Claude lê os arquivos da pasta sozinho e **sempre pede sua confirmação antes de mudar qualquer coisa**.
 Para sair: `/exit`.
 
+> 💡 **Para o Claude render bem (como o do Daniel):** veja **`docs/claude-setup.md`** — explica os
+> agentes e configurações que já vêm no projeto, quais skills/MCPs ativar, e os hábitos de uso que
+> fazem diferença (effort, `ultrathink`, delegar a agentes, `/compact`).
+
 ---
 
 ## Quem somos (e quem faz o quê)
@@ -95,6 +99,7 @@ performar já está dentro de casa.
 projeto-planners/
 ├── README.md                     ← você está aqui
 ├── CLAUDE.md                     instruções para a IA (Claude Code)
+├── .mcp.json                     MCP servers do projeto (sequential-thinking, memory)
 ├── deliverables/                 documentos finais (.pdf) + fontes (.md)
 │   ├── guia-do-negocio.pdf       ← COMECE AQUI (linguagem simples)
 │   ├── business-plan-planners.pdf
@@ -110,10 +115,10 @@ projeto-planners/
 │   ├── viabilidade-planners-v2.xlsx   (modelo financeiro, 10 abas)
 │   └── painel-kpis.xlsx               (rastreador mensal de metas)
 ├── research/                     pesquisa de mercado (evidence/) + laudos (validation/)
-├── docs/                         metodologia e premissas do negócio
+├── docs/                         metodologia, premissas e claude-setup.md (config da IA)
 ├── sources/                      rascunhos originais (o "antes", preservado)
 ├── scripts/                      ferramentas que geram o modelo e os PDFs (uso do autor)
-└── .claude/agents/               agentes de IA específicos do projeto
+└── .claude/                      config da IA: agents/ (agentes) + settings.json
 ```
 
 ## Índice dos documentos
