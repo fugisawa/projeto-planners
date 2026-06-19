@@ -1,54 +1,71 @@
-# Metodologia de refatoração
+# Metodologia
 
-Como transformar os rascunhos de `sources/` em artefatos profissionais defensáveis.
+Como este dossiê foi construído — e como mantê-lo rigoroso. Princípio único: **substituir suposição
+por evidência**, com honestidade calibrada. O público é **interno** (os dois sócios), então o viés é
+mostrar o que é fato, o que é estimativa e onde o plano pode falhar — não vender.
 
-## Princípio
+## Pipeline (evidência → decisão)
+Cada camada alimenta a próxima; nada "fecha" sem passar pela validação.
 
-Os rascunhos atuais são bem estruturados, mas a maioria dos números é **estimativa de
-mercado / "ILUSTRATIVO" / "a confirmar"**, e o dimensionamento de mercado é raso. A
-refatoração não reescreve o texto — ela **substitui suposição por evidência** e adiciona o
-rigor analítico que falta.
+1. **Evidência primeiro** — `research/evidence/`
+   - Pesquisa multi-fonte (skill `deep-research` / Exa + Tavily + WebSearch), **triangulando ≥2
+     fontes** para todo número central. Cada tema vira uma nota: pergunta · método · achados ·
+     tabela de fontes (nome · URL · data · trecho) · nível de confiança.
+   - Frameworks de mercado: **TAM/SAM/SOM** (top-down + bottom-up), personas, **Porter (5 forças)**,
+     mapa competitivo e a economia de **recorrência/LTV**.
 
-## Pipeline
+2. **Modelagem financeira** — `models/`
+   - `financial-modeler` constrói o `.xlsx` com premissas ligadas à evidência: unit economics por
+     canal, break-even, cenários, **análise de sensibilidade**, projeção 12M, pró-labore (A×B),
+     **EVEF** (DRE e fluxo de caixa 5 anos, VPL/TIR/payback descontado, capital de giro) e LTV/recorrência.
+   - **Rigor quantitativo:** toda fórmula é **conferida por recálculo independente** (lib `formulas`
+     + um cálculo paralelo em Python). Os números do texto têm de bater com o `.xlsx` ao centavo.
 
-1. **Evidência primeiro** (`research/evidence/`)
-   - Pesquisa multi-fonte via skill **deep-research** (Exa + Tavily) + WebSearch/WebFetch.
-   - Cada tema vira uma nota com: pergunta · método · achados · tabela de fontes · confiança.
-   - Triangular ≥2 fontes independentes para todo número central.
+3. **Estratégia & redação** — `deliverables/`
+   - Posicionamento (April Dunford), preço (`pricing-strategist`), sourcing/tributos
+     (`sourcing-analyst`), estratégia (moat, SWOT, **Ansoff**, cenários, Business Model Canvas) e
+     gestão (charter, RACI, OKRs, risk register, decision log).
+   - Cada afirmação numérica **cita** a evidência/modelo e leva **marca de confiança**.
 
-2. **Modelo financeiro** (`models/`)
-   - **financial-modeler** audita o `.xlsx` atual, corrige fórmulas, e reconstrói com
-     premissas ligadas à evidência + **análise de sensibilidade** (não só 3 cenários).
+4. **Validação adversarial** — gate de qualidade
+   - `business-validator` tenta **derrubar** o material: consistência cruzada entre documentos,
+     aritmética recomputada, fontes, premissas frágeis/otimismo e alucinação. Veredito por
+     severidade (CRÍTICO → BAIXO) antes de "pronto". Laudos em `research/validation/`.
 
-3. **Refatoração dos documentos** (`deliverables/`)
-   - Business plan e relatório de sourcing reescritos com os números agora respaldados.
-   - Posicionamento e preço passam por **pricing-strategist**; sourcing por **sourcing-analyst**.
-   - Formato final profissional via **briefing-designer** (PDF) quando aplicável.
+5. **Publicação**
+   - PDFs profissionais via `briefing-designer` (persona editorial); documentos jurídicos em estilo
+     formal; e o **guia em linguagem leiga** (`guia-do-negocio`) para quem não é da área.
 
-4. **Validação adversarial** (gate de qualidade)
-   - **business-validator** tenta derrubar o material: consistência cruzada, aritmética,
-     fontes, premissas frágeis, alucinação. Veredito por severidade antes de "pronto".
+## Processo iterativo (o que aguça o dossiê)
+A revisão dos sócios é entrada de dados, não ruído. Várias premissas centrais nasceram desse loop:
+a leitura correta do **ciclo eleitoral** de concursos (lull legal, não queda estrutural), a natureza
+**recorrente** do produto (recompra 3–4×/ano → LTV), e a **força de conteúdo da sócia** que de-risca
+a distribuição. Ao receber correção do dono, **propague-a por todo o dossiê** e revalide.
 
 ## Taxonomia de confiança
-
 | Marca | Significado | Uso |
 |---|---|---|
 | `[confirmado]` | fonte primária datada e verificável | pode embasar decisão |
-| `[estimativa triangulada]` | ≥2 fontes convergentes, ainda sem confirmação formal | usar com ressalva explícita |
-| `[a confirmar]` | suposição/faixa de mercado | nunca apresentar como fechado |
+| `[estimativa triangulada]` | ≥2 fontes convergentes, sem confirmação formal | usar com ressalva explícita |
+| `[a confirmar]` | suposição / faixa de mercado | nunca apresentar como fechado |
 
 ## Padrão de fontes
+- Preferir **primárias** (IBGE, órgãos de concurso, ACAD/IHRSA, Receita/Siscomex, páginas oficiais
+  de marketplaces, releases setoriais) a blogs. **Datar tudo** (mês/ano); registrar o câmbio usado.
+- **Tributos/tarifas mudam** → recomendar conferência (Siscomex Classif / Receita / despachante /
+  contador); nunca fixar alíquota sem fonte datada.
 
-- Preferir primárias: IBGE, órgãos de concurso, Receita Federal/Siscomex, páginas oficiais dos
-  marketplaces, relatórios setoriais — a blogs.
-- Datar toda fonte (mês/ano) e registrar o câmbio usado em qualquer conversão.
-- Tributos/tarifas: sempre recomendar conferência (Siscomex Classif / Receita / despachante /
-  contador). Não fixar alíquota sem fonte datada.
+## Fonte única da verdade
+Números compartilhados (preço, custo, margem, LTV, câmbio, alíquotas, sell-through…) têm **um único
+valor canônico** — a tabela de **Fatos-âncora** no `CLAUDE.md`. Ao mudar um, **propagar para todos os
+documentos + o modelo** e revalidar.
+
+## Manutenção & extensão
+- Novo número/afirmação → evidência datada **antes** de escrever.
+- Novo documento → **citar** os fatos-âncora, nunca recalcular por fora.
+- Mudou um fato-âncora → atualizar `CLAUDE.md` → propagar → `business-validator`.
 
 ## Regras de ouro
-
-- `sources/` é **imutável** — é o "antes". Todo resultado vai para `research/`, `models/` ou
-  `deliverables/`.
-- **Uma fonte da verdade** para números compartilhados (ver tabela de fatos-âncora no `CLAUDE.md`);
-  ao alterar um, propagar para os três artefatos.
-- Nenhum artefato é "concluído" sem passar pelo **business-validator**.
+- `sources/` é **imutável** (o "antes"); resultados vão para `research/`, `models/`, `deliverables/`.
+- **Honestidade > otimismo:** marcar incerteza; separar fato de meta.
+- Nada é "concluído" sem passar pelo **business-validator**.
