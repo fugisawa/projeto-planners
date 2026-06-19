@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><title>Plano de Gestão — Projeto Planners</title>
+<link rel="stylesheet" href="/home/daniel/.claude/skills/briefing-designer/templates/design_system.css">
+<style>
+  /* numeração das seções vem do markdown; desliga a automática p/ não duplicar */
+  .body-content h2::before { content: none; }
+  .body-content h2 { counter-increment: none; margin-top: 7mm; }
+  .body-content h3 { margin-top: 4mm; }
+  /* tabelas: largura total, padding e bordas leves (sem colunas coladas, podem quebrar entre páginas) */
+  .body-content table { width: 100%; border-collapse: collapse; font-size: 8.3pt; margin: 4mm 0; }
+  .body-content th, .body-content td { padding: 1.3mm 2.6mm; border-bottom: 0.3pt solid var(--rule); text-align: left; vertical-align: top; line-height: 1.25; }
+  .body-content thead th { border-bottom: 0.7pt solid var(--ink); font-size: 7.8pt; text-transform: uppercase; letter-spacing: 0.03em; }
+  .chart-wrap { break-inside: avoid; margin: 6mm 0; }
+  blockquote { break-inside: avoid; }
+  /* capa */
+  .cover-title { font-size: 33pt; line-height: 1.08; margin-bottom: 6mm; text-align: left; }
+  .cover-deck { font-size: 12pt; margin-bottom: 8mm; max-width: 100%; }
+  .cover-summary-table { margin: 4mm 0 0 0; }
+  .cover-abstract { font-size: 10.5pt; padding-top: 5mm; }
+</style></head>
+<body class="persona-editorial">
+<div class="string-set-title">Plano de Gestão · Projeto Planners</div>
+<div class="string-set-date">19 jun 2026</div>
+
+<section class="cover cover-editorial">
+  <div class="cover-kicker">PROJETO PLANNERS · DOSSIÊ INTERNO</div>
+  <h1 class="cover-title">Plano de Gestão<br>Projeto Planners</h1>
+  <p class="cover-deck">Charter, cronograma, RACI, OKRs, riscos, política financeira e decision log — o sistema operacional do negócio.</p>
+  <hr class="cover-rule">
+  <div class="cover-byline"><strong>Uso interno dos sócios</strong><br>
+    Brasília/DF &middot; 19 jun 2026<br><em>Documento vivo · revisar a cada gate/trimestre</em></div>
+  <table class="cover-summary-table"><tr><th>Gates de decisão</th><td>A · B · C</td></tr><tr><th>OKRs</th><td>ano 1, trimestrais</td></tr><tr><th>Riscos mapeados</th><td>9 (com dono e gatilho)</td></tr><tr><th>Decisões registradas</th><td>8</td></tr></table>
+  <div class="cover-abstract"><span class="cover-abstract-label">Síntese</span> Reúne o 'como executar': objetivos e gates, divisão de papéis (RACI), OKRs do ano 1, registro de riscos gerenciado, regras financeiras (autofinanciamento) e o histórico das decisões-chave com seus porquês. Métricas operacionais no painel-kpis.xlsx.</div>
+</section>
+
+<section class="body-content">
+<h2>1. Project charter (termo de abertura)</h2>
+<p class="lede">Este plano é o <strong>sistema operacional</strong> do Projeto Planners: define o que será feito, por quem, em que ritmo, com que regras financeiras e sob quais riscos — para que a execução não dependa de memória nem de improviso. Começa pelo termo de abertura, que fixa propósito, objetivos, escopo e critérios de sucesso.</p>
+<ul>
+<li><strong>Propósito:</strong> construir uma marca de planners-método premium e <strong>recorrente</strong> para concurseiros
+  e praticantes de força, com crescimento 100% autofinanciado.</li>
+<li><strong>Objetivos (ano 1):</strong> (a) validar a aquisição orgânica; (b) provar a unit economics (margem
+  direta ~50%); (c) iniciar a <strong>recompra</strong>; (d) recuperar os R$ 5 mil sem aporte/empréstimo.</li>
+<li><strong>Escopo (in):</strong> 2 SKUs (Concurseiro, Treino), D2C direto, produção nacional, conteúdo orgânico.
+  <strong>(out):</strong> marketplace como canal de receita, importação China, 3º SKU, B2B — tudo Fase 2+.</li>
+<li><strong>Premissas-chave:</strong> recompra 3–4×/ano (Concurseiro) <code>[a confirmar]</code>; custo gráfica ~R$ 45–55/un
+  <code>[a confirmar por 3 orçamentos]</code>; sócios com outra renda no ano 1 (pró-labore zero).</li>
+<li><strong>Restrições:</strong> capital R$ 5 mil inicial (autofinanciado depois); time de 2 pessoas; marketing
+  pago e ops não são forças.</li>
+<li><strong>Critérios de sucesso (ano 1):</strong> sell-through ≥ 75%; CAC ≤ R$ 45; recompra ≥ 30% no Q4; caixa
+  operacional acumulado ≥ R$ 15 mil.</li>
+<li><strong>Governança:</strong> decisões estratégicas (preço, capital, novos SKUs) são <strong>conjuntas</strong>; decisões
+  de execução seguem o RACI (§3). Reuniões: semanal (operacional) + revisão de gate/trimestre.</li>
+</ul>
+<h2>2. Cronograma &amp; decision gates</h2>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Período</th>
+<th>Entregas</th>
+<th>Gate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0 — Construção</strong></td>
+<td>Meses 1–3</td>
+<td>Audiência/lista de espera; conteúdo equilibrado; miolo + golden sample; 3 orçamentos de gráfica; loja/checkout; CNPJ/MEI</td>
+<td><strong>Gate A:</strong> lista ≥ 200–500 <strong>e</strong> 3 orçamentos fechados <strong>e</strong> sample aprovado → imprimir micro-lote</td>
+</tr>
+<tr>
+<td><strong>1 — Validação</strong></td>
+<td>Meses 4–12</td>
+<td>Pré-venda → micro-lote (~54 un) → vender ~387 un direto; retargeting (mês 4+); medir CAC/sell-through; iniciar recompra. Pró-labore <strong>zero</strong> (Estratégia B)</td>
+<td><strong>Gate B:</strong> sell-through ≥ 75% <strong>e</strong> CAC ≤ R$ 45 → lote maior BR (300–500 un) + iniciar pró-labore no ano 2 (R$ 500→2.000/sócio)</td>
+</tr>
+<tr>
+<td><strong>2 — Escala autofinanciada</strong></td>
+<td>~2027+</td>
+<td>Lotes BR offset crescentes pagos pela receita; vento do ciclo de concursos; 3º SKU; marketplace de volume</td>
+<td><strong>Gate C (capitalização):</strong> importar da China só com caixa ≥ lote + colchão (~R$ 135 mil, 100% próprio) <strong>e</strong> volume ≥ ~5.000 un/ano</td>
+</tr>
+</tbody>
+</table>
+<h2>3. Matriz RACI <code>[proposta — ajustar entre os sócios]</code></h2>
+<p>R = Responsável (faz) · A = Aprova (presta contas) · C = Consultado · I = Informado.
+<strong>S1</strong> e <strong>S2</strong> = os dois sócios; <strong>Ext</strong> = terceirizado (contador, gráfica, freelancer).</p>
+<table>
+<thead>
+<tr>
+<th>Atividade</th>
+<th>S1</th>
+<th>S2</th>
+<th>Ext</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conteúdo/método (miolo dos planners)</td>
+<td>A/R</td>
+<td>C</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Design / arte print-ready</td>
+<td>C</td>
+<td>A/R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Marketing &amp; conteúdo social (orgânico)</td>
+<td>C</td>
+<td>A/R</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Vendas &amp; atendimento (D2C)</td>
+<td>R</td>
+<td>A</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Operação &amp; expedição</td>
+<td>C</td>
+<td>A/R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Finanças &amp; fluxo de caixa</td>
+<td>A/R</td>
+<td>C</td>
+<td>C (contador)</td>
+</tr>
+<tr>
+<td>Fornecedor &amp; produção (gráfica)</td>
+<td>C</td>
+<td>A/R</td>
+<td>R (gráfica)</td>
+</tr>
+<tr>
+<td>Decisões estratégicas (preço, capital, SKU)</td>
+<td>A</td>
+<td>A</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>A divisão é uma proposta baseada nas competências (ambos cobrem conteúdo+design; lacunas em
+mídia paga e ops). Ajustem quem <em>puxa</em> cada frente e revisem a cada trimestre.</p>
+</blockquote>
+<h2>4. OKRs — Ano 1</h2>
+<p><strong>Objetivo anual:</strong> provar que o negócio recorrente e autofinanciado funciona.</p>
+<table>
+<thead>
+<tr>
+<th>Trimestre</th>
+<th>Objetivo</th>
+<th>Key Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Q1 (m1–3)</strong></td>
+<td>Construir audiência e preparar o lançamento</td>
+<td>• Lista de espera ≥ 300 · • Seguidores combinados ≥ 1.500 · • Golden sample aprovado + 3 orçamentos · • Loja + CNPJ ativos</td>
+</tr>
+<tr>
+<td><strong>Q2 (m4–6)</strong></td>
+<td>Lançar e validar a unit economics</td>
+<td>• Vender ≥ 80 un · • Sell-through 1º lote ≥ 75% · • CAC ≤ R$ 45 · • ≥ 8 conteúdos/semana</td>
+</tr>
+<tr>
+<td><strong>Q3 (m7–9)</strong></td>
+<td>Escalar aquisição e iniciar recompra</td>
+<td>• Vender ≥ 120 un no tri · • 1ª recompra registrada · • Lista ≥ 1.000 · • Ligar retargeting com ROAS ≥ 2,5×</td>
+</tr>
+<tr>
+<td><strong>Q4 (m10–12)</strong></td>
+<td>Consolidar recompra e caixa</td>
+<td>• Vender ≥ 180 un · • Taxa de recompra ≥ 30% · • Caixa operacional acumulado ≥ R$ 15 mil</td>
+</tr>
+</tbody>
+</table>
+<h2>5. Registro de riscos (risk register)</h2>
+<p>Prob/Impacto: A=alto, M=médio, B=baixo. Revisar a cada gate.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Risco</th>
+<th style="text-align: center;">Prob</th>
+<th style="text-align: center;">Imp</th>
+<th>Dono</th>
+<th>Mitigação</th>
+<th>Gatilho/indicador</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1</td>
+<td><strong>Aquisição/audiência nos nichos</strong></td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">A</td>
+<td>S2</td>
+<td><strong>Conteúdo orgânico — forte da irmã (viralização comprovada)</strong>; lista própria; retargeting só quente; afiliados</td>
+<td>Lista &lt; 100 em 60 d <strong>ou</strong> CAC &gt; R$ 60</td>
+</tr>
+<tr>
+<td>R2</td>
+<td><strong>Custo da gráfica &gt; previsto</strong></td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">A</td>
+<td>S2</td>
+<td>3 orçamentos antes do lote; recuar p/ Tier B; ajustar preço</td>
+<td>Cotação &gt; R$ 60/un no micro-lote</td>
+</tr>
+<tr>
+<td>R3</td>
+<td>Sell-through baixo → encalhe</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">A</td>
+<td>S1</td>
+<td>Pré-venda; micro-lote; perpétuo não vence</td>
+<td>Sell-through &lt; 60%</td>
+</tr>
+<tr>
+<td>R4</td>
+<td>Dependência de plataforma (algoritmo/ban)</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">A</td>
+<td>S1</td>
+<td>Multi-canal (IG+TikTok) + <strong>lista de e-mail própria</strong></td>
+<td>Queda &gt; 40% de alcance</td>
+</tr>
+<tr>
+<td>R5</td>
+<td>Recompra abaixo do esperado</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">A</td>
+<td>S1</td>
+<td>Lembrete de fim de ciclo; combos/assinatura; comunidade</td>
+<td>Recompra &lt; 20% no Q4</td>
+</tr>
+<tr>
+<td>R6</td>
+<td>Execução (time de 2 pessoas)</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">M</td>
+<td>S1/S2</td>
+<td>Calendário enxuto/reaproveitável; terceirizar com caixa</td>
+<td>Atraso &gt; 1 gate</td>
+</tr>
+<tr>
+<td>R7</td>
+<td>Teto MEI / tributário</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">M</td>
+<td>S2</td>
+<td>Contador; migrar a ME/Simples</td>
+<td>Receita acum. ≈ R$ 68 mil</td>
+</tr>
+<tr>
+<td>R8</td>
+<td>Câmbio/qualidade na escala (China)</td>
+<td style="text-align: center;">M</td>
+<td style="text-align: center;">M</td>
+<td>S2</td>
+<td>Só com Gate C; despachante; inspeção; sem empréstimo</td>
+<td>— (só Fase 2)</td>
+</tr>
+<tr>
+<td>R9</td>
+<td>Concorrência reage (Juspodivm/cópias)</td>
+<td style="text-align: center;">B-M</td>
+<td style="text-align: center;">M</td>
+<td>S1</td>
+<td>Moat: método + marca + recompra; Treino é whitespace</td>
+<td>Entrante premium no nicho</td>
+</tr>
+</tbody>
+</table>
+<h2>6. Política financeira</h2>
+<ul>
+<li><strong>Reinvestimento:</strong> 100% do resultado no <strong>ano 1</strong> (Estratégia B); pró-labore só a partir do
+  ano 2 (R$ 500 → R$ 2.000/sócio), ampliando no ano 3.</li>
+<li><strong>Colchão de segurança:</strong> manter <strong>≥ 3 meses de custos fixos</strong> em caixa antes de qualquer
+  comprometimento grande.</li>
+<li><strong>Capitalização da escala:</strong> <strong>100% autofinanciada</strong> — sem pré-venda do lote, <strong>sem empréstimo
+  e sem aporte</strong> que descapitalize. Importar só ao cruzar o <strong>gatilho</strong> (caixa ≥ lote + colchão,
+  ~R$ 135 mil, e volume ≥ ~5.000 un/ano).</li>
+<li><strong>Separação PF/PJ:</strong> conta PJ dedicada; pró-labore é a única retirada; nada de misturar caixa.</li>
+<li><strong>Precificação:</strong> lançamento R$ 119/109; preço de regime R$ 129–139/119–129 após reviews.</li>
+<li><strong>Canais:</strong> vender direto; <strong>marketplace só para descoberta</strong> (margem ~zero no ticket atual).</li>
+<li><strong>Marketing:</strong> orgânico primeiro; pago só como retargeting de audiência quente, com <strong>gate de
+  ROAS ≥ 2,5×</strong> e CAC ≤ R$ 45; lembrar do +12,15% de tributos na fatura de mídia.</li>
+<li><strong>Plano de contas (mínimo):</strong> receita por canal · COGS · taxas de canal · marketing · pró-labore
+  · tributos · ops/ferramentas · caixa.</li>
+</ul>
+<h2>7. Decision log (registro de decisões)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Data</th>
+<th>Decisão</th>
+<th>Por quê / alternativas</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D1</td>
+<td>jun/2026</td>
+<td><strong>Lançar os 2 SKUs em paralelo</strong></td>
+<td>Mesma plataforma física (custo incremental baixo); sócios encarnam os 2 ICPs</td>
+<td>Ativa</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>jun/2026</td>
+<td><strong>Preço R$ 119 (Conc.) / R$ 109 (Treino)</strong></td>
+<td>Vão entre genéricos e importados/apps; WTP R$ 80–130; sustenta CAC</td>
+<td>Ativa</td>
+</tr>
+<tr>
+<td>D3</td>
+<td>jun/2026</td>
+<td><strong>Vender 100% direto na Fase 1</strong></td>
+<td>Marketplace consome ~31% (Shopee) / ~14%+frete (ML) — destrói margem</td>
+<td>Ativa</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>jun/2026</td>
+<td><strong>Aquisição orgânica primeiro</strong></td>
+<td>Tráfego frio R$ 120–333 inviável na 1ª venda; é o forte do time</td>
+<td>Ativa</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>jun/2026</td>
+<td><strong>Pró-labore Estratégia B</strong> (zero no ano 1)</td>
+<td>Mantém ~R$ 17 mil no negócio no ano frágil; paga mais aos sócios em 3 anos</td>
+<td>Ativa</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>jun/2026</td>
+<td><strong>Escala autofinanciada; China só no Gate C</strong></td>
+<td>Evita risco de pré-venda (espera/reputação) e de empréstimo (descapitalizar)</td>
+<td>Ativa</td>
+</tr>
+<tr>
+<td>D7</td>
+<td>jun/2026</td>
+<td><strong>BR offset como ponte até a China</strong></td>
+<td>Já entrega R$ 18–32/un no volume — não há <em>abismo</em> de R$ 99 mil</td>
+<td>Ativa</td>
+</tr>
+<tr>
+<td>D8</td>
+<td>jun/2026</td>
+<td><strong>Tratar o negócio como recorrente</strong></td>
+<td>Planner de estudo dura ~3 meses → recompra 3–4×/ano; LTV ~R$ 374–397</td>
+<td>Ativa</td>
+</tr>
+</tbody>
+</table>
+<p><em>Documento de gestão vivo. RACI e OKRs são propostas a ajustar entre os sócios. Riscos e decisões
+devem ser revisados a cada gate/trimestre. Métricas operacionais no <code>painel-kpis.xlsx</code>.</em></p>
+<div class="sources">
+  <div class="sources-title">Notas, confiança e fontes</div>
+  <p class="uncertainty-note">Marcações de confiança usadas no texto — <strong>[confirmado]</strong>: fonte primária datada e verificável · <strong>[estimativa triangulada]</strong>: ≥2 fontes convergentes, sem confirmação formal · <strong>[a confirmar]</strong>: faixa de mercado, não apresentada como fechada.</p>
+  <p>Consolida business plan, EVEF, plano estratégico e modelo viabilidade-planners-v2.xlsx. RACI e OKRs são propostas a ajustar entre os sócios.</p>
+</div>
+</section>
+</body></html>

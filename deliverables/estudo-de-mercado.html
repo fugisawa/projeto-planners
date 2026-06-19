@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><title>Estudo de Mercado — Projeto Planners</title>
+<link rel="stylesheet" href="/home/daniel/.claude/skills/briefing-designer/templates/design_system.css">
+<style>
+  /* numeração das seções vem do markdown; desliga a automática p/ não duplicar */
+  .body-content h2::before { content: none; }
+  .body-content h2 { counter-increment: none; margin-top: 7mm; }
+  .body-content h3 { margin-top: 4mm; }
+  /* tabelas: largura total, padding e bordas leves (sem colunas coladas, podem quebrar entre páginas) */
+  .body-content table { width: 100%; border-collapse: collapse; font-size: 8.3pt; margin: 4mm 0; }
+  .body-content th, .body-content td { padding: 1.3mm 2.6mm; border-bottom: 0.3pt solid var(--rule); text-align: left; vertical-align: top; line-height: 1.25; }
+  .body-content thead th { border-bottom: 0.7pt solid var(--ink); font-size: 7.8pt; text-transform: uppercase; letter-spacing: 0.03em; }
+  .chart-wrap { break-inside: avoid; margin: 6mm 0; }
+  blockquote { break-inside: avoid; }
+  /* capa */
+  .cover-title { font-size: 33pt; line-height: 1.08; margin-bottom: 6mm; text-align: left; }
+  .cover-deck { font-size: 12pt; margin-bottom: 8mm; max-width: 100%; }
+  .cover-summary-table { margin: 4mm 0 0 0; }
+  .cover-abstract { font-size: 10.5pt; padding-top: 5mm; }
+</style></head>
+<body class="persona-editorial">
+<div class="string-set-title">Estudo de Mercado · Projeto Planners</div>
+<div class="string-set-date">19 jun 2026</div>
+
+<section class="cover cover-editorial">
+  <div class="cover-kicker">PROJETO PLANNERS · DOSSIÊ INTERNO</div>
+  <h1 class="cover-title">Estudo de Mercado<br>Concurseiro &amp; Treino de Força</h1>
+  <p class="cover-deck">Dois mercados grandes e complementares — um validado, um em whitespace. O tamanho não é o gargalo; a aquisição é.</p>
+  <hr class="cover-rule">
+  <div class="cover-byline"><strong>Uso interno dos sócios</strong><br>
+    Brasília/DF &middot; 19 jun 2026<br><em>Brasil · jun/2026</em></div>
+  <table class="cover-summary-table"><tr><th>SAM — Concurseiro</th><td>~R$ 55 M/ano</td></tr><tr><th>SAM — Treino de Força</th><td>~R$ 25 M/ano</td></tr><tr><th>SOM ano 1 (combinado)</th><td>350–1.100 un</td></tr><tr><th>Gargalo</th><td>aquisição, não mercado</td></tr></table>
+  <div class="cover-abstract"><span class="cover-abstract-label">Síntese</span> Concurseiro: grande, recorrente e validado, em lull eleitoral com retomada esperada em 2027. Treino: whitespace nacional com recompra. SAM somado de R$ 50–120 M/ano; o SOM do ano 1 é limitado por capacidade de aquisição (audiência do zero), não por tamanho de mercado.</div>
+</section>
+
+<section class="body-content">
+<h2>1. Sumário executivo</h2>
+<p>Dois mercados grandes e estruturalmente sólidos, com perfis de risco opostos e complementares:</p>
+<ul>
+<li><strong>Concurseiro</strong> — mercado <strong>grande, recorrente e validado</strong> (4–6 M de candidatos ativos que
+  estudam ~2 anos; um planner de marca a R$ 119,90 já vende). É <strong>mais competido</strong> e tem um
+  ciclo de demanda ligado ao calendário de concursos — hoje em <strong>lull legal de ano eleitoral</strong>,
+  com <strong>retomada esperada em 2027</strong>.</li>
+<li><strong>Treino de força</strong> — <strong>whitespace nacional</strong>: não há diário de periodização premium com marca
+  no Brasil; a concorrência é importada (cara) ou digital (app). Mercado <strong>menos competido, com
+  recompra</strong>, porém exige <strong>educar</strong> o consumidor sobre o conceito.</li>
+</ul>
+<p class="lede"><strong>O tamanho não é o gargalo.</strong> O SAM somado é da ordem de <strong>R$ 50–120 M/ano</strong>; o SOM do ano 1
+(200–1.100 un) é limitado por <strong>capacidade de aquisição</strong> — construir audiência do zero, num
+ticket (R$ 110–119) em que <strong>tráfego pago frio é inviável</strong> (CAC R$ 120–333). A vitória depende
+de <strong>conteúdo orgânico</strong> (a força dos sócios), não de mídia paga.</p>
+<h2>2. Metodologia &amp; fontes</h2>
+<p>Pesquisa multi-fonte (Exa/Tavily + web), triangulando ≥2 fontes para números centrais. TAM/SAM/
+SOM por método explícito (top-down de fontes oficiais + bottom-up por funil). Fontes primárias
+priorizadas: IBGE, MGI/Gov.br, Censo dos Concursos 2025 (QConcursos/Folha Dirigida, n=13.128),
+HFA/Panorama Fitness 2025, páginas oficiais de marketplaces, Amazon/ML. Detalhe e tabela de
+fontes em <code>research/evidence/mercado-demanda.md</code>, <code>concorrencia-preco.md</code>, <code>canal-aquisicao.md</code>.</p>
+<h2>3. Mercado 1 — Concurseiro</h2>
+<h3>3.1 Tamanho e dinâmica</h3>
+<ul>
+<li><strong>Base ativa:</strong> <strong>4–6 milhões</strong> de concurseiros únicos <code>[estimativa triangulada]</code> (9.581
+  concursos abertos em 2025, +57% vs 2024; CNU 2024 com 2,14 M inscritos) <code>[confirmado — MGI]</code>.</li>
+<li><strong>Demanda é estoque, não fluxo:</strong> preparação média de <strong>2 anos e 1 mês</strong> <code>[confirmado — Censo
+  2025]</code>; 67,8% estudam empregados. O público renova-se continuamente.</li>
+<li><strong>Gasto médio anual com preparação:</strong> ~R$ 2.011 (mediana ~R$ 800–1.200) <code>[confirmado]</code>.</li>
+</ul>
+<h3>3.2 Ciclo eleitoral (correção crítica de leitura)</h3>
+<p>Não haverá CNU em 2026, mas por <strong>vedação legal de ano eleitoral</strong>, não por queda de demanda:
+Lei 9.504/97 (art. 73, V) proíbe nomeações de <strong>4/jul/2026 a ~6/jan/2027</strong>; LRF (art. 21) veda
+aumento de despesa de pessoal nos 180 dias finais de mandato <code>[confirmado]</code>. <strong>Editais, provas e
+homologações seguem o ano todo.</strong> O ciclo <strong>pós-eleição</strong> retoma com força — em 2023 foram
+<strong>9.116 vagas federais (+47% vs os 4 anos anteriores somados)</strong>; a PLOA 2026 prevê ~89 mil
+provimentos e o <strong>CNU 3ª edição é esperado para 2027</strong> <code>[a confirmar — fontes de cursinhos; sem
+decreto]</code>. Enquadramento <strong>apartidário</strong>. <strong>Implicação:</strong> 2026 = construir/validar; <strong>2027 =
+vento de cauda para escalar.</strong></p>
+<h3>3.3 TAM / SAM / SOM <code>[estimativa triangulada]</code></h3>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Faixa</th>
+<th>Método</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TAM (material físico/papelaria)</td>
+<td>R$ 300–800 M/ano</td>
+<td>recorte de papelaria sobre a base ativa</td>
+</tr>
+<tr>
+<td><strong>SAM</strong> (compraria planner ~R$ 110)</td>
+<td><strong>R$ 35–80 M/ano</strong> (~400–700 k pessoas)</td>
+<td>base × intensidade × renda × propensão a físico premium</td>
+</tr>
+<tr>
+<td><strong>SOM ano 1</strong></td>
+<td><strong>R$ 24–71 k (200–600 un)</strong></td>
+<td>limitado por aquisição (D2C bootstrap, sem audiência)</td>
+</tr>
+<tr>
+<td>SOM ano 2</td>
+<td>R$ 95–238 k (800–2.000 un)</td>
+<td>com audiência construída + vento de 2027</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>O SAM usa proxy de renda familiar e pode estar ~14% superestimado — imaterial para o SOM
+(limitado por aquisição, não por tamanho de mercado).</p>
+</blockquote>
+<h2>4. Mercado 2 — Treino de Força</h2>
+<h3>4.1 Tamanho e dinâmica</h3>
+<ul>
+<li><strong>Base:</strong> 41–63 mil academias (2º maior parque do mundo); <strong>13–15 M membros ativos</strong> (7% de
+  penetração, <strong>+50% desde 2019</strong>) <code>[confirmado — HFA/Panorama 2025]</code>; 6–7 M com foco em
+  musculação; <strong>1,3–3 M</strong> seguem treino periodizado/sério <code>[estimativa]</code>.</li>
+<li><strong>Registro de treino (proxy de demanda):</strong> Hevy 14 M+ e Strong 5 M+ usuários globais
+  <code>[confirmado]</code>; dado BR específico é pago <code>[a confirmar]</code>.</li>
+</ul>
+<h3>4.2 Whitespace confirmado</h3>
+<p><strong>Não foi identificado, em buscas (jun/2026), um diário de periodização nacional com marca.</strong>
+A concorrência é <strong>importada</strong> (R$ 130–200 no Brasil) ou <strong>app</strong> (R$ 130–165/ano). Vantagens do
+nicho: menos concorrência, menos âncora de preço, <strong>recompra</strong> (o logbook <em>acaba</em>), demanda
+<strong>contínua</strong> (sem sazonalidade). Desvantagem: exige <strong>educar</strong> o mercado sobre o conceito
+<em>diário de periodização</em> (vs. <em>caderno de treino</em>). <code>[estimativa — buscas não alcançam D2C puro]</code></p>
+<h3>4.3 TAM / SAM / SOM <code>[estimativa triangulada]</code></h3>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Faixa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SAM</strong> (logbook premium)</td>
+<td><strong>R$ 15–40 M/ano</strong> (~150–370 k pessoas)</td>
+</tr>
+<tr>
+<td><strong>SOM ano 1</strong></td>
+<td><strong>R$ 16–54 k (150–500 un)</strong></td>
+</tr>
+<tr>
+<td>SOM ano 2</td>
+<td>R$ 65–196 k (600–1.800 un)</td>
+</tr>
+</tbody>
+</table>
+<h2>4.5 Mercado recorrente: LTV, recompra e tamanho real</h2>
+<blockquote>
+<p><strong>Correção estrutural (jun/2026).</strong> O planner de estudo cobre ~3 meses de ciclo; o concurseiro
+<strong>recompra 3–4×/ano</strong> ao longo dos ~2 anos de preparação. O diário de treino esgota em ~4–5
+meses. Logo, o negócio é <strong>recorrente/consumível</strong>, não venda única — o que multiplica o LTV e
+o tamanho real do mercado. (Modelo: aba <code>LTV &amp; Recorrência</code>.)</p>
+</blockquote>
+<p><strong>LTV por cliente</strong> <code>[estimativa — premissas a validar com survey]</code>:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">Concurseiro</th>
+<th style="text-align: right;">Treino de Força</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recompra/ano · permanência</td>
+<td style="text-align: right;">3 × 2 anos</td>
+<td style="text-align: right;">2,5 × 3 anos</td>
+</tr>
+<tr>
+<td>Unidades na vida</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">7,5</td>
+</tr>
+<tr>
+<td><strong>LTV (margem)</strong></td>
+<td style="text-align: right;"><strong>R$ 374</strong></td>
+<td style="text-align: right;"><strong>R$ 397</strong></td>
+</tr>
+<tr>
+<td>LTV (receita)</td>
+<td style="text-align: right;">R$ 714</td>
+<td style="text-align: right;">R$ 818</td>
+</tr>
+<tr>
+<td><strong>LTV/CAC</strong> (CAC R$ 50)</td>
+<td style="text-align: right;"><strong>7,5×</strong></td>
+<td style="text-align: right;"><strong>7,9×</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tamanho do mercado recorrente (anual)</strong> — em fluxo, não em <em>pessoas</em>:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">Concurseiro</th>
+<th style="text-align: right;">Treino</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unidades/ano</td>
+<td style="text-align: right;">1,65 M</td>
+<td style="text-align: right;">0,65 M</td>
+<td style="text-align: right;"><strong>~2,3 M un/ano</strong></td>
+</tr>
+<tr>
+<td>Receita/ano</td>
+<td style="text-align: right;">R$ 196 M</td>
+<td style="text-align: right;">R$ 71 M</td>
+<td style="text-align: right;"><strong>~R$ 267 M/ano</strong></td>
+</tr>
+<tr>
+<td>Novos compradores premium/ano</td>
+<td style="text-align: right;">~275 mil</td>
+<td style="text-align: right;">~90 mil</td>
+<td style="text-align: right;"><strong>~365 mil/ano</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>(Teto: assume todo comprador premium recomprando no ritmo pleno; um blend conservador (~2/ano)
+reduz ~⅓. As duas premissas que mais movem isto — recompra/ano e % elegível — devem ser
+validadas por survey próprio.)</em></p>
+<p><strong>Três implicações decisivas:</strong>
+1. <strong>A recompra é o motor de receita.</strong> A partir do ano 2, a base retida vende sem novo CAC:
+   cada <strong>1.000 clientes ativos ≈ 3.000 un/ano</strong> de recompra (Concurseiro). <strong>Reter &gt; adquirir.</strong>
+2. <strong>A economia de aquisição muda.</strong> Com LTV de margem ~R$ 374–397, mesmo <strong>CAC pago de R$ 120–150
+   cabe</strong> (LTV/CAC 2,5–3×) — revisando a leitura anterior (<em>tráfego frio inviável</em>, que valia só
+   para a 1ª venda isolada). O orgânico segue mais barato e é o forte do time, mas o pago deixa de
+   ser proibido na escala.
+3. <strong>Saturação não é risco; abastecimento é.</strong> A &lt; 0,1% de share por anos, não há saturação. O
+   risco oposto é <strong>desabastecer</strong> (perder recompra e reputação) → <strong>produção por reposição
+   (make-to-demand) com estoque de segurança</strong>; sendo perpétuo, o encalhe quase não <em>vence</em>.</p>
+<figure class="chart-wrap"><div class="chart-label">FIGURA 1</div><div class="chart-title">O Concurseiro tem ~2× o mercado endereçável do Treino</div><img src="assets/mkt_sam.svg" alt="SAM por nicho"><figcaption class="chart-caption">Mercado endereçável anual por nicho (ponto médio das faixas). Fonte: research/evidence/.</figcaption></figure><h2>5. Personas (ICP)</h2>
+<p><strong>P1 — Concurseiro de alto desafio.</strong> 25–40 anos, mira Senado/Câmara/tribunais/fiscais/polícias,
+estuda 15–30 h/semana há 1–3 anos, já gasta com cursos (Gran/Estratégia/QConcursos), valoriza
+<strong>método e estética</strong>, ativo em Instagram/Telegram/fóruns. Dor: organizar ciclos de estudo e
+revisão sem montar planilha. Gatilho de compra: método embutido + constância + produto bonito.</p>
+<p><strong>P2 — Praticante sério de força.</strong> 25–45 anos, treina 3–6×/semana, segue periodização, gosta do
+<strong>registro analógico</strong> (sem celular na academia), acompanha criadores de treino/físico. Dor:
+progredir carga com método, rápido e durável. Gatilho: periodização + RPE/RIR + PRs + tonelagem
+num produto físico — que os apps e cadernos genéricos não entregam.</p>
+<p><em>(Ambas as personas são vividas pelos próprios sócios — fonte de credibilidade e de conteúdo.)</em></p>
+<h2>6. Análise competitiva</h2>
+<p><strong>Concurseiro</strong></p>
+<table>
+<thead>
+<tr>
+<th>Concorrente</th>
+<th>Preço (jun/2026)</th>
+<th>Formato</th>
+<th>Sinal</th>
+<th>Lacuna que exploramos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planner do Concurseiro (Juspodivm)</td>
+<td>R$ 85–120</td>
+<td>físico, <strong>datado</strong></td>
+<td>177 reviews, 99% positivo</td>
+<td>nosso é <strong>perpétuo</strong> (não recompra anual)</td>
+</tr>
+<tr>
+<td>Perpétuos sem marca (ex.: Tche Decor)</td>
+<td>R$ 71–77</td>
+<td>físico wire-o</td>
+<td>sem escala/marca</td>
+<td>método + marca</td>
+</tr>
+<tr>
+<td>PDFs/digitais</td>
+<td>R$ 35–60</td>
+<td>digital</td>
+<td>barato</td>
+<td>tangibilidade + método estruturado</td>
+</tr>
+<tr>
+<td>Genéricos (Tilibra/Foroni)</td>
+<td>R$ 28–57</td>
+<td>físico simples</td>
+<td>volume alto</td>
+<td>sem método de concurso</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Treino de força</strong></p>
+<table>
+<thead>
+<tr>
+<th>Concorrente</th>
+<th>Preço no BR</th>
+<th>Formato</th>
+<th>Lacuna que exploramos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logbooks importados (Gymreapers, SaltWrap)</td>
+<td>R$ 130–200</td>
+<td>físico</td>
+<td>nacional, sem barreira/idioma, mais barato</td>
+</tr>
+<tr>
+<td>Nacional genérico (ex.: Amor Impresso)</td>
+<td>R$ 77–85</td>
+<td>físico</td>
+<td><strong>sem periodização/RPE/RIR</strong></td>
+</tr>
+<tr>
+<td>Apps (Strong, Hevy)</td>
+<td>R$ 130–165/ano</td>
+<td>digital</td>
+<td>tátil, compra única, sem fricção recorrente</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Posição-alvo (mapa de preço):</strong> físico, nacional, com método especializado, perpétuo, na
+faixa <strong>R$ 109–119</strong> — o <em>vão</em> entre genéricos (R$ 28–64), premium de marca (R$ 77–120) e
+topo importado/app (R$ 130–200).</p>
+<h2>7. Forças competitivas (Porter)</h2>
+<table>
+<thead>
+<tr>
+<th>Força</th>
+<th>Concurseiro</th>
+<th>Treino</th>
+<th>Implicação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rivalidade</strong></td>
+<td>média-alta (Juspodivm + genéricos + digitais)</td>
+<td><strong>baixa</strong> (whitespace)</td>
+<td>liderar conteúdo onde a rivalidade é menor; diferenciar por método/perpétuo</td>
+</tr>
+<tr>
+<td><strong>Novos entrantes</strong></td>
+<td><strong>alta</strong> (barreira de produção baixa)</td>
+<td>alta</td>
+<td>a barreira real é <strong>marca + conteúdo + audiência</strong> — construir esse fosso cedo</td>
+</tr>
+<tr>
+<td><strong>Substitutos</strong></td>
+<td>alta (apps, PDFs, Notion, caderno)</td>
+<td>alta (apps grátis)</td>
+<td>competir por <strong>valor do método físico</strong>, não por preço</td>
+</tr>
+<tr>
+<td><strong>Poder do comprador</strong></td>
+<td>médio</td>
+<td>médio</td>
+<td>ticket baixo + diferenciação reduzem; reviews/prova social ajudam</td>
+</tr>
+<tr>
+<td><strong>Poder do fornecedor</strong> (gráfica)</td>
+<td><strong>baixo</strong> (commoditizado)</td>
+<td>baixo</td>
+<td>múltiplas gráficas; cotar 3; sem dependência</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Leitura:</strong> o setor tem <strong>baixa barreira de entrada</strong> — qualquer um imprime um planner. O fosso
+defensável é <strong>marca + método proprietário + audiência/comunidade</strong>, não o produto físico. Por
+isso a estratégia certa é investir em <strong>conteúdo e marca</strong> desde o dia 1.</p>
+<h2>8. Canais &amp; economia de aquisição</h2>
+<ul>
+<li><strong>Venda direta (D2C)</strong> preserva ~50% de margem; <strong>marketplace destrói</strong> (Shopee ~31% de custo
+  de canal; ML ~14% + frete) — usar marketplace só para <strong>descoberta</strong>, não receita
+  <code>[confirmado — canal-aquisicao.md]</code>.</li>
+<li><strong>Mídia paga:</strong> Meta Ads tem <strong>+12,15% de tributos</strong> na fatura; <strong>CAC de tráfego frio R$ 120–
+  333/venda</strong> — inviável contra a margem (~R$ 57). Só <strong>retargeting de audiência quente</strong> cabe.</li>
+<li><strong>Audiência do zero (o gargalo):</strong> ~<strong>1.000 seguidores em 3–6 meses; ~10.000 em 12–24 meses</strong>
+  em nicho de concurso/força, com produção orgânica consistente <code>[estimativa]</code>. Pré-venda sem
+  audiência ≈ zero → <strong>construir lista de espera (60–90 dias) antes de imprimir</strong>.</li>
+</ul>
+<h2>9. Tendências &amp; drivers de demanda</h2>
+<ol>
+<li><strong>Ciclo de concursos pós-2026</strong> — retomada estrutural esperada em 2027 (vento de cauda).</li>
+<li><strong>Fitness em alta</strong> — +50% de membros de academia desde 2019; força/musculação como
+   modalidade dominante.</li>
+<li><strong>Registro analógico / <em>digital detox</em></strong> — valor crescente do papel para foco e constância,
+   contra a fadiga de telas/apps.</li>
+<li><strong>Papelaria premium e <em>tool for thought</em></strong> — disposição a pagar por método embutido e estética.</li>
+<li><strong>Criadores de nicho</strong> — concurso e força têm comunidades densas, favoráveis ao orgânico e a
+   parcerias com micro-influenciadores (melhor ROI que tráfego frio).</li>
+</ol>
+<h2>10. Síntese — oportunidade, riscos e implicações</h2>
+<p><strong>Oportunidade:</strong> dois mercados grandes e complementares; um validado (Concurseiro), um em
+whitespace (Treino). Posição de preço defensável no <em>vão</em> do mapa competitivo. A mesma
+plataforma física serve aos dois SKUs (custo incremental baixo de lançar ambos).</p>
+<p><strong>Riscos de mercado:</strong> (1) <strong>aquisição do zero</strong> é o gargalo central; (2) <strong>baixa barreira de
+entrada</strong> → o fosso precisa ser marca/conteúdo/audiência; (3) <strong>substitutos digitais</strong> baratos;
+(4) <strong>educação de mercado</strong> no nicho de força; (5) sensibilidade do Concurseiro ao <strong>ciclo de
+concursos</strong> (favorável a partir de 2027).</p>
+<p><strong>Implicações estratégicas:</strong>
+- <strong>Lançar os dois em paralelo</strong>, com <strong>conteúdo equilibrado</strong> (constrói o fosso onde a barreira
+  é a audiência).
+- <strong>Orgânico primeiro</strong> (força do time), marketplace e mídia paga como apoio.
+- <strong>Construir marca e comunidade desde o dia 1</strong> — é o ativo defensável.
+- <strong>Cronograma a favor:</strong> validar em 2026, escalar com o vento de 2027.</p>
+<p><em>(Lacunas a fechar: nº de concurseiros únicos sem dupla contagem; % de praticantes com
+periodização formal; gasto específico em material físico; base BR dos apps de treino. Endereçar
+com survey próprio nas comunidades — ver <code>mercado-demanda.md</code>, lacunas L1–L3, L9.)</em></p>
+<p><em>Estudo de apoio à decisão. Estimativas de mercado a refinar com dados primários (survey).
+Fontes datadas em <code>research/evidence/</code>. Não constitui recomendação de investimento.</em></p>
+<div class="sources">
+  <div class="sources-title">Notas, confiança e fontes</div>
+  <p class="uncertainty-note">Marcações de confiança usadas no texto — <strong>[confirmado]</strong>: fonte primária datada e verificável · <strong>[estimativa triangulada]</strong>: ≥2 fontes convergentes, sem confirmação formal · <strong>[a confirmar]</strong>: faixa de mercado, não apresentada como fechada.</p>
+  <p>research/evidence/ (4 notas datadas): IBGE, MGI, Censo dos Concursos 2025, HFA/Panorama Fitness 2025, Amazon/ML/Shopee, Meta Ads. Estimativas a refinar com survey próprio.</p>
+</div>
+</section>
+</body></html>

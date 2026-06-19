@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><title>Estudo de Viabilidade Econômico-Financeira — Projeto Planners</title>
+<link rel="stylesheet" href="/home/daniel/.claude/skills/briefing-designer/templates/design_system.css">
+<style>
+  /* numeração das seções vem do markdown; desliga a automática p/ não duplicar */
+  .body-content h2::before { content: none; }
+  .body-content h2 { counter-increment: none; margin-top: 7mm; }
+  .body-content h3 { margin-top: 4mm; }
+  /* tabelas: largura total, padding e bordas leves (sem colunas coladas, podem quebrar entre páginas) */
+  .body-content table { width: 100%; border-collapse: collapse; font-size: 8.3pt; margin: 4mm 0; }
+  .body-content th, .body-content td { padding: 1.3mm 2.6mm; border-bottom: 0.3pt solid var(--rule); text-align: left; vertical-align: top; line-height: 1.25; }
+  .body-content thead th { border-bottom: 0.7pt solid var(--ink); font-size: 7.8pt; text-transform: uppercase; letter-spacing: 0.03em; }
+  .chart-wrap { break-inside: avoid; margin: 6mm 0; }
+  blockquote { break-inside: avoid; }
+  /* capa */
+  .cover-title { font-size: 33pt; line-height: 1.08; margin-bottom: 6mm; text-align: left; }
+  .cover-deck { font-size: 12pt; margin-bottom: 8mm; max-width: 100%; }
+  .cover-summary-table { margin: 4mm 0 0 0; }
+  .cover-abstract { font-size: 10.5pt; padding-top: 5mm; }
+</style></head>
+<body class="persona-editorial">
+<div class="string-set-title">EVEF · Projeto Planners</div>
+<div class="string-set-date">19 jun 2026</div>
+
+<section class="cover cover-editorial">
+  <div class="cover-kicker">PROJETO PLANNERS · DOSSIÊ INTERNO</div>
+  <h1 class="cover-title">Estudo de Viabilidade<br>Econômico-Financeira (5 anos)</h1>
+  <p class="cover-deck">Vale a pena investir os R$ 5 mil? Sim — mas a viabilidade é decidida pela execução (aquisição e o financiamento do lote China), não pela matemática financeira.</p>
+  <hr class="cover-rule">
+  <div class="cover-byline"><strong>Uso interno dos sócios</strong><br>
+    Brasília/DF &middot; 19 jun 2026<br><em>Horizonte: 5 anos · taxa de desconto 12–15% a.a.</em></div>
+  <table class="cover-summary-table"><tr><th>VPL @ 13,5% (12–15%)</th><td>R$ 385 mil</td></tr><tr><th>TIR</th><td>~406% a.a.</td></tr><tr><th>Payback descontado</th><td>< 1 ano</td></tr><tr><th>Necessidade de capital</th><td>~R$ 5 mil</td></tr></table>
+  <div class="cover-abstract"><span class="cover-abstract-label">Síntese</span> A R$ 5 mil de capital, o VPL (R$ 365–407 mil) e a TIR (~406%) são fortemente positivos — porém inflados pelo capital mínimo. O investimento real é o trabalho dos sócios e o risco de execução. A decisão financeira de fato é o lote China (~R$ 99 mil) no ano 3.</div>
+</section>
+
+<section class="body-content">
+<h2>1. Veredito</h2>
+<p class="lede"><strong>O projeto é economicamente viável com folga — mas por razões que exigem leitura cuidadosa.</strong>
+A R$ 5 mil de capital, qualquer trajetória de venda minimamente bem-sucedida gera VPL e TIR
+altíssimos, porque <strong>o capital em risco é mínimo</strong>. O VPL fica em <strong>R$ 365–407 mil</strong> em toda a
+faixa de desconto (12–15%), a TIR é de <strong>~406% a.a.</strong> e o <strong>payback descontado é inferior a 1
+ano</strong>. Isso <strong>não</strong> significa <em>negócio fácil</em>: significa que <strong>a viabilidade não é decidida pela
+matemática financeira, e sim pela execução</strong> — construir audiência (o gargalo nº 1) e financiar
+o salto de escala (o lote China no ano 3). O EVEF, portanto, serve menos para <em>vale a pena?</em>
+(vale, trivialmente) e mais para <strong>planejar capital e medir a sensibilidade ao risco real</strong>.</p>
+<h2>2. Metodologia &amp; premissas</h2>
+<ul>
+<li><strong>Horizonte:</strong> 5 anos + Ano 0 (desembolso inicial). Fluxo de caixa anual.</li>
+<li><strong>Taxa de desconto:</strong> custo de oportunidade dos sócios, <strong>12–15% a.a.</strong> (base 13,5%). VPL
+  calculado nos três pontos.</li>
+<li><strong>Fluxo de caixa livre (FCF):</strong> Resultado operacional − variação de capital de giro. O
+  <strong>pró-labore é tratado como custo</strong> (Estratégia B) — logo o FCF mede o retorno <strong>ao capital</strong>,
+  <em>além</em> de remunerar o trabalho dos sócios. Como a B paga pró-labore abaixo do mercado no
+  início, o FCF dos primeiros anos <strong>superestima</strong> o retorno puro de capital (parte é trabalho
+  diferido). <code>[estimativa]</code></li>
+<li><strong>Capital de giro:</strong> estoque médio = COGS × (dias de estoque ÷ 360), com <strong>60 dias</strong> editáveis.
+  Pré-venda + pix (caixa adiantado) tendem a <strong>reduzir</strong> essa necessidade.</li>
+<li><strong>Tributos:</strong> Ano 1 em <strong>MEI</strong> (DAS fixo); anos 2–5 em <strong>ME/Simples</strong> (a receita ultrapassa o
+  teto MEI já no ano 2), com alíquota efetiva crescente (5% → 10%) <code>[estimativa]</code>.</li>
+<li><strong>Trajetória de unidades (combinada, 2 SKUs):</strong> 387 / 1.440 / 3.000 / 4.800 / 6.800 — anos 1–2
+  dentro do SOM pesquisado; anos 3–5 <code>[ilustrativo]</code>.</li>
+</ul>
+<h2>3. Projeção — DRE &amp; fluxo de caixa (R$)</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">Ano 1</th>
+<th style="text-align: right;">Ano 2</th>
+<th style="text-align: right;">Ano 3</th>
+<th style="text-align: right;">Ano 4</th>
+<th style="text-align: right;">Ano 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unidades (un)</td>
+<td style="text-align: right;">387</td>
+<td style="text-align: right;">1.440</td>
+<td style="text-align: right;">3.000</td>
+<td style="text-align: right;">4.800</td>
+<td style="text-align: right;">6.800</td>
+</tr>
+<tr>
+<td>Preço médio</td>
+<td style="text-align: right;">114</td>
+<td style="text-align: right;">124</td>
+<td style="text-align: right;">129</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">138</td>
+</tr>
+<tr>
+<td>Custo/un</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr>
+<td><strong>Receita bruta</strong></td>
+<td style="text-align: right;"><strong>44.118</strong></td>
+<td style="text-align: right;"><strong>178.560</strong></td>
+<td style="text-align: right;"><strong>387.000</strong></td>
+<td style="text-align: right;"><strong>643.200</strong></td>
+<td style="text-align: right;"><strong>938.400</strong></td>
+</tr>
+<tr>
+<td>(−) Marketing</td>
+<td style="text-align: right;">2.900</td>
+<td style="text-align: right;">12.000</td>
+<td style="text-align: right;">25.000</td>
+<td style="text-align: right;">45.000</td>
+<td style="text-align: right;">70.000</td>
+</tr>
+<tr>
+<td>(−) Pró-labore (B)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">30.000</td>
+<td style="text-align: right;">72.000</td>
+<td style="text-align: right;">96.000</td>
+<td style="text-align: right;">120.000</td>
+</tr>
+<tr>
+<td>(−) Impostos (MEI/Simples)</td>
+<td style="text-align: right;">972</td>
+<td style="text-align: right;">8.928</td>
+<td style="text-align: right;">27.090</td>
+<td style="text-align: right;">57.888</td>
+<td style="text-align: right;">93.840</td>
+</tr>
+<tr>
+<td>(−) Outras despesas</td>
+<td style="text-align: right;">1.200</td>
+<td style="text-align: right;">6.000</td>
+<td style="text-align: right;">12.000</td>
+<td style="text-align: right;">20.000</td>
+<td style="text-align: right;">28.000</td>
+</tr>
+<tr>
+<td>(−) Custo do produto (na MC)</td>
+<td style="text-align: right;"><em>na MC/un</em></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td><strong>(=) Resultado operacional</strong></td>
+<td style="text-align: right;"><strong>16.011</strong></td>
+<td style="text-align: right;"><strong>39.140</strong></td>
+<td style="text-align: right;"><strong>104.904</strong></td>
+<td style="text-align: right;"><strong>203.267</strong></td>
+<td style="text-align: right;"><strong>324.932</strong></td>
+</tr>
+<tr>
+<td>Capital de giro (estoque)</td>
+<td style="text-align: right;">2.903</td>
+<td style="text-align: right;">10.080</td>
+<td style="text-align: right;">16.500</td>
+<td style="text-align: right;">24.000</td>
+<td style="text-align: right;">31.733</td>
+</tr>
+<tr>
+<td>(−) Δ capital de giro</td>
+<td style="text-align: right;">2.903</td>
+<td style="text-align: right;">7.177</td>
+<td style="text-align: right;">6.420</td>
+<td style="text-align: right;">7.500</td>
+<td style="text-align: right;">7.733</td>
+</tr>
+<tr>
+<td><strong>(=) Fluxo de caixa livre</strong></td>
+<td style="text-align: right;"><strong>13.109</strong></td>
+<td style="text-align: right;"><strong>31.963</strong></td>
+<td style="text-align: right;"><strong>98.484</strong></td>
+<td style="text-align: right;"><strong>195.767</strong></td>
+<td style="text-align: right;"><strong>317.199</strong></td>
+</tr>
+<tr>
+<td><strong>FCF acumulado</strong> (desde −5.000)</td>
+<td style="text-align: right;"><strong>8.109</strong></td>
+<td style="text-align: right;"><strong>40.072</strong></td>
+<td style="text-align: right;"><strong>138.556</strong></td>
+<td style="text-align: right;"><strong>334.323</strong></td>
+<td style="text-align: right;"><strong>651.522</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>(A margem de contribuição por unidade — R$ 54 / 67 / 80 / 88 / 94 — já desconta canal, frete,
+pagamento, devoluções e o custo do produto; ver aba Unit Economics.)</em></p>
+<figure class="chart-wrap"><div class="chart-label">FIGURA 1</div><div class="chart-title">O fluxo de caixa livre cresce com a escala</div><img src="assets/evef_fcf.svg" alt="Fluxo de caixa livre por ano"><figcaption class="chart-caption">Fluxo de caixa livre por ano (após pró-labore e capital de giro). Anos 3–5 ilustrativos. Fonte: modelo (aba EVEF).</figcaption></figure><h2>4. Indicadores de viabilidade</h2>
+<table>
+<thead>
+<tr>
+<th>Indicador</th>
+<th>Valor</th>
+<th>Leitura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VPL @ 12% / 13,5% / 15%</strong></td>
+<td><strong>R$ 406.685 / 385.088 / 364.957</strong></td>
+<td>fortemente positivo em toda a faixa</td>
+</tr>
+<tr>
+<td><strong>TIR</strong></td>
+<td><strong>~406% a.a.</strong></td>
+<td>muito acima do custo de oportunidade — mas inflada pelo capital mínimo</td>
+</tr>
+<tr>
+<td><strong>Payback descontado</strong></td>
+<td><strong>&lt; 1 ano</strong></td>
+<td>os R$ 5 mil voltam já no ano 1</td>
+</tr>
+<tr>
+<td>Capital de giro (Ano 1 → 5)</td>
+<td>R$ 2,9 mil → R$ 31,7 mil</td>
+<td>cresce com a escala; pix/pré-venda reduz</td>
+</tr>
+<tr>
+<td><strong>Necessidade de capital operacional</strong></td>
+<td><strong>~R$ 5 mil</strong></td>
+<td>o caixa nunca fica negativo após o Ano 0</td>
+</tr>
+</tbody>
+</table>
+<h2>5. Leitura crítica (o que os números <strong>não</strong> dizem)</h2>
+<ol>
+<li><strong>VPL/TIR são inflados pelo capital ínfimo.</strong> Com R$ 5 mil de entrada, quase qualquer
+   sucesso de vendas produz TIR de três dígitos. O <strong>investimento real</strong> é o <strong>trabalho dos
+   sócios</strong> (pró-labore abaixo do mercado no início) e o <strong>risco de execução</strong>, que a TIR não
+   captura. Não use a TIR para <em>vender</em> o projeto — use-a só para confirmar que o retorno supera
+   com folga os 12–15% de custo de oportunidade (supera).</li>
+<li><strong>O gargalo é aquisição, não capital.</strong> Toda a projeção pressupõe vender 387 → 6.800 un. Isso
+   depende de <strong>construir audiência do zero</strong> (ver business plan §6) — o verdadeiro risco. Se a
+   aquisição patinar, a receita não se materializa e os indicadores acima evaporam.</li>
+<li><strong>Escala 100% autofinanciada — decisão tomada (jun/2026).</strong> Os sócios optaram por <strong>acumular
+   caixa</strong> e só comprometer um lote grande de importação quando ele se pagar com folga — <strong>sem
+   pré-venda</strong> (evita o risco de espera longa e dano à reputação) e <strong>sem empréstimo ou aporte</strong>
+   (evita descapitalizar ou ficar preso a uma dívida sem vender). <strong>Gatilho de capitalização:</strong>
+   comprometer um lote de importação só quando <strong>caixa acumulado ≥ custo do lote + colchão de
+   3 meses de custos fixos</strong> (100% próprio) <strong>e</strong> quando o volume sustentado justificar (~5.000
+   un/ano, onde a China ganha claramente). Em números: lote China ~5.000 un ≈ R$ 90 mil + colchão
+   ~R$ 45 mil ≈ <strong>R$ 135 mil de caixa</strong> — patamar que o <em>FCF acumulado</em> cruza no <strong>fim do Ano 3 /
+   Ano 4</strong>. <strong>Ponte até lá:</strong> escalar na <strong>gráfica BR (offset) em lotes crescentes pagos pela
+   receita</strong> (já ~R$ 18–32/un a 3.000–5.000 un). Ou seja, <strong>não há <em>abismo</em> de R$ 99 mil</strong>: o
+   negócio cresce em degraus autofinanciados e a China vira <strong>opcionalidade</strong>, não necessidade.</li>
+</ol>
+<h2>6. Sensibilidade &amp; cenário de baixa</h2>
+<ul>
+<li><strong>Variável que mais move o resultado: VOLUME (audiência).</strong> Preço e custo têm efeito de
+  segunda ordem; a aba <code>Sensibilidade</code> mostra que abaixo de ~340 un/ano o Ano 1 não cobre o
+  pró-labore (na Estratégia A) — sob a B, o Ano 1 não tem essa pressão.</li>
+<li><strong>Custo da gráfica <code>[a confirmar]</code>:</strong> se o micro-lote sair a ~R$ 65/un (topo da faixa), o
+  Ano 1 encolhe e o break-even do 1º lote fica difícil — <strong>confirmar por 3 orçamentos antes de
+  comprometer capital</strong> (ver consultoria de sourcing).</li>
+<li><strong>Anos 3–5:</strong> se a escala via China <strong>não</strong> acontecer, o negócio ainda é lucrativo em regime
+  nacional (margem cheia na reposição), mas o VPL cai para a faixa dos anos 1–2 anualizados —
+  ainda positivo, porém sem o <em>salto</em>.</li>
+<li><strong>Câmbio / tributos:</strong> mudanças de alíquota de importação ou de câmbio afetam o ponto de
+  virada da China, não a operação nacional dos anos 1–2.</li>
+</ul>
+<h2>7. Conclusão &amp; condicionantes</h2>
+<p><strong>Economicamente, o projeto é viável e cria valor muito acima do custo de oportunidade de
+12–15%.</strong> A decisão <strong>não</strong> deve se apoiar no VPL/TIR (inflados pelo capital baixo), e sim em
+três condicionantes de execução:</p>
+<ol>
+<li><strong>Provar a aquisição orgânica</strong> (audiência do zero) — sem isso, nada se realiza.</li>
+<li><strong>Confirmar o custo de produção</strong> (3 orçamentos de gráfica) antes do 1º lote.</li>
+<li><strong>Escalar de forma 100% autofinanciada</strong> — crescer em lotes BR (offset) pagos pela receita e
+   migrar para a China <strong>só</strong> quando o caixa cruzar o gatilho (~R$ 135 mil, fim do Ano 3/Ano 4),
+   sem pré-venda e sem empréstimo. Assim a China deixa de ser um risco de capital e vira ganho
+   marginal opcional.</li>
+</ol>
+<p>Sob a <strong>Estratégia B</strong>, o negócio se autofinancia ao longo dos anos 1–2 (nunca fica com caixa
+negativo após os R$ 5 mil), remunera os sócios de forma crescente a partir do Ano 2 e acumula
+~R$ 650 mil de caixa livre em 5 anos no cenário ilustrativo — condicionado a executar a
+aquisição e o salto de escala.</p>
+<p><em>Documento de apoio à decisão dos sócios. VPL/TIR sensíveis às premissas dos anos 3–5
+(ilustrativos). Custos de produção a confirmar por orçamento; tributos por contador. Não
+constitui recomendação financeira. Números conferidos contra <code>models/viabilidade-planners-v2.xlsx</code>
+(aba EVEF) por recálculo independente.</em></p>
+<div class="sources">
+  <div class="sources-title">Notas, confiança e fontes</div>
+  <p class="uncertainty-note">Marcações de confiança usadas no texto — <strong>[confirmado]</strong>: fonte primária datada e verificável · <strong>[estimativa triangulada]</strong>: ≥2 fontes convergentes, sem confirmação formal · <strong>[a confirmar]</strong>: faixa de mercado, não apresentada como fechada.</p>
+  <p>Modelo viabilidade-planners-v2.xlsx (aba EVEF), conferido por recálculo independente; research/evidence/. Anos 3–5 ILUSTRATIVOS; tributos por contador.</p>
+</div>
+</section>
+</body></html>

@@ -1,0 +1,18 @@
+# Temporários de escritório / sistema
+~$*.xlsx
+~$*.docx
+~$*.pptx
+.DS_Store
+Thumbs.db
+
+# Python / uv
+__pycache__/
+*.pyc
+.venv/
+.uv/
+.ruff_cache/
+
+# Saídas de build de PDF intermediárias
+*.aux
+*.log
+*.toc

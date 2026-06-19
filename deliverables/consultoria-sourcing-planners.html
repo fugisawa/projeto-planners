@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><title>Consultoria de Sourcing — Projeto Planners</title>
+<link rel="stylesheet" href="/home/daniel/.claude/skills/briefing-designer/templates/design_system.css">
+<style>
+  /* numeração das seções vem do markdown; desliga a automática p/ não duplicar */
+  .body-content h2::before { content: none; }
+  .body-content h2 { counter-increment: none; margin-top: 7mm; }
+  .body-content h3 { margin-top: 4mm; }
+  /* tabelas: largura total, padding e bordas leves (sem colunas coladas, podem quebrar entre páginas) */
+  .body-content table { width: 100%; border-collapse: collapse; font-size: 8.3pt; margin: 4mm 0; }
+  .body-content th, .body-content td { padding: 1.3mm 2.6mm; border-bottom: 0.3pt solid var(--rule); text-align: left; vertical-align: top; line-height: 1.25; }
+  .body-content thead th { border-bottom: 0.7pt solid var(--ink); font-size: 7.8pt; text-transform: uppercase; letter-spacing: 0.03em; }
+  .chart-wrap { break-inside: avoid; margin: 6mm 0; }
+  blockquote { break-inside: avoid; }
+  /* capa */
+  .cover-title { font-size: 33pt; line-height: 1.08; margin-bottom: 6mm; text-align: left; }
+  .cover-deck { font-size: 12pt; margin-bottom: 8mm; max-width: 100%; }
+  .cover-summary-table { margin: 4mm 0 0 0; }
+  .cover-abstract { font-size: 10.5pt; padding-top: 5mm; }
+</style></head>
+<body class="persona-editorial">
+<div class="string-set-title">Sourcing · Projeto Planners</div>
+<div class="string-set-date">19 jun 2026</div>
+
+<section class="cover cover-editorial">
+  <div class="cover-kicker">PROJETO PLANNERS · DOSSIÊ INTERNO</div>
+  <h1 class="cover-title">Consultoria de Sourcing<br>&amp; Desenvolvimento de Produto</h1>
+  <p class="cover-deck">Da ficha técnica ao landed cost: onde produzir os dois planners, a que custo, e quando a importação da China passa a compensar.</p>
+  <hr class="cover-rule">
+  <div class="cover-byline"><strong>Uso interno dos sócios</strong><br>
+    Brasília/DF &middot; 19 jun 2026<br><em>Horizonte: Fase 1 (Brasil) → Fase 2 (China)</em></div>
+  <table class="cover-summary-table"><tr><th>Decisão Fase 1</th><td>Gráfica nacional</td></tr><tr><th>Crossover China</th><td>~3.000–5.000 un</td></tr><tr><th>Landed cost</th><td>2,0–2,7× o FOB</td></tr><tr><th>NCM (tributado)</th><td>4820.10.00</td></tr></table>
+  <div class="cover-abstract"><span class="cover-abstract-label">Síntese</span> Brasil na Fase 1: a gráfica nacional fecha em 6–8 semanas, sem fricção de importação. A China só bate o custo nacional a partir de ~3.000–5.000 un — mais alto do que o rascunho supunha, após corrigir o AFRMM (8%, não 25%) e o ICMS não creditável no MEI.</div>
+</section>
+
+<section class="body-content">
+<h2>1. Resumo executivo (decisão final)</h2>
+<p><strong>Parâmetros:</strong> orçamento ~R$ 3 mil/SKU no 1º lote · prazo 30–60 dias · formato <strong>perpétuo (sem datas)</strong>.</p>
+<h3>Veredito: <strong>Brasil na Fase 1. China só na Fase 2 — e a partir de ~3.000–5.000 un, não 1.000.</strong></h3>
+<p>Dois motivos eliminatórios para a China no início:</p>
+<ol>
+<li><strong>O orçamento não alcança o MOQ chinês com vantagem.</strong> Abaixo de ~500 un, a China cai no <strong>regime de remessa</strong> (II de 60%), que inviabiliza revenda. E mesmo em 1.000 un, o landed cost real <strong>empata</strong> com a gráfica BR (ver §4–5).</li>
+<li><strong>O prazo não comporta frete marítimo.</strong> Produção China 30–60 dias <strong>+</strong> navio 30–45 dias = 60–105 dias só de logística. A <strong>gráfica BR fecha em 6–8 semanas com folga.</strong></li>
+</ol>
+<blockquote>
+<p class="lede"><strong>⚠️ Correção vs. rascunho original.</strong> O rascunho colocava o ponto de virada da China em ~1.000 un. Com a conta refeita (AFRMM correto de <strong>8%</strong>, não 25%; frete LCL real; ICMS-DF <em>por dentro</em>; e <strong>ICMS não creditável no MEI/Simples</strong>), o <strong>crossover real é ~3.000–5.000 un</strong> (conforme o tier de gráfica BR: ~3.000 contra gráfica premium; ~5.000+ contra offset de baixo custo) <code>[sourcing-tributos.md]</code>. Isso reforça: <strong>ficar no Brasil por mais tempo.</strong></p>
+</blockquote>
+<p><strong>Perpétuo</strong> é a decisão certa: estoque nunca <em>vence</em>, então micro-lote e pré-venda viram opções sem risco de encalhe.</p>
+<h3>Plano em fases (risco assimétrico)</h3>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>O quê</th>
+<th>Volume</th>
+<th>Rota</th>
+<th>Capital</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0 — Validação</strong></td>
+<td>Lista de espera + golden sample + pré-venda</td>
+<td>—</td>
+<td>Gráfica BR (POD)</td>
+<td>mínimo</td>
+</tr>
+<tr>
+<td><strong>1 — 1º lote comercial</strong></td>
+<td>Micro-lote + reposição <em>make-to-demand</em></td>
+<td>~54 → 300–500 un</td>
+<td><strong>Gráfica BR</strong></td>
+<td>≤ R$ 3k/SKU</td>
+</tr>
+<tr>
+<td><strong>2 — Escala</strong></td>
+<td>Reposição com margem maior</td>
+<td><strong>≥ 3.000 un</strong></td>
+<td><strong>China (importação formal)</strong></td>
+<td>CNPJ + Radar + capital</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>O 1º lote <strong>não é o negócio</strong> — é experimento pago para <strong>provar demanda, gerar conteúdo de unboxing e financiar a Fase 1</strong>.</p>
+</blockquote>
+<h2>2. Quanto R$ 3k compram no Brasil (A5 wire-o capa dura, perpétuo, ~190 pp)</h2>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Especificação</th>
+<th>Custo/un¹</th>
+<th>Unidades por R$ 3k</th>
+<th>Preço de venda sugerido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A — Premium</strong></td>
+<td>Capa dura + wire-o + soft-touch + hot stamping + elástico</td>
+<td>R$ 50–60</td>
+<td><strong>~50–60</strong></td>
+<td>R$ 120–150</td>
+</tr>
+<tr>
+<td><strong>B — Intermediário</strong></td>
+<td>Capa dura + wire-o + laminação fosca, sem hot stamping/elástico</td>
+<td>R$ 40–52</td>
+<td><strong>~58–75</strong></td>
+<td>R$ 95–120</td>
+</tr>
+<tr>
+<td><strong>C — Enxuto</strong></td>
+<td>Capa flexível premium (300 g + lam.) + espiral, miolo 90 g</td>
+<td>R$ 18–30</td>
+<td><strong>~100–160</strong></td>
+<td>R$ 70–95</td>
+</tr>
+</tbody>
+</table>
+<p>¹ Faixa de mercado <strong>a confirmar nas 3 cotações</strong> — micro-lote (&lt;100 un) sai no topo da faixa; cai com volume <code>[a confirmar, sourcing-tributos.md]</code>.</p>
+<p><strong>Recomendação: Tier A ou B.</strong> Os nichos pagam premium e valoram acabamento; produto bonito gera conteúdo, que é o que vende (o conteúdo orgânico é o motor de aquisição — ver business plan §6). O Tier C maximiza unidades, mas dilui o posicionamento. <strong>Modelo financeiro usa custo micro-lote R$ 55 (Tier A/B), caindo a R$ 45 na reposição.</strong></p>
+<p><strong>Alocação:</strong> R$ 3k <em>por</em> SKU. Como os dois compartilham plataforma (mesmo formato/papel/encadernação), <strong>padronizar reduz o MOQ efetivo e o custo</strong> (compra conjunta de insumos) — viabiliza rodar os dois em paralelo.</p>
+<h2>3. Fichas técnicas (proposta — ajuste o que divergir)</h2>
+<p>Padrão de mercado premium, ambos <strong>perpétuos</strong>. Padronizar formato/papel/encadernação entre os dois SKUs reduz MOQ efetivo e custo.</p>
+<h3>Planner 1 — Concurseiro</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Especificação</th>
+<th>Trade-off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Formato</td>
+<td>A5 (148×210 mm)</td>
+<td>Padrão premium e barato de enviar; menor aperta a grade de estudo</td>
+</tr>
+<tr>
+<td>Encadernação</td>
+<td><strong>Wire-o</strong>, capa dura</td>
+<td>Abre 180°/<em>lay-flat</em> (essencial p/ escrever); espiral é mais barata e menos premium</td>
+</tr>
+<tr>
+<td>Miolo</td>
+<td>~180–200 pp, <strong>offset 90 g</strong> branco/marfim</td>
+<td>90 g evita transparência da caneta; 75 g <em>vaza</em></td>
+</tr>
+<tr>
+<td>Capa</td>
+<td>Cartão empastado + <strong>soft-touch</strong> + <strong>hot stamping</strong></td>
+<td>Soft-touch escurece a cor → peça prova física; verniz localizado é alternativa mais barata</td>
+</tr>
+<tr>
+<td>Acabamentos</td>
+<td>Elástico + marcador de fita + cantos arredondados</td>
+<td>Cada acabamento sobe custo e MOQ na China</td>
+</tr>
+<tr>
+<td>Conteúdo</td>
+<td>Grade de ciclo (não cronograma fixo) · registro diário (tópico, tempo, nº questões, % acerto) · <strong>revisão espaçada</strong> (24h/7d/30d) · tracker de simulados (banca/nota/% por disciplina) · edital verticalizado · visão semanal/mensal · página de constância</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3>Planner 2 — Treino de Força</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Especificação</th>
+<th>Trade-off</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Formato</td>
+<td>A5 (148×210) <strong>ou</strong> 17×24 cm</td>
+<td>17×24 dá mais espaço de tabela de cargas, mas encarece e pesa no frete</td>
+</tr>
+<tr>
+<td>Encadernação</td>
+<td><strong>Wire-o</strong>, capa dura</td>
+<td><em>Lay-flat</em> inegociável na academia; durabilidade importa mais aqui</td>
+</tr>
+<tr>
+<td>Capa</td>
+<td>Cartão + <strong>soft-touch</strong> (ou PU) resistente</td>
+<td>Ambiente de academia → priorize resistência a suor/atrito</td>
+</tr>
+<tr>
+<td>Miolo</td>
+<td>~160–200 pp, <strong>offset 90 g</strong></td>
+<td>Igual ao P1 para ganho de escala na compra de papel</td>
+</tr>
+<tr>
+<td>Conteúdo</td>
+<td>Perfil/1RM e metas · <strong>periodização</strong> (mesociclo/semana/foco) · template de sessão (exercício, séries×reps, <strong>carga, RPE/RIR</strong>, descanso, notas) · registro de PRs · tonelagem/volume · marcadores de <em>deload</em> · métricas corporais · calendário semanal/mensal · páginas de protocolo (ladders/EMOM)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<figure class="chart-wrap"><div class="chart-label">FIGURA 1</div><div class="chart-title">A China só bate a gráfica BR a partir de ~3.000 un</div><img src="assets/src_china_br.svg" alt="China landed vs gráfica BR por volume"><figcaption class="chart-caption">Custo unitário por volume de pedido. Abaixo de ~3.000 un, a produção nacional ganha ou empata. Fonte: research/evidence/sourcing-tributos.md.</figcaption></figure><h2>4. Decisão de fornecimento — Gráfica BR × China</h2>
+<h3>4.1 Comparativo nas 4 dimensões (nota 1–5)</h3>
+<table>
+<thead>
+<tr>
+<th>Dimensão</th>
+<th>Gráfica BR</th>
+<th>China</th>
+<th>Vencedor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(a) Fidelidade ao que peço</strong></td>
+<td>4/5 — acompanhamento próximo, português, revisão de prova rápida</td>
+<td>3/5 — ODM excelente, mas exige <em>dieline</em>, prova física e gestão de cor à distância</td>
+<td><strong>BR</strong> (no início)</td>
+</tr>
+<tr>
+<td><strong>(b) Praticidade</strong></td>
+<td>5/5 — sem importação/despachante, MOQ de 1–100 un, pix</td>
+<td>2/5 — Alibaba, amostra, Incoterm, despachante, Radar/Siscomex, lead 30–60 dias</td>
+<td><strong>BR</strong></td>
+</tr>
+<tr>
+<td><strong>(c) Preço (landed cost)</strong></td>
+<td>3/5 — caro em volume baixo, melhora pouco na escala</td>
+<td>5/5 — domina <strong>só a partir de ~3.000 un</strong></td>
+<td><strong>China</strong> (na escala)</td>
+</tr>
+<tr>
+<td><strong>(d) Risco</strong></td>
+<td>5/5 — sem risco cambial/aduaneiro/lead; pouco capital em jogo</td>
+<td>2/5 — câmbio, qualidade à distância, desembaraço, lote grande imobilizado</td>
+<td><strong>BR</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>4.2 Custo unitário — China landed × Gráfica BR por volume <code>[estimativa triangulada; BR a confirmar por orçamento]</code></h3>
+<table>
+<thead>
+<tr>
+<th>Volume</th>
+<th>China — regime</th>
+<th>China FOB US$/un</th>
+<th><strong>China landed R$/un¹</strong></th>
+<th><strong>Gráfica BR R$/un²</strong></th>
+<th>Vencedor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50–100 (piloto)</td>
+<td>Remessa/courier</td>
+<td>3,50–4,50</td>
+<td>~48–53 (II 60%)</td>
+<td>R$ 40–65</td>
+<td><strong>BR (claro)</strong></td>
+</tr>
+<tr>
+<td>300</td>
+<td>Formal</td>
+<td>3,50</td>
+<td><strong>~R$ 61</strong></td>
+<td>R$ 32–50</td>
+<td><strong>BR</strong></td>
+</tr>
+<tr>
+<td>500</td>
+<td>Formal</td>
+<td>3,20</td>
+<td><strong>~R$ 47</strong></td>
+<td>R$ 28–45</td>
+<td><strong>Empate</strong></td>
+</tr>
+<tr>
+<td>1.000</td>
+<td>Formal</td>
+<td>3,00</td>
+<td><strong>~R$ 37</strong></td>
+<td>R$ 22–38</td>
+<td><strong>Disputado</strong></td>
+</tr>
+<tr>
+<td>3.000</td>
+<td>Formal</td>
+<td>2,30</td>
+<td><strong>~R$ 24</strong></td>
+<td>R$ 18–32</td>
+<td><strong>China</strong></td>
+</tr>
+<tr>
+<td>5.000+</td>
+<td>Formal</td>
+<td>1,80</td>
+<td><strong>~R$ 18</strong></td>
+<td>R$ 18–30</td>
+<td><strong>Empate/China</strong></td>
+</tr>
+</tbody>
+</table>
+<p>¹ <strong>Importação formal</strong>, câmbio R$ 5,20, com a conta de §5. Em 300 un o landed sobe (R$ 61) porque o frete LCL e o despachante se diluem em poucas unidades. ² Faixa de gráfica digital/POD em volume baixo; offset a partir de 500 un.</p>
+<p><strong>Leitura central:</strong> o FOB chinês <em>parece</em> 3–4× mais barato, mas a carga de importação (≈ <strong>2,0–2,4× o FOB</strong>, e <strong>2,5–2,7× como MEI</strong> por o ICMS não ser creditável) faz o <strong>landed convergir com a gráfica BR até ~1.000 un</strong>. A China só abre vantagem clara <strong>a partir de ~3.000 un</strong>. Abaixo de ~500 un, a China força o regime de remessa com <strong>II de 60%</strong> — inviável para revenda.</p>
+<h2>5. A conta do landed cost (importação formal — 1.000 un, FOB US$ 3,00) <code>[sourcing-tributos.md]</code></h2>
+<table>
+<thead>
+<tr>
+<th>Componente</th>
+<th>R$/un</th>
+<th>Base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FOB</td>
+<td>15,60</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Frete marítimo LCL</td>
+<td>4,16</td>
+<td>rateio do contêiner</td>
+</tr>
+<tr>
+<td><strong>CIF (base de cálculo)</strong></td>
+<td><strong>19,81</strong></td>
+<td>FOB + frete + seguro</td>
+</tr>
+<tr>
+<td>(+) II 14,4%</td>
+<td>2,85</td>
+<td>× CIF</td>
+</tr>
+<tr>
+<td>(+) IPI 9,75%</td>
+<td>2,21</td>
+<td>× (CIF + II)</td>
+</tr>
+<tr>
+<td>(+) PIS/COFINS-Imp 11,75%</td>
+<td>2,33</td>
+<td>× CIF</td>
+</tr>
+<tr>
+<td>(+) <strong>ICMS-DF 20% <em>por dentro</em></strong></td>
+<td><strong>7,30</strong></td>
+<td>maior componente</td>
+</tr>
+<tr>
+<td>(+) AFRMM 8%</td>
+<td>0,33</td>
+<td>× frete marítimo</td>
+</tr>
+<tr>
+<td>(+) Despachante + armazenagem</td>
+<td>2,00</td>
+<td>rateio</td>
+</tr>
+<tr>
+<td><strong>= Landed/un</strong></td>
+<td><strong>36,83</strong></td>
+<td><strong>≈ 2,36× o FOB</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Alíquotas vigentes (confirmadas jun/2026)</strong> <code>[confirmado]</code>: II <strong>14,4%</strong> · IPI <strong>9,75%</strong> · PIS-Imp <strong>2,10%</strong> + COFINS-Imp <strong>9,65%</strong> (= 11,75%) · ICMS-DF <strong>20%</strong> por dentro · AFRMM <strong>8%</strong> sobre o frete marítimo (Lei 14.301/2022 — <strong>não 25%</strong>, como dizia o rascunho).</p>
+<ul>
+<li><strong>Gecex 852/2026</strong> (fev–mar/2026) elevou o II de 1.000+ NCMs, mas <strong>nos capítulos 84–90</strong> (máquinas/eletrônica) — <strong>o capítulo 48 (NCM 4820.10.00) não foi alterado</strong>; II permanece 14,4% <code>[confirmado]</code>.</li>
+<li><strong>Regime de remessa (courier):</strong> até US$ 50 → <strong>II 20%</strong> + ICMS; US$ 50,01–3.000 → <strong>II 60% (−US$ 20)</strong> + ICMS (PL 3.261/2025, que restauraria isenção de US$ 50, <strong>não aprovado</strong> até jun/2026) <code>[confirmado]</code>.</li>
+<li><strong>Regra de bolso:</strong> landed ≈ <strong>2,0–2,4× o FOB</strong> (importação formal, Lucro Real); <strong>2,5–2,7×</strong> no MEI/Simples (ICMS não creditável). Confirme a alíquota final no <strong>Siscomex Classif / simulador da Receita</strong> e com <strong>despachante</strong> <code>[a confirmar com despachante]</code>.</li>
+<li><em>Nota metodológica:</em> a base do ICMS <em>por dentro</em> acima inclui o despachante (premissa conservadora — eleva o custo em ~R$ 0,50/un); a composição exata da base deve ser confirmada com o despachante.</li>
+</ul>
+<p><strong>Dados China (MOQ/FOB/lead)</strong> <code>[estimativa, a confirmar por RFQ]</code>: FOB planner A5 wire-o capa dura soft-touch custom US$ 1,80–3,99/un · MOQ 300–1.000 un (premium/custom 1.000–3.000) · lead 30–60 dias · amostra US$ 50–150 + frete aéreo (geralmente reembolsável) · frete LCL China→Santos US$ 700–900/embarque.</p>
+<h2>6. Playbook de sourcing (passo a passo)</h2>
+<ol>
+<li><strong>Feche ficha técnica e conteúdo</strong> dos dois SKUs (§3) antes de cotar — cotação sem spec fechada gera preço inútil.</li>
+<li><strong>Habilite o CNPJ</strong> (MEI já serve para vender na Fase 1; para importação formal na Fase 2, <strong>Radar/Habilitação no Siscomex</strong>, modalidade Expressa cobre importadores pequenos).</li>
+<li><strong>Cote no Brasil (3 gráficas)</strong> especializadas em agenda/planner wire-o capa dura. Peça preço para <strong>100 / 300 / 500 / 1.000 un</strong>, prazo e <strong>prova física</strong> (não só PDF). Termos usuais: 50% sinal / 50% na entrega.</li>
+<li><strong>Cote na China em paralelo</strong> (Alibaba + Made-in-China) já mirando a Fase 2 (≥ 3.000 un). Filtre por <strong>Trade Assurance</strong>, anos de operação, fábrica vs. trading. Mesmo RFQ para <strong>5–8 fornecedores</strong>.</li>
+<li><strong>No RFQ peça:</strong> FOB <strong>e</strong> CIF (Santos/Itajaí/Paranaguá), MOQ real, preço escalonado (500/1k/3k/5k), lead time, <strong>custo de amostra</strong> e Incoterm.</li>
+<li><strong>Incoterm:</strong> comece em <strong>FOB</strong> (você controla frete e desembaraço com despachante) ou peça <strong>DDP</strong> só para enxergar o teto de custo <em>na porta</em>. Evite EXW no início.</li>
+<li><strong>Pagamento:</strong> <strong>T/T 30% sinal / 70% antes do embarque</strong>; prefira <strong>Trade Assurance</strong> ou L/C no 1º pedido. Evite Western Union/PayPal para valores altos.</li>
+<li><strong>Amostra/protótipo:</strong> exija <strong>golden sample aprovado por escrito</strong> (cor, gramatura, wire-o, hot stamping) — vira o padrão de aceite do lote.</li>
+<li><strong>Inspeção de qualidade (checklist):</strong> cor vs. prova aprovada · gramatura do miolo · alinhamento/firmeza do wire-o · adesão da laminação · hot stamping sem falha · cantos · elástico/fita · esquadro · embalagem individual + master carton. Contrate <strong>inspeção pré-embarque</strong> no 1º pedido China.</li>
+<li><strong>Importação (Fase 2):</strong> contrate <strong>despachante aduaneiro</strong> (DUIMP, tributos, <strong>AFRMM 8%</strong> sobre frete marítimo, armazenagem). Some ao landed cost.</li>
+<li><strong>Armadilhas comuns:</strong> preço <em>bom demais</em> de trading sem fábrica · MOQ que sobe após a amostra · cor que muda com soft-touch (sempre prova física) · lombada/<em>dieline</em> errada · câmbio entre cotação e pagamento (trave ou orce com folga) · esquecer AFRMM e despachante na conta.</li>
+</ol>
+<h2>7. Preparação de arquivos print-ready</h2>
+<h3>Checklist de arquivo</h3>
+<ul>
+<li><strong>Sangria (bleed):</strong> 3 mm em todos os lados (confirme — algumas gráficas BR pedem 5 mm).</li>
+<li><strong>Cor:</strong> <strong>CMYK</strong> (nunca RGB). Pretos de texto em 100% K; Pantone/PMS convertidos ou especificados.</li>
+<li><strong>Resolução:</strong> imagens a <strong>300 dpi</strong> no tamanho final.</li>
+<li><strong>PDF:</strong> <strong>PDF/X-1a:2001</strong> ou <strong>PDF/X-4</strong> (pergunte qual o fornecedor prefere). <strong>Fontes incorporadas ou em curvas.</strong></li>
+<li><strong>Perfil ICC:</strong> Coated FOGRA39 ou o do fornecedor — peça o perfil deles.</li>
+<li><strong>Arquivos separados:</strong> <strong>miolo</strong> (páginas individuais, em ordem, não em <em>spreads</em>) + <strong>capa</strong> (frente + lombada + verso num só, com a <strong>largura da lombada calculada pelo nº de páginas</strong> — fórmula vem do fornecedor) + <strong>guarda</strong> (se capa dura).</li>
+<li><strong>Gabarito/dieline:</strong> <strong>peça o <em>dieline</em> da capa wire-o capa dura ao fornecedor</strong> antes de fechar a arte — o empaste com cartão tem medidas próprias.</li>
+<li><strong>Marcas:</strong> corte e registro; prova de cor, idealmente <strong>física</strong> (soft-touch escurece a cor).</li>
+</ul>
+<h3>Anexo — Ficha técnica (RFQ) para enviar ao fornecedor</h3>
+<p><code>PRODUTO: Planner [Concurseiro / Treino] — perpétuo (undated)
+FORMATO: A5 148×210 mm (final, fechado)
+ENCADERNAÇÃO: Wire-o, capa dura (lay-flat 180°)
+MIOLO: ___ páginas | offset 90 g | 4/4 cores (CMYK)
+CAPA: cartão empastado | laminação soft-touch | hot stamping [cor]
+ACABAMENTOS: elástico + marcador de fita + cantos arredondados
+EMBALAGEM: 1 un shrink + master carton (informar pç/caixa)
+ARTE: PDF/X-__ CMYK, 300 dpi, sangria 3 mm, fontes em curva
+QUANTIDADES P/ COTAR: 100 / 300 / 500 / 1.000 / 3.000
+PREÇO: FOB ___ e CIF [Santos/Itajaí] ___ | MOQ real ___
+AMOSTRA: custo + prazo | LEAD TIME bulk: ___ dias
+INCOTERM/PAGAMENTO: FOB | T/T 30/70 via Trade Assurance</code></p>
+<h2>8. Cronograma de execução (alinhado ao go-to-market)</h2>
+<table>
+<thead>
+<tr>
+<th>Semana</th>
+<th>Ação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–4</td>
+<td><strong>Construir audiência/lista de espera</strong> (conteúdo orgânico) + fechar <strong>conteúdo/miolo</strong> dos SKUs + pedir <strong>golden sample</strong> em 2–3 gráficas</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td>Aprovar sample por escrito; fechar <strong>arquivos print-ready</strong> (PDF/X, sangria 3 mm, <strong>dieline da capa</strong> que a gráfica fornece)</td>
+</tr>
+<tr>
+<td>7–8</td>
+<td><strong>Abrir pré-venda</strong> com fotos do golden sample (checkout + pix) → micro-lote <strong>+</strong> pré-pedidos</td>
+</tr>
+<tr>
+<td>9–12</td>
+<td>Rodar a tiragem; expedir; coletar feedback; decidir reposição</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>A pré-venda só converte com audiência pré-construída (ver business plan §6) — por isso as semanas 1–4 priorizam <strong>conteúdo</strong>, não só produto.</p>
+</blockquote>
+<h2>9. Fontes &amp; datas (números-chave, jun/2026)</h2>
+<ul>
+<li><strong>Câmbio USD/BRL:</strong> ≈ R$ 5,18 em 17/jun/2026 (Investing.com).</li>
+<li><strong>NCM 4820.10.00:</strong> II 14,4% · IPI 9,75% · PIS 2,10% · COFINS 9,65% (FazComex/TIPI ADE COANA 001/2026). <strong>Gecex 852/2026 não alterou o cap. 48</strong> <code>[confirmado]</code>.</li>
+<li><strong>AFRMM:</strong> <strong>8%</strong> sobre frete de longo curso (Lei 14.301/2022) — correção do rascunho (que usava 25%).</li>
+<li><strong>ICMS-DF:</strong> <strong>20%</strong> <em>por dentro</em> (Lei DF 1.254/96); <strong>não creditável</strong> no MEI/Simples.</li>
+<li><strong>Regime de remessa (RTS):</strong> até US$ 50 → II 20% + ICMS; US$ 50,01–3.000 → II 60% (−US$ 20) + ICMS (Receita/Correios).</li>
+<li><strong>China (planners custom):</strong> MOQ 300–1.000 un (premium 1.000–3.000) · FOB ~US$ 1,80–3,99/un · lead 30–60 dias · amostra US$ 50–150 (Alibaba, Made-in-China, Anniorpastin — jun/2026).</li>
+</ul>
+<p><em>Custos unitários e landed costs marcados como estimativa são faixas de mercado para dimensionar a decisão; devem ser confirmados por cotação formal (gráficas BR) e por despachante (importação China). Não constituem orçamento fechado. Detalhe e tabela de fontes em <code>research/evidence/sourcing-tributos.md</code>.</em></p>
+<div class="sources">
+  <div class="sources-title">Notas, confiança e fontes</div>
+  <p class="uncertainty-note">Marcações de confiança usadas no texto — <strong>[confirmado]</strong>: fonte primária datada e verificável · <strong>[estimativa triangulada]</strong>: ≥2 fontes convergentes, sem confirmação formal · <strong>[a confirmar]</strong>: faixa de mercado, não apresentada como fechada.</p>
+  <p>Alíquotas: FazComex/TIPI ADE COANA 001/2026; Gecex 852/2026 (não alterou o cap. 48); Lei 14.301/2022 (AFRMM 8%); Lei DF 1.254/96 (ICMS). China: Alibaba, Made-in-China (jun/2026). Detalhe datado em research/evidence/sourcing-tributos.md. A confirmar por despachante e 3 orçamentos.</p>
+</div>
+</section>
+</body></html>
