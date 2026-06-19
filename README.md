@@ -50,8 +50,10 @@ faz conteúdo performar é transferível entre nichos — e já está dentro de 
   Viabilidade → Cenários → Sensibilidade → Projeção 12M → Pró-labore A×B → EVEF 5 anos → LTV & Recorrência).
 - **`painel-kpis.xlsx`** — rastreador mensal de KPIs (preencher mês a mês).
 
-**Apoio:** `research/evidence/` (pesquisa datada) · `docs/` (metodologia, premissas) ·
-`sources/` (rascunhos originais — o "antes", imutáveis).
+**Apoio:** `research/evidence/` (pesquisa datada) + `research/validation/` (laudos) · `docs/`
+(metodologia, premissas) · `sources/` (rascunhos originais — o "antes", imutáveis) · `scripts/`
+(ferramentas que **regeram** o modelo e os PDFs — uso do autor; os `.html`/`.svg` de build não são
+versionados, só os `.pdf`).
 
 ## Como navegar
 - Não-técnico / visão geral → **guia-do-negocio.pdf**.

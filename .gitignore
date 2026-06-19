@@ -16,3 +16,9 @@ __pycache__/
 *.aux
 *.log
 *.toc
+
+# Intermediários regeneráveis pelos scripts/ (a partir dos .md):
+# os .pdf são versionados; os .html/.svg de build, não — exceto o guia (que é fonte).
+deliverables/*.html
+!deliverables/guia-do-negocio.html
+deliverables/assets/
