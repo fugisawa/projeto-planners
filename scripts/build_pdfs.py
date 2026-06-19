@@ -10,7 +10,7 @@ import sys
 
 import markdown as md
 
-SKILL = "/home/daniel/.claude/skills/briefing-designer"
+SKILL = os.path.expanduser("~/.claude/skills/briefing-designer")  # skill do autor — não vem no repo; só p/ regenerar PDFs
 sys.path.insert(0, os.path.join(SKILL, "scripts"))
 import make_charts as mc
 import matplotlib as mpl
@@ -19,7 +19,7 @@ import matplotlib as mpl
 # que comia os espaços e sobrepunha o texto dos eixos.
 mpl.rcParams["text.parse_math"] = False
 
-HERE = "/home/daniel/planners/deliverables"
+HERE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "deliverables")
 ASSETS = os.path.join(HERE, "assets")
 os.makedirs(ASSETS, exist_ok=True)
 CSS = os.path.join(SKILL, "templates", "design_system.css")

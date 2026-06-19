@@ -7,7 +7,7 @@
 > necessário **ME/Sociedade Limitada** ou **SLU + acordo**), ao contrato social e à legislação
 > vigente. Campos `[entre colchetes]` são decisões a tomar.
 
-**Partes:** **[Sócio 1 — Daniel, qualificação completa]** e **[Sócio 2 — irmã, qualificação completa]**.
+**Partes:** **[Sócio 1 — Daniel, qualificação completa]** e **[Sócio 2 — Mayara, qualificação completa]**.
 **Objeto:** regular a relação entre os sócios na exploração do **Projeto Planners** (linha de
 planners/cadernos-método premium, D2C). **Data:** [__/__/____].
 
@@ -34,7 +34,7 @@ mútuo entre sócios / postergação]** `[a definir]`.
 ## Cláusula 4 — Funções, dedicação e papéis
 4.1. Divisão de papéis (detalhe na matriz **RACI** do plano de gestão):
 - **Sócio 1 (Daniel):** estratégia, finanças, pesquisa, fornecedor, operação.
-- **Sócio 2 (irmã):** redes sociais, conteúdo e marca (motor de aquisição).
+- **Sócio 2 (Mayara):** redes sociais, conteúdo e marca (motor de aquisição).
 4.2. Dedicação esperada: **[horas/semana ou "esforços razoáveis"]** `[a definir]`. Decisões e
 prestação de contas seguem a periodicidade do plano de gestão (semanal/mensal/trimestral).
 
@@ -110,7 +110,7 @@ co-gestão indesejada). *(Recomenda-se alinhar com o planejamento sucessório.)*
 - [ ] Tipo societário (Ltda/SLU) — confirmar com contador/advogado (MEI não admite sócio).
 
 _____________________________          _____________________________
-**[Sócio 1 — Daniel]**                  **[Sócio 2 — irmã]**
+**[Sócio 1 — Daniel]**                  **[Sócio 2 — Mayara]**
 
 *Minuta-modelo para discussão. Não constitui parecer jurídico. Revisar com advogado(a) e contador(a)
 antes de constituir a sociedade e assinar.*

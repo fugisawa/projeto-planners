@@ -6,6 +6,8 @@ aba de Sensibilidade nova, dois SKUs em paralelo, dupla linha de resultado
 (antes/depois de pró-labore). Fontes datadas em research/evidence/.
 """
 
+import os
+
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
@@ -1174,7 +1176,7 @@ c(
 wb["Premissas"].freeze_panes = "A2"
 wb["Projeção 12M"].freeze_panes = "B3"
 
-out = "/home/daniel/planners/models/viabilidade-planners-v2.xlsx"
+out = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "models", "viabilidade-planners-v2.xlsx")
 wb.save(out)
 print("OK salvo:", out)
 

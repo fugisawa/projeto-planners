@@ -52,7 +52,7 @@ Porter mostra **barreira de entrada baixa** (qualquer um imprime um planner) —
 
 | Forças | Fraquezas |
 |---|---|
-| Fundadores = ICP (credibilidade + conteúdo) · **redes sociais/conteúdo viral comprovado (irmã)** · **finanças/estratégia (Daniel, economista)** · design in-house · conteúdo já rascunhado · perpétuo + método · recorrência (LTV alto) | Audiência ainda a construir **nos nichos** · tráfego pago e ops em escala não são o forte · capital pequeno · dependência de 2 pessoas |
+| Fundadores = ICP (credibilidade + conteúdo) · **redes sociais/conteúdo viral comprovado (Mayara)** · **finanças/estratégia (Daniel, economista)** · design in-house · conteúdo já rascunhado · perpétuo + método · recorrência (LTV alto) | Audiência ainda a construir **nos nichos** · tráfego pago e ops em escala não são o forte · capital pequeno · dependência de 2 pessoas |
 | **Oportunidades** | **Ameaças** |
 | Whitespace no Treino · ciclo de concursos 2027 · tendência "registro analógico" · LTV permite escalar aquisição · catálogo expansível | Baixa barreira de entrada (cópias) · substitutos digitais grátis · reação do Juspodivm · risco de plataforma (algoritmo/ban) · execução com time enxuto |
 

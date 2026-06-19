@@ -126,7 +126,7 @@ projeto-planners/
 │   └── painel-kpis.xlsx               (rastreador mensal de metas)
 ├── research/                     pesquisa de mercado (evidence/) + laudos (validation/)
 ├── docs/                         metodologia, premissas e claude-setup.md (config da IA)
-├── sources/                      rascunhos originais (o "antes", preservado)
+├── sources/                      rascunhos originais (o "antes" — preservado, não editar)
 ├── scripts/                      ferramentas que geram o modelo e os PDFs (uso do autor)
 └── .claude/                      config da IA: agents/ (agentes) + settings.json
 ```

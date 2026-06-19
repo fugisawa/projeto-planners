@@ -44,7 +44,7 @@ sócios (uso interno e honesto — não é pitch para investidor).
 `sources/` (rascunhos, **imutáveis**) → `research/` (evidência datada) → `models/` (.xlsx) +
 `deliverables/` (docs) → **business-validator** (checagem cruzada antes de "pronto").
 
-- `deliverables/` — 10 documentos (`.md` = fonte, `.pdf` = saída). Índice no `README.md`;
+- `deliverables/` — 10 documentos (`.md` → `.pdf`; o `guia-do-negocio` usa `.html` como fonte). Índice no `README.md`;
   `guia-do-negocio` = versão em linguagem leiga.
 - `models/` — `viabilidade-planners-v2.xlsx` (10 abas) + `painel-kpis.xlsx`.
 - `research/evidence/` (pesquisa datada) + `research/validation/` (laudos).

@@ -1,5 +1,7 @@
 """Gera o painel de KPIs operacional (rastreador mensal) do PROJETO PLANNERS."""
 
+import os
+
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
@@ -102,6 +104,6 @@ note.font = Font(italic=True, size=9, color="808080")
 note.alignment = Alignment(wrap_text=True, vertical="top")
 ws.merge_cells(start_row=r + 1, start_column=1, end_row=r + 3, end_column=15)
 
-out = "/home/daniel/planners/models/painel-kpis.xlsx"
+out = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "models", "painel-kpis.xlsx")
 wb.save(out)
 print("OK salvo:", out)

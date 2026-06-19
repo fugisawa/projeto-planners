@@ -1,7 +1,7 @@
 # Business Plan — Projeto Planners
 ### Linha de planners perpétuos premium · Concurseiro & Treino de Força · Brasil (D2C)
 
-**Sócios:** dois irmãos (titular + irmã), que **são o público-alvo** dos dois produtos.
+**Sócios:** dois irmãos (Daniel + Mayara), que **são o público-alvo** dos dois produtos.
 **Investimento inicial:** R$ 5.000 (é o teste; reinveste 100% por 4 meses; há aporte conforme tração).
 **Praça:** Brasil, operação a partir de Brasília/DF · **Data:** 19/jun/2026 · **Câmbio de planejamento:** USD/BRL ≈ R$ 5,20.
 **Modelo financeiro:** `models/viabilidade-planners-v2.xlsx` (premissas editáveis; tudo recalcula).

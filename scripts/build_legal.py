@@ -1,9 +1,10 @@
 """Renderiza os documentos jurídicos (acordo, INPI, LGPD) com estilo formal neutro
 (diferente do briefing analítico). Gera os .html prontos para render.py."""
 
+import os
 import markdown as md
 
-HERE = "/home/daniel/planners/deliverables"
+HERE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "deliverables")
 DOCS = ["acordo-de-socios-minuta", "ip-marca-inpi", "lgpd-privacidade-termos"]
 
 CSS = """

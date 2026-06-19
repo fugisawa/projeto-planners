@@ -78,13 +78,13 @@ Prob/Impacto: A=alto, M=médio, B=baixo. Revisar a cada gate.
 
 | # | Risco | Prob | Imp | Dono | Mitigação | Gatilho/indicador |
 |---|---|:--:|:--:|---|---|---|
-| R1 | **Aquisição/audiência nos nichos** | M | A | S2 | **Conteúdo orgânico — forte da irmã (viralização comprovada)**; lista própria; retargeting só quente; afiliados | Lista < 100 em 60 d **ou** CAC > R$ 60 |
+| R1 | **Aquisição/audiência nos nichos** | M | A | S2 | **Conteúdo orgânico — forte da Mayara (viralização comprovada)**; lista própria; retargeting só quente; afiliados | Lista < 100 em 60 d **ou** CAC > R$ 60 |
 | R2 | **Custo da gráfica > previsto** | M | A | S2 | 3 orçamentos antes do lote; recuar p/ Tier B; ajustar preço | Cotação > R$ 60/un no micro-lote |
 | R3 | Sell-through baixo → encalhe | M | A | S1 | Pré-venda; micro-lote; perpétuo não vence | Sell-through < 60% |
 | R4 | Dependência de plataforma (algoritmo/ban) | M | A | S1 | Multi-canal (IG+TikTok) + **lista de e-mail própria** | Queda > 40% de alcance |
 | R5 | Recompra abaixo do esperado | M | A | S1 | Lembrete de fim de ciclo; combos/assinatura; comunidade | Recompra < 20% no Q4 |
 | R6 | Execução (time de 2 pessoas) | M | M | S1/S2 | Calendário enxuto/reaproveitável; terceirizar com caixa | Atraso > 1 gate |
-| R7 | Teto MEI / tributário | M | M | S2 | Contador; migrar a ME/Simples | Receita acum. ≈ R$ 68 mil |
+| R7 | Teto MEI / tributário | M | M | S1 | Contador; migrar a ME/Simples | Receita acum. ≈ R$ 68 mil |
 | R8 | Câmbio/qualidade na escala (China) | M | M | S2 | Só com Gate C; despachante; inspeção; sem empréstimo | — (só Fase 2) |
 | R9 | Concorrência reage (Juspodivm/cópias) | B-M | M | S1 | Moat: método + marca + recompra; Treino é whitespace | Entrante premium no nicho |
 
