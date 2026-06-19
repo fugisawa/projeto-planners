@@ -9,6 +9,43 @@ são ativações na conta + alguns hábitos de uso.
 
 ---
 
+## 🔧 Instalar as dependências — o seu Claude baixa tudo (no SEU computador)
+
+> Para a **Mayara**: você **não precisa saber programar nem instalar nada à mão** — o seu próprio
+> Claude faz. Tudo é instalado **só no seu computador** (não afeta a máquina do Daniel).
+
+Depois de instalar o Claude Code e abrir o projeto com `claude`, **cole este pedido**:
+
+```
+Quero rodar este projeto no meu computador e não sei programar. Detecte meu sistema operacional e
+instale o que for necessário para os scripts funcionarem:
+1) o "uv" (gerenciador que cuida do Python e das bibliotecas automaticamente);
+2) o Node.js (para os MCPs do .mcp.json).
+Rode os instaladores certos para o meu sistema, peça minha permissão antes de cada comando, e no
+fim confirme com "uv --version" e "node --version".
+```
+
+O Claude roda os instaladores certos e **pede sua confirmação antes de cada passo** — é só aprovar.
+
+**O que ele instala (e por quê):**
+- **`uv`** — a peça principal. Os scripts rodam com `uv run --with <biblioteca>`, e o uv **baixa o
+  Python e cada biblioteca (openpyxl, matplotlib, weasyprint…) sozinho, na hora**. Você nunca
+  instala pacote à mão.
+- **Node.js** *(opcional)* — só para os 2 MCPs do projeto (`sequential-thinking`, `memory`). Sem
+  ele, todo o resto funciona normalmente.
+
+**Comando manual do `uv`** (caso prefira, ou se o Claude pedir):
+- **Windows (PowerShell):** `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`
+- **Mac:** `curl -LsSf https://astral.sh/uv/install.sh | sh`
+- **Node.js:** instalador **LTS** em `nodejs.org` (Next, Next… padrão).
+
+> **Só para LER os documentos, nada disso é necessário** — abra os PDFs em `deliverables/`. O
+> `uv`/Node só importam se você quiser que o Claude **gere ou atualize** planilhas/documentos.
+> *(Regenerar os PDFs do zero usa a skill personalizada `briefing-designer`, do Daniel, que o seu
+> Claude não baixa sozinho — peça a ele se precisar. Ler os PDFs prontos não exige isso.)*
+
+---
+
 ## 1. O que JÁ vem no repositório (funciona ao abrir o projeto)
 
 Ao rodar `claude` dentro da pasta do projeto, isto já está ativo automaticamente:

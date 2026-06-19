@@ -67,6 +67,16 @@ Para conferir se deu certo, digite `claude --version` (deve aparecer um número 
 O Claude lê os arquivos da pasta sozinho e **sempre pede sua confirmação antes de mudar qualquer coisa**.
 Para sair: `/exit`.
 
+### Passo 4 — Deixe o Claude instalar as dependências (só na 1ª vez)
+
+Você **não precisa instalar Python nem nada à mão**. Na primeira vez, peça ao seu Claude:
+
+> *"Instale tudo o que este projeto precisa para rodar no meu computador — não sei programar."*
+
+Ele detecta o seu sistema e instala o **`uv`** (que cuida de Python e das bibliotecas sozinho) e o
+**Node.js**, pedindo sua permissão antes de cada passo. Detalhes em **`docs/claude-setup.md`**.
+*(Só para **ler** os PDFs em `deliverables/`, nada disso é preciso.)*
+
 > 💡 **Para o Claude render bem (como o do Daniel):** veja **`docs/claude-setup.md`** — explica os
 > agentes e configurações que já vêm no projeto, quais skills/MCPs ativar, e os hábitos de uso que
 > fazem diferença (effort, `ultrathink`, delegar a agentes, `/compact`).
