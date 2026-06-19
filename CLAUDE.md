@@ -1,119 +1,88 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guia para o Claude Code (claude.ai/code) neste repositório. **Não é um codebase** — é o **dossiê de
+negócio do PROJETO PLANNERS**. Idioma de trabalho: **pt-BR**.
 
-## O que é este repositório
+<!-- Manutenção (humanos): manter < 200 linhas. Atualizar os "Fatos-âncora" sempre que um número
+canônico mudar — eles são a fonte única da verdade citada por todos os documentos. Skills/MCPs e
+dicas de uso ficam em docs/claude-setup.md (não duplicar aqui). -->
 
-**Não é um codebase de software.** É o dossiê de uma micro-venture D2C: o **PROJETO PLANNERS**
-— uma linha de dois planners perpétuos premium (sem datas) para nichos brasileiros de alto
-engajamento:
+## O que é
+Micro-venture D2C de **dois planners perpétuos premium** (sem datas):
+- **Concurseiro** — *sistema de estudo* (grade de ciclo, revisão espaçada, tracker), não "agenda".
+- **Treino de Força** — *diário de periodização* (mesociclo, carga, RPE/RIR, PRs), não "caderno".
 
-1. **Concurseiro** — posicionado como *sistema de estudo* (grade de ciclo, revisão espaçada,
-   tracker de simulados), não "agenda".
-2. **Treino de Força** — posicionado como *diário de periodização* (mesociclo, carga, RPE/RIR,
-   PRs, tonelagem), não "caderno".
+Operação enxuta a partir de Brasília/DF. O dossiê está **completo**; o trabalho agora é
+**mantê-lo consistente, atualizado e executável** (não "refatorar do zero"). Audiência: os dois
+sócios (uso interno e honesto — não é pitch para investidor).
 
-Operação enxuta a partir de **Brasília/DF**, investimento inicial **~R$ 5.000**. **Fase 1** =
-produção nacional (gráfica, micro-lote); **Fase 2** = escala via importação da China.
-Idioma de trabalho: **português (pt-BR)**.
+## Sócios (definem os papéis)
+- **Daniel** — economista/oficial de inteligência → estratégia, finanças, pesquisa, sourcing, ops.
+- **Mayara** — criadora de conteúdo viral (milhões de views no TikTok) → redes sociais, conteúdo e
+  marca = **motor de aquisição** (de-risca o maior risco do plano: distribuição do zero).
 
-O objetivo corrente do repositório é **refatorar três rascunhos em artefatos profissionais,
-respaldados em pesquisa de mercado robusta e análise financeira defensável.**
-
-## Arquitetura do dossiê (o fluxo que importa)
-
-O valor flui em uma direção. Entender isto evita inconsistência entre documentos:
-
-```
-sources/  (rascunhos originais, IMUTÁVEIS)
-   │  insumo de partida — nunca editar; são o "antes"
-   ▼
-research/  (base de evidências: pesquisa de mercado datada e citável)
-   │  alimenta números e afirmações
-   ▼
-models/        deliverables/
-(modelo .xlsx)  (artefatos refatorados: business plan, sourcing, etc.)
-   └──────┬──────┘
-          ▼
-   business-validator  (checagem adversarial cruzada antes de "pronto")
-```
-
-Os **três artefatos precisam ser internamente consistentes**. Números compartilhados (preço,
-custo/un, câmbio, margem, MOQ, alíquotas, sell-through) têm **uma única fonte da verdade** — o
-modelo financeiro em `models/` puxa premissas de `research/`, e os documentos em `deliverables/`
-citam os mesmos valores. Ao mudar um número-chave, propague para os três.
-
-### Layout
-- `sources/` — os 3 rascunhos originais (2 `.md` + `viabilidade-planners.xlsx`). **Read-only.**
-- `research/evidence/` — notas de evidência por tema (mercado, concorrência, tributos, sourcing).
-- `research/` — laudos de validação (`validation-<data>.md`).
-- `models/` — modelo(s) financeiro(s) reconstruído(s) (`.xlsx`).
-- `deliverables/` — artefatos profissionais finais (business plan, relatório de sourcing, PDFs).
-- `docs/` — metodologia e notas de trabalho.
-- `.claude/agents/` — subagentes específicos do projeto.
-
-## Fatos-âncora (fonte da verdade — mantenha sincronizados nos 3 artefatos)
-
-| Parâmetro | Valor de planejamento | Observação |
+## Fatos-âncora — FONTE ÚNICA DA VERDADE (sincronizar em todos os documentos)
+| Parâmetro | Valor | Nota |
 |---|---|---|
-| Câmbio USD/BRL | **≈ R$ 5,20** | datar ao reconfirmar (≈ R$ 5,18 em 17/jun/2026) |
-| Investimento inicial | **R$ 5.000** | — |
-| Preço de lançamento | **Concurseiro R$ 119 · Treino R$ 109** | premium ~15% acima do Juspodivm (~R$ 103) |
-| Custo/un (Fase 1, BR) | **~R$ 45** (Tier B) | faixa de mercado, a confirmar por 3 orçamentos |
-| Mix de canal (Fase 1) | **90% direto / 10% marketplace** | marketplace destrói margem neste preço |
-| Margem contrib. direta | **~R$ 62/un (52%)** | vs ~R$ 7,60 no marketplace |
-| Classificação fiscal | **NCM 4820.10.00 — tributado** | planner ≠ livro; **sem** imunidade do art. 150 CF |
-| Fases | **Fase 1 BR / Fase 2 China** | China só com SKU validado, ≥1.000 un, CNPJ + Radar |
+| Câmbio USD/BRL | ≈ **R$ 5,20** | planejamento (spot ≈ R$ 5,18 em 17/jun/2026) |
+| Investimento inicial | **R$ 5.000** | é o teste; **100% autofinanciado** depois |
+| Preço de lançamento | Concurseiro **R$ 119** · Treino **R$ 109** | regime depois: R$ 129–139 / 119–129 |
+| Custo/un | micro-lote **R$ 55** → reposição **R$ 45** | Tier B; cai com volume |
+| MC/un (preço médio R$ 114) | direto **R$ 57,59 (50%)** · blended **R$ 54,48** | marketplace destrói (Shopee R$ 6,48) |
+| Recorrência | recompra **3–4×/ano** (Conc) / ~2,5 (Treino) | **LTV margem ~R$ 374–397**; LTV/CAC ~7–8× |
+| Mercado recorrente | **~2,3 M un/ano (~R$ 267 M)** | SAM ~R$ 55 M (Conc) / ~R$ 25 M (Treino) |
+| Mix de canal (Fase 1) | **90% direto / 10% marketplace** | vender direto; marketplace só p/ descoberta |
+| Pró-labore (**Estratégia B**) | ano 1 = **0** → ano 2 **R$ 500→2.000/sócio** → ano 3 ~R$ 3.000 | reinveste 100% no ano 1 |
+| Escala / China | só ao cruzar **gatilho ~R$ 135 mil** + volume ≥ ~5.000 un | **sem pré-venda, sem empréstimo** |
+| Sourcing | **NCM 4820.10.00** (tributado, sem imunidade de livro) · **AFRMM 8%** · landed 2,0–2,7× FOB · crossover China **~3.000–5.000 un** | Fase 1 gráfica BR; Fase 2 China |
+| EVEF (5 anos, taxa 12–15%) | VPL **R$ 365–407 mil** · TIR ~406% · payback < 1 ano | anos 3–5 ilustrativos |
 
-## Comandos
+> Ao mudar um número-chave, **propague para todos os documentos** e rode o `business-validator`.
+> Premissas detalhadas: `docs/premissas-do-negocio.md`.
 
-Inspecionar ou reconstruir o modelo financeiro (`.xlsx`) — não há `openpyxl` global; use **uv**:
+## Estrutura & fluxo (o valor flui numa direção)
+`sources/` (rascunhos, **imutáveis**) → `research/` (evidência datada) → `models/` (.xlsx) +
+`deliverables/` (docs) → **business-validator** (checagem cruzada antes de "pronto").
+
+- `deliverables/` — 10 documentos (`.md` = fonte, `.pdf` = saída). Índice no `README.md`;
+  `guia-do-negocio` = versão em linguagem leiga.
+- `models/` — `viabilidade-planners-v2.xlsx` (10 abas) + `painel-kpis.xlsx`.
+- `research/evidence/` (pesquisa datada) + `research/validation/` (laudos).
+- `docs/` — metodologia, premissas e **`claude-setup.md`** (config da IA + skills/MCPs).
+- `sources/` — 3 rascunhos originais (o "antes", **read-only**).
+- `scripts/` — geradores (`build_model.py`, `build_painel.py`, `build_pdfs.py`, `build_legal.py`).
+- `.claude/agents/` (agentes) · `.mcp.json` (MCP servers do projeto).
+
+## Comandos (regenerar — requer `uv`; não há openpyxl/markdown global)
 ```bash
-# Ler/auditar a planilha (dump de fórmulas e valores)
-uv run --with openpyxl python - <<'PY'
-import openpyxl
-wb = openpyxl.load_workbook("sources/viabilidade-planners.xlsx", data_only=False)
-for ws in wb.worksheets:
-    print("==", ws.title, "==")
-    for row in ws.iter_rows():
-        for c in row:
-            if c.value is not None: print(c.coordinate, repr(c.value))
-PY
+uv run --with openpyxl python scripts/build_model.py     # modelo .xlsx (10 abas)
+uv run --with openpyxl python scripts/build_painel.py    # painel de KPIs
+uv run --with markdown --with matplotlib --with numpy python scripts/build_pdfs.py  # HTML dos docs (briefing)
+uv run --with markdown python scripts/build_legal.py     # HTML dos docs jurídicos
+# PDF a partir do HTML:
+uv run --with weasyprint --with pypdf python ~/.claude/skills/briefing-designer/templates/render.py <in.html> <out.pdf>
 ```
-Reconstruções e cálculos de landed cost também rodam via `uv run --with openpyxl python ...`.
-Histórico versionado com git (repo inicializado; commit/push só quando o usuário pedir).
+Conferir fórmulas do modelo: `uv run --with openpyxl --with formulas python ...` (recalcular e comparar com o texto).
+Git: **commit/push só quando o usuário pedir.**
 
-## Subagentes do projeto (`.claude/agents/`)
-
+## Agentes do projeto (`.claude/agents/`)
 | Agente | Quando acionar |
 |---|---|
-| **market-researcher** | dimensionar mercado (TAM/SAM/SOM), concorrência, preços, demanda, taxas |
-| **sourcing-analyst** | gráfica BR × China, NCM, landed cost, regimes de importação, RFQ, QA |
-| **financial-modeler** | unit economics, break-even, cenários, sensibilidade, rebuild do `.xlsx` |
-| **pricing-strategist** | preço, posicionamento (April Dunford), oferta/SKU, economia de canal |
-| **business-validator** | **sempre antes de dar algo como pronto** — checagem adversarial e cruzada |
+| `market-researcher` | mercado (TAM/SAM/SOM), concorrência, demanda, taxas |
+| `pricing-strategist` | preço, posicionamento (Dunford), oferta/SKU |
+| `sourcing-analyst` | gráfica BR × China, NCM, landed cost, RFQ, QA |
+| `financial-modeler` | unit economics, viabilidade, sensibilidade, rebuild do `.xlsx` |
+| `business-validator` | **antes de dar algo por pronto** — checagem adversarial cruzada |
 
-Subagentes rodam em Sonnet por padrão (config global); `financial-modeler` e
-`business-validator` herdam o modelo principal (`model: inherit`) por exigirem precisão.
-
-## Skills correspondentes (globais — acionar por tarefa)
-
-- **deep-research** — motor de pesquisa de mercado (Exa + Tavily). Base de `research/`.
-- **data-analyst** — EDA, tabelas e quadros comparativos, dataviz com storytelling.
-- **senior-data-scientist** — modelagem de cenários, sensibilidade, projeções.
-- **briefing-designer** — gerar o business plan / relatório de sourcing como **PDF profissional**.
-- **xlsx** — criar/editar o modelo de viabilidade quando o deliverable for a própria planilha.
-- **pptx** / **docx** — formatos alternativos de entrega (pitch deck, documento Word).
+Subagentes rodam em Sonnet (config); `financial-modeler` e `business-validator` em Opus
+(`model: inherit`). Skills, MCPs e dicas de desempenho: `docs/claude-setup.md`.
 
 ## Convenções (inegociáveis)
-
-- **Toda afirmação numérica leva fonte + data.** Triangular ≥2 fontes para números centrais.
-  Marcar confiança: `[confirmado]` · `[estimativa triangulada]` · `[a confirmar]`. Nunca usar
-  número "ILUSTRATIVO" como se fosse fechado.
-- **`sources/` é imutável** — é o "antes" do refactor. O "depois" vai para `deliverables/`.
-- **Datas relativas → absolutas.** Registrar o câmbio e a data de toda cotação de preço/tributo.
-- **Tributos e tarifas mudam** — recomendar conferência no Siscomex Classif / Receita /
-  despachante / contador; não afirmar alíquota sem data e fonte.
-- **Imutabilidade de dados** ao manipular o modelo: gerar nova versão do `.xlsx`, não sobrescrever
-  silenciosamente o original em `sources/`.
-- Validar com **business-validator** antes de marcar qualquer artefato como concluído.
+- **Todo número leva fonte + data**; triangular ≥2 fontes para números centrais. Confiança:
+  `[confirmado]` · `[estimativa triangulada]` · `[a confirmar]`. Nunca usar "ILUSTRATIVO" como fechado.
+- **`sources/` é imutável** (o "antes"); o "depois" vai para `deliverables/`.
+- **Datas relativas → absolutas**; registrar câmbio/data de toda cotação. Tributos/tarifas mudam →
+  recomendar conferência (Siscomex/Receita/despachante/contador); não afirmar alíquota sem fonte+data.
+- **Tabela em markdown precisa de linha em branco ANTES** dela (senão não vira tabela no PDF).
+- **Aspas de ênfase** nos `.md` viram itálico no PDF; não afetam a renderização da tabela.
+- Validar com **business-validator** antes de concluir qualquer artefato.
