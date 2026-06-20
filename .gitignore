@@ -41,3 +41,6 @@ design/concurseiro/planner-v1/mockups/*debug*
 # Typst — intermediários de build (regeneráveis via render.py/finalize.py)
 design/concurseiro/planner-v1/typst/*.pdf
 !design/concurseiro/planner-v1/typst/planner-proto-pdfx1a.pdf
+
+# Typst — arquivos de teste/scratch dos agentes
+design/concurseiro/planner-v1/typst/test_*.typ
