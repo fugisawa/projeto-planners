@@ -34,3 +34,6 @@ design/concurseiro/referencias/_originais/
 # Imagens baixadas de concorrentes — reproduzíveis via *_manifest.json; não versionar (peso ~160MB)
 design/concurseiro/pesquisa/capturas/
 design/concurseiro/caderno-de-erros/referencias/
+
+# Artefatos de debug/scratch dos mockups
+design/concurseiro/planner-v1/mockups/*debug*
