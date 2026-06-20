@@ -66,17 +66,21 @@ uv run --with weasyprint --with pypdf python ~/.claude/skills/briefing-designer/
 Conferir fórmulas do modelo: `uv run --with openpyxl --with formulas python ...` (recalcular e comparar com o texto).
 Git: **commit/push só quando o usuário pedir.**
 
-## Agentes do projeto (`.claude/agents/`)
+## Agentes & skills do projeto (`.claude/`)
 | Agente | Quando acionar |
 |---|---|
 | `market-researcher` | mercado (TAM/SAM/SOM), concorrência, demanda, taxas |
 | `pricing-strategist` | preço, posicionamento (Dunford), oferta/SKU |
 | `sourcing-analyst` | gráfica BR × China, NCM, landed cost, RFQ, QA |
 | `financial-modeler` | unit economics, viabilidade, sensibilidade, rebuild do `.xlsx` |
-| `business-validator` | **antes de dar algo por pronto** — checagem adversarial cruzada |
+| `business-validator` | **antes de dar algo por pronto** — checagem adversarial cruzada (read-only) |
+| `doc-updater` | propagar número-âncora por deliverables/CLAUDE.md (após validar; diff p/ revisão) |
+| `conteudo-mayara` | conteúdo/lançamento (roteiros TikTok/Reels, copy, calendário) — motor de aquisição |
+
+**Skills** (`.claude/skills/`): `planner-designer` (decide design) + `typst-planner` (executa o build print-ready) — par decide→executa do módulo de design.
 
 Subagentes rodam em Sonnet (config); `financial-modeler` e `business-validator` em Opus
-(`model: inherit`). Skills, MCPs e dicas de desempenho: `docs/claude-setup.md`.
+(`model: inherit`). **Orquestração** (mapa de capacidades + workflows P→S→B · VAP · PSF · design): `docs/orquestracao.md`. Skills, MCPs e desempenho: `docs/claude-setup.md`.
 
 ## Direção de produto (design) — Concurseiro `[validado · Mayara · 19/jun/2026]`
 Trabalho em `design/concurseiro/`. Refina o "sistema de estudo": é um **hub analógico** (foco sem
