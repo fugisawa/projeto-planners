@@ -1,0 +1,139 @@
+#import "estilos.typ": *
+#show: planner-page
+#set par(spacing: 0pt) // controle total dos gaps via v()
+
+// ─── Helpers locais ──────────────────────────────────────────────────────────
+
+// Cabeçalho de coluna da grade (caixa-alta, 6pt, ink-2)
+#let col-hd(s) = align(center + horizon,
+  text(font: sans, size: 6pt, fill: ink-2, tracking: 0.06em, weight: 700)[#upper(s)])
+
+// Rótulo inline + linha pontilhada (para linha de totais e semana)
+#let ifield(lbl-txt, w: 22mm, unit: none) = box(baseline: 0pt)[
+  #text(font: sans, size: fs.label, fill: ink-2)[#lbl-txt ]
+  #box(width: w, dot())
+  #if unit != none { text(font: sans, size: fs.label, fill: ink-2)[ #unit] }
+]
+
+// Traços de borda para células da grade (bottom apenas, ou bottom+left)
+#let bs  = (bottom: (paint: hair, thickness: wt.hair))
+#let bls = (bottom: (paint: hair, thickness: wt.hair), left: (paint: hair, thickness: wt.hair))
+
+// ─── MASTHEAD ─────────────────────────────────────────────────────────────────
+#masthead("Semanal", kicker: "Ciclo de matérias")
+
+// Linha: Semana ___ a ___ · D-prova ___ · Prova ___
+#grid(columns: (auto, 14mm, auto, 14mm, auto, 10mm, auto, 1fr),
+  column-gutter: 1.6mm, align: bottom,
+  text(font: sans, size: fs.label, fill: ink-2)[Semana], dot(w: 14mm),
+  text(font: sans, size: fs.label, fill: ink-2)[ a ], dot(w: 14mm),
+  text(font: sans, size: fs.label, fill: ink-2)[· D-prova], dot(w: 10mm),
+  text(font: sans, size: fs.label, fill: ink-2)[· Prova], dot(w: 1fr),
+)
+#v(3mm)
+
+// ─── SEÇÃO: METAS DA SEMANA ───────────────────────────────────────────────────
+#sechead("Metas da semana", hint: "rotação & volume")
+
+// Cabeçalho das colunas: chip | MATÉRIA | QUEST. | PÁGS/AULAS | HRS-ALVO | FEITO?
+// Larguras: (5mm, 1fr, 13mm, 17mm, 15mm, 9mm) — chip à esquerda conforme spec
+#let col-m = (5mm, 1fr, 13mm, 17mm, 15mm, 9mm)
+#let rh = 7mm // altura de linha — espaço generoso para escrever à mão
+
+#grid(columns: col-m, column-gutter: 0pt, align: bottom,
+  [],
+  align(left + horizon,
+    text(font: sans, size: 6pt, fill: ink-2, tracking: 0.06em, weight: 700)[#upper("Matéria")]),
+  col-hd("Quest."),
+  col-hd("Págs/Aulas"),
+  col-hd("Hrs-alvo"),
+  col-hd("Feito?"),
+)
+#line(length: 100%, stroke: (paint: hair, thickness: wt.hair))
+
+// 8 linhas de matéria com colorsq à esquerda
+#for _ in range(8) {
+  grid(columns: col-m, column-gutter: 0pt,
+    // Chip de cor (quadrado 4×4mm) — dicionário de color-coding
+    rect(width: 100%, height: rh, stroke: bs)[
+      #align(center + horizon)[#colorsq]
+    ],
+    // Matéria
+    rect(width: 100%, height: rh, stroke: bs)[],
+    // Quest.
+    rect(width: 100%, height: rh, stroke: bls)[],
+    // Págs/Aulas
+    rect(width: 100%, height: rh, stroke: bls)[],
+    // Hrs-alvo
+    rect(width: 100%, height: rh, stroke: bls)[],
+    // Feito? (checkbox centralizado)
+    rect(width: 100%, height: rh, stroke: bls)[
+      #align(center + horizon)[#checkbox]
+    ],
+  )
+}
+#line(length: 100%, stroke: (paint: hair, thickness: wt.rule))
+#v(1.5mm)
+
+// Linha de totais
+#grid(columns: (auto, auto, auto, 1fr, auto),
+  column-gutter: 3.5mm, align: bottom,
+  ifield("Previsto", w: 11mm, unit: "h"),
+  ifield("Real", w: 11mm, unit: "h"),
+  ifield("Questões", w: 12mm),
+  [],
+  ifield("% Acerto", w: 11mm, unit: "%"),
+)
+#v(3mm)
+
+// ─── SEÇÃO: ROTAÇÃO DA SEMANA ─────────────────────────────────────────────────
+#sechead("Rotação da semana")
+
+// Grade 4 slots (M1–M4) × 7 dias
+#let col-r = (9mm, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr)
+#let dias  = ("Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom")
+#let rh-r  = 7mm // células confortáveis para anotar
+
+#grid(columns: col-r, column-gutter: 0pt, align: bottom,
+  align(left + horizon,
+    text(font: sans, size: 6pt, fill: ink-2, tracking: 0.06em, weight: 700)[#upper("Slot")]),
+  ..dias.map(d => align(center + horizon,
+    text(font: sans, size: 6pt, fill: ink-2, tracking: 0.06em, weight: 700)[#upper(d)]))
+)
+#line(length: 100%, stroke: (paint: hair, thickness: wt.hair))
+
+#for slot in ("M1", "M2", "M3", "M4") {
+  grid(columns: col-r, column-gutter: 0pt,
+    rect(width: 100%, height: rh-r, stroke: bs)[
+      #align(left + horizon)[
+        #pad(left: 1.5mm,
+          text(font: sans, size: fs.label, fill: accent, weight: 700)[#slot])
+      ]
+    ],
+    ..range(7).map(_ => rect(width: 100%, height: rh-r, stroke: bls)[])
+  )
+}
+#line(length: 100%, stroke: (paint: hair, thickness: wt.hair))
+#v(3mm)
+
+// ─── SEÇÃO: AJUSTE & REFLEXÃO SEMANAL ────────────────────────────────────────
+#softband[
+  #grid(columns: (1fr, auto), align: (left + horizon, right + horizon),
+    seclbl("Ajuste & reflexão semanal"),
+    text(font: sans, size: fs.micro, fill: ink-3, style: "italic")[o que funcionou · o que ajustar])
+  #v(2.5mm)
+  #dot() #v(7mm)
+  #dot() #v(7mm)
+  #dot() #v(7mm)
+  #dot()
+]
+#v(3mm)
+
+// ─── CAMPO: → MIGRAR PARA PRÓXIMA SEMANA ─────────────────────────────────────
+#line(length: 100%, stroke: (paint: hair, thickness: 0.3pt))
+#v(1.5mm)
+#text(font: sans, size: 6.5pt, fill: ink-3, tracking: 1pt)[→ MIGRAR]
+#v(2mm)
+#dot() #v(7mm)
+#dot() #v(7mm)
+#dot()
