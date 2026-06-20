@@ -1,6 +1,6 @@
 # Wireframes — Planner de Estudo v1
 
-**v1 · 19/jun/2026 · pré-validação**
+**v1 · 19/jun/2026 · validado no conceito (Mayara)**
 Módulo-âncora do sistema Concurseiro. Persona: Rafael, dedicação exclusiva (6–10 h/dia).
 Físico: A5 (148×210 mm) · dot grid · perpétuo · lay-flat · anti-culpa/flexível.
 Tese: hub analógico harmônico (foco + síntese + reflexão) — dá liga ao digital sem replicá-lo.

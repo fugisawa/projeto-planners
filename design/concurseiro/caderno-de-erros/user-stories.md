@@ -1,7 +1,7 @@
 # Caderno de Erros — user stories (v1: Rafael, dedicação exclusiva)
 
 Extraído de [`../conceitos/personas-user-stories.md`](../conceitos/personas-user-stories.md)
-(provisório — **validar com a audiência da Mayara**).
+(validado com a Mayara · 19/jun/2026).
 
 ## Persona
 **Rafael** — concurseiro full-time (recorte de alta intensidade da P1): 6–10 h/dia; usa cursinho +

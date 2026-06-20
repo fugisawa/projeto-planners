@@ -1,7 +1,7 @@
 # Caderno de Erros — workspace do módulo
 
 Módulo de **diagnóstico do raciocínio errado** — baseado no **错题本** (China) + **오답노트** (Coreia),
-adaptado ao concurso brasileiro. **19/jun/2026.** Status: **definição/spec — pré-validação.**
+adaptado ao concurso brasileiro. **19/jun/2026.** Status: **definição/spec — validado no conceito (Mayara, 19/jun).**
 
 > **Papel no produto (realinhado 19/jun):** entra em **duas formas** — (1) **seção *lite*** dentro do
 > **Planner v1** (o módulo-âncora); (2) **caderno completo standalone** na **Fase 2** do ecossistema.

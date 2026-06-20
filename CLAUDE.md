@@ -78,7 +78,7 @@ Git: **commit/push só quando o usuário pedir.**
 Subagentes rodam em Sonnet (config); `financial-modeler` e `business-validator` em Opus
 (`model: inherit`). Skills, MCPs e dicas de desempenho: `docs/claude-setup.md`.
 
-## Direção de produto (design) — Concurseiro `[em desenvolvimento — pré-validação]`
+## Direção de produto (design) — Concurseiro `[validado · Mayara · 19/jun/2026]`
 Trabalho em `design/concurseiro/`. Refina o "sistema de estudo": é um **hub analógico** (foco sem
 celular + síntese + **diagnóstico de erro**) **harmônico** com o digital (Anki, QConcursos,
 cursinhos) — **sem replicá-lo** nem colidir com o que os portais já entregam (edital

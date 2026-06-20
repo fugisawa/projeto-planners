@@ -36,13 +36,13 @@ Este plano é o **sistema operacional** do Projeto Planners: define o que será 
 | **1 — Validação** | Meses 4–12 | Pré-venda → micro-lote (~54 un) → vender ~387 un direto; retargeting (mês 4+); medir CAC/sell-through; iniciar recompra. Pró-labore **zero** (Estratégia B) | **Gate B:** sell-through ≥ 75% **e** CAC ≤ R$ 45 → lote maior BR (300–500 un) + iniciar pró-labore no ano 2 (R$ 500→2.000/sócio) |
 | **2 — Escala autofinanciada** | ~2027+ | Lotes BR offset crescentes pagos pela receita; vento do ciclo de concursos; 3º SKU; marketplace de volume | **Gate C (capitalização):** importar da China só com caixa ≥ lote + colchão (~R$ 135 mil, 100% próprio) **e** volume ≥ ~5.000 un/ano |
 
-### Roadmap de produto — Concurseiro (design) `[em desenvolvimento — pré-validação]`
+### Roadmap de produto — Concurseiro (design) `[validado · Mayara · 19/jun/2026]`
 
 Eixo de **produto** (complementar ao cronograma de sourcing acima): lançamento **faseado** do sistema
 de estudo modular. **F1 — v1: o Planner de Estudo** (módulo-âncora, com diagnóstico de erro *lite*; cabe no teste
 de R$ 5k) → **F2 — ecossistema** (Caderno de Erros standalone, Síntese, Bússola + capa) → **F3 — foto→app**
 (recorrência/serviço). Detalhe e gates em `design/concurseiro/conceitos/roadmap-faseado.md`.
-*(PDF e `business-validator` pendentes para esta adição.)*
+*(PDF regenerado em 19/jun/2026; `business-validator` opcional para esta adição.)*
 
 ---
 

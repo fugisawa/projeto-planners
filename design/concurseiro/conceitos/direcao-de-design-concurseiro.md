@@ -109,6 +109,6 @@ justifica R$ 119 (acima do funcional, abaixo de um Hobonichi completo) e sustent
 
 ## 8) Próximos passos
 1. **Wireframes** das páginas-chave (diário, semanal-ciclo, revisão espaçada, questões, mapa do edital).
-2. **Validar com concurseiros** (entrevistas/enquete — usar a audiência da Mayara).
+2. ✅ **Validado com a Mayara** (19/jun/2026).
 3. **Sourcing + custo** (sourcing-analyst / financial-modeler) para travar specs viáveis a R$ 119.
 4. **Protótipo físico** (1 ciclo) para teste de uso real.

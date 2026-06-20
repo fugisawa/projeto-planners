@@ -11,7 +11,7 @@ espaçada, miolo, capa, formato, papel e a experiência de uso.
 > **Caderno de Erros** completo é módulo standalone (Fase 2) —
 > [`concurseiro/caderno-de-erros/`](concurseiro/caderno-de-erros/README.md). Roadmap em
 > [`concurseiro/conceitos/roadmap-faseado.md`](concurseiro/conceitos/roadmap-faseado.md).
-> **Próximo:** validar com a Mayara → wireframes → protótipo → sourcing.
+> **Validado com a Mayara (19/jun/2026).** Próximo: protótipo de 1 ciclo → sourcing/custo.
 
 ## Estrutura
 

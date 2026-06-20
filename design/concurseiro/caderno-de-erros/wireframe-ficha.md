@@ -1,6 +1,6 @@
 # Caderno de Erros — wireframe da ficha (v0)
 
-Estrutural (ASCII), derivado de [`spec.md`](spec.md) + os 3 benchmarks. **19/jun/2026 · pré-validação.**
+Estrutural (ASCII), derivado de [`spec.md`](spec.md) + os 3 benchmarks. **19/jun/2026 · validado no conceito (Mayara).**
 A **lite** (para o planner v1) fica em [`../conceitos/wireframes-planner-v1.md`](../conceitos/wireframes-planner-v1.md);
 aqui é a **ficha completa** (módulo standalone, Fase 2).
 

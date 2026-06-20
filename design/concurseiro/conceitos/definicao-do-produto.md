@@ -22,7 +22,7 @@ verticalizado, cronograma e trilha** de forma **barata, automática e bem-feita*
 **comprometer, adaptar, executar e refletir** sobre o plano vindo do digital — **nunca gerá-lo**.
 (É o princípio "adaptar, não substituir", aplicado ao módulo mais arriscado.)
 
-## 4. Os módulos (hipótese — validar com usuários)
+## 4. Os módulos (validado no conceito · Mayara 19/jun; conjunto exato a refinar no protótipo)
 Cada um **independente + complementar**:
 
 | Módulo | O que é (standalone) | Lacuna que preenche | Relação com o digital |

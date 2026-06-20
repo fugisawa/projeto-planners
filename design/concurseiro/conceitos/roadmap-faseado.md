@@ -1,8 +1,8 @@
 # Roadmap faseado — sistema de estudo do Concurseiro
 
 **19/jun/2026.** Decisão: **ecossistema modular** (módulos **independentes + complementares**),
-lançado de forma **faseada**, começando por um **beachhead**. Pré-validação — firma-se após a
-pesquisa com usuários. Ver [`definicao-do-produto.md`](definicao-do-produto.md).
+lançado de forma **faseada**, começando por um **beachhead**. **Validado com a Mayara (19/jun/2026).**
+Ver [`definicao-do-produto.md`](definicao-do-produto.md).
 
 ## Fase 0 — Pesquisa & definição ✅ (concluída)
 Teardown INDIGO (5 modelos) + Japão (Kokuyo/Hobonichi) + comunidades (Anki/med-EUA, China/Coreia,
@@ -14,7 +14,7 @@ O **planner** em si (o que dá nome ao projeto), com **diagnóstico de erro inte
 Núcleo: **Diário de Foco** (time-log 10–15 min anti-celular + tarefas puxadas do digital + síntese +
 reflexão) + **camada semanal/ciclo leve** (comprometer/adaptar o plano do cursinho — **não** gerá-lo)
 + **seção *lite* de diagnóstico de erro**. Workspace do módulo de erros: [`../caderno-de-erros/`](../caderno-de-erros/README.md). **Etapas (gates):**
-1. **Validar** (enquete + entrevistas via Mayara): tese anti-celular, o planner, módulos avulsos.
+1. ✅ **Validado com a Mayara** (19/jun/2026): conceito do planner aprovado.
 2. **Wireframe** das páginas-âncora → **protótipo** (1 ciclo de uso).
 3. **Sourcing & custo** (`sourcing-analyst` + `financial-modeler`): papel ≥120 g, lay-flat, preço a R$ 119.
 4. **Lançar** no teste + medir uso/recompra.

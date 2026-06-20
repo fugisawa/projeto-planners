@@ -1,7 +1,7 @@
 # Personas & user stories — v1 (concurseiro dedicação exclusiva)
 
-**Provisório (19/jun/2026)** — hipóteses fundamentadas na pesquisa; **VALIDAR com a audiência da
-Mayara antes de fixar.** Alinhado à **P1** do estudo de mercado (§5), com zoom no recorte full-time.
+**Validado com a Mayara (19/jun/2026)** — hipóteses da pesquisa confirmadas no conceito.
+Alinhado à **P1** do estudo de mercado (§5), com zoom no recorte full-time.
 
 > Nota de consistência: P1 cita **15–30 h/semana**; "dedicação exclusiva" é mais intenso (40+ h/sem).
 > Tratar como **sub-recorte de alta intensidade de P1** — não contradição. (Talvez valha registrar o
