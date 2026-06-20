@@ -42,10 +42,9 @@
 #masthead("Bússola da Jornada", kicker: "Frontmatter")
 
 // ── Objetivo + Por que ─────────────────────────────────────────────────────────
-#grid(columns: (auto, 1fr), column-gutter: 2.5mm, align: left + horizon,
-  text(font: sans, size: fs.label, fill: ink-2)[Meu objetivo / cargo-alvo],
-  wline(),
-)
+#text(font: sans, size: fs.label, fill: ink-2)[Meu objetivo / cargo-alvo]
+#v(1.8mm)
+#wline()
 #v(3mm)
 #text(font: sans, size: fs.micro, fill: ink-3, style: "italic")[Por que quero isso?]
 #v(2mm)

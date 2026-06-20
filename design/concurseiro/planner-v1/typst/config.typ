@@ -16,6 +16,7 @@
 #let grid-c = cmyk(24%, 10%, 0%, 8%)   // linhas da grade (azul-claro tipo INDIGO)
 #let hair   = cmyk(22%, 9%, 0%, 24%)   // fios de seção
 #let band   = cmyk(12%, 5%, 0%, 4%)    // faixa sombreada suave (Revisar)
+#let title-c = cmyk(68%, 44%, 0%, 48%) // azul-ardósia profundo — títulos de página (acento escuro do tema)
 
 // Fonte: Lato (humanista, quente, amigável). Instalada no sistema.
 #let sans = "Lato"

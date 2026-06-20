@@ -2,6 +2,18 @@
 #show: planner-page
 #set par(spacing: 0pt) // controle total dos gaps via v()
 
+// ── Identidade (eyebrow + tab de acento) ──
+#grid(columns: (1fr, auto), align: (left + horizon, right + horizon),
+  text(font: sans, size: 6.5pt, fill: ink-3, weight: 700, tracking: 1.6pt)[#upper("Diário")],
+  text(font: sans, size: 6.5pt, fill: ink-3, tracking: 1.4pt)[#upper("foco do dia")],
+)
+#v(1.2mm)
+#box(width: 100%, height: 1.4pt)[
+  #place(left + horizon, line(length: 100%, stroke: (paint: hair, thickness: wt.hair)))
+  #place(left + horizon, line(length: 12mm, stroke: (paint: accent, thickness: 1.6pt)))
+]
+#v(2.8mm)
+
 // ── Cabeçalho (3TIMES): Data (grande) · D-prova (círculo) · Tempo ──
 #grid(columns: (1fr, 22mm, 30mm), column-gutter: 7mm, align: bottom,
   fieldcol("Data"),

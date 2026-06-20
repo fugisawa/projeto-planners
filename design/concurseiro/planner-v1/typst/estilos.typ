@@ -14,20 +14,24 @@
 }
 
 // Rótulo de seção — Lato bold, suave (sem caixa-alta agressiva).
-#let seclbl(s) = text(font: sans, size: fs.h2, fill: ink-2, weight: 700, tracking: 0.2pt)[#s]
+#let seclbl(s) = text(font: sans, size: fs.h2, fill: ink, weight: 700, tracking: 0.2pt)[#s]
 
 // Linha de escrita (sólida fina) e pontilhada.
 #let wline(w: 1fr) = box(width: w, line(length: 100%, stroke: (paint: hair, thickness: wt.hair)))
 #let dot(w: 1fr) = box(width: w, line(length: 100%, stroke: (paint: hair, thickness: wt.hair, dash: "dotted")))
 
-// Masthead de página (Semanal, Bússola, Pontes, Ficha): título Lato + kicker + fio.
+// Masthead de página: título Lato Black em azul-ardósia + kicker (eyebrow) + fio com "tab" de acento.
 #let masthead(title, kicker: none) = {
-  grid(columns: (1fr, auto), align: (left + bottom, right + bottom),
-    text(font: sans, size: 22pt, fill: ink, weight: 400)[#title],
-    if kicker != none { text(font: sans, size: 7pt, fill: ink-3, tracking: 1.2pt)[#upper(kicker)] } else [],
+  grid(columns: (1fr, auto), column-gutter: 4mm, align: (left + bottom, right + bottom),
+    text(font: sans, size: 18pt, fill: title-c, weight: 900, tracking: -0.1pt)[#title],
+    if kicker != none { text(font: sans, size: 6.5pt, fill: ink-3, tracking: 1.5pt)[#upper(kicker)] } else [],
   )
-  v(1.6mm)
-  line(length: 100%, stroke: (paint: hair, thickness: wt.rule))
+  v(2mm)
+  // Fio: hairline largura cheia + "tab" curto de acento à esquerda (âncora da identidade)
+  box(width: 100%, height: 2pt)[
+    #place(left + horizon, line(length: 100%, stroke: (paint: hair, thickness: wt.hair)))
+    #place(left + horizon, line(length: 14mm, stroke: (paint: accent, thickness: 2pt)))
+  ]
   v(3mm)
 }
 
