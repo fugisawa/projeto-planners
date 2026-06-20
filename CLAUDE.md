@@ -52,6 +52,7 @@ sócios (uso interno e honesto — não é pitch para investidor).
 - `sources/` — 3 rascunhos originais (o "antes", **read-only**).
 - `scripts/` — geradores (`build_model.py`, `build_painel.py`, `build_pdfs.py`, `build_legal.py`).
 - `.claude/agents/` (agentes) · `.mcp.json` (MCP servers do projeto).
+- `design/` — **módulo de design do produto** (Concurseiro): pesquisa + conceitos + o módulo **`caderno-de-erros/`** (beachhead). Ver `design/README.md` e `design/concurseiro/conceitos/roadmap-faseado.md`.
 
 ## Comandos (regenerar — requer `uv`; não há openpyxl/markdown global)
 ```bash
@@ -76,6 +77,17 @@ Git: **commit/push só quando o usuário pedir.**
 
 Subagentes rodam em Sonnet (config); `financial-modeler` e `business-validator` em Opus
 (`model: inherit`). Skills, MCPs e dicas de desempenho: `docs/claude-setup.md`.
+
+## Direção de produto (design) — Concurseiro `[em desenvolvimento — pré-validação]`
+Trabalho em `design/concurseiro/`. Refina o "sistema de estudo": é um **hub analógico** (foco sem
+celular + síntese + **diagnóstico de erro**) **harmônico** com o digital (Anki, QConcursos,
+cursinhos) — **sem replicá-lo** nem colidir com o que os portais já entregam (edital
+verticalizado/cronograma). *Nuance a reconciliar com `## O que é`:* revisão espaçada e tracker de
+questões tendem a ficar **no digital**; o papel **decide e processa** (o que ankificar, o porquê do erro).
+- **Arquitetura:** ecossistema **modular** (módulos independentes + complementares sob uma capa).
+- **Roadmap** (`design/concurseiro/conceitos/roadmap-faseado.md`): **F0** pesquisa ✅ · **F1 = o
+  Planner de Estudo** (com diagnóstico de erro *lite*) · **F2** ecossistema (Caderno de Erros standalone, Síntese, Bússola + capa) · **F3** foto→app.
+- **Persona v1:** dedicação exclusiva (recorte de alta intensidade da **P1**).
 
 ## Convenções (inegociáveis)
 - **Todo número leva fonte + data**; triangular ≥2 fontes para números centrais. Confiança:

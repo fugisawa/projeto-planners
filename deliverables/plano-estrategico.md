@@ -85,6 +85,10 @@ Porter mostra **barreira de entrada baixa** (qualquer um imprime um planner) —
 O **catálogo recorrente** (penetração + produto) é o caminho de maior retorno e menor risco —
 alavanca o mesmo público e a mesma marca.
 
+> **Produto (design) `[pré-validação]`:** o "Desenvolvimento de produto" se concretiza como
+> **ecossistema modular** do Concurseiro — beachhead **Caderno de Erros** → módulos + capa → camada
+> **foto→app**. Roadmap: `design/concurseiro/conceitos/roadmap-faseado.md`.
+
 ---
 
 ## 7. Cenários 3–5 anos

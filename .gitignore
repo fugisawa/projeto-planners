@@ -22,3 +22,15 @@ __pycache__/
 deliverables/*.html
 !deliverables/guia-do-negocio.html
 deliverables/assets/
+
+# Originais de referência com PII — manter só local; versionar apenas as versões tarjadas
+design/concurseiro/referencias/_originais/
+
+# Saída do Playwright MCP (cruft de automação)
+.playwright-mcp/
+# Manifestos gerados na raiz (cópia versionada fica em design/concurseiro/pesquisa/fontes/)
+/indigo_manifest.json
+/hobonichi_manifest.json
+# Imagens baixadas de concorrentes — reproduzíveis via *_manifest.json; não versionar (peso ~160MB)
+design/concurseiro/pesquisa/capturas/
+design/concurseiro/caderno-de-erros/referencias/
