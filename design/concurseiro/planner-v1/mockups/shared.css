@@ -1,0 +1,309 @@
+/* ============================================================
+   PLANNER CONCURSEIRO v1 — CSS COMPARTILHADO
+   Formato: A5 148×210mm · Fundo creme · Dot grid · Premium
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* ---------- Reset & Box Model ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Página A5 ---------- */
+@page {
+  size: 148mm 210mm;
+  margin: 0;
+}
+
+html, body {
+  width: 148mm;
+  height: 210mm;
+  background: #E8E0D0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.page {
+  width: 148mm;
+  height: 210mm;
+  background-color: #FBF7EE;
+  position: relative;
+  overflow: hidden;
+  padding: 10mm 11mm 8mm 11mm;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ---------- Dot Grid background ---------- */
+.dot-grid {
+  background-image: radial-gradient(circle, #C8BAA0 1px, transparent 1px);
+  background-size: 5mm 5mm;
+  background-color: #FBF7EE;
+}
+
+/* ---------- Tipografia ---------- */
+.section-title {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 6.5pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2C2416;
+  line-height: 1;
+}
+
+.section-title-lg {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2C2416;
+  line-height: 1;
+}
+
+.label {
+  font-family: 'Inter', sans-serif;
+  font-size: 5.5pt;
+  font-weight: 400;
+  color: #7A6B52;
+  letter-spacing: 0.04em;
+}
+
+.label-bold {
+  font-family: 'Inter', sans-serif;
+  font-size: 5.5pt;
+  font-weight: 600;
+  color: #5A4E38;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.field-line {
+  border: none;
+  border-bottom: 0.3pt solid #BFB49A;
+  background: transparent;
+  width: 100%;
+  height: 4.5mm;
+  display: block;
+}
+
+/* ---------- Cores & Paleta ---------- */
+:root {
+  --creme: #FBF7EE;
+  --creme-dark: #F3EDD8;
+  --gold: #C8A86B;
+  --gold-light: #E5D5B0;
+  --ink: #2C2416;
+  --ink-mid: #5A4E38;
+  --ink-light: #7A6B52;
+  --ink-pale: #BFB49A;
+  --ink-ghost: #DDD6C4;
+  --accent: #8B6F47;     /* único acento quente */
+  --rule: #D4C8B0;
+  --dot: #C8BAA0;
+}
+
+/* ---------- Linha horizontal de separação ---------- */
+.rule {
+  height: 0.3pt;
+  background: var(--rule);
+  width: 100%;
+}
+
+.rule-heavy {
+  height: 0.6pt;
+  background: var(--ink-pale);
+  width: 100%;
+}
+
+/* ---------- Checkbox ---------- */
+.cb {
+  display: inline-block;
+  width: 3mm;
+  height: 3mm;
+  border: 0.5pt solid var(--ink-mid);
+  background: transparent;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+/* ---------- Tabela base ---------- */
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 5.5pt;
+  color: var(--ink);
+}
+.tbl th {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 5pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-light);
+  background: #F0E9D8;
+  padding: 1.2mm 1.5mm;
+  border: 0.3pt solid var(--rule);
+  text-align: left;
+}
+.tbl td {
+  padding: 1.5mm 1.5mm;
+  border: 0.3pt solid var(--rule);
+  vertical-align: top;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.tbl tr:last-child td {
+  border-bottom: 0.3pt solid var(--ink-pale);
+}
+
+/* ---------- Barra de progresso pintável ---------- */
+.prog-bar {
+  display: flex;
+  gap: 0.8mm;
+  align-items: center;
+}
+.prog-seg {
+  width: 4.5mm;
+  height: 2.8mm;
+  border: 0.4pt solid var(--ink-pale);
+  background: transparent;
+  display: inline-block;
+}
+
+/* ---------- Rodapé curado ---------- */
+.footer-curated {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8mm;
+  background: #F0E9D8;
+  border-top: 0.5pt solid var(--gold-light);
+  display: flex;
+  align-items: center;
+  padding: 0 11mm;
+  gap: 3mm;
+}
+.footer-curated .footer-label {
+  font-size: 4.5pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.footer-curated .footer-text {
+  font-size: 5pt;
+  color: var(--ink-mid);
+  font-style: italic;
+  line-height: 1.3;
+}
+
+/* ---------- Cabeçalho de página ---------- */
+.page-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2.5mm;
+  padding-bottom: 2mm;
+  border-bottom: 0.6pt solid var(--ink-pale);
+}
+.page-header .page-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.page-header .page-meta {
+  font-size: 5pt;
+  color: var(--ink-light);
+  letter-spacing: 0.06em;
+}
+
+/* ---------- Campo de data / meta inline ---------- */
+.field-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  flex-wrap: wrap;
+}
+.field-inline {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1mm;
+}
+.field-blank {
+  display: inline-block;
+  border-bottom: 0.3pt solid var(--ink-pale);
+  min-width: 12mm;
+  height: 3.5mm;
+}
+.field-blank-sm {
+  display: inline-block;
+  border-bottom: 0.3pt solid var(--ink-pale);
+  min-width: 7mm;
+  height: 3.5mm;
+}
+.field-blank-lg {
+  display: inline-block;
+  border-bottom: 0.3pt solid var(--ink-pale);
+  min-width: 25mm;
+  height: 3.5mm;
+}
+
+/* ---------- Seção com título ---------- */
+.section-block {
+  margin-bottom: 2mm;
+}
+.section-block + .section-block {
+  padding-top: 1.5mm;
+  border-top: 0.3pt solid var(--ink-ghost);
+}
+
+/* ---------- Área dot-grid livre ---------- */
+.free-area {
+  flex: 1;
+  background-image: radial-gradient(circle, #C8BAA0 0.8px, transparent 0.8px);
+  background-size: 5mm 5mm;
+  background-color: transparent;
+  border: 0.3pt solid var(--ink-ghost);
+  border-radius: 0.5mm;
+  min-height: 15mm;
+}
+
+/* ---------- Legenda de cor ---------- */
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 2mm;
+  flex-wrap: wrap;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 1mm;
+}
+.legend-swatch {
+  width: 3.5mm;
+  height: 3.5mm;
+  border: 0.4pt solid var(--ink-pale);
+  background: transparent;
+}
+.legend-swatch.filled-1 { background: #E8D5B0; }
+
+/* ---------- Número de página ---------- */
+.page-num {
+  position: absolute;
+  bottom: 9.5mm;
+  right: 11mm;
+  font-size: 5pt;
+  color: var(--ink-ghost);
+  letter-spacing: 0.08em;
+}

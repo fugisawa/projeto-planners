@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P4 — Pontes Digitais v3</title>
+<link rel="stylesheet" href="shared-v3.css">
+<style>
+.page {
+  padding: 9mm 11mm 7mm 11mm;
+  overflow: hidden;
+}
+
+.hdr {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 2mm;
+  margin-bottom: 2.5mm;
+  border-bottom: 0.4pt solid var(--ink-pale);
+}
+.hdr-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.hdr-accent {
+  width: 8mm;
+  height: 0.8pt;
+  background: var(--accent);
+  margin-top: 0.5mm;
+  margin-bottom: 0.5mm;
+}
+.hdr-sub {
+  font-size: 4.5pt;
+  color: var(--ink-light);
+  font-style: italic;
+}
+
+/* Título de seção com régua abaixo */
+.sec-hdr { margin-bottom: 1.5mm; }
+.sec-hdr-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.8mm;
+}
+.sec-rule {
+  height: 0.4pt;
+  background: var(--accent);
+  width: 100%;
+  opacity: 0.35;
+}
+
+/* HR WeasyPrint-safe */
+.hr-line {
+  height: 0.3pt;
+  background: var(--ink-pale);
+  width: 100%;
+}
+.hr-ghost {
+  height: 0.25pt;
+  background: var(--ink-ghost);
+  width: 100%;
+}
+
+/* Bloco de ponte digital */
+.ponte {
+  margin-bottom: 2mm;
+  padding-bottom: 1.5mm;
+  border-bottom: 0.25pt solid var(--ink-ghost);
+}
+.ponte:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.ponte-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 4.5pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1mm;
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+}
+.ponte-title-note {
+  font-size: 3.5pt;
+  font-weight: 400;
+  color: var(--ink-light);
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Campos em linha */
+.pf-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  flex-wrap: wrap;
+  margin-bottom: 0.8mm;
+}
+.pf-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1mm;
+}
+.pf-lbl {
+  font-size: 4pt;
+  font-weight: 600;
+  color: var(--ink-mid);
+  white-space: nowrap;
+  letter-spacing: 0.06em;
+}
+.pf-blank {
+  display: inline-block;
+  min-width: 10mm;
+  height: 3.5mm;
+  vertical-align: middle;
+}
+.pf-blank-wrap {
+  display: inline-block;
+  vertical-align: middle;
+}
+.pf-sep {
+  width: 0.3pt;
+  height: 3mm;
+  background: var(--ink-ghost);
+  align-self: center;
+}
+
+/* Checkbox para ritmo */
+.cb-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8mm;
+  margin-right: 1.5mm;
+}
+.cb-sq {
+  width: 3mm;
+  height: 3mm;
+  border: 0.4pt solid var(--ink-light);
+  display: inline-block;
+  flex-shrink: 0;
+}
+.cb-lbl {
+  font-size: 4pt;
+  color: var(--ink-mid);
+}
+
+/* Linha de reflexão */
+.refl-line {
+  height: 3mm;
+  width: 100%;
+  margin-bottom: 0.2mm;
+}
+
+/* Simulados — bloco condicional */
+.simulado-box {
+  background: var(--creme-dark);
+  border: 0.3pt solid var(--gold-light);
+  border-radius: 0.5mm;
+  padding: 1.5mm 2mm;
+  margin-bottom: 2mm;
+}
+
+/* Reflexão integrada */
+.refl-integrada {
+  background: rgba(139, 111, 71, 0.05);
+  border: 0.3pt solid var(--gold-light);
+  border-radius: 0.5mm;
+  padding: 1.5mm 2mm;
+  overflow: hidden;
+}
+.refl-int-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 4.5pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-mid);
+  margin-bottom: 1mm;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- CABEÇALHO -->
+  <div class="hdr">
+    <div>
+      <div class="hdr-title">Pontes Digitais</div>
+      <div class="hdr-accent"></div>
+      <div class="hdr-sub">sincronizar dados do digital → ajustar o analógico · uso semanal ou quinzenal</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:4pt; color:var(--ink-ghost); letter-spacing:0.10em; text-transform:uppercase; margin-bottom:1mm;">Concurseiro · v3</div>
+      <div style="display:flex; align-items:baseline; gap:1mm; justify-content:flex-end; white-space:nowrap;">
+        <span style="font-size:4pt; color:var(--ink-light); white-space:nowrap;">Sem. de</span>
+        <div style="display:inline-block; min-width:16mm; vertical-align:middle; white-space:nowrap;">
+          <div style="height:3mm;"></div>
+          <div class="hr-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. BANCO DE QUESTÕES -->
+  <div class="ponte">
+    <div class="ponte-title">
+      Banco de Questões
+      <span class="ponte-title-note">ex.: QConcursos · Estratégia · Gran</span>
+    </div>
+    <div class="pf-row">
+      <div class="pf-item"><span class="pf-lbl">% Acerto geral</span><div class="pf-blank-wrap" style="min-width:10mm;"><div class="pf-blank"></div><div class="hr-line"></div></div><span class="pf-lbl">%</span></div>
+      <div class="pf-sep"></div>
+      <div class="pf-item"><span class="pf-lbl">Melhor matéria</span><div class="pf-blank-wrap" style="min-width:18mm;"><div class="pf-blank"></div><div class="hr-line"></div></div><div class="pf-blank-wrap" style="min-width:7mm;"><div class="pf-blank"></div><div class="hr-line"></div></div><span class="pf-lbl">%</span></div>
+      <div class="pf-sep"></div>
+      <div class="pf-item"><span class="pf-lbl">Pior matéria</span><div class="pf-blank-wrap" style="min-width:18mm;"><div class="pf-blank"></div><div class="hr-line"></div></div><div class="pf-blank-wrap" style="min-width:7mm;"><div class="pf-blank"></div><div class="hr-line"></div></div><span class="pf-lbl">%</span></div>
+      <div class="pf-sep"></div>
+      <div class="pf-item"><span class="pf-lbl">Total questões</span><div class="pf-blank-wrap" style="min-width:10mm;"><div class="pf-blank"></div><div class="hr-line"></div></div></div>
+    </div>
+  </div>
+
+  <!-- 2. ANKI / REVISÃO ESPAÇADA -->
+  <div class="ponte">
+    <div class="ponte-title">Anki / Revisão Espaçada</div>
+    <div class="pf-row">
+      <div class="pf-item"><span class="pf-lbl">Cards maduros (&gt;21 dias)</span><div class="pf-blank-wrap" style="min-width:10mm;"><div class="pf-blank"></div><div class="hr-line"></div></div></div>
+      <div class="pf-sep"></div>
+      <div class="pf-item"><span class="pf-lbl">Retenção média</span><div class="pf-blank-wrap" style="min-width:10mm;"><div class="pf-blank"></div><div class="hr-line"></div></div><span class="pf-lbl">%</span></div>
+      <div class="pf-sep"></div>
+      <div class="pf-item"><span class="pf-lbl">Novos cards</span><div class="pf-blank-wrap" style="min-width:10mm;"><div class="pf-blank"></div><div class="hr-line"></div></div></div>
+      <div class="pf-sep"></div>
+      <div class="pf-item"><span class="pf-lbl">Atrasados</span><div class="pf-blank-wrap" style="min-width:20mm;"><div class="pf-blank"></div><div class="hr-line"></div></div></div>
+    </div>
+  </div>
+
+  <!-- 3. AULAS / CURSINHO -->
+  <div class="ponte">
+    <div class="ponte-title">Aulas / Cursinho</div>
+    <div class="pf-row">
+      <div class="pf-item"><span class="pf-lbl">Aulas concluídas</span><div class="pf-blank-wrap" style="min-width:10mm;"><div class="pf-blank"></div><div class="hr-line"></div></div></div>
+      <div class="pf-sep"></div>
+      <div class="pf-item"><span class="pf-lbl">Módulo atual</span><div class="pf-blank-wrap" style="min-width:22mm;"><div class="pf-blank"></div><div class="hr-line"></div></div></div>
+      <div class="pf-sep"></div>
+      <div class="pf-item"><span class="pf-lbl">% módulo</span><div class="pf-blank-wrap" style="min-width:10mm;"><div class="pf-blank"></div><div class="hr-line"></div></div><span class="pf-lbl">%</span></div>
+    </div>
+    <div style="display:flex; align-items:center; gap:1mm; margin-bottom:0; flex-wrap:nowrap;">
+      <span class="pf-lbl">Ritmo:</span>
+      <div class="cb-inline" style="white-space:nowrap;"><div class="cb-sq"></div><span class="cb-lbl">No ritmo</span></div>
+      <div class="cb-inline" style="white-space:nowrap;"><div class="cb-sq"></div><span class="cb-lbl">Atrasado</span></div>
+      <div class="cb-inline" style="white-space:nowrap;"><div class="cb-sq"></div><span class="cb-lbl">À frente</span></div>
+    </div>
+  </div>
+
+  <!-- 4. SIMULADOS (condicional) -->
+  <div class="simulado-box">
+    <div class="ponte-title" style="margin-bottom:1mm;">
+      Simulados
+      <span class="ponte-title-note">preencher só quando houver</span>
+    </div>
+    <div class="pf-row">
+      <div class="pf-item"><span class="pf-lbl">Prova / Banca</span><div class="pf-blank-wrap" style="min-width:20mm;"><div class="pf-blank"></div><div class="hr-line"></div></div></div>
+      <div class="pf-sep"></div>
+      <div class="pf-item"><span class="pf-lbl">Nota</span><div class="pf-blank-wrap" style="min-width:10mm;"><div class="pf-blank"></div><div class="hr-line"></div></div></div>
+      <div class="pf-sep"></div>
+      <div class="pf-item"><span class="pf-lbl">Meta</span><div class="pf-blank-wrap" style="min-width:10mm;"><div class="pf-blank"></div><div class="hr-line"></div></div></div>
+      <div class="pf-sep"></div>
+      <div class="pf-item"><span class="pf-lbl">Ponto mais fraco</span><div class="pf-blank-wrap" style="min-width:20mm;"><div class="pf-blank"></div><div class="hr-line"></div></div></div>
+    </div>
+  </div>
+
+  <!-- REFLEXÃO INTEGRADA -->
+  <div class="refl-integrada">
+    <div class="refl-int-title">Reflexão Integrada</div>
+    <div style="margin-bottom:1mm;">
+      <span style="font-size:3.5pt; color:var(--ink-light); font-style:italic;">O que o digital mostra que o papel não captura?</span>
+      <div class="refl-line" style="margin-top:0.5mm;"></div>
+      <div class="hr-line"></div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2mm;">
+      <div>
+        <span class="pf-lbl">Ajuste para próxima semana</span>
+        <div class="refl-line" style="margin-top:0.5mm;"></div>
+        <div class="hr-line"></div>
+        <div class="refl-line"></div>
+        <div class="hr-line"></div>
+      </div>
+      <div>
+        <span class="pf-lbl">Sinal de alerta</span>
+        <div class="refl-line" style="margin-top:0.5mm;"></div>
+        <div class="hr-line"></div>
+        <div class="refl-line"></div>
+        <div class="hr-line"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P1 — Diário de Foco v3</title>
+<link rel="stylesheet" href="shared-v3.css">
+<style>
+/* ---- Página 1 v3: Diário de Foco — TIME-LOG 3 BLOCOS · POLISH ---- */
+.page {
+  padding: 9mm 11mm 7mm 11mm;
+  overflow: hidden;
+}
+
+/* ---- Cabeçalho masthead ---- */
+.hdr {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 2mm;
+  margin-bottom: 2.5mm;
+  border-bottom: 0.4pt solid var(--ink-pale);
+}
+.hdr-left { display: flex; flex-direction: column; gap: 1.5mm; }
+.hdr-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  line-height: 1;
+}
+/* Accent bar abaixo do título */
+.hdr-accent {
+  width: 8mm;
+  height: 0.7pt;
+  background: var(--accent);
+  margin-top: 0.8mm;
+  margin-bottom: 0;
+}
+.hdr-fields {
+  display: flex;
+  gap: 4mm;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.hf {
+  display: flex;
+  align-items: center;
+  gap: 1.5mm;
+}
+.hf-lbl {
+  font-size: 4.5pt;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  white-space: nowrap;
+}
+/* D-day: apenas "D-___" limpo, sem círculo duplo */
+.dday-field {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5mm;
+}
+.dday-lbl {
+  font-size: 5.5pt;
+  font-weight: 700;
+  color: var(--ink-mid);
+  letter-spacing: 0;
+}
+.dday-blank {
+  display: inline-block;
+  min-width: 8mm;
+  height: 3.5mm;
+  vertical-align: middle;
+  border-bottom: 0.3pt solid var(--ink-pale);
+}
+.hdr-right {
+  text-align: right;
+}
+.hdr-v {
+  font-size: 4pt;
+  color: var(--ink-ghost);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+/* ---- HR line (WeasyPrint-safe) ---- */
+.hr-line {
+  height: 0.3pt;
+  background: var(--ink-pale);
+  width: 100%;
+}
+.hr-dashed {
+  height: 0;
+  border-top: 0.3pt dashed var(--ink-ghost);
+  width: 100%;
+}
+
+/* ---- TIME-LOG: 3 colunas lado a lado ---- */
+.timelog-section {
+  margin-bottom: 2mm;
+}
+.timelog-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.2mm;
+}
+.tl-note {
+  font-size: 3.5pt;
+  color: var(--ink-light);
+  font-style: italic;
+}
+
+/* Container de 3 colunas */
+.tl-cols {
+  display: flex;
+  gap: 2mm;
+  align-items: flex-start;
+}
+.tl-col {
+  flex: 1;
+}
+.tl-col-hdr {
+  text-align: center;
+  font-size: 4pt;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1mm;
+  padding-bottom: 0.5mm;
+  border-bottom: 0.4pt solid var(--gold-light);
+}
+
+/* Grade da coluna */
+.tl-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 0.25mm;
+}
+.tl-hr {
+  font-size: 4pt;
+  font-weight: 600;
+  color: var(--ink-mid);
+  font-variant-numeric: tabular-nums;
+  width: 6.5mm;
+  text-align: right;
+  padding-right: 1mm;
+  flex-shrink: 0;
+  letter-spacing: -0.02em;
+}
+/* 4 células × hora = 15 min cada */
+.tl-cells {
+  display: flex;
+  gap: 0.3mm;
+  flex: 1;
+}
+.tl-b {
+  flex: 1;
+  height: 4.8mm;
+  min-width: 4mm;
+  border: 0.3pt solid var(--dot);
+  background: transparent;
+  flex-shrink: 0;
+}
+
+/* Subtotal por coluna */
+.tl-subtotal {
+  display: flex;
+  align-items: baseline;
+  gap: 1mm;
+  margin-top: 1mm;
+  padding-top: 0.8mm;
+  border-top: 0.3pt solid var(--ink-ghost);
+  justify-content: flex-end;
+}
+.tl-sub-lbl {
+  font-size: 4pt;
+  font-weight: 600;
+  color: var(--ink-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.tl-sub-blank {
+  display: inline-block;
+  min-width: 6mm;
+  height: 3mm;
+  vertical-align: middle;
+}
+
+/* Footer do time-log: total dia + legenda */
+.tl-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5mm;
+  padding-top: 1mm;
+  border-top: 0.4pt solid var(--ink-pale);
+}
+.tl-total-day {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+}
+.tl-total-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1mm;
+}
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5mm;
+}
+.lgd {
+  display: flex;
+  align-items: center;
+  gap: 0.8mm;
+}
+.lgd-sw {
+  width: 4.5mm;
+  height: 3.5mm;
+  border: 0.3pt solid var(--ink-pale);
+  background: transparent;
+  flex-shrink: 0;
+}
+.lgd-lbl {
+  font-size: 3.5pt;
+  color: var(--ink-light);
+  min-width: 8mm;
+}
+
+/* ---- Divisor ---- */
+.divider {
+  height: 0.4pt;
+  background: var(--ink-pale);
+  margin: 1.5mm 0;
+}
+
+/* ---- STUDY + REVIEW: 2 colunas ---- */
+.sr-cols {
+  display: flex;
+  gap: 3mm;
+  margin-bottom: 1.5mm;
+}
+.sr-col {
+  flex: 1;
+}
+.sr-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 5pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1mm;
+  padding-bottom: 0.5mm;
+  border-bottom: 0.4pt solid var(--gold-light);
+}
+.sr-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5mm;
+  padding: 0.5mm 0;
+  min-height: 4.8mm;
+}
+.sr-row-wrap {
+  margin-bottom: 0;
+}
+/* Tag de matéria */
+.mat-tag {
+  min-width: 8mm;
+  max-width: 10mm;
+  height: 3.8mm;
+  border: 0.3pt solid var(--ink-ghost);
+  background: transparent;
+  flex-shrink: 0;
+  font-size: 3.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sr-line {
+  flex: 1;
+  height: 3.5mm;
+}
+/* Círculo de check */
+.circ-cb {
+  width: 3.5mm;
+  height: 3.5mm;
+  border: 0.4pt solid var(--ink-light);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ---- KPI do dia ---- */
+.kpi-bar {
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+  padding: 1.5mm 2mm;
+  background: var(--creme-dark);
+  border: 0.3pt solid var(--gold-light);
+  border-radius: 0.5mm;
+  margin-bottom: 1.5mm;
+  flex-wrap: wrap;
+}
+.kpi-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1mm;
+}
+.kpi-lbl {
+  font-size: 4pt;
+  font-weight: 700;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.kpi-blank {
+  display: inline-block;
+  min-width: 9mm;
+  height: 3mm;
+  vertical-align: middle;
+}
+.kpi-sep {
+  width: 0.3pt;
+  height: 3mm;
+  background: var(--ink-ghost);
+  align-self: center;
+}
+
+/* ---- Reflexão mínima ---- */
+.refl-sq {
+  width: 3mm;
+  height: 3mm;
+  border: 0.4pt solid var(--ink-light);
+  display: inline-block;
+  flex-shrink: 0;
+}
+.refl-lbl {
+  font-size: 4.5pt;
+  color: var(--ink-mid);
+  white-space: nowrap;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- CABEÇALHO -->
+  <div class="hdr">
+    <div class="hdr-left">
+      <div>
+        <div class="hdr-title">Diário de Foco</div>
+        <div class="hdr-accent"></div>
+      </div>
+      <div class="hdr-fields">
+        <!-- Data -->
+        <div class="hf">
+          <span class="hf-lbl">Data</span>
+          <div style="display:inline-block; min-width:22mm; vertical-align:middle;">
+            <div style="height:3.5mm;"></div>
+            <div class="hr-line"></div>
+          </div>
+        </div>
+        <!-- D-day: um único campo limpo -->
+        <div class="dday-field">
+          <span class="dday-lbl">D&#8209;</span>
+          <div class="dday-blank"></div>
+        </div>
+        <!-- Meta h -->
+        <div class="hf">
+          <span class="hf-lbl">Meta</span>
+          <div style="display:inline-block; min-width:7mm; vertical-align:middle;">
+            <div style="height:3.5mm;"></div>
+            <div class="hr-line"></div>
+          </div>
+          <span class="hf-lbl">h</span>
+        </div>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="hdr-v">Concurseiro · v3</div>
+    </div>
+  </div>
+
+  <!-- TIME-LOG: MANHÃ / TARDE / NOITE -->
+  <div class="timelog-section">
+    <div class="timelog-title-row">
+      <span class="section-title">Time-Log</span>
+      <span class="tl-note">cada bloco = 15 min · pinte por matéria · 4 blocos/hora</span>
+    </div>
+
+    <div class="tl-cols">
+
+      <!-- COLUNA MANHÃ -->
+      <div class="tl-col">
+        <div class="tl-col-hdr">Manhã</div>
+        <div class="tl-row"><span class="tl-hr">05h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">06h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">07h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">08h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">09h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">10h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">11h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr" style="color:var(--ink-pale);">12h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-subtotal">
+          <span class="tl-sub-lbl">Sub</span>
+          <div style="display:inline-block; min-width:7mm; vertical-align:middle;">
+            <div class="tl-sub-blank"></div>
+            <div class="hr-line"></div>
+          </div>
+          <span class="tl-sub-lbl">h</span>
+        </div>
+      </div>
+
+      <!-- Divisor vertical -->
+      <div style="width:0.25pt; background:var(--ink-ghost); align-self:stretch; margin-top:5.5mm;"></div>
+
+      <!-- COLUNA TARDE -->
+      <div class="tl-col">
+        <div class="tl-col-hdr">Tarde</div>
+        <div class="tl-row"><span class="tl-hr">13h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">14h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">15h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">16h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">17h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">18h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">19h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr" style="color:var(--ink-pale);">20h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-subtotal">
+          <span class="tl-sub-lbl">Sub</span>
+          <div style="display:inline-block; min-width:7mm; vertical-align:middle;">
+            <div class="tl-sub-blank"></div>
+            <div class="hr-line"></div>
+          </div>
+          <span class="tl-sub-lbl">h</span>
+        </div>
+      </div>
+
+      <!-- Divisor vertical -->
+      <div style="width:0.25pt; background:var(--ink-ghost); align-self:stretch; margin-top:5.5mm;"></div>
+
+      <!-- COLUNA NOITE -->
+      <div class="tl-col">
+        <div class="tl-col-hdr">Noite</div>
+        <div class="tl-row"><span class="tl-hr">20h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">21h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">22h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr">23h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div class="tl-row"><span class="tl-hr" style="color:var(--ink-ghost);">00h</span><div class="tl-cells"><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div></div>
+        <div style="height:15mm;"></div>
+        <div class="tl-subtotal">
+          <span class="tl-sub-lbl">Sub</span>
+          <div style="display:inline-block; min-width:7mm; vertical-align:middle;">
+            <div class="tl-sub-blank"></div>
+            <div class="hr-line"></div>
+          </div>
+          <span class="tl-sub-lbl">h</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer: Total do dia + Legenda -->
+    <div class="tl-footer">
+      <div class="tl-total-day">
+        <span class="label-bold" style="white-space:nowrap;">Total do Dia</span>
+        <div class="tl-total-item">
+          <div style="display:inline-block; min-width:8mm; vertical-align:middle;">
+            <div class="tl-sub-blank"></div>
+            <div class="hr-line"></div>
+          </div>
+          <span class="hf-lbl">h</span>
+          <div style="display:inline-block; min-width:6mm; vertical-align:middle;">
+            <div class="tl-sub-blank"></div>
+            <div class="hr-line"></div>
+          </div>
+          <span class="hf-lbl">min</span>
+        </div>
+      </div>
+      <div class="legend-row">
+        <span class="label-bold" style="font-size:3.5pt;">Legenda:</span>
+        <div class="lgd"><div class="lgd-sw"></div><div style="min-width:8mm;"><span class="lgd-lbl"></span><div style="height:0.25pt; background:var(--ink-ghost); width:100%; margin-top:0.2mm;"></div></div></div>
+        <div class="lgd"><div class="lgd-sw"></div><div style="min-width:8mm;"><span class="lgd-lbl"></span><div style="height:0.25pt; background:var(--ink-ghost); width:100%; margin-top:0.2mm;"></div></div></div>
+        <div class="lgd"><div class="lgd-sw"></div><div style="min-width:8mm;"><span class="lgd-lbl"></span><div style="height:0.25pt; background:var(--ink-ghost); width:100%; margin-top:0.2mm;"></div></div></div>
+        <div class="lgd"><div class="lgd-sw"></div><div style="min-width:8mm;"><span class="lgd-lbl"></span><div style="height:0.25pt; background:var(--ink-ghost); width:100%; margin-top:0.2mm;"></div></div></div>
+        <div class="lgd"><div class="lgd-sw"></div><div style="min-width:8mm;"><span class="lgd-lbl"></span><div style="height:0.25pt; background:var(--ink-ghost); width:100%; margin-top:0.2mm;"></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- STUDY + REVIEW lado a lado -->
+  <div class="sr-cols">
+
+    <!-- STUDY (8 linhas) -->
+    <div class="sr-col">
+      <div class="sr-title">Study</div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+    </div>
+
+    <!-- REVIEW (5 linhas) -->
+    <div class="sr-col" style="flex:0.65;">
+      <div class="sr-title">Review</div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+      <div class="sr-row-wrap"><div class="sr-row"><div class="mat-tag">mat</div><div class="sr-line"></div><div class="circ-cb"></div></div><div class="hr-dashed"></div></div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- KPI DO DIA + REFLEXÃO -->
+  <div style="overflow:hidden; padding-bottom:1mm;">
+    <div class="kpi-bar">
+      <div class="kpi-item">
+        <span class="kpi-lbl">Questões</span>
+        <div style="display:inline-block; min-width:9mm; vertical-align:middle;">
+          <div class="kpi-blank"></div>
+          <div style="height:0.3pt; background:var(--ink-mid); width:100%;"></div>
+        </div>
+      </div>
+      <div class="kpi-sep"></div>
+      <div class="kpi-item">
+        <span class="kpi-lbl">Acertos</span>
+        <div style="display:inline-block; min-width:9mm; vertical-align:middle;">
+          <div class="kpi-blank"></div>
+          <div style="height:0.3pt; background:var(--ink-mid); width:100%;"></div>
+        </div>
+        <span class="kpi-lbl">%</span>
+      </div>
+      <div class="kpi-sep"></div>
+      <div class="kpi-item">
+        <span class="kpi-lbl">Discursivas</span>
+        <div style="display:inline-block; min-width:9mm; vertical-align:middle;">
+          <div class="kpi-blank"></div>
+          <div style="height:0.3pt; background:var(--ink-mid); width:100%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REFLEXÃO: "Hoje:" + linha + checkboxes numa linha só, sem overflow -->
+    <!-- Usamos tabela para controle exato de largura e evitar overflow -->
+    <div style="display:table; width:100%; table-layout:fixed; border-collapse:collapse;">
+      <div style="display:table-row;">
+        <div style="display:table-cell; white-space:nowrap; width:9mm; vertical-align:bottom; padding-bottom:0.3mm;">
+          <span class="hf-lbl">Hoje:</span>
+        </div>
+        <div style="display:table-cell; vertical-align:bottom; padding-bottom:0.3mm;">
+          <div style="height:0.3pt; background:var(--ink-pale); width:100%;"></div>
+        </div>
+        <div style="display:table-cell; white-space:nowrap; width:auto; vertical-align:middle; padding-left:2mm;">
+          <div style="display:flex; align-items:center; gap:1.5mm;">
+            <div style="display:flex; align-items:center; gap:0.8mm; white-space:nowrap;">
+              <div class="refl-sq"></div>
+              <span class="refl-lbl">Entendi</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.8mm; white-space:nowrap;">
+              <div class="refl-sq"></div>
+              <span class="refl-lbl">Confuso</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.8mm; white-space:nowrap;">
+              <div class="refl-sq"></div>
+              <span class="refl-lbl">Não aprendi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

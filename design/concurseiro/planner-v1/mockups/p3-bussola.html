@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P3 — Bússola da Jornada</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.page {
+  padding: 9mm 10mm 8mm 10mm;
+}
+
+/* Cabeçalho */
+.header-bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 1.8mm;
+  margin-bottom: 2.5mm;
+  border-bottom: 0.6pt solid var(--ink-pale);
+}
+.header-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.header-meta {
+  font-size: 4.5pt;
+  color: var(--ink-ghost);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Grid layout: 2 colunas */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3mm;
+  margin-bottom: 2mm;
+}
+
+/* Bloco objetivo */
+.obj-block {
+  margin-bottom: 2.5mm;
+}
+.field-line {
+  height: 4.5mm;
+  border-bottom: 0.3pt solid var(--ink-pale);
+  width: 100%;
+  display: block;
+  margin-bottom: 1mm;
+}
+
+/* Mapa do edital */
+.mapa-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5mm;
+}
+.mapa-table th {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 4.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-light);
+  background: #EDE5D4;
+  padding: 1.2mm 1.5mm;
+  border: 0.4pt solid var(--rule);
+  text-align: left;
+}
+.mapa-table td {
+  border: 0.3pt solid var(--rule);
+  padding: 1mm 1.5mm;
+  height: 5mm;
+  vertical-align: middle;
+}
+.mapa-table td.peso {
+  text-align: center;
+  width: 10mm;
+  font-size: 5pt;
+  color: var(--ink-light);
+}
+.mapa-table td.prog {
+  width: 30mm;
+}
+
+/* Barra de progresso */
+.prog-segs {
+  display: flex;
+  gap: 0.5mm;
+}
+.prog-seg {
+  width: 4mm;
+  height: 2.5mm;
+  border: 0.4pt solid var(--ink-pale);
+  background: transparent;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Stack */
+.stack-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  margin-bottom: 1mm;
+}
+.stack-key {
+  font-size: 5pt;
+  font-weight: 600;
+  color: var(--ink-mid);
+  min-width: 24mm;
+  text-align: right;
+  letter-spacing: 0.04em;
+}
+.stack-blank {
+  flex: 1;
+  height: 3.5mm;
+  border-bottom: 0.3pt solid var(--ink-pale);
+}
+
+/* Calendário de provas */
+.provas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2mm;
+}
+.provas-table th {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 4.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--ink-light);
+  background: #EDE5D4;
+  padding: 1.2mm 1.5mm;
+  border: 0.4pt solid var(--rule);
+  text-align: left;
+}
+.provas-table td {
+  border: 0.3pt solid var(--rule);
+  padding: 1mm 1.5mm;
+  height: 5mm;
+  vertical-align: middle;
+  font-size: 5pt;
+}
+
+/* Balanço mensal */
+.balanco-row {
+  display: flex;
+  align-items: baseline;
+  gap: 3mm;
+  flex-wrap: wrap;
+  margin-bottom: 1.5mm;
+}
+.balanco-field {
+  display: flex;
+  align-items: baseline;
+  gap: 1mm;
+}
+.balanco-blank {
+  display: inline-block;
+  border-bottom: 0.3pt solid var(--ink-pale);
+  height: 3.5mm;
+}
+.bal-line {
+  height: 4mm;
+  border-bottom: 0.3pt solid var(--ink-pale);
+  width: 100%;
+  margin-bottom: 1mm;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- CABEÇALHO -->
+  <div class="header-bar">
+    <div class="header-title">Bússola da Jornada</div>
+    <div class="header-meta">Frontmatter · Concurseiro v1</div>
+  </div>
+
+  <!-- OBJETIVO -->
+  <div class="obj-block">
+    <span class="section-title" style="display:block; margin-bottom:1.5mm;">Meu Objetivo / Cargo-Alvo</span>
+    <div class="field-line"></div>
+    <div style="margin-top:1mm;">
+      <span class="label" style="font-style:italic;">Por que quero isso?</span>
+      <div class="field-line" style="margin-top:0.5mm;"></div>
+    </div>
+  </div>
+
+  <div class="rule" style="margin-bottom:2mm;"></div>
+
+  <!-- MAPA DO EDITAL + MEU STACK — lado a lado -->
+  <div class="two-col" style="margin-bottom:2mm; align-items:start;">
+
+    <!-- col 1: mapa do edital -->
+    <div>
+      <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:1.5mm;">
+        <span class="section-title">Mapa do Edital</span>
+        <span class="label" style="font-size:4pt; font-style:italic;">visão macro</span>
+      </div>
+      <table class="mapa-table">
+        <thead>
+          <tr>
+            <th>Bloco / Matéria</th>
+            <th style="text-align:center; width:10mm;">Peso</th>
+            <th style="width:28mm;">Progresso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-size:5pt;"></td>
+            <td class="peso">___%</td>
+            <td class="prog"><div class="prog-segs">
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+            </div></td>
+          </tr>
+          <tr>
+            <td style="font-size:5pt;"></td>
+            <td class="peso">___%</td>
+            <td class="prog"><div class="prog-segs">
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+            </div></td>
+          </tr>
+          <tr>
+            <td style="font-size:5pt;"></td>
+            <td class="peso">___%</td>
+            <td class="prog"><div class="prog-segs">
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+            </div></td>
+          </tr>
+          <tr>
+            <td style="font-size:5pt;"></td>
+            <td class="peso">___%</td>
+            <td class="prog"><div class="prog-segs">
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+            </div></td>
+          </tr>
+          <tr>
+            <td style="font-size:5pt;"></td>
+            <td class="peso">___%</td>
+            <td class="prog"><div class="prog-segs">
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+            </div></td>
+          </tr>
+          <tr>
+            <td style="font-size:5pt;"></td>
+            <td class="peso">___%</td>
+            <td class="prog"><div class="prog-segs">
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+            </div></td>
+          </tr>
+          <tr>
+            <td style="font-size:5pt;"></td>
+            <td class="peso">___%</td>
+            <td class="prog"><div class="prog-segs">
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+              <span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span>
+            </div></td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="display:flex; align-items:center; gap:1.5mm; margin-top:1mm;">
+        <div style="display:flex; gap:0.3mm;">
+          <span class="prog-seg" style="width:3mm; height:2mm;"></span>
+          <span class="prog-seg" style="width:3mm; height:2mm; background:#D4C4A0;"></span>
+          <span class="prog-seg" style="width:3mm; height:2mm; background:#A89060;"></span>
+        </div>
+        <span style="font-size:4pt; color:var(--ink-light);">0% → 100% (subjetivo, pintável)</span>
+      </div>
+    </div>
+
+    <!-- col 2: meu stack -->
+    <div>
+      <span class="section-title" style="display:block; margin-bottom:1.5mm;">Meu Stack</span>
+      <div style="font-size:4.5pt; color:var(--ink-light); font-style:italic; margin-bottom:1.5mm;">preencher uma vez</div>
+      <div style="display:flex; flex-direction:column; gap:2mm;">
+        <div><div style="font-size:4.5pt; color:var(--ink-light); margin-bottom:0.5mm;">Cursinho / trilha</div><div class="stack-blank"></div></div>
+        <div><div style="font-size:4.5pt; color:var(--ink-light); margin-bottom:0.5mm;">Banco de questões</div><div class="stack-blank"></div></div>
+        <div><div style="font-size:4.5pt; color:var(--ink-light); margin-bottom:0.5mm;">Revisão espaçada</div><div class="stack-blank"></div></div>
+        <div><div style="font-size:4.5pt; color:var(--ink-light); margin-bottom:0.5mm;">Simulados</div><div class="stack-blank"></div></div>
+        <div><div style="font-size:4.5pt; color:var(--ink-light); margin-bottom:0.5mm;">Timer / foco</div><div class="stack-blank"></div></div>
+        <div><div style="font-size:4.5pt; color:var(--ink-light); margin-bottom:0.5mm;">Outro</div><div class="stack-blank"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule" style="margin-bottom:2mm;"></div>
+
+  <!-- CALENDÁRIO DE PROVAS / D-DAYS -->
+  <div style="margin-bottom:2mm;">
+    <span class="section-title" style="display:block; margin-bottom:1.5mm;">Calendário de Provas / D-Days</span>
+    <table class="provas-table">
+      <thead>
+        <tr>
+          <th>Concurso / Prova</th>
+          <th>Fase</th>
+          <th>Data</th>
+          <th>D-</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="rule" style="margin-bottom:2mm;"></div>
+
+  <!-- BALANÇO MENSAL -->
+  <div style="margin-bottom:8.5mm;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:1.5mm;">
+      <span class="section-title">Balanço Mensal</span>
+      <span class="label" style="font-style:italic;">replicar a cada fechamento</span>
+    </div>
+    <div class="balanco-row">
+      <div class="balanco-field">
+        <span class="label-bold">Mês/Ano</span>
+        <div class="balanco-blank" style="min-width:14mm;"></div>
+      </div>
+      <div class="balanco-field">
+        <span class="label-bold">Horas</span>
+        <div class="balanco-blank" style="min-width:8mm;"></div>
+      </div>
+      <div class="balanco-field">
+        <span class="label-bold">Questões</span>
+        <div class="balanco-blank" style="min-width:8mm;"></div>
+      </div>
+    </div>
+    <div style="margin-bottom:1mm;">
+      <span class="label-bold" style="display:block; margin-bottom:0.5mm;">O que foi bem</span>
+      <div class="bal-line"></div>
+      <div class="bal-line"></div>
+    </div>
+    <div>
+      <span class="label-bold" style="display:block; margin-bottom:0.5mm;">O que precisa mudar · Ajuste de rota</span>
+      <div class="bal-line"></div>
+      <div class="bal-line"></div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ CURADO -->
+  <div class="footer-curated">
+    <span class="footer-label">Aprovado diz</span>
+    <span class="footer-text">"Consistência bate intensidade. Um bloco por dia, todos os dias, supera um maratona errada."</span>
+  </div>
+
+</div>
+</body>
+</html>

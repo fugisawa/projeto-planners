@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P5 — Diagnóstico de Erro v3 (lite · 2/pág)</title>
+<link rel="stylesheet" href="shared-v3.css">
+<style>
+.page {
+  padding: 9mm 11mm 7mm 11mm;
+  overflow: hidden;
+}
+
+.hdr {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 2mm;
+  margin-bottom: 2mm;
+  border-bottom: 0.4pt solid var(--ink-pale);
+}
+.hdr-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.hdr-accent {
+  width: 8mm;
+  height: 0.8pt;
+  background: var(--accent);
+  margin-top: 0.5mm;
+  margin-bottom: 0.5mm;
+}
+.hdr-sub {
+  font-size: 4pt;
+  color: var(--ink-light);
+  font-style: italic;
+  max-width: 90mm;
+  line-height: 1.3;
+}
+
+/* INSTRUÇÃO DE TRIAGEM */
+.triagem-nota {
+  background: var(--creme-dark);
+  border: 0.3pt solid var(--gold-light);
+  border-radius: 0.5mm;
+  padding: 1.2mm 2mm;
+  margin-bottom: 2mm;
+  font-size: 3.8pt;
+  color: var(--ink-mid);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Ficha principal */
+.ficha {
+  border: 0.4pt solid var(--ink-pale);
+  padding: 2.5mm 2.5mm 2mm 3mm;
+  margin-bottom: 2mm;
+  position: relative;
+  overflow: hidden;  /* CRÍTICO: previne traços passando da borda */
+  background: transparent;
+}
+.ficha::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 1.2pt;
+  background: var(--accent);
+  opacity: 0.45;
+}
+
+/* Cabeçalho da ficha */
+.fc-hdr {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2mm;
+  align-items: start;
+  margin-bottom: 1.5mm;
+}
+.fc-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1mm;
+}
+
+/* HR line WeasyPrint-safe */
+.hr-line {
+  height: 0.3pt;
+  background: var(--ink-pale);
+  width: 100%;
+}
+.hr-ghost {
+  height: 0.25pt;
+  background: var(--ink-ghost);
+  width: 100%;
+}
+
+/* Matéria + swatch */
+.mat-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5mm;
+  overflow: hidden;  /* evita overflow dos elementos internos */
+}
+.cor-sw {
+  width: 4.5mm;
+  height: 4.5mm;
+  border: 0.4pt solid var(--ink-pale);
+  background: transparent;
+  flex-shrink: 0;
+}
+.mat-blank {
+  flex: 1;
+  max-width: 28mm;
+  overflow: hidden;
+}
+
+/* ORIGEM — 2 modos */
+.origem-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5mm;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.origem-modo {
+  display: flex;
+  align-items: center;
+  gap: 0.8mm;
+  font-size: 3.8pt;
+  color: var(--ink-light);
+  overflow: hidden;
+}
+.orig-blank {
+  display: inline-block;
+  min-width: 8mm;
+  height: 3.5mm;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.orig-sep {
+  font-size: 3.8pt;
+  color: var(--ink-ghost);
+  padding: 0 0.5mm;
+  flex-shrink: 0;
+}
+
+/* D-day */
+.fc-dday {
+  font-size: 4.5pt;
+  font-weight: 700;
+  color: var(--ink-light);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+.fc-dday-val {
+  display: inline-block;
+  min-width: 8mm;
+  height: 3.5mm;
+  vertical-align: bottom;
+}
+
+/* Triagem + Causa em bloco */
+.tc-box {
+  margin-bottom: 1.5mm;
+  padding: 1mm 1.5mm;
+  background: var(--creme-dark);
+  border-radius: 0.4mm;
+}
+.cb-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5mm;
+  flex-wrap: wrap;
+  margin-bottom: 0.8mm;
+}
+.cb-row:last-child {
+  margin-bottom: 0;
+}
+.cb-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8mm;
+}
+.cb-box {
+  width: 3mm;
+  height: 3mm;
+  border: 0.4pt solid var(--ink-light);
+  display: inline-block;
+  flex-shrink: 0;
+}
+.cb-lbl {
+  font-size: 4pt;
+  color: var(--ink-mid);
+  white-space: nowrap;
+}
+
+/* Campos de texto */
+.fd-section {
+  margin-bottom: 1.5mm;
+  overflow: hidden;
+}
+.fd-label {
+  font-size: 4pt;
+  font-weight: 700;
+  color: var(--ink-mid);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.6mm;
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+}
+.fd-note {
+  font-size: 3.5pt;
+  font-weight: 400;
+  color: var(--ink-light);
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.fd-dot {
+  background-image: radial-gradient(circle, #BCAD95 0.6px, transparent 0.6px);
+  background-size: 5mm 5mm;
+  min-height: 10mm;
+  border: 0.25pt solid var(--ink-ghost);
+  overflow: hidden;
+}
+.fd-line {
+  height: 4mm;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Gatilho — sem overflow, conteúdo contido */
+.gatilho-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5mm;
+  margin-bottom: 1.5mm;
+  overflow: hidden;  /* CRÍTICO: evita traços saindo da ficha */
+}
+.gt-lbl {
+  font-size: 4pt;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.gt-blank {
+  flex: 1;
+  height: 3.5mm;
+  min-width: 10mm;
+  max-width: 100%;
+  overflow: hidden;
+}
+.gt-arrow {
+  font-size: 5.5pt;
+  color: var(--ink-pale);
+  align-self: flex-end;
+  padding-bottom: 0.5mm;
+  flex-shrink: 0;
+}
+
+/* Revisão espaçada */
+.rev-row {
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+  padding-top: 1.2mm;
+  border-top: 0.25pt solid var(--ink-ghost);
+}
+.rev-item {
+  display: flex;
+  align-items: center;
+  gap: 1mm;
+}
+.rev-lbl {
+  font-size: 3.8pt;
+  color: var(--ink-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.rev-cb {
+  width: 3.8mm;
+  height: 3.8mm;
+  border: 0.4pt solid var(--ink-pale);
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+/* Segunda ficha — compacta */
+.ficha-sm {
+  border: 0.4pt solid var(--ink-pale);
+  padding: 2mm 2.5mm 1.5mm 3mm;
+  position: relative;
+  overflow: hidden;  /* CRÍTICO: previne traços passando da borda */
+  background: transparent;
+}
+.ficha-sm::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 1.2pt;
+  background: var(--ink-ghost);
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- CABEÇALHO -->
+  <div class="hdr">
+    <div>
+      <div class="hdr-title">Diagnóstico de Erro</div>
+      <div class="hdr-accent"></div>
+      <div class="hdr-sub">lite · só registrar se: ponto-cego · armadilha · questão-modelo</div>
+    </div>
+    <div style="font-size:4pt; color:var(--ink-ghost); letter-spacing:0.10em; text-transform:uppercase; margin-top:1mm;">Concurseiro · v3</div>
+  </div>
+
+  <!-- INSTRUÇÃO DE TRIAGEM IMPRESSA -->
+  <div class="triagem-nota">
+    Não registre todo erro — o QConcursos já guarda. Traga só 1–3 por dia: o que te pegou (ponto-cego / armadilha / questão-modelo).
+  </div>
+
+  <!-- FICHA 1 -->
+  <div class="ficha">
+
+    <!-- Header da ficha -->
+    <div class="fc-hdr">
+      <div class="fc-left">
+        <!-- Matéria + cor -->
+        <div class="mat-row">
+          <div class="cor-sw"></div>
+          <span class="label-bold" style="font-size:4pt; white-space:nowrap;">Matéria</span>
+          <div style="flex:1; max-width:28mm; overflow:hidden;"><div style="height:4mm;"></div><div class="hr-line"></div></div>
+        </div>
+        <!-- ORIGEM — 2 modos, contidos -->
+        <div class="origem-row">
+          <div class="origem-modo">
+            <span>Livro</span>
+            <div style="display:inline-block; min-width:12mm; max-width:14mm; vertical-align:middle; overflow:hidden;"><div class="orig-blank" style="width:100%;"></div><div class="hr-line"></div></div>
+            <span>p.</span>
+            <div style="display:inline-block; min-width:5mm; max-width:7mm; vertical-align:middle; overflow:hidden;"><div class="orig-blank" style="width:100%;"></div><div class="hr-line"></div></div>
+            <span>nº</span>
+            <div style="display:inline-block; min-width:5mm; max-width:7mm; vertical-align:middle; overflow:hidden;"><div class="orig-blank" style="width:100%;"></div><div class="hr-line"></div></div>
+          </div>
+          <div class="orig-sep">OU</div>
+          <div class="origem-modo">
+            <span>Site</span>
+            <div style="display:inline-block; min-width:12mm; max-width:14mm; vertical-align:middle; overflow:hidden;"><div class="orig-blank" style="width:100%;"></div><div class="hr-line"></div></div>
+            <span>id</span>
+            <div style="display:inline-block; min-width:7mm; max-width:9mm; vertical-align:middle; overflow:hidden;"><div class="orig-blank" style="width:100%;"></div><div class="hr-line"></div></div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:right; flex-shrink:0;">
+        <div style="display:inline-flex; align-items:flex-end; gap:0;">
+          <span class="fc-dday">D&#8209;</span>
+          <div style="display:inline-block; min-width:8mm; max-width:10mm; overflow:hidden;">
+            <div class="fc-dday-val"></div>
+            <div class="hr-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Triagem + Causa -->
+    <div class="tc-box">
+      <div class="cb-row">
+        <span class="label-bold" style="font-size:3.8pt; min-width:10mm;">Triagem</span>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Ponto-cego</span></div>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Armadilha</span></div>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Questão-modelo</span></div>
+      </div>
+      <div class="cb-row" style="margin-bottom:0;">
+        <span class="label-bold" style="font-size:3.8pt; min-width:10mm;">Causa</span>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Conceito</span></div>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Interpretação</span></div>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Aplic./cálculo</span></div>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Desatenção</span></div>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Pegadinha</span></div>
+      </div>
+    </div>
+
+    <!-- O que eu pensei (errado) -->
+    <div class="fd-section">
+      <div class="fd-label">
+        O que eu pensei
+        <span class="fd-note">errado — antes da solução</span>
+      </div>
+      <div class="fd-dot" style="min-height:11mm;"></div>
+    </div>
+
+    <!-- Raciocínio correto -->
+    <div class="fd-section" style="overflow:hidden;">
+      <div class="fd-label">Raciocínio Correto</div>
+      <div class="fd-line"></div>
+      <div class="hr-line"></div>
+      <div class="fd-line"></div>
+      <div class="hr-line"></div>
+    </div>
+
+    <!-- Gatilho — overflow:hidden na row e nos blanks -->
+    <div class="gatilho-row">
+      <span class="gt-lbl">Quando vir</span>
+      <div class="gt-blank" style="display:flex; flex-direction:column; justify-content:flex-end;">
+        <div style="flex:1; min-height:3.5mm;"></div>
+        <div class="hr-line"></div>
+      </div>
+      <span class="gt-arrow">→</span>
+      <span class="gt-lbl">Faço</span>
+      <div class="gt-blank" style="display:flex; flex-direction:column; justify-content:flex-end;">
+        <div style="flex:1; min-height:3.5mm;"></div>
+        <div class="hr-line"></div>
+      </div>
+    </div>
+
+    <!-- Revisão espaçada -->
+    <div class="rev-row">
+      <span class="label-bold" style="font-size:3.8pt; min-width:10mm;">Revisão</span>
+      <div class="rev-item"><span class="rev-lbl">D+1</span><div class="rev-cb"></div></div>
+      <div class="rev-item"><span class="rev-lbl">D+7</span><div class="rev-cb"></div></div>
+      <div class="rev-item"><span class="rev-lbl">D+15</span><div class="rev-cb"></div></div>
+      <div class="rev-item"><span class="rev-lbl">D+30</span><div class="rev-cb"></div></div>
+    </div>
+
+  </div>
+
+  <!-- FICHA 2 — compacta -->
+  <div class="ficha-sm">
+
+    <div class="fc-hdr" style="margin-bottom:1.2mm;">
+      <div class="fc-left">
+        <div class="mat-row">
+          <div class="cor-sw" style="width:4mm; height:4mm;"></div>
+          <span class="label-bold" style="font-size:4pt; white-space:nowrap;">Matéria</span>
+          <div class="mat-blank"><div style="height:4mm;"></div><div class="hr-line"></div></div>
+        </div>
+        <div class="origem-row">
+          <div class="origem-modo">
+            <span>Livro</span>
+            <div style="display:inline-block; min-width:10mm; max-width:12mm; vertical-align:middle; overflow:hidden;"><div class="orig-blank" style="width:100%;"></div><div class="hr-line"></div></div>
+            <span>p.</span>
+            <div style="display:inline-block; min-width:4mm; max-width:6mm; vertical-align:middle; overflow:hidden;"><div class="orig-blank" style="width:100%;"></div><div class="hr-line"></div></div>
+            <span>nº</span>
+            <div style="display:inline-block; min-width:4mm; max-width:6mm; vertical-align:middle; overflow:hidden;"><div class="orig-blank" style="width:100%;"></div><div class="hr-line"></div></div>
+          </div>
+          <div class="orig-sep">OU</div>
+          <div class="origem-modo">
+            <span>Site</span>
+            <div style="display:inline-block; min-width:10mm; max-width:12mm; vertical-align:middle; overflow:hidden;"><div class="orig-blank" style="width:100%;"></div><div class="hr-line"></div></div>
+            <span>id</span>
+            <div style="display:inline-block; min-width:5mm; max-width:7mm; vertical-align:middle; overflow:hidden;"><div class="orig-blank" style="width:100%;"></div><div class="hr-line"></div></div>
+          </div>
+        </div>
+      </div>
+      <div style="flex-shrink:0; text-align:right;">
+        <div style="display:inline-flex; align-items:flex-end; gap:0;">
+          <span class="fc-dday" style="font-size:4pt;">D&#8209;</span>
+          <div style="display:inline-block; min-width:8mm; max-width:10mm; overflow:hidden;">
+            <div class="fc-dday-val"></div>
+            <div class="hr-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tc-box" style="padding:0.8mm 1.2mm; margin-bottom:1mm;">
+      <div class="cb-row" style="margin-bottom:0.5mm;">
+        <span class="label-bold" style="font-size:3.8pt; min-width:10mm;">Triagem</span>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Ponto-cego</span></div>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Armadilha</span></div>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Questão-modelo</span></div>
+      </div>
+      <div class="cb-row" style="margin-bottom:0;">
+        <span class="label-bold" style="font-size:3.8pt; min-width:10mm;">Causa</span>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Conceito</span></div>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Interpretação</span></div>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Aplic./cálculo</span></div>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Desatenção</span></div>
+        <div class="cb-item"><div class="cb-box"></div><span class="cb-lbl">Pegadinha</span></div>
+      </div>
+    </div>
+
+    <div class="fd-section" style="margin-bottom:1mm;">
+      <div class="fd-label" style="margin-bottom:0.4mm;">O que eu pensei</div>
+      <div class="fd-dot" style="min-height:8mm;"></div>
+    </div>
+
+    <div class="fd-section" style="margin-bottom:1mm;">
+      <div class="fd-label" style="margin-bottom:0.4mm;">Raciocínio Correto</div>
+      <div class="fd-line" style="height:3.5mm;"></div>
+      <div class="hr-line"></div>
+    </div>
+
+    <!-- Gatilho — overflow:hidden na row -->
+    <div class="gatilho-row" style="margin-bottom:1.2mm; overflow:hidden;">
+      <span class="gt-lbl" style="font-size:4pt;">Quando vir</span>
+      <div class="gt-blank" style="display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden;">
+        <div style="flex:1; min-height:3.5mm;"></div>
+        <div class="hr-line"></div>
+      </div>
+      <span class="gt-arrow">→</span>
+      <span class="gt-lbl" style="font-size:4pt;">Faço</span>
+      <div class="gt-blank" style="display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden;">
+        <div style="flex:1; min-height:3.5mm;"></div>
+        <div class="hr-line"></div>
+      </div>
+    </div>
+
+    <div class="rev-row">
+      <span class="label-bold" style="font-size:3.8pt; min-width:10mm;">Revisão</span>
+      <div class="rev-item"><span class="rev-lbl">D+1</span><div class="rev-cb"></div></div>
+      <div class="rev-item"><span class="rev-lbl">D+7</span><div class="rev-cb"></div></div>
+      <div class="rev-item"><span class="rev-lbl">D+15</span><div class="rev-cb"></div></div>
+      <div class="rev-item"><span class="rev-lbl">D+30</span><div class="rev-cb"></div></div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

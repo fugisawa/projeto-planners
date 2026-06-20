@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P1 — Diário de Foco</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+/* ---- Página 1: Diário de Foco ---- */
+.page {
+  padding: 9mm 10mm 8mm 10mm;
+  gap: 0;
+}
+
+/* Cabeçalho */
+.header-bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 1.8mm;
+  margin-bottom: 2mm;
+  border-bottom: 0.6pt solid var(--ink-pale);
+}
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5mm;
+}
+.header-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.header-fields {
+  display: flex;
+  gap: 3mm;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.hf-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1mm;
+}
+.hf-label {
+  font-size: 5pt;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+.hf-blank {
+  display: inline-block;
+  border-bottom: 0.4pt solid var(--ink-pale);
+  height: 3mm;
+}
+.hf-blank.date { min-width: 20mm; }
+.hf-blank.dday { min-width: 8mm; }
+.hf-blank.hrs  { min-width: 6mm; }
+
+/* Time-log */
+.timelog-wrap {
+  margin-bottom: 2mm;
+}
+.timelog-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1mm;
+}
+.timelog-subtext {
+  font-size: 4.5pt;
+  color: var(--ink-light);
+  font-style: italic;
+}
+
+/* Grade do time-log */
+.timelog-grid {
+  width: 100%;
+  border-collapse: collapse;
+}
+.timelog-grid td {
+  padding: 0;
+  vertical-align: middle;
+  border: none;
+}
+.tl-hour {
+  font-size: 5pt;
+  font-weight: 600;
+  color: var(--ink-mid);
+  font-variant-numeric: tabular-nums;
+  width: 8mm;
+  padding-right: 1.5mm;
+  text-align: right;
+  letter-spacing: -0.02em;
+}
+.tl-group {
+  display: flex;
+  gap: 0.6mm;
+  align-items: center;
+  padding: 0.3mm 0;
+}
+.tl-block {
+  width: 4.8mm;
+  height: 4.8mm;
+  border: 0.4pt solid #C8BAA0;
+  background: transparent;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.tl-sep {
+  width: 1.5mm;
+  display: inline-block;
+}
+.tl-group-sep {
+  width: 2mm;
+  display: inline-block;
+}
+.tl-period {
+  font-size: 4pt;
+  color: var(--ink-ghost);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  width: 10mm;
+  text-align: center;
+}
+
+/* Totais do time-log */
+.timelog-footer {
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+  margin-top: 0.5mm;
+  padding-top: 0.5mm;
+  border-top: 0.3pt solid var(--ink-ghost);
+}
+.tl-total {
+  display: flex;
+  align-items: baseline;
+  gap: 1mm;
+}
+
+/* Legenda de matérias */
+.legend-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.5mm;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.legend-swatch-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8mm;
+}
+.swatch {
+  width: 4.5mm;
+  height: 4.5mm;
+  border: 0.4pt solid var(--ink-pale);
+  background: transparent;
+}
+.swatch-label {
+  font-size: 4.5pt;
+  color: var(--ink-light);
+  min-width: 10mm;
+  border-bottom: 0.3pt solid var(--ink-ghost);
+  padding-bottom: 0.3mm;
+}
+
+/* Seção Tarefas */
+.tasks-section {
+  margin-bottom: 2mm;
+}
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5mm;
+  padding: 0.4mm 0;
+  border-bottom: 0.3pt solid var(--ink-ghost);
+}
+.task-cb {
+  width: 3mm;
+  height: 3mm;
+  border: 0.5pt solid var(--ink-mid);
+  background: transparent;
+  flex-shrink: 0;
+}
+.task-line {
+  flex: 1;
+  height: 0;
+  border: none;
+}
+.task-mat {
+  font-size: 4.5pt;
+  font-weight: 600;
+  color: var(--ink-light);
+  letter-spacing: 0.08em;
+  min-width: 6mm;
+  text-align: right;
+}
+
+/* Seção Síntese */
+.sintese-section {
+  flex: 1;
+  margin-bottom: 2mm;
+}
+.sintese-area {
+  background-image: radial-gradient(circle, #C0B29A 0.7px, transparent 0.7px);
+  background-size: 5mm 5mm;
+  background-color: transparent;
+  border: 0.3pt solid var(--ink-ghost);
+  flex: 1;
+  min-height: 24mm;
+  width: 100%;
+}
+
+/* Reflexão */
+.reflexao-section {
+  margin-bottom: 1.5mm;
+}
+.refl-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8mm;
+  margin: 1.5mm 0;
+}
+.refl-line {
+  height: 4mm;
+  border-bottom: 0.3pt solid var(--ink-pale);
+  width: 100%;
+}
+.refl-check-row {
+  display: flex;
+  align-items: center;
+  gap: 2.5mm;
+  margin-top: 1mm;
+}
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 1mm;
+}
+.check-box {
+  width: 3mm;
+  height: 3mm;
+  border: 0.5pt solid var(--ink-mid);
+  display: inline-block;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- CABEÇALHO -->
+  <div class="header-bar">
+    <div class="header-left">
+      <div class="header-title">Diário de Foco</div>
+      <div class="header-fields" style="margin-top:1.5mm;">
+        <div class="hf-item">
+          <span class="hf-label">Data</span>
+          <span class="hf-blank date"></span>
+        </div>
+        <div class="hf-item">
+          <span class="hf-label">D-</span>
+          <span class="hf-blank dday"></span>
+        </div>
+        <div class="hf-item">
+          <span class="hf-label">Meta</span>
+          <span class="hf-blank hrs"></span>
+          <span class="hf-label">h</span>
+        </div>
+      </div>
+    </div>
+    <div style="font-size:4.5pt; color:var(--ink-ghost); letter-spacing:0.08em; text-transform:uppercase;">Concurseiro · v1</div>
+  </div>
+
+  <!-- TIME-LOG -->
+  <div class="timelog-wrap">
+    <div class="timelog-title-row">
+      <span class="section-title">Time-Log</span>
+      <span class="timelog-subtext">cada bloco = 15 min · pinte por matéria</span>
+    </div>
+
+    <!-- Time-log compacto: 3 blocos por hora (cada = 20min) para caber em A5 -->
+    <!-- Formato: HORA | manhã (4 blocos) | sep | tarde (4 blocos) | sep | noite (4 blocos) -->
+    <style>
+    .tl-row { display: flex; align-items: center; gap: 0; margin-bottom: 0.5mm; }
+    .tl-hr { font-size: 5pt; font-weight: 600; color: var(--ink-mid); font-variant-numeric: tabular-nums; width: 8mm; text-align: right; padding-right: 1.5mm; flex-shrink: 0; }
+    .tl-b { width: 4mm; height: 4mm; border: 0.4pt solid #C8BAA0; background: transparent; display: inline-block; flex-shrink: 0; }
+    .tl-gap { width: 2mm; flex-shrink: 0; }
+    .tl-dash { width: 0.3pt; height: 3.5mm; background: var(--ink-ghost); align-self: center; margin: 0 1mm; flex-shrink: 0; }
+    .tl-shift-break { border-top: 0.4pt dashed var(--ink-ghost); margin: 0.3mm 0 0.7mm 0; }
+    </style>
+
+    <div>
+      <!-- Rótulos de turno -->
+      <div style="display:flex; margin-bottom:1mm; padding-left:8mm;">
+        <div style="width:21mm; text-align:center; font-size:4pt; color:var(--ink-ghost); text-transform:uppercase; letter-spacing:0.08em;">Manhã</div>
+        <div style="width:6mm;"></div>
+        <div style="width:21mm; text-align:center; font-size:4pt; color:var(--ink-ghost); text-transform:uppercase; letter-spacing:0.08em;">Tarde</div>
+        <div style="width:6mm;"></div>
+        <div style="width:21mm; text-align:center; font-size:4pt; color:var(--ink-ghost); text-transform:uppercase; letter-spacing:0.08em;">Noite</div>
+      </div>
+
+      <!-- Linhas 06h – 11h (manhã) -->
+      <div class="tl-row"><span class="tl-hr">06h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">07h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">08h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">09h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">10h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">11h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <!-- intervalo manhã/tarde -->
+      <div class="tl-shift-break"></div>
+      <div class="tl-row"><span class="tl-hr" style="color:var(--ink-pale);">12h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">13h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">14h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">15h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">16h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <!-- intervalo tarde/noite -->
+      <div class="tl-shift-break"></div>
+      <div class="tl-row"><span class="tl-hr" style="color:var(--ink-pale);">17h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">18h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">19h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">20h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">21h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+      <div class="tl-row"><span class="tl-hr">22h</span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-gap"></span><span class="tl-dash"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span><span class="tl-b"></span></div>
+    </div>
+
+    <!-- Totais + Legenda -->
+    <div class="timelog-footer">
+      <div class="tl-total">
+        <span class="label-bold">Total</span>
+        <span class="hf-blank" style="min-width:7mm;"></span>
+        <span class="hf-label">h</span>
+        <span class="hf-blank" style="min-width:5mm; margin-left:1mm;"></span>
+        <span class="hf-label">min</span>
+      </div>
+      <div class="legend-wrap">
+        <span class="label-bold" style="margin-right:1mm;">Legenda:</span>
+        <div class="legend-swatch-box"><span class="swatch"></span><span class="swatch-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <div class="legend-swatch-box"><span class="swatch"></span><span class="swatch-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <div class="legend-swatch-box"><span class="swatch"></span><span class="swatch-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <div class="legend-swatch-box"><span class="swatch"></span><span class="swatch-label">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REGRA -->
+  <div class="rule-heavy" style="margin-bottom:1.5mm;"></div>
+
+  <!-- TAREFAS DE HOJE -->
+  <div class="tasks-section">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:1mm;">
+      <span class="section-title">Tarefas de Hoje</span>
+      <span class="label" style="font-style:italic;">puxar do app / cursinho</span>
+    </div>
+    <div class="task-row">
+      <div class="task-cb"></div>
+      <div class="task-line"></div>
+      <div class="task-mat">MAT.</div>
+    </div>
+    <div class="task-row">
+      <div class="task-cb"></div>
+      <div class="task-line"></div>
+      <div class="task-mat">MAT.</div>
+    </div>
+    <div class="task-row">
+      <div class="task-cb"></div>
+      <div class="task-line"></div>
+      <div class="task-mat">MAT.</div>
+    </div>
+    <div class="task-row">
+      <div class="task-cb"></div>
+      <div class="task-line"></div>
+      <div class="task-mat">MAT.</div>
+    </div>
+    <div class="task-row">
+      <div class="task-cb"></div>
+      <div class="task-line"></div>
+      <div class="task-mat">MAT.</div>
+    </div>
+  </div>
+
+  <!-- REGRA -->
+  <div class="rule" style="margin-bottom:1.5mm;"></div>
+
+  <!-- SÍNTESE À MÃO -->
+  <div class="sintese-section" style="display:flex; flex-direction:column; margin-bottom:1.5mm;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:1mm;">
+      <span class="section-title">Síntese à Mão</span>
+      <span class="label" style="font-style:italic;">mapa mental · resumo · lei seca</span>
+    </div>
+    <div class="sintese-area" style="height:14mm;"></div>
+  </div>
+
+  <!-- REFLEXÃO -->
+  <div class="reflexao-section" style="margin-bottom:0; padding-bottom:9mm;">
+    <div class="rule" style="margin-bottom:1.5mm;"></div>
+    <span class="section-title">Reflexão do Dia</span>
+    <div class="refl-lines">
+      <div class="refl-line"></div>
+      <div class="refl-line"></div>
+    </div>
+    <div class="refl-check-row">
+      <span class="label-bold" style="font-size:4.5pt;">Sensação:</span>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <span class="label">Entendi bem</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <span class="label">Confuso</span>
+      </div>
+      <div class="check-item">
+        <div class="check-box"></div>
+        <span class="label">Não aprendi</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ CURADO -->
+  <div class="footer-curated" style="position:absolute; bottom:0; left:0; right:0;">
+    <span class="footer-label">Lei Seca</span>
+    <span class="footer-text">Art. 5º, CF/88 — Todos são iguais perante a lei, sem distinção de qualquer natureza...</span>
+  </div>
+
+</div>
+</body>
+</html>

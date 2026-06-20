@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P3 — Bússola da Jornada v3</title>
+<link rel="stylesheet" href="shared-v3.css">
+<style>
+.page {
+  padding: 9mm 11mm 7mm 11mm;
+  overflow: hidden;
+}
+
+.hdr {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 2mm;
+  margin-bottom: 2.5mm;
+  border-bottom: 0.4pt solid var(--ink-pale);
+}
+.hdr-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.hdr-accent {
+  width: 8mm;
+  height: 0.8pt;
+  background: var(--accent);
+  margin-top: 0.5mm;
+}
+
+/* Título de seção com régua abaixo */
+.sec-hdr { margin-bottom: 1.5mm; }
+.sec-hdr-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.8mm;
+}
+.sec-rule {
+  height: 0.4pt;
+  background: var(--accent);
+  width: 100%;
+  opacity: 0.35;
+}
+
+.field-line {
+  height: 4.5mm;
+  border-bottom: 0.3pt dashed var(--ink-pale);
+  width: 100%;
+  display: block;
+  margin-bottom: 1mm;
+}
+
+/* HR WeasyPrint-safe */
+.hr-line {
+  height: 0.3pt;
+  background: var(--ink-pale);
+  width: 100%;
+}
+
+/* Mapa do edital — hairlines */
+.mapa-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5mm;
+}
+.mapa-table th {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.5pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--ink-light);
+  background: transparent;
+  padding: 0.8mm 1mm;
+  border-bottom: 0.4pt solid var(--ink-pale);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: left;
+}
+.mapa-table td {
+  border-bottom: 0.25pt solid var(--ink-ghost);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 0.6mm 1mm;
+  height: 4.5mm;
+  vertical-align: middle;
+  font-size: 4pt;
+}
+.mapa-table td.peso {
+  text-align: center;
+  width: 8mm;
+  color: var(--ink-light);
+}
+.mapa-table td.prog {
+  width: 24mm;
+}
+.mapa-table tbody tr:last-child td {
+  border-bottom: 0.3pt solid var(--ink-pale);
+}
+
+/* Barra de progresso */
+.prog-segs {
+  display: flex;
+  gap: 0.3mm;
+}
+.prog-seg {
+  width: 3.5mm;
+  height: 2.5mm;
+  border: 0.3pt solid var(--ink-pale);
+  background: transparent;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Stack */
+.stack-blank {
+  flex: 1;
+  height: 3.5mm;
+  border-bottom: 0.3pt dashed var(--ink-pale);
+  display: block;
+  margin-top: 0.3mm;
+}
+
+/* Calendário de provas */
+.provas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5mm;
+}
+.provas-table th {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.5pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--ink-light);
+  background: transparent;
+  padding: 0.8mm 1mm;
+  border-bottom: 0.4pt solid var(--ink-pale);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: left;
+}
+.provas-table td {
+  border-bottom: 0.25pt solid var(--ink-ghost);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 0.6mm 1mm;
+  height: 4.5mm;
+  vertical-align: middle;
+  font-size: 4pt;
+}
+.provas-table tbody tr:last-child td {
+  border-bottom: 0.3pt solid var(--ink-pale);
+}
+
+/* Balanço mensal com KPIs */
+.balanco-kpi-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  flex-wrap: wrap;
+  margin-bottom: 1.2mm;
+  padding: 1mm 1.5mm;
+  background: var(--creme-dark);
+  border: 0.3pt solid var(--gold-light);
+  border-radius: 0.5mm;
+}
+.bkpi {
+  display: flex;
+  align-items: baseline;
+  gap: 1mm;
+}
+.bkpi-lbl {
+  font-size: 3.5pt;
+  font-weight: 700;
+  color: var(--ink-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.bkpi-blank {
+  display: inline-block;
+  border-bottom: 0.3pt solid var(--ink-mid);
+  min-width: 8mm;
+  height: 3mm;
+}
+.bkpi-sep {
+  width: 0.3pt;
+  height: 3mm;
+  background: var(--ink-ghost);
+  align-self: center;
+}
+.bal-line {
+  height: 4.5mm;
+  border-bottom: 0.3pt dashed var(--ink-pale);
+  width: 100%;
+  margin-bottom: 1mm;
+}
+
+/* Layout 2 colunas */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3mm;
+  margin-bottom: 1.5mm;
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- CABEÇALHO -->
+  <div class="hdr">
+    <div>
+      <div class="hdr-title">Bússola da Jornada</div>
+      <div class="hdr-accent"></div>
+    </div>
+    <div style="font-size:4pt; color:var(--ink-ghost); letter-spacing:0.10em; text-transform:uppercase; margin-top:1mm;">Frontmatter · Concurseiro v3</div>
+  </div>
+
+  <!-- OBJETIVO -->
+  <div style="margin-bottom:2mm;">
+    <div class="sec-hdr">
+      <div class="sec-hdr-row">
+        <span class="section-title">Meu Objetivo / Cargo-Alvo</span>
+      </div>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="field-line"></div>
+    <div style="margin-top:0.5mm; display:flex; align-items:baseline; gap:1mm;">
+      <span class="label" style="font-style:italic; white-space:nowrap;">Por que quero isso?</span>
+      <div class="field-line" style="margin:0; flex:1;"></div>
+    </div>
+  </div>
+
+  <!-- MAPA DO EDITAL + MEU STACK — lado a lado -->
+  <div class="two-col" style="align-items:start;">
+
+    <!-- col 1: mapa do edital -->
+    <div>
+      <div class="sec-hdr">
+        <div class="sec-hdr-row">
+          <span class="section-title">Mapa do Edital</span>
+          <span class="label" style="font-size:3.5pt; font-style:italic;">visão macro</span>
+        </div>
+        <div class="sec-rule"></div>
+      </div>
+      <table class="mapa-table">
+        <thead>
+          <tr>
+            <th>Bloco / Matéria</th>
+            <th style="text-align:center; width:8mm;">Peso</th>
+            <th style="width:24mm;">Progresso</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+          <tr><td></td><td class="peso">__%</td><td class="prog"><div class="prog-segs"><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span><span class="prog-seg"></span></div></td></tr>
+        </tbody>
+      </table>
+      <div style="display:flex; align-items:center; gap:1.5mm; margin-top:0.5mm;">
+        <div style="display:flex; gap:0.3mm;">
+          <span class="prog-seg" style="width:3mm; height:2mm;"></span>
+          <span class="prog-seg" style="width:3mm; height:2mm; background:#D0C0A0;"></span>
+          <span class="prog-seg" style="width:3mm; height:2mm; background:#9A8060;"></span>
+        </div>
+        <span style="font-size:3pt; color:var(--ink-light);">0% → 100% (pintável)</span>
+      </div>
+    </div>
+
+    <!-- col 2: meu stack + calendário de provas -->
+    <div style="display:flex; flex-direction:column; gap:2.5mm;">
+      <!-- Stack -->
+      <div>
+        <div class="sec-hdr">
+          <div class="sec-hdr-row">
+            <span class="section-title">Meu Stack</span>
+          </div>
+          <div class="sec-rule"></div>
+        </div>
+        <div style="font-size:3.5pt; color:var(--ink-light); font-style:italic; margin-bottom:1mm;">preencher uma vez</div>
+        <div style="display:flex; flex-direction:column; gap:1.5mm;">
+          <div><div style="font-size:3.5pt; color:var(--ink-light);">Cursinho / trilha</div><div class="stack-blank"></div></div>
+          <div><div style="font-size:3.5pt; color:var(--ink-light);">Banco de questões</div><div class="stack-blank"></div></div>
+          <div><div style="font-size:3.5pt; color:var(--ink-light);">Revisão espaçada (Anki etc.)</div><div class="stack-blank"></div></div>
+          <div><div style="font-size:3.5pt; color:var(--ink-light);">Simulados</div><div class="stack-blank"></div></div>
+          <div><div style="font-size:3.5pt; color:var(--ink-light);">App de foco/tempo (ex.: Forest)</div><div class="stack-blank"></div></div>
+          <div><div style="font-size:3.5pt; color:var(--ink-light);">Outro</div><div class="stack-blank"></div></div>
+        </div>
+      </div>
+
+      <!-- Calendário de provas -->
+      <div>
+        <div class="sec-hdr">
+          <div class="sec-hdr-row">
+            <span class="section-title">Calendário de Provas</span>
+          </div>
+          <div class="sec-rule"></div>
+        </div>
+        <table class="provas-table">
+          <thead>
+            <tr>
+              <th>Concurso</th>
+              <th>Fase</th>
+              <th>Data</th>
+              <th>D-</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule" style="margin-bottom:2mm;"></div>
+
+  <!-- BALANÇO MENSAL COM KPIs -->
+  <div>
+    <div class="sec-hdr">
+      <div class="sec-hdr-row">
+        <span class="section-title">Balanço Mensal</span>
+        <span class="label" style="font-style:italic; font-size:3.5pt;">replicar a cada fechamento</span>
+      </div>
+      <div class="sec-rule"></div>
+    </div>
+    <!-- KPIs numéricos -->
+    <div class="balanco-kpi-row">
+      <div class="bkpi">
+        <span class="bkpi-lbl">Mês</span>
+        <span class="bkpi-blank" style="min-width:12mm;"></span>
+      </div>
+      <div class="bkpi-sep"></div>
+      <div class="bkpi">
+        <span class="bkpi-lbl">Horas</span>
+        <span class="bkpi-blank"></span>
+      </div>
+      <div class="bkpi-sep"></div>
+      <div class="bkpi">
+        <span class="bkpi-lbl">Questões Obj.</span>
+        <span class="bkpi-blank"></span>
+      </div>
+      <div class="bkpi-sep"></div>
+      <div class="bkpi">
+        <span class="bkpi-lbl">% Acerto</span>
+        <span class="bkpi-blank"></span>
+        <span class="bkpi-lbl">%</span>
+      </div>
+      <div class="bkpi-sep"></div>
+      <div class="bkpi">
+        <span class="bkpi-lbl">Discursivas</span>
+        <span class="bkpi-blank"></span>
+      </div>
+      <div class="bkpi-sep"></div>
+      <div class="bkpi">
+        <span class="bkpi-lbl">Anki criados</span>
+        <span class="bkpi-blank"></span>
+      </div>
+      <div class="bkpi-sep"></div>
+      <div class="bkpi">
+        <span class="bkpi-lbl">Anki revisados</span>
+        <span class="bkpi-blank"></span>
+      </div>
+    </div>
+    <!-- Análise qualitativa -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2mm;">
+      <div>
+        <span class="label-bold" style="display:block; margin-bottom:0.8mm; font-size:4pt;">O que foi bem</span>
+        <div class="bal-line"></div>
+        <div class="bal-line"></div>
+      </div>
+      <div>
+        <span class="label-bold" style="display:block; margin-bottom:0.8mm; font-size:4pt;">O que precisa mudar · Ajuste de rota</span>
+        <div class="bal-line"></div>
+        <div class="bal-line"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
