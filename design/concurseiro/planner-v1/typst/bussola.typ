@@ -4,17 +4,20 @@
 
 // ── Helpers locais ─────────────────────────────────────────────────────────────
 
-// Quadrado pintável de progresso (5 un = 0%→100%).
+// Quadrados pintáveis de progresso (5 un = 0%→100%).
 #let prog5 = {
   for _ in range(5) {
     box(baseline: 0.2mm,
-      rect(width: 3.5mm, height: 3.5mm, stroke: (paint: hair, thickness: wt.box)))
+      rect(width: 3.2mm, height: 3.2mm, stroke: (paint: hair, thickness: wt.box)))
     h(0.5mm)
   }
 }
 
 // Micro cabeçalho de coluna.
 #let th(s) = text(font: sans, size: 5.5pt, fill: ink-2, weight: 700, tracking: 0.5pt)[#upper(s)]
+
+// Célula peso (linha de escrita + %), para a tabela do edital.
+#let pesocell = box[#box(width: 4mm, line(length: 100%, stroke: (paint: hair, thickness: wt.hair, dash: "dotted")))#h(0.6mm)#text(font: sans, size: 5.5pt, fill: ink-3)[%]]
 
 // Célula KPI com largura fixa.
 #let kpic(label, w: 20mm) = box(width: w)[
@@ -54,47 +57,25 @@
   columns: (1fr, 52mm),
   column-gutter: 5mm,
 
-  // ── ESQUERDA: Mapa do edital (tabela com chip de cor) ────────────────────
+  // ── ESQUERDA: Mapa do edital (tabela com header integrado + chip de cor) ──
   [
     #sechead("Mapa do edital", hint: "visão macro")
-    // Cabeçalho manual da tabela
-    #grid(
-      columns: (5.5mm, 1fr, 13mm, auto),
-      column-gutter: 1.5mm,
-      align: (center + horizon, left + horizon, right + horizon, right + horizon),
-      [], th("Bloco / Matéria"), th("Peso"), th("Progresso"),
+    #let ecells = (
+      [], th("Bloco / Matéria"), align(right + horizon, th("Peso")), align(right + horizon, th("Progresso")),
     )
-    #v(0.8mm)
-    #line(length: 100%, stroke: (paint: hair, thickness: wt.hair))
-    // Tabela unificada: chip | matéria (pontilhado) | peso (%) | progresso (prog5)
-    // Usa table() para rows fixas de 4.5mm — mais estável que grid empilhado
-    #let n = 12
-    #let cells = ()
-    #for i in range(n) {
-      // chip
-      cells.push(align(center + horizon,
-        rect(width: 4mm, height: 3.5mm, fill: none, stroke: (paint: hair, thickness: wt.box))
-      ))
-      // matéria (pontilhado)
-      cells.push(box(width: 100%, align(left + horizon, dot())))
-      // peso %
-      cells.push(align(right + horizon,
-        text(font: sans, size: 5pt, fill: ink-3)[%]
-      ))
-      // progresso (5 quadradinhos)
-      cells.push(align(right + horizon, prog5))
+    #for i in range(12) {
+      ecells.push(align(center + horizon, rect(width: 4mm, height: 3.4mm, fill: none, stroke: (paint: hair, thickness: wt.box))))
+      ecells.push(align(left + horizon, dot()))
+      ecells.push(align(right + horizon, pesocell))
+      ecells.push(align(right + horizon, prog5))
     }
     #table(
-      columns: (5.5mm, 1fr, 9mm, auto),
-      rows: 4.5mm,
-      inset: (x, y) => {
-        if x == 0 { (x: 0.8mm, y: 0.5mm) }
-        else if x == 2 { (x: 1mm, y: 0.5mm) }
-        else { (x: 1mm, y: 0.5mm) }
-      },
+      columns: (5.5mm, 1fr, 11mm, auto),
+      rows: (auto,) + (4.5mm,) * 12,
+      inset: (x, y) => (x: 1mm, y: 0.5mm),
       align: (center + horizon, left + horizon, right + horizon, right + horizon),
-      stroke: (x, y) => (paint: grid-c, thickness: wt.hair),
-      ..cells
+      stroke: (x, y) => if y == 0 { (bottom: (paint: hair, thickness: wt.hair)) } else { (top: (paint: grid-c, thickness: wt.hair)) },
+      ..ecells
     )
     #v(2mm)
     // Legenda de progresso
@@ -102,12 +83,10 @@
       columns: (auto, auto, auto, 1fr),
       column-gutter: 2mm,
       align: left + horizon,
-      rect(width: 3.5mm, height: 3.5mm, fill: none, stroke: (paint: hair, thickness: wt.box)),
-      rect(width: 3.5mm, height: 3.5mm, fill: grid-c, stroke: (paint: hair, thickness: wt.box)),
-      rect(width: 3.5mm, height: 3.5mm, fill: ink-2, stroke: (paint: hair, thickness: wt.box)),
-      align(left + horizon,
-        text(font: sans, size: 5pt, fill: ink-3)[0% → 100% (pintável)]
-      ),
+      rect(width: 3.2mm, height: 3.2mm, fill: none, stroke: (paint: hair, thickness: wt.box)),
+      rect(width: 3.2mm, height: 3.2mm, fill: grid-c, stroke: (paint: hair, thickness: wt.box)),
+      rect(width: 3.2mm, height: 3.2mm, fill: ink-2, stroke: (paint: hair, thickness: wt.box)),
+      align(left + horizon, text(font: sans, size: 5pt, fill: ink-3)[0% → 100% (pintável)]),
     )
   ],
 
@@ -122,22 +101,14 @@
     #stack-row("Outro")
     #v(3mm)
     #sechead("Calendário de provas")
-    // Cabeçalho
-    #grid(
-      columns: (1fr, 11mm, 9mm, 7mm),
-      column-gutter: 1mm,
-      align: (left + horizon, left + horizon, left + horizon, right + horizon),
-      th("Concurso"), th("Fase"), th("Data"), th("D-"),
-    )
-    #v(0.8mm)
-    #line(length: 100%, stroke: (paint: hair, thickness: wt.hair))
-    // 4 linhas em tabela — rows fixas de 5.5mm (espaço real p/ escrita à mão)
+    // Header integrado na tabela → colunas alinhadas; D-/Data com espaço de escrita
     #table(
-      columns: (1fr, 11mm, 9mm, 7mm),
-      rows: 5.5mm,
-      inset: (x, y) => (x: 1mm, y: 0.5mm),
-      align: left + horizon,
-      stroke: (x, y) => if y > 0 { (top: (paint: grid-c, thickness: wt.hair)) } else { none },
+      columns: (1fr, 9mm, 12mm, 8mm),
+      rows: (auto,) + (5.6mm,) * 4,
+      inset: (x, y) => (x: 1mm, y: 0.6mm),
+      align: (left + horizon, left + horizon, left + horizon, right + horizon),
+      stroke: (x, y) => if y == 0 { (bottom: (paint: hair, thickness: wt.hair)) } else { (top: (paint: grid-c, thickness: wt.hair)) },
+      th("Concurso"), th("Fase"), th("Data"), th("D-"),
       dot(), dot(), dot(), dot(),
       dot(), dot(), dot(), dot(),
       dot(), dot(), dot(), dot(),
