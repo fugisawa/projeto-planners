@@ -1,6 +1,18 @@
 # Estudo de Mercado — Projeto Planners
 ### Planners premium para concurseiros e praticantes de força · Brasil · pt-BR
 
+> ## ⚠️ DOCUMENTO EM REVISÃO — baseline pré-pivô (a recalcular pós-cotação)
+> **Atualizado: 21/jun/2026.** Redigido em 19/jun/2026, **antes** das decisões travadas de 21/jun/2026. As **tabelas e indicadores numéricos** deste corpo (VPL/TIR, MC/un, ROI, break-even, preço médio R$ 114, custo R$ 55) refletem o **cenário pré-pivô (2 SKUs em paralelo · R$ 119)** e **serão refeitos** pelo `financial-modeler` após as cotações reais (Gate A). **Não usar os números deste corpo como âncora operacional** — a fonte da verdade é `CLAUDE.md` §Fatos-âncora + `design/concurseiro/planner-v1/ESTADO-RETOMADA.md`.
+>
+> **Decisões que prevalecem sobre o corpo abaixo:**
+> - **Lançamento sequencial:** F1 = **só o Concurseiro** (R$ 5.000 banca 1 SKU); **Treino de Força e Caderno de Erros = F2**, pagos pelo caixa gerado. (O corpo trata os 2 SKUs em paralelo — superado.)
+> - **Preço de lançamento Concurseiro = R$ 129** (regime ~R$ 139); Treino R$ 109 (regime R$ 119–129). `[Daniel · 21/jun/2026]`
+> - **SEM pré-venda · SEM empréstimo/aporte** — 100% autofinanciado. (Onde o corpo disser "pré-venda obrigatória" ou "aporte", está superado.)
+> - **Custo/un (~112 pp, micro-lote):** 4/4 R$ 43–55 · 2/2 (paleta fria) R$ 36–47 `[estimativa triangulada · 21/jun/2026]` (supera ~R$ 55–60).
+> - **Produto v1 = o Planner SEM ficha embutida** (só ponteiro → Caderno de Erros).
+>
+> ---
+
 **Objeto:** dimensionar e caracterizar os dois mercados-alvo, mapear concorrência, personas,
 forças competitivas e a economia de aquisição.
 **Data:** 19/jun/2026 · **Base de evidências:** `research/evidence/` (4 notas datadas).
@@ -13,16 +25,17 @@ Marcações: `[confirmado]` · `[estimativa triangulada]` · `[a confirmar]`.
 Dois mercados grandes e estruturalmente sólidos, com perfis de risco opostos e complementares:
 
 - **Concurseiro** — mercado **grande, recorrente e validado** (4–6 M de candidatos ativos que
-  estudam ~2 anos; um planner de marca a R$ 119,90 já vende). É **mais competido** e tem um
-  ciclo de demanda ligado ao calendário de concursos — hoje em **lull legal de ano eleitoral**,
-  com **retomada esperada em 2027**.
+  estudam ~2 anos; um planner de marca a R$ 119,90 já vende — nosso Concurseiro entra a R$ 129,
+  com perpétuo e método mais completo). É **mais competido** e tem um ciclo de demanda ligado ao
+  calendário de concursos — hoje em **lull legal de ano eleitoral**, com **retomada esperada em
+  2027**.
 - **Treino de força** — **whitespace nacional**: não há diário de periodização premium com marca
   no Brasil; a concorrência é importada (cara) ou digital (app). Mercado **menos competido, com
   recompra**, porém exige **educar** o consumidor sobre o conceito.
 
 **O tamanho não é o gargalo.** O SAM somado é da ordem de **R$ 50–120 M/ano**; o SOM do ano 1
 (200–1.100 un) é limitado por **capacidade de aquisição** — construir audiência do zero, num
-ticket (R$ 110–119) em que **tráfego pago frio é inviável** (CAC R$ 120–333). A vitória depende
+ticket (R$ 109–129) em que **tráfego pago frio é inviável** (CAC R$ 120–333). A vitória depende
 de **conteúdo orgânico** (a força dos sócios), não de mídia paga.
 
 ---
@@ -170,8 +183,8 @@ num produto físico — que os apps e cadernos genéricos não entregam.
 | Apps (Strong, Hevy) | R$ 130–165/ano | digital | tátil, compra única, sem fricção recorrente |
 
 **Posição-alvo (mapa de preço):** físico, nacional, com método especializado, perpétuo, na
-faixa **R$ 109–119** — o "vão" entre genéricos (R$ 28–64), premium de marca (R$ 77–120) e
-topo importado/app (R$ 130–200).
+faixa **R$ 109–129** (Treino R$ 109 · Concurseiro R$ 129) — posição no topo do premium de marca
+e logo abaixo do topo importado/app (R$ 130–200).
 
 ---
 
@@ -200,7 +213,9 @@ isso a estratégia certa é investir em **conteúdo e marca** desde o dia 1.
   333/venda** — inviável contra a margem (~R$ 57). Só **retargeting de audiência quente** cabe.
 - **Audiência do zero (o gargalo):** ~**1.000 seguidores em 3–6 meses; ~10.000 em 12–24 meses**
   em nicho de concurso/força, com produção orgânica consistente `[estimativa]`. Pré-venda sem
-  audiência ≈ zero → **construir lista de espera (60–90 dias) antes de imprimir**.
+  audiência ≈ zero — e mesmo com audiência, a decisão `[Daniel · 21/jun/2026]` é **não fazer
+  pré-venda formal** (evita risco de espera/reputação). A sequência correta: **construir lista de
+  espera (60–90 dias) → Gate A (≥ 200–500) → imprimir → abrir vendas imediatamente.**
 
 ---
 

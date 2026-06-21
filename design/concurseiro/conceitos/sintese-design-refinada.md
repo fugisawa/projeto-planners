@@ -35,11 +35,13 @@ Qualquer elemento impresso que chame mais atenção que a caligrafia é ruído.
 
 | Nível | Peso | Tamanho | Tracking | Uso |
 |---|---|---|---|---|
-| Título de página | Regular | 22–26pt | 0 | Nome da seção (Bússola, Diário...) |
+| Título de página | Black 900 | 18pt | -0.1pt | Nome da seção em azul-ardósia (`title-c`) — Diário usa só eyebrow (sem título grande) |
 | Label primário de seção | Bold 700 | 8–9pt | +0.2pt | "Estudar", "Revisar", "Mapa do Edital" |
 | Label de campo | Regular | 7–8pt | +0.3pt | "Data", "Matéria", "D-prova" |
 | Dica / instrução | Regular itálico | 6.5–7pt | 0 | hints e instruções in-page |
 | Hora / micro | Regular | 6–6.5pt | 0 | Números de hora no time-log |
+
+_(Linha "Título de página" supercede o valor Regular 22–26pt pré-2.0 PRO, revogado em 20/jun/2026.)_
 
 **Regra:** nunca bold em dicas. Nunca itálico em labels de campo. Caixa alta + tracking no lugar de bold para labels secondários.
 
@@ -111,7 +113,7 @@ Mínimo 4.5 mm (1 módulo); seções grandes separadas por 9 mm (2 módulos). Nu
 | Função | Espessura | Token |
 |---|---|---|
 | Grade interna (time-log, quadriculado) | 0.3–0.4 pt | `wt.grid` / `wt.hair` |
-| Linha de escrita pontilhada | 0.3 pt tracejado | `hair` |
+| Linha de escrita pontilhada | 0.4 pt tracejado | `hair` |
 | Linha de escrita sólida | 0.4 pt | `hair` |
 | Divisor de seção horizontal | 0.6–0.7 pt | `wt.rule` |
 | Borda de bloco (softband, ficha) | 0.5–0.6 pt | `wt.box` |
@@ -121,12 +123,11 @@ Nunca 1 pt em fios internos de tabela. O 1 pt surge apenas em bordas externas de
 
 ---
 
-## 6. Cantos arredondados
+## 6. Cantos (RETO — 2.0 PRO)
 
-- Chips de cor: `radius: 1 mm`
-- Softband / faixa Revisar: `radius: 2 mm`
-- Ficha de erro (card completo): `radius: 1.2 pt` (quase reto — deliberado: a ficha é mais "técnica" que "amigável")
-- Checkboxes: `radius: 0.6 mm`
+Todos os elementos internos (chips, softband, checkboxes, faixas sombreadas, células) têm cantos **RETOS** — sem radius. Só círculos são redondos (donecirc, radio do helper studyrows). Regra antiga de radius revogada em 20/jun/2026 pela decisão 2.0 PRO. Confirmar em estilos.typ: `chip=box()`, `softband=block()`, `checkbox=rect()`.
+
+_(Supercede o valor pré-2.0 PRO: chips 1 mm · softband 2 mm · ficha 1.2 pt · checkboxes 0.6 mm — revogados.)_
 
 ---
 
@@ -225,10 +226,10 @@ Nunca 1 pt em fios internos de tabela. O 1 pt surge apenas em bordas externas de
 
 | Item | Especificação |
 |---|---|
-| Papel miolo | 120 g/m² offset creme (#FAFAF5 impresso fica mais quente) |
+| Papel miolo | Pólen Bold 90g creme (Tier A candidato) ou offset creme 90g (Tier B) — [a confirmar pós-RFQ gráfica BR; 120g é mínimo de mercado para marcador] — ver financeiro-planner-v1.md para análise de margem por tier |
 | Opacidade mínima | 88% (evita ghosting de highlighter) |
 | Capa | 300 g/m², plastificação fosca (não brilhante) |
-| Cantos | Arredondados r = 3 mm em toda a borda externa |
+| Cantos (borda física do caderno) | Arredondados r = 3 mm no corte/trim — NÃO confundir com elementos internos (cantos retos per 2.0 PRO) |
 | Encadernação | Wire-o preto ou gunmetal (não prata, não plástico colorido) |
 | Abas de seção | Papel 200 g cor sólida, 5 mm de saliência, sem texto — a cor é o código |
 | Fitas marcadoras | 2 × 7 mm costuradas na lombada, cores distintas (1 neutra + 1 de acento) |

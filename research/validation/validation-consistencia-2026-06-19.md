@@ -1,4 +1,7 @@
 # Laudo de Validação Adversarial — Projeto Planners
+
+> ⚠️ **LAUDO HISTÓRICO (19/jun/2026) — OBSOLETO.** Validou o estado **pré-pivô** (preço R$ 119, custo R$ 45/55, ROI 325%, break-even 51 un, VPL R$ 365–407 mil, TIR ~406%). **Superado** pelas decisões de 21/jun/2026 (lançamento R$ 129, custo triangulado 4/4 R$ 43–55 / 2/2 R$ 36–47, lançamento sequencial, EVEF a recalcular pós-cotação). Mantido como registro de auditoria; novo laudo será gerado após as cotações reais (Gate A).
+
 **Validador:** business-validator (role: investidor-anjo desconfiado + fact-checker)
 **Data:** 19/jun/2026
 **Escopo:** consistência cruzada + aritmética + coerência narrativa + fontes do pacote completo

@@ -3,9 +3,8 @@
 **Validado com a Mayara (19/jun/2026)** — hipóteses da pesquisa confirmadas no conceito.
 Alinhado à **P1** do estudo de mercado (§5), com zoom no recorte full-time.
 
-> Nota de consistência: P1 cita **15–30 h/semana**; "dedicação exclusiva" é mais intenso (40+ h/sem).
-> Tratar como **sub-recorte de alta intensidade de P1** — não contradição. (Talvez valha registrar o
-> sub-recorte no estudo de mercado.)
+> Decisão: sub-recorte de P1 (40+ h/sem) não contradiz P1 [confirmado · 19/jun/2026].
+> Ação: doc-updater propagar anotação de sub-recorte para deliverables/estudo-de-mercado.md §5 quando conveniente.
 
 ## Persona primária — "Rafael, dedicação exclusiva"
 - 28 anos, largou o emprego (ou tem apoio familiar); **estuda 6–10 h/dia**, ~2º ano de preparação.

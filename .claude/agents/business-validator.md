@@ -31,13 +31,17 @@ precisam ser internamente consistentes e externamente defensáveis:
 
 **Fatos-Âncora (FONTE ÚNICA DA VERDADE — qualquer divergência = CRÍTICO automático):**
 
+> ⚠️ STOP antes de executar: ler CLAUDE.md §Fatos-âncora e comparar com a tabela abaixo.
+> Se houver divergência, usar CLAUDE.md como fonte de verdade e alertar o usuário.
+> Esta tabela é uma cópia de referência e pode estar desatualizada.
+
 | Parâmetro | Valor canônico |
 |---|---|
 | Câmbio USD/BRL | ≈ R$ 5,20 (planejamento) |
 | Investimento inicial | R$ 5.000 (100% autofinanciado) |
 | Preço lançamento | Concurseiro R$ 129 `[Daniel · 21/jun/2026]` · Treino R$ 109 |
-| Custo/un | micro-lote ~R$ 60 (~112 pp, sem ficha) `[estimativa pré-RFQ · 21/jun/2026]` → reposição R$ 45 (a confirmar); ref. histórica: 71 pp era R$ 55 |
-| MC/un (preço médio R$ 114) | direto R$ 57,59 (50%) · blended R$ 54,48 `[a recalcular pós-cotação · 21/jun/2026]` |
+| Custo/un | micro-lote: 4/4 R$43–55 · 2/2 (preto+azul) R$36–47 `[estimativa triangulada · 21/jun/2026]` → reposição R$45 (a confirmar); nota: estimativa pré-RFQ R$60 SUPERADA — usar faixa triangulada; paleta fria (Y=0) corta ~15–20% sobre 4/4 |
+| MC/un Conc (R$129 lançamento) | direto ~48–58% (4/4) · ~55–62% (2/2) `[est. · 21/jun/2026]`; blended `[a recalcular pós-cotação]` |
 | LTV margem | ~R$ 374–397 · LTV:CAC ~7–8× |
 | Mercado recorrente | ~2,3 M un/ano (~R$ 267 M) |
 | Mix de canal Fase 1 | 90% direto / 10% marketplace |
@@ -45,7 +49,7 @@ precisam ser internamente consistentes e externamente defensáveis:
 | NCM | 4820.10.00 (tributado; sem imunidade de livro) |
 | AFRMM | 8% do frete oceânico (verificar com despachante) |
 | Landed | 2,0–2,7× FOB |
-| EVEF (5 anos, 12–15%) | VPL R$ 365–407 mil · TIR ~406% · payback < 1 ano `[a recalcular pós-cotação · 21/jun/2026]` |
+| EVEF (5 anos, 12–15%) | `[a recalcular pós-cotação @ R$129 + custo real]` — NÃO usar valores antigos VPL R$365–407 mil · TIR ~406% como fechados em nenhum output |
 
 > Fonte: CLAUDE.md §Fatos-âncora (jun/2026). Ao detectar qualquer número divergente nos
 > artefatos, classificar como CRÍTICO e citar ambos os valores (artefato vs âncora).
@@ -55,6 +59,11 @@ precisam ser internamente consistentes e externamente defensáveis:
 ## Protocolo de execução (passo a passo obrigatório)
 
 ### Passo 0 — Pré-mortem (iniciar SEMPRE aqui)
+
+**STOP-and-sync obrigatório:** Antes de qualquer outra ação, ler CLAUDE.md §Fatos-âncora
+e comparar com a tabela "Fatos-Âncora" deste agente. Se houver divergência entre os dois,
+usar CLAUDE.md como fonte de verdade e alertar o usuário antes de prosseguir — o agente
+pode estar validando com números desatualizados, o que geraria falso-positivo ou falso-negativo.
 
 Antes de ler qualquer documento, escreva internamente:
 
@@ -89,7 +98,7 @@ artefatos e verificar se batem:
 
 ```bash
 grep -rn "5\.20\|5,20\|câmbio\|USD" /home/daniel/planners/deliverables/
-grep -rn "R\$ 119\|R\$119\|Concurseiro" /home/daniel/planners/deliverables/
+grep -rn "R\$ 129\|R\$129\|Concurseiro" /home/daniel/planners/deliverables/
 grep -rn "R\$ 109\|R\$109\|Treino" /home/daniel/planners/deliverables/
 grep -rn "55\|45\|custo.*un\|COGS" /home/daniel/planners/deliverables/
 grep -rn "57,59\|54,48\|margem.*contribui" /home/daniel/planners/deliverables/
@@ -103,37 +112,27 @@ Registrar cada divergência encontrada com: arquivo, linha, valor encontrado vs 
 Recompute com Bash/Python as métricas-chave. Não confie nos números do documento:
 
 ```python
-# MC/un verificação
-preco_concurseiro = 119
-preco_treino = 109
-preco_medio = (preco_concurseiro + preco_treino) / 2  # 114
-
-custo_microlote = 55
-custo_reposicao = 45
-
-mc_direto = preco_medio - custo_microlote  # 57,59 + taxas pagamento ~2%
-# taxas pagamento (2% sobre preço)
-taxas_pg = preco_medio * 0.02
-mc_direto_liquido = preco_medio - custo_microlote - taxas_pg
-
-# LTV/CAC check
-recompra_ano = 3.5  # midpoint 3-4x
-mc_por_compra = mc_direto_liquido
-ltv_margem = mc_por_compra * recompra_ano * 2  # 2 anos de coorte estimado
-
-# Break-even Fase 1
-investimento = 5000
-lote_un = investimento // custo_microlote  # quantas unidades compra
-receita_lote = lote_un * preco_medio
-mc_lote = receita_lote - (lote_un * custo_microlote)
-
-print(f"Preço médio: R${preco_medio}")
-print(f"MC/un (antes taxas): R${preco_medio - custo_microlote:.2f}")
-print(f"Taxas pagamento: R${taxas_pg:.2f}")
-print(f"MC/un líquido: R${mc_direto_liquido:.2f}")
-print(f"LTV margem estimado 2 anos: R${ltv_margem:.2f}")
-print(f"Lote Fase 1 ({investimento}/R${custo_microlote}): {lote_un} un")
-print(f"MC bruta do lote: R${mc_lote:.2f} ({mc_lote/receita_lote*100:.1f}%)")
+# [DESATUALIZADO — reescrever com âncoras do CLAUDE.md §Fatos-âncora antes de rodar]
+# INSTRUÇÕES: Antes de executar este bloco, ler CLAUDE.md §Fatos-âncora e substituir
+# os valores abaixo pelas âncoras atuais. NÃO rodar com os valores placeholder.
+#
+# Âncoras atuais (21/jun/2026 — verificar CLAUDE.md antes de usar):
+#   Fase 1: só Concurseiro — NÃO calcular preço médio blended com Treino
+#   preco_concurseiro = 129  # lançamento F1 [Daniel · 21/jun/2026]
+#   custo_microlote_4x4 = 49  # midpoint R$43–55 [estimativa triangulada · 21/jun/2026]
+#   custo_microlote_2x2 = 41  # midpoint R$36–47 [estimativa triangulada · 21/jun/2026]
+#   custo_reposicao = 45  # [a confirmar]
+#   EVEF/VPL/TIR: [a recalcular pós-cotação] — NÃO usar valores antigos como fechados
+#
+# Exemplo de cálculo Fase 1 (apenas Concurseiro R$129):
+#   taxas_pg = preco_concurseiro * 0.02
+#   mc_direto_4x4 = preco_concurseiro - custo_microlote_4x4 - taxas_pg
+#   mc_direto_2x2 = preco_concurseiro - custo_microlote_2x2 - taxas_pg
+#   # mc_direto_4x4 / preco_concurseiro → ~48–58% conforme âncora
+#   # mc_direto_2x2 / preco_concurseiro → ~55–62% conforme âncora
+#
+# NÃO calcular "preco_medio = (129 + 109) / 2 = 119" para Fase 1.
+# Blended só é relevante na Fase 2 (Concurseiro + Treino simultâneos).
 ```
 
 Sinalizar qualquer resultado que divirja >5% dos valores nos documentos.
@@ -160,7 +159,7 @@ Para cada premissa da tabela abaixo, verificar se há evidência nos artefatos:
 |---|---|---|---|
 | Demanda | "Público quer planner físico, não só app" | ≥1 venda real ou pré-venda ou entrevista com pagamento simbólico | Zero evidência primária |
 | Canal | "Mayara converte seguidores em clientes" | CTR histórico, engagement em posts de produto, comparável de mercado | CTR < 0,5% em posts similares |
-| Preço | "R$119 é premium, não caro" | PSM com ≥40 respondentes OU comparável de concorrentes identificados com preço real | OPP (PSM) < R$90 |
+| Preço | "R$129 é premium, não caro" | PSM com ≥40 respondentes OU comparável de concorrentes identificados com preço real | OPP (PSM) < R$99 |
 | Sourcing | "Gráfica BR entrega no prazo e qualidade" | Orçamento recebido + prazo confirmado + amostra avaliada | Sem contato com fornecedor |
 | Unit economics | "LTV:CAC > 3× com CAC orgânico" | Projeção com premissas explícitas; CAC pago separado do orgânico | CAC pago > R$60 sem canal orgânico |
 | Recompra | "3–4× ao ano" | Análogo de mercado (ex.: agenda premium BR) OU coorte real | Sem benchmarks citados |
@@ -182,6 +181,7 @@ Marcar cada item como ✅ (ok) / ⚠️ (parcial) / ❌ (falha) / N/A:
 - [ ] Existe cenário de pivô/saída se KPIs não baterem em 6 meses?
 - [ ] A premissa "90% direto / 10% marketplace" tem base testada?
 - [ ] Modelo financeiro sobrevive ao teste "e se o preço cair 20%"?
+- [ ] Modelo financeiro está calculado separadamente para F1 (só Concurseiro R$129) e não assume blended de dois SKUs?
 - [ ] Todas as tabelas em markdown têm linha em branco antes (convenção do projeto)?
 - [ ] Datas relativas foram convertidas para absolutas?
 - [ ] Alíquotas/tributos têm fonte + data + recomendação de conferência com despachante?
@@ -214,7 +214,7 @@ Se nenhuma divergência: "Nenhuma divergência detectada com os Fatos-Âncora."
 
 ### 4. Resultado do checklist adversarial
 
-Tabela com os 14 itens e status (✅ / ⚠️ / ❌ / N/A). Itens ❌ viram achados automaticamente.
+Tabela com os 15 itens e status (✅ / ⚠️ / ❌ / N/A). Itens ❌ viram achados automaticamente.
 
 ### 5. Veredito final
 
@@ -256,7 +256,7 @@ Este agente entregou seu trabalho quando:
 - [ ] Pré-mortem registrado no output
 - [ ] Todos os Fatos-Âncora verificados contra os artefatos em escopo
 - [ ] Tabela de achados completa (mesmo que vazia em severidades baixas)
-- [ ] Checklist adversarial de 14 itens respondido
+- [ ] Checklist adversarial de 15 itens respondido
 - [ ] Veredito final emitido com justificativa
 - [ ] Instrução de onde salvar o laudo fornecida ao usuário
 

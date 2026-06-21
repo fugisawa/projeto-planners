@@ -3,9 +3,9 @@
 Módulo de **diagnóstico do raciocínio errado** — baseado no **错题本** (China) + **오답노트** (Coreia),
 adaptado ao concurso brasileiro. **19/jun/2026.** Status: **definição/spec — validado no conceito (Mayara, 19/jun).**
 
-> **Papel no produto (realinhado 19/jun):** entra em **duas formas** — (1) **seção *lite*** dentro do
-> **Planner v1** (o módulo-âncora); (2) **caderno completo standalone** na **Fase 2** do ecossistema.
-> O **v1 é o Planner**, não este módulo. Ver [`../conceitos/roadmap-faseado.md`](../conceitos/roadmap-faseado.md).
+> **Papel no produto (realinhado 21/jun):** o Caderno de Erros é um módulo **standalone da Fase 2** —
+> não entra no Planner v1 (que tem só um ponteiro "→ Caderno de Erros"). Decisão: [Daniel · 21/jun/2026].
+> Ver [`../conceitos/roadmap-faseado.md`](../conceitos/roadmap-faseado.md).
 
 ## Por que importa
 - Preenche a **maior lacuna**: o digital diz *o quê* você errou; só o papel processa o *porquê*.
@@ -25,5 +25,7 @@ adaptado ao concurso brasileiro. **19/jun/2026.** Status: **definição/spec —
 - Roadmap faseado: [`../conceitos/roadmap-faseado.md`](../conceitos/roadmap-faseado.md).
 - Pesquisa nativa do método: [`../pesquisa/fontes/uso-asia-china-coreia.md`](../pesquisa/fontes/uso-asia-china-coreia.md).
 
-## Próximo
-Benchmark visual (CN/KR/JP, em andamento) → wireframe da ficha → validação.
+## Status atual (21/jun/2026)
+- ✅ Benchmarks CN/KR/JP concluídos (`benchmark-{china,coreia,japao}.md`)
+- ✅ Wireframe da ficha completa (`wireframe-ficha.md`)
+- ⏳ Pendentes: taxonomia final · validar com usuários · sourcing/custo standalone.

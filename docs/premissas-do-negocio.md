@@ -12,7 +12,7 @@ documentos. Audiência: **uso interno dos dois sócios** (decisão honesta, não
   **redes sociais, conteúdo e marca** = o **motor de aquisição**.
 
 ## Capital & remuneração
-- **R$ 5.000 é apenas o teste inicial**; há mais capital disponível conforme os sinais de venda.
+- **R$ 5.000 é apenas o teste inicial**; os sócios têm capital próprio adicional disponível para reinvestir conforme os sinais de venda — sem empréstimo ou aporte de terceiros.
 - **Pró-labore — Estratégia B (recomendada):** ano 1 = **0** (reinveste 100%); ano 2 sobe de
   **R$ 500 → R$ 2.000 por sócio**; ano 3 ~**R$ 3.000 por sócio**, calibrado para preservar caixa.
   - *Pré-condição:* os sócios precisam de **outra renda durante o ano 1**.
@@ -22,7 +22,7 @@ documentos. Audiência: **uso interno dos dois sócios** (decisão honesta, não
 - **Escala 100% autofinanciada:** **sem pré-venda** (risco de espera longa/reputação) e **sem
   empréstimo ou aporte** (não descapitalizar). **Gatilho de importação (China):** caixa acumulado ≥
   custo do lote + colchão de 3 meses (≈ **R$ 135 mil**) **e** volume sustentado ≥ ~**5.000 un/ano**.
-  Até lá, escalar em **lotes BR offset** pagos pela receita (~R$ 18–32/un no volume); a China é
+  Até lá, escalar em **lotes BR offset** pagos pela receita (~R$ 18–32/un a partir de ~500–1.000 un `[a confirmar pós-RFQ de volume]`); a China é
   **opcionalidade**, não necessidade.
 
 ## Competências internas
@@ -42,7 +42,7 @@ documentos. Audiência: **uso interno dos dois sócios** (decisão honesta, não
 ## Produto & mercado
 - **Recorrência (premissa de domínio do sócio):** o planner de estudo "enche" em ~3 meses → o
   concurseiro **recompra 3–4×/ano**; o de treino, ~2,5×/ano. `[a confirmar por survey]` É a
-  **alavanca central** do negócio (LTV ~R$ 374–397/cliente; retenção > aquisição).
+  **alavanca central** do negócio (LTV ~R$ 374–397/cliente a R$ 129 `[est.]`; retenção > aquisição).
 - **Lançamento sequencial: Concurseiro (F1) primeiro; Caderno de Erros e Treino de Força = F2**, pagos pelo caixa gerado; R$ 5.000 banca 1 SKU `[Daniel · 21/jun/2026]`. Com **conteúdo equilibrado** nos dois nichos — a evidência decide a prioridade conforme a tração.
 
 ## Objetivo & horizonte
@@ -59,6 +59,6 @@ documentos. Audiência: **uso interno dos dois sócios** (decisão honesta, não
 
 ## Premissas a validar (abertas)
 - **Taxa de recompra** (3–4×/ano) — survey com o público.
-- **Custo da gráfica** (micro-lote ~R$ 60 Concurseiro, ~112 pp, sem ficha `[estimativa pré-RFQ · 21/jun/2026]`; reposição ~R$ 45, a confirmar; ref. histórica: protótipo 71 pp era ~R$ 55) — **3 orçamentos reais** antes de comprometer capital.
+- **Custo da gráfica** (micro-lote triangulado: **4/4 R$ 43–55** · **2/2 preto+azul R$ 36–47** `[estimativa triangulada · 21/jun/2026]`; paleta fria Y=0 → miolo 2 cores corta ~15–20%; ref. histórica: 71 pp era ~R$ 55; reposição ~R$ 45 `[a confirmar]`) — **3 orçamentos reais** antes de comprometer capital.
 - **% do público elegível a premium** e o nº de concurseiros únicos (sem dupla contagem).
 - **Split societário**, dedicação de cada sócio e a fonte de renda dos sócios no ano 1.

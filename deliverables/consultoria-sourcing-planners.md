@@ -1,5 +1,17 @@
 # Consultoria de Sourcing & Desenvolvimento de Produto — Projeto Planners
-### Dois planners comerciais (Concurseiro e Treino de Força) — do conceito ao produto pronto para venda
+### Concurseiro (F1) e Treino de Força (F2) — sourcing, RFQ e ficha técnica por fase
+
+> ## ⚠️ DOCUMENTO EM REVISÃO — baseline pré-pivô (a recalcular pós-cotação)
+> **Atualizado: 21/jun/2026.** Redigido em 19/jun/2026, **antes** das decisões travadas de 21/jun/2026. As **tabelas e indicadores numéricos** deste corpo (VPL/TIR, MC/un, ROI, break-even, preço médio R$ 114, custo R$ 55) refletem o **cenário pré-pivô (2 SKUs em paralelo · R$ 119)** e **serão refeitos** pelo `financial-modeler` após as cotações reais (Gate A). **Não usar os números deste corpo como âncora operacional** — a fonte da verdade é `CLAUDE.md` §Fatos-âncora + `design/concurseiro/planner-v1/ESTADO-RETOMADA.md`.
+>
+> **Decisões que prevalecem sobre o corpo abaixo:**
+> - **Lançamento sequencial:** F1 = **só o Concurseiro** (R$ 5.000 banca 1 SKU); **Treino de Força e Caderno de Erros = F2**, pagos pelo caixa gerado. (O corpo trata os 2 SKUs em paralelo — superado.)
+> - **Preço de lançamento Concurseiro = R$ 129** (regime ~R$ 139); Treino R$ 109 (regime R$ 119–129). `[Daniel · 21/jun/2026]`
+> - **SEM pré-venda · SEM empréstimo/aporte** — 100% autofinanciado. (Onde o corpo disser "pré-venda obrigatória" ou "aporte", está superado.)
+> - **Custo/un (~112 pp, micro-lote):** 4/4 R$ 43–55 · 2/2 (paleta fria) R$ 36–47 `[estimativa triangulada · 21/jun/2026]` (supera ~R$ 55–60).
+> - **Produto v1 = o Planner SEM ficha embutida** (só ponteiro → Caderno de Erros).
+>
+> ---
 
 **Escopo:** decisão de fornecimento, economia de importação, RFQ, controle de qualidade e arquivos print-ready.
 **Local:** Brasília/DF · **Data:** 19/jun/2026 · **Câmbio de planejamento:** USD/BRL ≈ R$ 5,20.
@@ -22,13 +34,13 @@ Dois motivos eliminatórios para a China no início:
 
 > **⚠️ Correção vs. rascunho original.** O rascunho colocava o ponto de virada da China em ~1.000 un. Com a conta refeita (AFRMM correto de **8%**, não 25%; frete LCL real; ICMS-DF "por dentro"; e **ICMS não creditável no MEI/Simples**), o **crossover real é ~3.000–5.000 un** (conforme o tier de gráfica BR: ~3.000 contra gráfica premium; ~5.000+ contra offset de baixo custo) `[sourcing-tributos.md]`. Isso reforça: **ficar no Brasil por mais tempo.**
 
-**Perpétuo** é a decisão certa: estoque nunca "vence", então micro-lote e pré-venda viram opções sem risco de encalhe.
+**Perpétuo** é a decisão certa: estoque nunca "vence", então micro-lotes pequenos são possíveis sem risco de encalhe. (Pré-venda é tecnicamente possível mas não é o plano padrão — ver decisão dos sócios.)
 
 ### Plano em fases (risco assimétrico)
 
 | Fase | O quê | Volume | Rota | Capital |
 |---|---|---|---|---|
-| **0 — Validação** | Lista de espera + golden sample + pré-venda | — | Gráfica BR (POD) | mínimo |
+| **0 — Validação** | Lista de espera + golden sample + abertura de vendas pós-lote | — | Gráfica BR (POD) | mínimo |
 | **1 — 1º lote comercial** | Micro-lote + reposição *make-to-demand* | ~54 → 300–500 un | **Gráfica BR** | ≤ R$ 3k/SKU |
 | **2 — Escala** | Reposição com margem maior | **≥ 3.000 un** | **China (importação formal)** | CNPJ + Radar + capital |
 
@@ -48,13 +60,13 @@ Dois motivos eliminatórios para a China no início:
 
 **Recomendação: Tier A ou B.** Os nichos pagam premium e valoram acabamento; produto bonito gera conteúdo, que é o que vende (o conteúdo orgânico é o motor de aquisição — ver business plan §6). O Tier C maximiza unidades, mas dilui o posicionamento. **Modelo financeiro usa custo micro-lote R$ 55 (Tier A/B), caindo a R$ 45 na reposição.**
 
-**Alocação:** R$ 3k *por* SKU. Como os dois compartilham plataforma (mesmo formato/papel/encadernação), **padronizar reduz o MOQ efetivo e o custo** (compra conjunta de insumos) — viabiliza rodar os dois em paralelo.
+**F1:** orçamento ~R$ 3–5k para o Concurseiro (lote inicial). **F2:** ao ativar o Treino (pós-gatilho ~R$ 135k ou caixa gerado), padronizar formato/papel/encadernação com o Concurseiro reduz MOQ e custo (compra conjunta de insumos).
 
 ---
 
 ## 3. Fichas técnicas (proposta — ajuste o que divergir)
 
-Padrão de mercado premium, ambos **perpétuos**. Padronizar formato/papel/encadernação entre os dois SKUs reduz MOQ efetivo e custo.
+Padrão de mercado premium, ambos **perpétuos**. Para F2 (quando Treino for ativado): padronizar formato/papel/encadernação com o Concurseiro reduzirá MOQ e custo (compra conjunta de insumos).
 
 ### Planner 1 — Concurseiro
 
@@ -62,10 +74,10 @@ Padrão de mercado premium, ambos **perpétuos**. Padronizar formato/papel/encad
 |---|---|---|
 | Formato | A5 (148×210 mm) | Padrão premium e barato de enviar; menor aperta a grade de estudo |
 | Encadernação | **Wire-o**, capa dura | Abre 180°/*lay-flat* (essencial p/ escrever); espiral é mais barata e menos premium |
-| Miolo | ~180–200 pp, **offset 90 g** branco/marfim | 90 g evita transparência da caneta; 75 g "vaza" |
+| Miolo | ~112 pp, **Polen Bold 90g creme** | 90 g evita transparência da caneta; 75 g "vaza". Polen Bold é linha Suzano — confirmar disponibilidade e preço na gráfica escolhida. |
 | Capa | Cartão empastado + **soft-touch** + **hot stamping** | Soft-touch escurece a cor → peça prova física; verniz localizado é alternativa mais barata |
 | Acabamentos | Elástico + marcador de fita + cantos arredondados | Cada acabamento sobe custo e MOQ na China |
-| Conteúdo | Grade de ciclo (não cronograma fixo) · registro diário (tópico, tempo, nº questões, % acerto) · **revisão espaçada** (24h/7d/30d) · tracker de simulados (banca/nota/% por disciplina) · edital verticalizado · visão semanal/mensal · página de constância | — |
+| Conteúdo | Grade de ciclo (não cronograma fixo) · registro diário (tópico, tempo, nº questões, % acerto) · **ponteiros para sistema de revisão** (→ Anki / QConcursos) · registro simplificado de questões (tracker completo fica no digital) · edital verticalizado · visão semanal/mensal · página de constância | — |
 
 ### Planner 2 — Treino de Força
 
@@ -135,7 +147,7 @@ Padrão de mercado premium, ambos **perpétuos**. Padronizar formato/papel/encad
 
 ## 6. Playbook de sourcing (passo a passo)
 
-1. **Feche ficha técnica e conteúdo** dos dois SKUs (§3) antes de cotar — cotação sem spec fechada gera preço inútil.
+1. **F1: Feche ficha técnica e conteúdo do Concurseiro** antes de cotar — cotação sem spec fechada gera preço inútil. **F2 (futuro):** feche também a spec do Treino de Força quando F2 for ativado — a spec do Treino (§3.2) é preparatória.
 2. **Habilite o CNPJ** (MEI já serve para vender na Fase 1; para importação formal na Fase 2, **Radar/Habilitação no Siscomex**, modalidade Expressa cobre importadores pequenos).
 3. **Cote no Brasil (3 gráficas)** especializadas em agenda/planner wire-o capa dura. Peça preço para **100 / 300 / 500 / 1.000 un**, prazo e **prova física** (não só PDF). Termos usuais: 50% sinal / 50% na entrega.
 4. **Cote na China em paralelo** (Alibaba + Made-in-China) já mirando a Fase 2 (≥ 3.000 un). Filtre por **Trade Assurance**, anos de operação, fábrica vs. trading. Mesmo RFQ para **5–8 fornecedores**.
@@ -166,7 +178,7 @@ Padrão de mercado premium, ambos **perpétuos**. Padronizar formato/papel/encad
 PRODUTO: Planner [Concurseiro / Treino] — perpétuo (undated)
 FORMATO: A5 148×210 mm (final, fechado)
 ENCADERNAÇÃO: Wire-o, capa dura (lay-flat 180°)
-MIOLO: ___ páginas | offset 90 g | 4/4 cores (CMYK)
+MIOLO: ~112 pp | Polen Bold 90g creme | OPÇÃO A: 2/2 cores (preto K + Índigo, paleta fria Y=0) | OPÇÃO B: 4/4 CMYK — cotar ambas para comparar
 CAPA: cartão empastado | laminação soft-touch | hot stamping [cor]
 ACABAMENTOS: elástico + marcador de fita + cantos arredondados
 EMBALAGEM: 1 un shrink + master carton (informar pç/caixa)
@@ -185,10 +197,10 @@ INCOTERM/PAGAMENTO: FOB | T/T 30/70 via Trade Assurance
 |---|---|
 | 1–4 | **Construir audiência/lista de espera** (conteúdo orgânico) + fechar **conteúdo/miolo** dos SKUs + pedir **golden sample** em 2–3 gráficas |
 | 5–6 | Aprovar sample por escrito; fechar **arquivos print-ready** (PDF/X, sangria 3 mm, **dieline da capa** que a gráfica fornece) |
-| 7–8 | **Abrir pré-venda** com fotos do golden sample (checkout + pix) → micro-lote **+** pré-pedidos |
+| 7–8 | Receber lote; fotografar para conteúdo; **abrir vendas diretas** (canal próprio). *Opção avançada: pré-venda só se a audiência já estiver construída e os sócios decidirem conjuntamente — não é o plano padrão.* |
 | 9–12 | Rodar a tiragem; expedir; coletar feedback; decidir reposição |
 
-> A pré-venda só converte com audiência pré-construída (ver business plan §6) — por isso as semanas 1–4 priorizam **conteúdo**, não só produto.
+> A audiência pré-construída é essencial para o lançamento (ver business plan §6) — por isso as semanas 1–4 priorizam **conteúdo**, não só produto. **Decisão travada: SEM pré-venda** `[Daniel · 21/jun/2026]` — imprime-se o micro-lote após o Gate A (lista ≥ 200–500) e abre-se a venda a partir do estoque pronto.
 
 ---
 

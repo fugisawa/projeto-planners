@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """Compila uma página Typst e rasteriza para PNG (150 dpi).
-Uso: uv run --with typst python render.py <key>   (ex.: diario, semanal, bussola, pontes, ficha)
+Uso: uv run --with typst python render.py <key>   (ex.: guia, bussola, semanal, diario, pontes, ficha)
 Avisa se o resultado tiver mais de 1 página (o alvo é 1 A5 por página)."""
 
 import os

@@ -25,7 +25,7 @@
 // Masthead: título Lato Black em azul-ardósia + kicker (eyebrow) + fio com "tab" de acento.
 #let masthead(title, kicker: none) = {
   grid(columns: (1fr, auto), column-gutter: 4mm, align: (left + bottom, right + bottom),
-    text(font: sans, size: 18pt, fill: title-c, weight: 900, tracking: -0.1pt)[#title],
+    text(font: sans, size: fs.h1, fill: title-c, weight: 900, tracking: -0.1pt)[#title],
     if kicker != none { text(font: sans, size: 6.5pt, fill: ink-3, tracking: 1.5pt)[#upper(kicker)] } else [],
   )
   v(2mm)

@@ -56,7 +56,9 @@ cor ali); a divisória + a pauta alinham tudo.
 
 ## Alinhamento (capricho = tudo no mesmo eixo)
 - **Divisórias de seções irmãs ALINHAM:** a barra vertical do Estudar e do Revisar caem no mesmo
-  x → a faixa do Revisar é **largura cheia (sem recuo lateral)**, não recuada.
+  x → a faixa do Revisar é **largura cheia (sem recuo lateral)**, não recuada. Na prática: faixa que
+  contém `studyrows` usa `block(width:100%, fill: band, inset:(x:0mm, y:2.5mm))` — **NÃO** o helper
+  `softband` (tem `x:3.5mm` e desalinha a divisória). `softband` só para caixas autônomas (reflexão).
 - **Linhas de preenchimento na BASE do texto** (`align: bottom`) — senão o número escrito fica
   deslocado do rótulo.
 - **Tamanhos coerentes:** os elementos de uma zona relacionam-se (não um box 8×5 ao lado de

@@ -56,7 +56,9 @@ Fonte: diretolegaliza.com/remessa-conforme-regras-2026 + Gov.br Receita Federal
 
 ## 4. Custo Gráfica Nacional — Faixas de Mercado
 
-**Especificação:** A5 (148×210 mm) · wire-o · capa dura · laminação soft-touch · miolo ~190 pp offset 90 g · impressão 4/4 CMYK · elástico
+**Especificação (19/jun/2026):** A5 (148×210 mm) · wire-o · capa dura · laminação soft-touch · miolo ~190 pp offset 90 g · impressão 4/4 CMYK · elástico
+
+> **Atualização 21/jun/2026:** Paginação revisada de ~190 pp para **~112 pp** — produto F1 = Planner de Estudo sem Caderno de Erros embutido (F2 standalone). As faixas de custo da tabela §4 permanecem indicativas; confirmar orçamentos com a especificação atualizada de 112 pp, que provavelmente reduz o custo unitário vs 190 pp. Especificação de encadernação também atualizada: capa **fosca flexível-firme** (não dura) com **wire-o duplo**, conforme âncora de produto. `[Daniel · 21/jun/2026]`
 
 > Todas as faixas abaixo são **estimativas de mercado a confirmar por 3 orçamentos reais.**  
 > Fontes: graficabrasil7.com (preços online jun/2026), aquigraficas.com.br (jun/2026), Printi.com.br (R$49,35/un base), referência de mercado (R$32/un em 100un confirmada em busca jun/2026).

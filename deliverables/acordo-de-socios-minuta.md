@@ -40,7 +40,7 @@ prestação de contas seguem a periodicidade do plano de gestão (semanal/mensal
 
 ## Cláusula 5 — Pró-labore e distribuição de lucros
 5.1. **Pró-labore (Estratégia B):** **zero no ano 1** (reinveste 100%); a partir do ano 2,
-**R$ 500 → R$ 2.000 por sócio**, ampliando no ano 3 conforme caixa (ver EVEF e plano de gestão).
+**R$ 500 → R$ 2.000 por sócio**, ampliando no ano 3 conforme caixa (ver EVEF e plano de gestão). *(EVEF em recalculo pós-cotação — referência ao cenário de viabilidade; o valor do ano 3 será revisado quando o EVEF for consolidado [a recalcular pós-cotação · 21/jun/2026].)*
 5.2. **Distribuição de lucros:** proporcional à participação, **somente após** (i) reserva de
 **3 meses de custos fixos** e (ii) atendimento ao gatilho de reinvestimento vigente.
 5.3. Alterações de pró-labore/distribuição exigem decisão conjunta (Cl. 8).

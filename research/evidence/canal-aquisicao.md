@@ -4,6 +4,8 @@
 **Data:** 19 jun 2026
 **Método:** WebSearch + WebFetch em 14 fontes; triangulação cruzada; confiança marcada por afirmação.
 
+> **Atualização 21/jun/2026:** As simulações neste documento usam ticket R$ 119 (Conc) e custo/un R$ 45 — premissas pré-pivô de 19/jun. O ticket de lançamento do Concurseiro foi revisado para **R$ 129**; o custo blended triangulado é **R$ 43–55 (4/4) / R$ 36–47 (2/2)** [estimativa triangulada · Daniel · 21/jun/2026]. A conclusão qualitativa sobre inviabilidade do tráfego pago frio permanece válida; os números de MC e CAC de ruptura mudam com o novo preço e devem ser recalculados. A evidência de canal (taxas ML/Shopee, CPM, conversão) não é afetada — são fatos de mercado datados.
+
 ---
 
 ## 1. Taxas de Marketplace — Mercado Livre 2026
@@ -95,6 +97,8 @@ Receita bruta:               R$ 115,00
 
 [estimativa triangulada — método declarado acima; frete D2C omitido; impostos não deduzidos]
 
+> **Atualização 21/jun/2026:** Simulações acima calculadas para ticket R$ 115–119 (pré-pivô). Com ticket de lançamento Concurseiro R$ 129, os valores de receita líquida e margem bruta mudam (ex.: D2C a R$ 129 → receita líquida ~R$ 125,13, margem bruta ~R$ 70–82 dependendo do custo blended). A conclusão qualitativa — D2C muito superior aos marketplaces — permanece. Recalcular na próxima revisão do modelo com o custo real pós-cotação [a recalcular pós-cotação].
+
 ---
 
 ## 3. Meta Ads Brasil 2026 — Parâmetros
@@ -159,6 +163,8 @@ Meta passou a repassar PIS/COFINS (9,25%) + ISS (2,9%) = **~12,15% sobre o valor
 
 **Conclusão:** O tráfego pago frio é inviável economicamente no ticket de R$ 110–119 com custo/un de R$ 45. A margem de contribuição de ~R$ 62 suporta no máximo CAC de ~R$ 50–60, atingível **somente** com retargeting de audiência quente, not with cold traffic. Em tráfego frio realista (CAC R$ 150–333), **cada venda via Meta Ads queima caixa**.
 
+> **Atualização 21/jun/2026:** Com ticket de lançamento R$ 129 (Concurseiro), a MC direta sobe para ~R$ 72–86/un (custo R$ 43–57 blended 4/4) — a conclusão qualitativa de inviabilidade do tráfego frio permanece, mas o CAC de ruptura melhora. Os valores exatos de MC e CAC máximo devem ser recalculados pós-cotação real [a recalcular pós-cotação · Daniel · 21/jun/2026].
+
 Adicionar 12,15% de tributos Meta eleva ainda mais o CAC efetivo. Exemplo: se o CAC de mídia é R$ 120, o custo real para o caixa é R$ 134,60. [confirmado — método: tributos edialog.com.br × CAC estimado acima]
 
 ---
@@ -209,6 +215,8 @@ Adicionar 12,15% de tributos Meta eleva ainda mais o CAC efetivo. Exemplo: se o 
 - [estimativa triangulada — socialinsider.io fev/2026; análise de nicho]
 
 ### Pré-venda sem audiência: o que esperar
+
+> **Atualização 21/jun/2026:** A estratégia atual NÃO inclui pré-venda (âncora CLAUDE.md — "sem pré-venda, sem empréstimo"). Esta seção documenta benchmarks de mercado para fins de referência, não uma estratégia adotada. A ação defensável adotada é construção de lista de espera (landing page + conteúdo orgânico), não abertura de pré-venda antes de ter estoque. [Daniel · 21/jun/2026]
 
 - Com 0 seguidores e 0 lista de email: pré-venda realista = R$ 0–500 em receita na abertura [estimativa — padrão de mercado para produto novo sem audiência; a confirmar].
 - Com 500–1.000 seguidores engajados (nicho): pré-venda pode render 2%–5% de conversão da audiência = 10–50 unidades [estimativa triangulada].

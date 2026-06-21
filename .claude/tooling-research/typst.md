@@ -329,7 +329,7 @@ Planner escolar simples com páginas diária e semanal. Código Typst puro, refe
 | PDF/X (PDF/X-1a, X-3, X-4) | Não suportado — issue #6012 aberta. Workaround: Ghostscript pós-processamento. |
 | PDF/A (arquivo) | Suportado: `--pdf-standard a-2b`, `a-3b`, etc. |
 | CMYK nativo | Sintaxe `cmyk(c, m, y, k)` disponível; embedding de perfil ICC ainda em desenvolvimento (issue #3143). |
-| Bleed nativo | PR #6357 em revisão final (jun/2026). Workaround: `markly` package. |
+| Bleed nativo | `[VERIFICAR]` PR #6357 estava "em revisão final" (jun/2026) — pode já ter sido mergeado; conferir antes de migrar do workaround. Hoje a sangria sai via GS (`-dPDFXSETBLEEDBOXTOMEDIABOX`). Workaround alternativo: `markly`. |
 | Fontes embarcadas | Sim, automático e obrigatório. |
 | Marca d'água/crop marks | Via `markly` + CeTZ (workaround). |
 

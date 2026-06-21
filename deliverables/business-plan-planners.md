@@ -1,8 +1,20 @@
 # Business Plan — Projeto Planners
 ### Linha de planners perpétuos premium · Concurseiro & Treino de Força · Brasil (D2C)
 
+> ## ⚠️ DOCUMENTO EM REVISÃO — baseline pré-pivô (a recalcular pós-cotação)
+> **Atualizado: 21/jun/2026.** Redigido em 19/jun/2026, **antes** das decisões travadas de 21/jun/2026. As **tabelas e indicadores numéricos** deste corpo (VPL/TIR, MC/un, ROI, break-even, preço médio R$ 114, custo R$ 55) refletem o **cenário pré-pivô (2 SKUs em paralelo · R$ 119)** e **serão refeitos** pelo `financial-modeler` após as cotações reais (Gate A). **Não usar os números deste corpo como âncora operacional** — a fonte da verdade é `CLAUDE.md` §Fatos-âncora + `design/concurseiro/planner-v1/ESTADO-RETOMADA.md`.
+>
+> **Decisões que prevalecem sobre o corpo abaixo:**
+> - **Lançamento sequencial:** F1 = **só o Concurseiro** (R$ 5.000 banca 1 SKU); **Treino de Força e Caderno de Erros = F2**, pagos pelo caixa gerado. (O corpo trata os 2 SKUs em paralelo — superado.)
+> - **Preço de lançamento Concurseiro = R$ 129** (regime ~R$ 139); Treino R$ 109 (regime R$ 119–129). `[Daniel · 21/jun/2026]`
+> - **SEM pré-venda · SEM empréstimo/aporte** — 100% autofinanciado. (Onde o corpo disser "pré-venda obrigatória" ou "aporte", está superado.)
+> - **Custo/un (~112 pp, micro-lote):** 4/4 R$ 43–55 · 2/2 (paleta fria) R$ 36–47 `[estimativa triangulada · 21/jun/2026]` (supera ~R$ 55–60).
+> - **Produto v1 = o Planner SEM ficha embutida** (só ponteiro → Caderno de Erros).
+>
+> ---
+
 **Sócios:** dois irmãos (Daniel + Mayara), que **são o público-alvo** dos dois produtos.
-**Investimento inicial:** R$ 5.000 (é o teste; reinveste 100% por 4 meses; há aporte conforme tração).
+**Investimento inicial:** R$ 5.000 (é o teste; **100% autofinanciado** — sem empréstimo, sem aporte externo). Treino de Força e Caderno de Erros entram em F2, pagos pelo caixa gerado.
 **Praça:** Brasil, operação a partir de Brasília/DF · **Data:** 19/jun/2026 · **Câmbio de planejamento:** USD/BRL ≈ R$ 5,20.
 **Modelo financeiro:** `models/viabilidade-planners-v2.xlsx` (premissas editáveis; tudo recalcula).
 **Base de evidências:** `research/evidence/` (mercado, concorrência/preço, sourcing/tributos, canal/aquisição — fontes datadas).
@@ -17,11 +29,13 @@
 
 **O que o modelo financeiro v2 mostra (cenário-base: 360 un no ano, preço médio R$ 114, custo R$ 45, 90% direto):**
 
+> **DESATUALIZADO / a recalcular @ R$ 129 + custo triangulado [21/jun/2026].** Os indicadores abaixo foram calculados a preço médio R$ 114 e custo R$ 55 (pré-pivô). Com Concurseiro F1 a R$ 129 e custo 4/4 R$ 43–55 / 2/2 R$ 36–47, todos precisam ser recalculados pelo `financial-modeler`. Mantidos como referência histórica.
+
 | Indicador | Valor | Leitura |
 |---|---|---|
 | Margem de contribuição/un — **canal direto** | **R$ 57,59 (50%)** | preserva margem |
 | Margem de contribuição/un — Shopee | R$ 6,48 (6%) ⚠️ | marketplace destrói margem neste preço |
-| Break-even do 1º lote | **51 de 54 un (94%)** | por isso **pré-venda é obrigatória** |
+| Break-even do 1º lote | **51 de 54 un (94%)** | break-even alto — por isso o lote inicial deve ser pequeno (~54 un) e a venda aberta só após audiência construída (≥ 200–500 na lista de espera) |
 | Break-even mensal (pró-labore + DAS) | **~39 un/mês** | o teste de viabilidade real |
 | Ano 1 — caixa gerado **antes** do pró-labore | **+R$ 16,2 mil (ROI 325% s/ R$ 5k)** | o negócio em si é rentável |
 | **Estratégia de pró-labore recomendada** | **B (otimizadora)** | reinveste 100% no ano 1; sócios sacam só a partir do ano 2 (ver §8) |
@@ -32,11 +46,11 @@
 > **Nota de leitura.** Há duas simulações distintas (consistentes, não somáveis): o **Cenário Base** acima é um retrato anual de 360 un; a **Projeção 12M** (§8) é uma simulação mês a mês com 387 un e ramp do zero. Ambas mostram o mesmo: o negócio **recupera o capital com folga já no ano 1** (≈ R$ 17 mil de caixa antes do pró-labore).
 
 **Recomendações centrais:**
-1. **Lançar os DOIS SKUs em paralelo** (mesma plataforma física → custo incremental baixo; os sócios encarnam os dois ICPs), com **conteúdo equilibrado** nos dois nichos.
+1. **Lançar o Concurseiro primeiro (F1)** — banca 1 SKU com os R$ 5.000; Treino de Força e Caderno de Erros entram na F2, financiados pelo caixa gerado. Foco no Concurseiro no lançamento; conteúdo de Treino pode ser construído em paralelo para preparar F2. `[Daniel · 21/jun/2026]`
 2. **Pré-construir audiência por ~60–90 dias antes de imprimir** (lista de espera) — pré-venda sem audiência ≈ zero `[estimativa, canal-aquisicao.md]`. Mirar 200–500 inscritos antes de abrir vendas.
 3. **Vender 100% direto na Fase 1** (Instagram/TikTok + checkout próprio + pix). Marketplace só para visibilidade, nunca como canal de receita neste preço.
 4. **Mídia paga só como retargeting de audiência quente, a partir do mês ~4** — nunca tráfego frio em escala no ano 1.
-5. **Preço: Concurseiro R$ 119 · Treino R$ 109** (premium defensável; ver §5).
+5. **Preço de lançamento: Concurseiro R$ 129 · Treino R$ 109** (premium defensável; regime ~R$ 139 / R$ 119–129) `[Daniel · 21/jun/2026]`. *(A justificativa numérica do §5 abaixo é pré-pivô, a R$ 119 — a recalcular pós-cotação; ver banner.)*
 6. **Pró-labore na Estratégia B (otimizadora):** reinvestir 100% no ano 1, iniciar a retirada só no ano 2 (R$ 500 → R$ 2.000 por sócio) e ampliar no ano 3. Mantém ~R$ 17 mil no negócio no ano mais frágil — e, ainda assim, paga mais aos sócios em 3 anos (R$ 102 mil vs R$ 64 mil da Estratégia A). **Pré-condição: os sócios precisam de outra renda no ano 1.**
 
 **Por que isto se sustenta apesar do mercado "pequeno" no ano 1:** o SOM do ano 1 (≈ 200–600 un Concurseiro / 150–500 un Treino, **combinados ~350–1.100 un**) `[estimativa triangulada, mercado-demanda.md]` é limitado por **capacidade de aquisição**, não por tamanho de mercado — que é grande e persistente (4–6 M concurseiros que estudam ~2 anos; 13–15 M praticantes de academia). É um negócio que **começa pequeno e honesto e escala em 2027** (ver §3 e §10) — e, por ser **recorrente** (recompra 3–4×/ano), cada cliente conquistado vale ~R$ 374–397 de margem ao longo do tempo (LTV), não só a 1ª venda.
@@ -80,8 +94,9 @@ Dois SKUs sobre a **mesma plataforma física** (reduz custo de insumo e MOQ): **
 - **ICP:** praticante intermediário/avançado, 25–45 anos, treina 3–6×/semana, segue periodização, gosta do registro analógico, ativo em comunidades fitness/força.
 - **TAM/SAM/SOM** `[estimativa triangulada]`: **SAM R$ 15–40 M/ano** (~150–370 k pessoas) · **SOM ano 1 R$ 16–54 k (150–500 un); ano 2 R$ 65–196 k (600–1.800 un)**.
 
-### 3.3 Por que os dois em paralelo
-Concurseiro tem ~2× o SAM, mas é mais competido e sazonal; Treino é *whitespace* com recompra e demanda contínua. Como **compartilham a plataforma física** (mesmo formato, papel e encadernação → MOQ e custo de insumo conjuntos) e os sócios **vivem os dois nichos**, lançar ambos diversifica o risco com pouco custo incremental. O limite real é **banda de atenção de conteúdo** — endereçado com calendário editorial equilibrado e reaproveitamento de formato entre os dois.
+### 3.3 Por que a sequência Concurseiro (F1) → Treino (F2)
+
+Lançar os dois em paralelo seria a decisão natural — compartilham a plataforma física (mesmo formato, papel e encadernação → MOQ e custo de insumo conjuntos) e os sócios vivem os dois nichos. Porém a restrição de capital (R$ 5.000) e foco de conteúdo levaram à decisão de sequenciar: **Concurseiro (F1) primeiro** — SAM maior (~2× o do Treino), validação mais rápida — e **Treino na F2, financiado pelo caixa gerado**. O conteúdo de Treino pode ser construído em paralelo para preparar o lançamento de F2. `[Daniel · 21/jun/2026]`
 
 ---
 
@@ -100,16 +115,18 @@ Concurseiro tem ~2× o SAM, mas é mais competido e sazonal; Treino é *whitespa
 | Faixa | Produto | Preço | Nosso posicionamento |
 |---|---|---|---|
 | Genérico | Agendas/cadernos | R$ 28–64 | abaixo da nossa qualidade |
-| **Premium de marca** | Juspodivm (datado) / nacional fitness | R$ 77–120 | **nós: R$ 109–119**, no topo, por método + perpétuo + acabamento |
+| **Premium de marca** | Juspodivm (datado) / nacional fitness | R$ 77–120 | **nós: R$ 109–129** (Treino R$ 109 · Concurseiro R$ 129), no vão superior entre premium de marca e topo importado |
 | Topo | Importados / apps premium | R$ 130–200 | teto da categoria |
 
-**Ponto cego que ocupamos:** produto **físico, nacional, com método especializado, perpétuo**, na faixa R$ 109–119. O Juspodivm prova que pagam R$ 85–120 por método (mas é datado); os importados provam R$ 130–200 (mas têm barreira/idioma); os apps provam R$ 130–165/ano (mas com fricção recorrente e sem tangibilidade). Estamos exatamente no vão entre eles.
+**Ponto cego que ocupamos:** produto **físico, nacional, com método especializado, perpétuo**, na faixa R$ 109–129 (Treino R$ 109 · Concurseiro R$ 129). O Juspodivm prova que pagam R$ 85–120 por método (mas é datado); os importados provam R$ 130–200 (mas têm barreira/idioma); os apps provam R$ 130–165/ano (mas com fricção recorrente e sem tangibilidade). A R$ 129, o Concurseiro está no teto do Juspodivm — posicionamento claro como premium, não apenas "no vão".
 
 ---
 
 ## 5. Estratégia de preço
 
-**Concurseiro R$ 119 · Treino R$ 109** (preço de lançamento). Justificativa em três eixos `[concorrencia-preco.md]`:
+> **⚠️ DESATUALIZADO (pré-pivô).** O preço de lançamento do Concurseiro é **R$ 129** `[Daniel · 21/jun/2026]` (regime ~R$ 139). A análise abaixo (eixos, MC/un) foi feita a **R$ 119** e **será refeita pós-cotação** pelo `financial-modeler`. Mantida como baseline.
+
+**Concurseiro R$ 119 · Treino R$ 109** (preço de lançamento — *baseline pré-pivô*). Justificativa em três eixos `[concorrencia-preco.md]`:
 
 1. **Factível para o consumidor.** Concurseiro: paridade com o Juspodivm (R$ 85–120), com o argumento "perpétuo" (no 2º ano o custo amortizado tende a zero vs. recomprar o datado). Treino: 15–30% abaixo dos importados e sem a renovação anual dos apps; o premium de ~R$ 25–32 sobre o nacional genérico (R$ 77–85) se paga pelo método de periodização, que a concorrência nacional não tem. WTP triangulada: R$ 80–130 nos dois nichos; teto psicológico ~R$ 130.
 2. **Viável para o negócio.** A R$ 114 (médio), no canal direto, a margem de contribuição é **R$ 57,59/un (50%)** `[modelo]`. Cobre o break-even mensal de pró-labore + DAS (~39 un/mês) e absorve um CAC de retargeting com folga.
@@ -141,7 +158,7 @@ O desafio nº 1 é **construir distribuição** — e aqui está a maior vantage
 
 **Sequência (Fase 0 → Fase 1):**
 1. **Mês 1–2 — construção de audiência + lista de espera.** Conteúdo orgânico equilibrado nos dois nichos (os sócios são o público); landing page de captura; *seeding* de unidades-amostra a 6–10 micro-perfis. Meta: **200–500 inscritos** antes de imprimir.
-2. **Mês 3 — pré-venda do golden sample** com checkout próprio + pix → micro-lote **+** pré-pedidos (transfere risco para a demanda real).
+2. **Mês 3 — golden sample + abertura de vendas** (checkout próprio + pix, sem pré-venda prévia ao lote). Imprimir o micro-lote somente após Gate A (≥ 200–500 na lista de espera), vendendo imediatamente a partir da entrega física. Controle de risco pelo tamanho do lote (~54 un) e pelo perpétuo (estoque não vence).
 3. **Mês 4+ — retargeting** (R$ 300–500/mês) sobre visitantes/seguidores; **afiliados/micro-influenciadores** de nicho (melhor ROI que tráfego frio para produto físico de ticket médio).
 
 **Mix orgânico/pago defensável no ano 1** `[canal-aquisicao.md]`: M1–3 100% orgânico · M4–6 80% orgânico + 20% retargeting · M7–12 70% orgânico + 20% afiliados + 10% pago experimental.
@@ -170,10 +187,10 @@ O desafio nº 1 é **construir distribuição** — e aqui está a maior vantage
 ## 7. Operações & fornecimento (resumo — detalhe na consultoria de sourcing)
 
 - **Veículo legal:** **MEI** na Fase 1 (DAS ~R$ 81/mês `[a confirmar 2026 com contador]`; venda doméstica sem ICMS/II por unidade). Teto ~R$ 81 mil/ano: o SOM do ano 1 (R$ 40–130 mil) pode encostar no teto no cenário otimista → **migrar para ME/Simples** ao se aproximar. Atenção: como MEI o ICMS de importação **não é creditável** (piora a conta da China).
-- **Produção Fase 1:** **gráfica nacional** (MOQ baixo, prazo 6–8 semanas, sem fricção de importação). Custo/un micro-lote ~R$ 55, caindo a ~R$ 45 na reposição (300 un) `[a confirmar por 3 orçamentos, sourcing-tributos.md]`.
+- **Produção Fase 1:** **gráfica nacional** (MOQ baixo, prazo 6–8 semanas, sem fricção de importação). Custo/un micro-lote estimado: **4/4 R$ 43–55 · 2/2 (paleta fria Y=0) R$ 36–47** `[estimativa triangulada · 21/jun/2026]`; reposição (300 un) estimada ~R$ 36–45/un conforme palette. A confirmar por 3 orçamentos reais `[a confirmar, sourcing-tributos.md]`.
 - **Produção Fase 2:** **China**, mas **só a partir de ~3.000–5.000 un** (conforme o tier de gráfica BR — premium vs. offset) — é onde o landed cost (com AFRMM 8% e ICMS por dentro) finalmente bate a gráfica BR. Abaixo disso, BR ganha ou empata. Exige CNPJ + Radar/Siscomex + despachante.
 - **Fulfillment:** expedição própria via Correios/Melhor Envio; **cliente paga o frete** no canal direto (premissa do modelo; *free shipping* opcional testável na aba Sensibilidade).
-- **Fluxo:** audiência → golden sample → pré-venda → micro-lote → expedição → feedback → reposição *make-to-demand*.
+- **Fluxo:** audiência → golden sample → Gate A (lista ≥ 200–500) → micro-lote → abertura de vendas → expedição → feedback → reposição *make-to-demand*.
 
 ---
 
@@ -191,6 +208,8 @@ O desafio nº 1 é **construir distribuição** — e aqui está a maior vantage
 **Recorrência (o que muda o jogo):** o produto é consumível — o concurseiro recompra **3–4×/ano**. Isso eleva o **LTV** para **~R$ 374–397 de margem por cliente** (LTV/CAC ~7–8× no orgânico) e faz da recompra o motor de receita a partir do ano 2. Em fluxo, o mercado é de **~2,3 M un/ano** (ver estudo de mercado §4.5 e aba `LTV & Recorrência`).
 
 **Cenários (ano 1, R$ 5.000) — com dupla linha de resultado:**
+
+> **DESATUALIZADO / a recalcular pós-cotação @ R$ 129 [21/jun/2026].** Tabela calculada a preço médio R$ 109–119 (pré-pivô). Com Concurseiro F1 a R$ 129 e custo triangulado 4/4 R$ 43–55 / 2/2 R$ 36–47, todos os cenários e o ROI (94% / 325% / 762%) precisam ser recalculados. Mantidos como referência histórica — não usar como fechados.
 
 | | Conservador | Base | Otimista |
 |---|---|---|---|
@@ -235,7 +254,7 @@ Quanto e **quando** os sócios retiram pró-labore quase não mexe na margem, ma
 | **Distribuição/aquisição nos nichos** (risco nº 1) | Média | **Conteúdo orgânico — forte da sócia (viralização comprovada)**; lista própria pré-lançamento; recompra eleva o LTV (CAC pago cabe na escala); afiliados de nicho |
 | **Custo real da gráfica acima do previsto** | Alta | **3 orçamentos reais antes de comprometer capital**; se micro-lote > R$ 60/un, recuar para Tier B ou ajustar preço/tamanho do lote |
 | Dependência de plataforma de mídia social (algoritmo/ban) | Média-Alta | Diversificar (Instagram + TikTok) e **construir lista de e-mail própria** — o ativo que a plataforma não tira |
-| Sell-through baixo → encalhe | Alta | **Pré-venda antes de imprimir**; micro-lote (54 un); perpétuo (estoque não "vence") |
+| Sell-through baixo → encalhe | Alta | **Micro-lote pequeno (~54 un) como controle de risco**; perpétuo (estoque não "vence"); abrir vendas só após Gate A (≥ 200–500 na lista) |
 | Capacidade de execução (2 pessoas, sem força em mídia/ops) | Média | Calendário de conteúdo enxuto e reaproveitável; terceirizar/aprender ops e tráfego só quando houver caixa |
 | Marketplace corrói margem | Média | Vender direto na Fase 1; marketplace só p/ descoberta, a ≥ R$ 129 |
 | Frete grátis corrói margem | Média | Cliente paga o frete por padrão; se ofertar frete grátis, **embutir no preço** (senão a MC/un cai de R$ 57 para ~R$ 22–37) |
@@ -248,8 +267,8 @@ Quanto e **quando** os sócios retiram pró-labore quase não mexe na margem, ma
 
 ## 10. Roadmap & decision gates
 
-- **Fase 0 — Construção (meses 1–3):** conteúdo orgânico equilibrado nos 2 nichos → lista de espera → golden sample → **pré-venda**.
-  - **Gate A:** ≥ 200–500 inscritos na lista **e** sinais de pré-pedido **e** 3 orçamentos de gráfica fechados (custo/un confirmado) → imprimir o micro-lote.
+- **Fase 0 — Construção (meses 1–3):** conteúdo orgânico (foco no Concurseiro, F1) → lista de espera → golden sample → **abertura de vendas após Gate A** (sem pré-venda).
+  - **Gate A:** ≥ 200–500 inscritos na lista de espera **e** engajamento ativo (DMs, comentários pedindo compra) **e** 3 orçamentos de gráfica fechados (custo/un confirmado) → imprimir o micro-lote e abrir vendas imediatamente.
 - **Fase 1 — Validação (meses 4–12):** vender ~387 un **direto**; ligar retargeting (mês 4+); medir sell-through, CAC, recompra/indicação. **Estratégia B: pró-labore zero no ano 1** (reinveste 100%).
   - **Gate B:** sell-through ≥ 75% **e** CAC ≤ R$ 45 → reordenar lote maior no Brasil (300–500 un), ampliar conteúdo e **iniciar o pró-labore no ano 2** (R$ 500 → R$ 2.000 por sócio).
 - **Fase 2 — Escala autofinanciada (a partir de ~2027, com capital + dados):** surfar a **retomada do ciclo de concursos**; escalar em **lotes BR (offset) crescentes, pagos pela receita** (já ~R$ 18–32/un no volume); **importar da China só ao cruzar o gatilho de capitalização** — caixa acumulado ≥ custo do lote + colchão de 3 meses (100% próprio, ~R$ 135 mil; fim do ano 3/ano 4), **sem pré-venda e sem empréstimo**; abrir CNPJ + Radar quando importar; marketplace como canal de volume (preço de regime); **ampliar o pró-labore no ano 3** (≈ R$ 3.000 por sócio); avaliar 3º SKU.

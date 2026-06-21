@@ -15,7 +15,7 @@ QConcursos + Anki; dor central = **padrões de erro que se repetem** e não sabe
 - Como Rafael, quero **triar** só os erros que importam (ponto-cego/armadilha/modelo), p/ não virar depósito morto.
 - …registrar **meu raciocínio errado antes da solução**, p/ enxergar a falha.
 - …definir **gatilho→ação** ("quando vir X → faço Y"), p/ corrigir no automático.
-- …revisar em **D+3/14/30** e ver **padrões mensais** (por matéria/tipo), p/ focar onde erro mais.
+- …revisar em **D+1/7/15/30** (Ebbinghaus, embutido na ficha) e ver **padrões mensais** (por matéria/tipo), p/ focar onde erro mais.
 - …que o caderno **converse** com QConcursos/Anki sem retrabalho (decido aqui o que ankificar).
 
 ## A validar (com a Mayara)

@@ -101,14 +101,20 @@ O usuário de treino de força aceita R$ 130–165/ano em app (assinatura recorr
 ## Recomendação de Preço de Lançamento por SKU
 
 ### Premissas comuns
+
+> **Atualização 21/jun/2026:** Custo triangulado em 21/jun/2026: **4/4 R$ 43–55 · 2/2 (preto+azul) R$ 36–47** (micro-lote, ~112 pp) [estimativa triangulada · 21/jun/2026]. A premissa R$ 45 abaixo é a ponta ótima da faixa 4/4; o custo blended real depende da escolha de impressão e orçamento real. **Margens derivadas (R$ 74/un Conc, R$ 64/un Treino) a recalcular pós-cotação** [a recalcular pós-cotação].
+
 - Custo/un (Fase 1 BR): ~R$ 45 [a confirmar por 3 orçamentos]
 - Margem de contribuição mínima desejada: 50%+ sobre preço líquido
 - Canal dominante Fase 1: 90% direto (D2C), sem marketplace
 - Sem audiência prévia → CAC inicial desconhecido → margem deve ser gordurosa para absorver aprendizado de tráfego
+- Lançamento SEQUENCIAL: Concurseiro (F1) primeiro; Treino de Força = F2, só após validação de demanda do Concurseiro. [âncora · 21/jun/2026]
 
 ---
 
 ### SKU 1 — Planner Concurseiro: R$ 119
+
+> **Atualização 21/jun/2026:** A recomendação de launch abaixo foi revisada para **R$ 129** pelo sócio Daniel [Daniel · 21/jun/2026]. O racional de WTP desta seção permanece válido como evidência de mercado — o teto psicológico ~R$ 130 suporta R$ 129. O regime futuro passa a ser ~R$ 139. Apenas a headline de preço mudou; o corpo da análise (âncoras Juspodivm, eixos a/b/c) é evidência de mercado legítima e não foi alterado.
 
 **Eixo (a) — Factível para o consumidor:**
 - Âncora natural: Juspodivm R$ 84,90–119,90. Proposto R$ 119 está no topo da faixa do líder de mercado.

@@ -1,6 +1,18 @@
 # Plano de Gestão — Projeto Planners
 ### Charter · Cronograma · RACI · OKRs · Riscos · Política financeira · Decision log
 
+> ## ⚠️ DOCUMENTO EM REVISÃO — baseline pré-pivô (a recalcular pós-cotação)
+> **Atualizado: 21/jun/2026.** Redigido em 19/jun/2026, **antes** das decisões travadas de 21/jun/2026. As **tabelas e indicadores numéricos** deste corpo (VPL/TIR, MC/un, ROI, break-even, preço médio R$ 114, custo R$ 55) refletem o **cenário pré-pivô (2 SKUs em paralelo · R$ 119)** e **serão refeitos** pelo `financial-modeler` após as cotações reais (Gate A). **Não usar os números deste corpo como âncora operacional** — a fonte da verdade é `CLAUDE.md` §Fatos-âncora + `design/concurseiro/planner-v1/ESTADO-RETOMADA.md`.
+>
+> **Decisões que prevalecem sobre o corpo abaixo:**
+> - **Lançamento sequencial:** F1 = **só o Concurseiro** (R$ 5.000 banca 1 SKU); **Treino de Força e Caderno de Erros = F2**, pagos pelo caixa gerado. (O corpo trata os 2 SKUs em paralelo — superado.)
+> - **Preço de lançamento Concurseiro = R$ 129** (regime ~R$ 139); Treino R$ 109 (regime R$ 119–129). `[Daniel · 21/jun/2026]`
+> - **SEM pré-venda · SEM empréstimo/aporte** — 100% autofinanciado. (Onde o corpo disser "pré-venda obrigatória" ou "aporte", está superado.)
+> - **Custo/un (~112 pp, micro-lote):** 4/4 R$ 43–55 · 2/2 (paleta fria) R$ 36–47 `[estimativa triangulada · 21/jun/2026]` (supera ~R$ 55–60).
+> - **Produto v1 = o Planner SEM ficha embutida** (só ponteiro → Caderno de Erros).
+>
+> ---
+
 **Data:** 19/jun/2026 · **Uso interno dos sócios.** Documento vivo — revisar a cada gate/trimestre.
 Conecta-se a: business plan, estudo de mercado, EVEF, plano estratégico e modelo
 `viabilidade-planners-v2.xlsx`. Marcações: `[confirmado]` · `[a confirmar]` · `[proposta — ajustar]`.
@@ -15,10 +27,9 @@ Este plano é o **sistema operacional** do Projeto Planners: define o que será 
   e praticantes de força, com crescimento 100% autofinanciado.
 - **Objetivos (ano 1):** (a) validar a aquisição orgânica; (b) provar a unit economics (margem
   direta ~50%); (c) iniciar a **recompra**; (d) recuperar os R$ 5 mil sem aporte/empréstimo.
-- **Escopo (in):** 2 SKUs (Concurseiro, Treino), D2C direto, produção nacional, conteúdo orgânico.
+- **Escopo (in):** lançamento **sequencial** — F1 = **Concurseiro** (1 SKU); **Treino = F2** `[Daniel · 21/jun/2026]`; D2C direto, produção nacional, conteúdo orgânico.
   **(out):** marketplace como canal de receita, importação China, 3º SKU, B2B — tudo Fase 2+.
-- **Premissas-chave:** recompra 3–4×/ano (Concurseiro) `[a confirmar]`; custo gráfica ~R$ 45–55/un
-  `[a confirmar por 3 orçamentos]`; sócios com outra renda no ano 1 (pró-labore zero).
+- **Premissas-chave:** recompra 3–4×/ano (Concurseiro) `[a confirmar]`; custo gráfica micro-lote: **4/4 R$ 43–55 · 2/2 (paleta fria) R$ 36–47** `[estimativa triangulada · 21/jun/2026]`, a confirmar por 3 orçamentos; sócios com outra renda no ano 1 (pró-labore zero).
 - **Restrições:** capital R$ 5 mil inicial (autofinanciado depois); time de 2 pessoas; marketing
   pago e ops não são forças.
 - **Critérios de sucesso (ano 1):** sell-through ≥ 75%; CAC ≤ R$ 45; recompra ≥ 30% no Q4; caixa
@@ -33,13 +44,13 @@ Este plano é o **sistema operacional** do Projeto Planners: define o que será 
 | Fase | Período | Entregas | Gate |
 |---|---|---|---|
 | **0 — Construção** | Meses 1–3 | Audiência/lista de espera; conteúdo equilibrado; miolo + golden sample; 3 orçamentos de gráfica; loja/checkout; CNPJ/MEI | **Gate A:** lista ≥ 200–500 **e** 3 orçamentos fechados **e** sample aprovado → imprimir micro-lote |
-| **1 — Validação** | Meses 4–12 | Pré-venda → micro-lote (~54 un) → vender ~387 un direto; retargeting (mês 4+); medir CAC/sell-through; iniciar recompra. Pró-labore **zero** (Estratégia B) | **Gate B:** sell-through ≥ 75% **e** CAC ≤ R$ 45 → lote maior BR (300–500 un) + iniciar pró-labore no ano 2 (R$ 500→2.000/sócio) |
+| **1 — Validação** | Meses 4–12 | Golden sample → micro-lote (após Gate A) (~54 un) → vender ~387 un direto; retargeting (mês 4+); medir CAC/sell-through; iniciar recompra. Pró-labore **zero** (Estratégia B) | **Gate B:** sell-through ≥ 75% **e** CAC ≤ R$ 45 → lote maior BR (300–500 un) + iniciar pró-labore no ano 2 (R$ 500→2.000/sócio) |
 | **2 — Escala autofinanciada** | ~2027+ | Lotes BR offset crescentes pagos pela receita; vento do ciclo de concursos; 3º SKU; marketplace de volume | **Gate C (capitalização):** importar da China só com caixa ≥ lote + colchão (~R$ 135 mil, 100% próprio) **e** volume ≥ ~5.000 un/ano |
 
 ### Roadmap de produto — Concurseiro (design) `[validado · Mayara · 19/jun/2026]`
 
 Eixo de **produto** (complementar ao cronograma de sourcing acima): lançamento **faseado** do sistema
-de estudo modular. **F1 — v1: o Planner de Estudo** (módulo-âncora, com diagnóstico de erro *lite*; cabe no teste
+de estudo modular. **F1 — v1: o Planner de Estudo** (módulo-âncora, SEM ficha embutida; apenas ponteiro → Caderno de Erros (F2); cabe no teste
 de R$ 5k) → **F2 — ecossistema** (Caderno de Erros standalone, Síntese, Bússola + capa) → **F3 — foto→app**
 (recorrência/serviço). Detalhe e gates em `design/concurseiro/conceitos/roadmap-faseado.md`.
 *(PDF regenerado em 19/jun/2026; `business-validator` opcional para esta adição.)*
@@ -88,7 +99,7 @@ Prob/Impacto: A=alto, M=médio, B=baixo. Revisar a cada gate.
 |---|---|:--:|:--:|---|---|---|
 | R1 | **Aquisição/audiência nos nichos** | M | A | S2 | **Conteúdo orgânico — forte da Mayara (viralização comprovada)**; lista própria; retargeting só quente; afiliados | Lista < 100 em 60 d **ou** CAC > R$ 60 |
 | R2 | **Custo da gráfica > previsto** | M | A | S2 | 3 orçamentos antes do lote; recuar p/ Tier B; ajustar preço | Cotação > R$ 60/un no micro-lote |
-| R3 | Sell-through baixo → encalhe | M | A | S1 | Pré-venda; micro-lote; perpétuo não vence | Sell-through < 60% |
+| R3 | Sell-through baixo → encalhe | M | A | S1 | micro-lote inicial pequeno (~54–83 un); Gate A (lista ≥ 200–500) antes de imprimir; perpétuo não vence | Sell-through < 60% |
 | R4 | Dependência de plataforma (algoritmo/ban) | M | A | S1 | Multi-canal (IG+TikTok) + **lista de e-mail própria** | Queda > 40% de alcance |
 | R5 | Recompra abaixo do esperado | M | A | S1 | Lembrete de fim de ciclo; combos/assinatura; comunidade | Recompra < 20% no Q4 |
 | R6 | Execução (time de 2 pessoas) | M | M | S1/S2 | Calendário enxuto/reaproveitável; terceirizar com caixa | Atraso > 1 gate |
@@ -108,7 +119,7 @@ Prob/Impacto: A=alto, M=médio, B=baixo. Revisar a cada gate.
   e sem aporte** que descapitalize. Importar só ao cruzar o **gatilho** (caixa ≥ lote + colchão,
   ~R$ 135 mil, e volume ≥ ~5.000 un/ano).
 - **Separação PF/PJ:** conta PJ dedicada; pró-labore é a única retirada; nada de misturar caixa.
-- **Precificação:** lançamento R$ 119/109; preço de regime R$ 129–139/119–129 após reviews.
+- **Precificação:** lançamento R$ 129 (Conc.) / R$ 109 (Treino) `[Daniel · 21/jun/2026]`; regime ~R$ 139 (Conc.) / R$ 119–129 (Treino) após reviews.
 - **Canais:** vender direto; **marketplace só para descoberta** (margem ~zero no ticket atual).
 - **Marketing:** orgânico primeiro; pago só como retargeting de audiência quente, com **gate de
   ROAS ≥ 2,5×** e CAC ≤ R$ 45; lembrar do +12,15% de tributos na fatura de mídia.
@@ -121,8 +132,9 @@ Prob/Impacto: A=alto, M=médio, B=baixo. Revisar a cada gate.
 
 | # | Data | Decisão | Por quê / alternativas | Status |
 |---|---|---|---|---|
-| D1 | jun/2026 | **Lançar os 2 SKUs em paralelo** | Mesma plataforma física (custo incremental baixo); sócios encarnam os 2 ICPs | Ativa |
-| D2 | jun/2026 | **Preço R$ 119 (Conc.) / R$ 109 (Treino)** | Vão entre genéricos e importados/apps; WTP R$ 80–130; sustenta CAC | Ativa |
+| D1 | **21/jun/2026** | **Lançamento SEQUENCIAL: Concurseiro (F1); Treino e Caderno de Erros = F2** | Capital R$ 5.000 banca 1 SKU; Treino entra na F2 com caixa gerado | **Revisada** `[Daniel · 21/jun/2026]` |
+| D1-hist | jun/2026 | ~~Lançar os 2 SKUs em paralelo~~ (superado) | Premissa original: mesma plataforma física (custo incremental baixo); sócios encarnam os 2 ICPs — revisada em 21/jun/2026 por restrição de capital R$ 5.000 | Superada |
+| D2 | 21/jun/2026 | **Preço lançamento R$ 129 (Conc.) / R$ 109 (Treino)** `[Daniel]` (regime ~R$ 139 / 119–129) | Vão entre genéricos e importados/apps; WTP R$ 80–130; sustenta CAC | Ativa (revisada de R$ 119) |
 | D3 | jun/2026 | **Vender 100% direto na Fase 1** | Marketplace consome ~31% (Shopee) / ~14%+frete (ML) — destrói margem | Ativa |
 | D4 | jun/2026 | **Aquisição orgânica primeiro** | Tráfego frio R$ 120–333 inviável na 1ª venda; é o forte do time | Ativa |
 | D5 | jun/2026 | **Pró-labore Estratégia B** (zero no ano 1) | Mantém ~R$ 17 mil no negócio no ano frágil; paga mais aos sócios em 3 anos | Ativa |

@@ -27,7 +27,7 @@ Elevar o planner de "rascunho limpo" (v3) a **quase-Tier-1**, de modo que o free
 ## Fases
 - **P0** pesquisa toolchain + prior-art — *rodando*.
 - **P1** decidir toolchain · construir o **sistema de tokens** (de referência) · escolher fontes livres.
-- **P2** reconstruir as 5 páginas no toolchain — **começar pelo time-log do Diário** (o mais difícil).
+- **P2** ✅ reconstruir as **6 páginas** no toolchain (guia + bussola + semanal + diario + pontes + ficha) — **concluído 20/jun/2026**. *(originalmente 5; Guia de Uso/Contracapa adicionado como página 6)*
 - **P3** pipeline print-correctness (sangria/marcas/CMYK via **Ghostscript+ICC** / PDF/X) + **preflight** (veraPDF/Acrobat).
 - **P4** **loop de crítica adversarial** (painel multi-lente) → refina → repete até convergir.
 - **P5** validar (preflight + teste de impressão real) + handoff.
@@ -60,6 +60,7 @@ dedicada → **o painel de crítica é o substituto do designer**.
 - **Ghostscript** p/ **PDF/X-1a + ICC FOGRA39** (Typst ainda não faz PDF/X — issue #6012). Receita GS RGB→PDF/X no relatório.
 - Plano B (teto máximo): **LuaLaTeX + microtype + TikZ + pdfx**. **PrinceXML eliminado** (pago, US$ 495–3.800).
 - **Fontes (OFL):** **Source Serif 4 + Source Sans 3** (ótimo pt-BR); alt.: EB Garamond / Libertinus / Inter.
+  *(Pesquisa; decisão final: Lato Black/Regular [Daniel · 20/jun/2026]. Source Serif/Sans descartadas — planner sem texto corrido não requer serifa editorial.)*
 - **Arquitetura a copiar:** `hfactor/papermaker` (`config.typ → estilos.typ → componentes de página`).
   Refs visuais: `kudrykv/latex-yearly-planner`; foldmark/punchmark p/ fichário A5: `stettberger/notebook`.
 - **Print-correctness:** FOGRA39 (couché) · **rich black C60 M40 Y40 K100** (TIC 240%) · texto = **K100 puro**.

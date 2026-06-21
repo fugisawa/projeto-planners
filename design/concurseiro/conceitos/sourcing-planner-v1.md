@@ -2,10 +2,10 @@
 
 **Data:** 20/jun/2026 | **Câmbio de referência:** USD/BRL ≈ R$ 5,20 | **Analista:** sourcing-analyst (Claude Code)
 
-> Documento complementar a `consultoria-sourcing-planners.md` e `prototipo-planner-v1.md`.
+> Documento complementar a [`consultoria-sourcing-planners.md`](../../../deliverables/consultoria-sourcing-planners.md) e [`prototipo-planner-v1.md`](prototipo-planner-v1.md).
 > Foco: especificação de papel, capa e encadernação para o protótipo A5 (~71 pp / ~36 folhas)
 > e para a produção comercial (~112 pp, Concurseiro, sem ficha) `[Daniel · 21/jun/2026]`. Âncoras de custo do dossiê:
-> micro-lote ~R$ 60/un (~112 pp, sem ficha) `[estimativa pré-RFQ · 21/jun/2026]` · reposição ~R$ 45/un (a confirmar); ref. histórica: protótipo 71 pp era ~R$ 55 · preço de venda R$ 129 `[Daniel · 21/jun/2026]`.
+> micro-lote 4/4: R$ 43–55 / 2/2: R$ 36–47 `[estimativa triangulada · 21/jun/2026]` · reposição ~R$ 45/un (a confirmar); ref. histórica: protótipo 71 pp era ~R$ 55 · preço de venda R$ 129 `[Daniel · 21/jun/2026]`.
 
 ---
 
@@ -95,9 +95,10 @@ O brief pede: **creme/quente** (não branco frio), **liso o suficiente** (não p
 
 ### 4.2 Micro-lote — ~54 unidades (~71 pp protótipo)
 
-| Tier | Spec | Custo/un estimado | Total ~54 un | vs. âncora R$ 55 |
+| Tier | Spec | Custo/un estimado | Total ~54 un | vs. âncora (4/4: R$ 43–55 · 2/2: R$ 36–47) |
 |---|---|---|---|---|
-| **A — Premium** (Pólen Bold 90g, capa couchê 300g soft-touch, wire-o) | A5, colorido f&v | **R$ 45–58** | R$ 2.430–3.130 | **Dentro da âncora** |
+| **A — Premium 4/4** (Pólen Bold 90g, capa couchê 300g soft-touch, wire-o) | A5, colorido f&v | **R$ 45–58** | R$ 2.430–3.130 | **Dentro da âncora 4/4** |
+| **A — 2/2 cores** (Pólen Bold 90g, paleta fria Y=0, capa couchê 300g soft-touch, wire-o) | A5, 2 cores miolo | **R$ 36–47** | R$ 1.944–2.538 | **Dentro da âncora 2/2** `[estimativa triangulada · 21/jun/2026]` |
 | **B — Intermediário** (offset 90g creme, capa couchê 300g fosca, wire-o) | A5, colorido f&v | **R$ 35–48** | R$ 1.890–2.590 | **Abaixo da âncora** |
 | **C — Enxuto** (offset 75g, capa couchê 300g, wire-o) | A5, P&B miolo | **R$ 25–38** | R$ 1.350–2.050 | Bem abaixo |
 
@@ -105,9 +106,10 @@ O brief pede: **creme/quente** (não branco frio), **liso o suficiente** (não p
 
 ### 4.3 Produção comercial — ~54 unidades (~120 pp, 3 ciclos)
 
-| Tier | Custo/un estimado | vs. âncora R$ 55 |
+| Tier | Custo/un estimado | vs. âncora (4/4: R$ 43–55 · 2/2: R$ 36–47) |
 |---|---|---|
-| A — Pólen Bold 90g + soft-touch + wire-o | **R$ 52–68** | Âncora no limite — atualizar modelo |
+| A — Pólen Bold 90g + soft-touch + wire-o, 4/4 | **R$ 52–68** | Topo da âncora — confirmar cotação |
+| A — Pólen Bold 90g + soft-touch + wire-o, 2/2 | **R$ 43–56** `[estimativa triangulada · 21/jun/2026]` | Dentro da âncora 2/2 |
 | B — Offset creme 90g + fosca + wire-o | **R$ 40–55** | Dentro da âncora |
 | C — Offset 75g + fosca | **R$ 28–42** | Folga confortável |
 
@@ -128,7 +130,9 @@ O brief pede: **creme/quente** (não branco frio), **liso o suficiente** (não p
 
 ---
 
-## 6. Veredito de viabilidade a R$ 119
+## 6. Veredito de viabilidade a R$ 129 [Daniel · 21/jun/2026]
+
+> Tabela já recalculada com R$ 129; ver nota sobre âncora de custo abaixo.
 
 | Cenário | Custo/un | MC bruta (direto) | MC% | Viabilidade |
 |---|---|---|---|---|
@@ -138,9 +142,9 @@ O brief pede: **creme/quente** (não branco frio), **liso o suficiente** (não p
 | Produção ~54 un, ~120 pp, Tier A | **R$ 52–68** | R$ 51–67 | 43–56% | Viável com atenção — confirmar |
 | Produção ~54 un, ~120 pp, Tier B | **R$ 40–55** | R$ 64–79 | 54–66% | **Boa margem** |
 
-> MC bruta = R$ 129 `[Daniel · 21/jun/2026]` − custo/un (sem marketplace, sem frete saída). O modelo blended do dossiê (`MC/un blended ~R$ 54,48`) `[a recalcular pós-cotação · 21/jun/2026]` — base era preço R$ 119/custo R$ 55; preço subiu para R$ 129 e custo estimado ~R$ 60. Com Tier A na produção de ~112 pp o número fica pressionado — **confirmar cotação antes de fechar spec**.
+> MC bruta = R$ 129 `[Daniel · 21/jun/2026]` − custo/un (sem marketplace, sem frete saída). O modelo blended do dossiê (`MC/un blended ~R$ 54,48`) `[a recalcular pós-cotação · 21/jun/2026]` — base era preço R$ 119/custo R$ 55; preço subiu para R$ 129 e o custo estimado é **4/4 R$ 43–55 · 2/2 R$ 36–47** `[estimativa triangulada · 21/jun/2026]`. Com Tier A na produção de ~112 pp o número fica pressionado no topo da faixa — **confirmar cotação antes de fechar spec**.
 
-**Conclusão:** a margem de R$ 119 suporta papel creme de qualidade (Pólen Bold 90g) + capa couchê 300g + laminação fosca/soft-touch + wire-o, **desde que o custo seja confirmado por cotação real e fique dentro de R$ 55–65/un no micro-lote**. O papel premium Munken na Fase 2 deve ser avaliado contra o aumento de custo esperado.
+**Conclusão:** a margem de R$ 129 `[Daniel · 21/jun/2026]` suporta a spec completa (Pólen Bold 90g + capa couchê 300g + laminação fosca/soft-touch + wire-o), desde que o custo confirmado fique dentro de R$ 43–55/un (4/4) ou R$ 36–47/un (2/2) no micro-lote `[estimativa triangulada · 21/jun/2026]`. O Tier A (4/4) está dentro do range; o Tier B (2/2) melhora ainda mais a MC. O papel premium Munken na Fase 2 deve ser avaliado contra o aumento de custo esperado.
 
 ---
 
@@ -160,7 +164,7 @@ O brief pede: **creme/quente** (não branco frio), **liso o suficiente** (não p
 
 1. **Amostra física de papel** — comprar resma A5 de **Pólen Bold 90g** e **Pólen Soft 80g** na Diplomata, Papel Avulso ou Shopee (R$ 19–25 por 100 fls) → fazer teste real de marca-texto (Stabilo, BIC) e caneta esferográfica → confirmar tom creme e toque antes de fechar spec com a gráfica.
 
-2. **3 cotações formais** — enviar RFQ para **Gráfica do Livro** + **Avanço Color** + **GIV Online** com spec completa (A5 148×210 · miolo Pólen Bold 90g · ~70–75 pp · capa couchê 300g fosca/soft-touch · wire-o · shrink individual · colorido f&v) — pedir preços para **1 / 10 / 54 / 100 un**.
+2. **3 cotações formais** — enviar RFQ para **Gráfica do Livro** + **Avanço Color** + **GIV Online** com spec completa (A5 148×210 · miolo Pólen Bold 90g · ~70–75 pp · capa couchê 300g fosca/soft-touch · wire-o · shrink individual) — pedir preços para **1 / 10 / 54 / 100 un** em **duas variantes de cor**: (a) colorido f&v 4/4 e (b) 2 cores miolo — preto + azul-ardósia, paleta fria Y=0 (corte estimado ~15–20% no custo de impressão) `[estimativa triangulada · 21/jun/2026]`.
 
 3. **Confirmar disponibilidade de Pólen Bold** — perguntar explicitamente na Gráfica do Livro se operam com resmas do Pólen Bold 90g para o miolo (o configurador lista o papel, mas confirmar estoque).
 
@@ -185,4 +189,4 @@ O brief pede: **creme/quente** (não branco frio), **liso o suficiente** (não p
 - **Ipsis Gráfica** (ipsis.com.br/papeisespeciais) — Munken disponível para impressão editorial (Santo André, SP); digital até 200 un; brochura costurada e capa dura. Jun/2026. `[confirmado]`
 
 > Todos os custos de gráfica marcados como `[estimativa]` são faixas de mercado para dimensionar a decisão. Confirmar com cotação formal (3 gráficas) antes de comprometer capital.
-> Alíquotas, tributos e regimes de importação: ver `consultoria-sourcing-planners.md` e `research/evidence/sourcing-tributos.md`. Conferir sempre com despachante e Siscomex para a rota China na Fase 2.
+> Alíquotas, tributos e regimes de importação: ver [`consultoria-sourcing-planners.md`](../../../deliverables/consultoria-sourcing-planners.md) e [`sourcing-tributos.md`](../../../research/evidence/sourcing-tributos.md). Conferir sempre com despachante e Siscomex para a rota China na Fase 2.

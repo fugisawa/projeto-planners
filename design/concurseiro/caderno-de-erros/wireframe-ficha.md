@@ -1,8 +1,7 @@
 # Caderno de Erros — wireframe da ficha (v0)
 
 Estrutural (ASCII), derivado de [`spec.md`](spec.md) + os 3 benchmarks. **19/jun/2026 · validado no conceito (Mayara).**
-A **lite** (para o planner v1) fica em [`../conceitos/wireframes-planner-v1.md`](../conceitos/wireframes-planner-v1.md);
-aqui é a **ficha completa** (módulo standalone, Fase 2).
+Aqui está a **ficha completa** (módulo standalone, **Fase 2**). A versão lite para o Planner v1 foi **descartada** [Daniel · 21/jun/2026] — o v1 tem apenas ponteiro "→ Caderno de Erros".
 
 ## A — Ficha completa (1 questão por ficha) — formato 2 colunas
 

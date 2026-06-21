@@ -10,7 +10,7 @@ O protótipo é gerado **por código** (Typst), in-house, sem InDesign/Affinity.
 |---|---|
 | `config.typ` | design tokens (geometria A5, cores CMYK, fonte Lato, escala, fios) |
 | `estilos.typ` | helpers compartilhados (masthead, sechead, softhead, timeblock, studyrows, chip, colorsq, checkbox, softband…) |
-| `guia.typ` · `diario.typ` · `semanal.typ` · `bussola.typ` · `pontes.typ` · `ficha.typ` | as **6 páginas** (`guia` = onboarding/contracapa) |
+| `guia.typ` · `bussola.typ` · `semanal.typ` · `diario.typ` · `pontes.typ` · `ficha.typ` | as **6 páginas** (`guia` = onboarding/contracapa) — ordem do booklet (ORDER em `finalize.py`) |
 | `render.py` | compila 1 página → PDF + PNG p/ QA: `uv run --with typst python render.py <pagina>` |
 | `finalize.py` + `PDFX_def.ps` | merge das 6 → **`planner-proto-pdfx1a.pdf`** (CMYK · PDF/X-1a · FOGRA39) |
 | `INSTRUCOES-PAGINAS.md` | briefing concreto por página (spec do build) |

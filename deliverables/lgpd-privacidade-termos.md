@@ -70,9 +70,11 @@ o frete é informado no checkout.
 **até 7 dias corridos** após o recebimento para **desistir** (CDC art. 49) e receber reembolso.
 Produtos com **defeito** são trocados/reparados conforme o CDC. Para solicitar: `[E-MAIL DE CONTATO]`.
 
-**6. Pré-venda (quando houver).** Itens em pré-venda têm **prazo de produção/envio informado** na
-oferta; ao comprar, você concorda com esse prazo. O direito de arrependimento (item 5) é contado do
-**recebimento**.
+**6. Pré-venda.** Na **Fase 1 não há pré-venda** — os produtos são vendidos a partir de estoque já
+pronto `[decisão: sem pré-venda · Daniel · 21/jun/2026]`. *(Cláusula completa mantida inativa em rascunho abaixo, caso a política mude.)*
+<!-- [PREPARATÓRIO — NÃO ATIVAR; decisão travada: SEM pré-venda na Fase 1.] Se um dia houver pré-venda:
+Itens em pré-venda têm prazo de produção/envio informado na oferta; ao comprar, você concorda com esse
+prazo. O direito de arrependimento (item 5) é contado do recebimento. -->
 
 **7. Propriedade intelectual.** A marca, os textos, o **método**, layouts e conteúdos do site e dos
 produtos pertencem a **[MARCA]/`[RAZÃO SOCIAL]`**; é vedada a reprodução sem autorização.

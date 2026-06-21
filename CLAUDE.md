@@ -28,14 +28,14 @@ sócios (uso interno e honesto — não é pitch para investidor).
 | Investimento inicial | **R$ 5.000** | é o teste; **100% autofinanciado** depois; **banca 1 SKU: Concurseiro (F1); Caderno e Treino = F2** `[Daniel · 21/jun/2026]` |
 | Preço de lançamento | Concurseiro **R$ 129** · Treino **R$ 109** | **lançamento sequencial (Conc. F1)** `[Daniel · 21/jun/2026]`; regime: ~R$ 139 / 119–129 |
 | Custo/un (Conc., ~112 pp, micro-lote) | **4/4: R$ 43–55 · 2/2: R$ 36–47** → cai com volume | `[estimativa triangulada · 21/jun/2026]`; paleta fria (Y=0) → miolo 2 cores corta ~15–20% |
-| MC/un Conc. (R$ 129) | direto **~48–58% (4/4) · ~55–62% (2/2)** `[est.]` · blended **[a recalcular]** | `[estimativa triangulada · 21/jun/2026]`; marketplace destrói (Shopee ~R$ 6) |
+| MC/un Conc. (R$ 129) | **contribuição direta** (líq. do cascade do canal: devoluções 4% + pagamento 2,5% + embalagem R$ 4 → contrib. ~R$ 116,61) **~48–58% (4/4) · ~55–62% (2/2)** `[est.]` · blended **[a recalcular]** | `[estimativa triangulada · 21/jun/2026]`; marketplace destrói (Shopee ~R$ 6) |
 | Recorrência | recompra **3–4×/ano** (Conc) / ~2,5 (Treino) | **LTV margem ~R$ 374–397** (mantém-se a R$ 129) `[est.]`; LTV/CAC ~7–8× |
 | Mercado recorrente | **~2,3 M un/ano (~R$ 267 M)** | SAM ~R$ 55 M (Conc) / ~R$ 25 M (Treino) |
 | Mix de canal (Fase 1) | **90% direto / 10% marketplace** | vender direto; marketplace só p/ descoberta |
 | Pró-labore (**Estratégia B**) | ano 1 = **0** → ano 2 **R$ 500→2.000/sócio** → ano 3 ~R$ 3.000 | reinveste 100% no ano 1 |
 | Escala / China | só ao cruzar **gatilho ~R$ 135 mil** + volume ≥ ~5.000 un | **sem pré-venda, sem empréstimo** |
 | Sourcing | **NCM 4820.10.00** (tributado, sem imunidade de livro) · **AFRMM 8%** · landed 2,0–2,7× FOB · crossover China **~3.000–5.000 un** | Fase 1 gráfica BR; Fase 2 China |
-| EVEF (5 anos, taxa 12–15%) | **[a recalcular pós-cotação @ R$ 129 / ~R$ 60 · 21/jun/2026]** (era VPL R$ 365–407 mil · TIR ~406%) | anos 3–5 ilustrativos |
+| EVEF (5 anos, taxa 12–15%) | **[a recalcular pós-cotação @ R$ 129 / custo R$ 43–55 (4/4) ou R$ 36–47 (2/2) · 21/jun/2026]** (era VPL R$ 365–407 mil · TIR ~406%) | anos 3–5 ilustrativos |
 
 > Ao mudar um número-chave, **propague para todos os documentos** e rode o `business-validator`.
 > Premissas detalhadas: `docs/premissas-do-negocio.md`.
@@ -44,15 +44,15 @@ sócios (uso interno e honesto — não é pitch para investidor).
 `sources/` (rascunhos, **imutáveis**) → `research/` (evidência datada) → `models/` (.xlsx) +
 `deliverables/` (docs) → **business-validator** (checagem cruzada antes de "pronto").
 
-- `deliverables/` — 10 documentos (`.md` → `.pdf`; o `guia-do-negocio` usa `.html` como fonte). Índice no `README.md`;
+- `deliverables/` — 10 documentos (fonte `.md` → `.html` → `.pdf`; exceto `guia-do-negocio`, que tem só `.html` como fonte editável). Índice no `README.md`;
   `guia-do-negocio` = versão em linguagem leiga.
 - `models/` — `viabilidade-planners-v2.xlsx` (10 abas) + `painel-kpis.xlsx`.
 - `research/evidence/` (pesquisa datada) + `research/validation/` (laudos).
 - `docs/` — metodologia, premissas e **`claude-setup.md`** (config da IA + skills/MCPs).
 - `sources/` — 3 rascunhos originais (o "antes", **read-only**).
 - `scripts/` — geradores (`build_model.py`, `build_painel.py`, `build_pdfs.py`, `build_legal.py`).
-- `.claude/agents/` (agentes) · `.mcp.json` (MCP servers do projeto).
-- `design/` — **módulo de design do produto** (Concurseiro): pesquisa + conceitos + o módulo **`caderno-de-erros/`** (beachhead). Ver `design/README.md` e `design/concurseiro/conceitos/roadmap-faseado.md`.
+- `.claude/agents/` (agentes) · `.claude/skills/` (planner-designer, typst-planner) · `.mcp.json` (MCP servers do projeto).
+- `design/` — **módulo de design do produto** (Concurseiro): pesquisa + conceitos + o módulo **`caderno-de-erros/`** (standalone F2). Ver `design/README.md` e `design/concurseiro/conceitos/roadmap-faseado.md`.
 
 ## Comandos (regenerar — requer `uv`; não há openpyxl/markdown global)
 ```bash

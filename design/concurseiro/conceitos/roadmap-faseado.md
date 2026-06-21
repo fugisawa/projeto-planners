@@ -1,7 +1,7 @@
 # Roadmap faseado — sistema de estudo do Concurseiro
 
 **19/jun/2026.** Decisão: **ecossistema modular** (módulos **independentes + complementares**),
-lançado de forma **faseada**, começando por um **beachhead**. **Validado com a Mayara (19/jun/2026).**
+lançado de forma **faseada**, começando pelo **beachhead = Concurseiro (F1)**. **Validado com a Mayara (19/jun/2026).**
 Ver [`definicao-do-produto.md`](definicao-do-produto.md).
 
 ## Fase 0 — Pesquisa & definição ✅ (concluída)
@@ -36,4 +36,4 @@ Hub **harmônico** (não one-stop-shop) · **não-colisão** com cursinhos · **
 ## Alinhamento com o dossiê (eixos distintos, coerentes)
 - **Produto (este roadmap):** beachhead → ecossistema → app.
 - **Sourcing/escala (dossiê):** Fase 1 gráfica BR; China só no **gatilho ~R$ 135 mil** + volume ≥ ~5.000 un; **autofinanciado**; recompra 3–4×/ano.
-- O beachhead (Caderno de Erros, baixo custo unitário) cabe no teste de **R$ 5.000** sem ferir a política financeira.
+- O beachhead (**Concurseiro, F1**) cabe no teste de **R$ 5.000** sem ferir a política financeira. O Caderno de Erros é **Fase 2** — entra após tração comprovada do Concurseiro [âncora Daniel · 21/jun/2026]. Custo/un do Caderno standalone = [a recalcular pós-sourcing-analyst].

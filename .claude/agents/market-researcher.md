@@ -125,7 +125,7 @@ Universo macro (IBGE/PNAD/CEBRASPE)
 Unidade atômica: "planner premium comprado por pessoa do nicho no ano"
 × Número de pessoas ativas no nicho (estimado por sinal proxy)
 × Taxa de penetração de produto físico premium (usar análogo)
-× Preço médio (R$114)
+× Preço médio (ler §Fatos-âncora do CLAUDE.md antes de calcular — F1: R$ 129; F2 blended: [a recalcular pós-cotação])
 = Estimativa de receita de mercado
 ```
 
@@ -142,7 +142,13 @@ Sempre reportar P10/P50/P90 variando as 3 principais premissas:
 |---|---|---|---|
 | Taxa de penetração | ½ × base | base | 2× base |
 | Frequência de recompra | 2×/ano | 3–4×/ano | 5×/ano |
-| Preço médio | R$ 99 | R$ 114 | R$ 129 |
+| Preço médio (Conc F1) | R$ 109 | R$ 129 | R$ 139 |
+
+> **Nota de fase:** A tabela acima reflete o cenário **Fase 1** (apenas Concurseiro, preço de
+> lançamento R$ 129). P10 = promoção/desconto de lançamento; P50 = preço de lançamento âncora
+> `[Daniel · 21/jun/2026]`; P90 = preço de regime (~R$ 139). Para **Fase 2** (blended com Treino
+> R$ 109), construir tabela separada após lançamento sequencial — o P50 blended **[a recalcular
+> pós-cotação]** dependerá do mix de vendas Conc×Treino e não deve ser usado em modelos de F1.
 
 ### Etapa 4 — Análise competitiva
 

@@ -2,7 +2,7 @@
 
 **Data:** 20/jun/2026 | **Analista:** financial-modeler (Claude Code) | **Câmbio ref.:** USD/BRL ≈ R$ 5,20
 
-> ⚠️ **DESATUALIZADO:** preço-âncora era R$ 119; recalcular para R$ 129 + custo ~R$ 60 pós-cotação `[21/jun/2026]`. As tabelas internas abaixo são referência histórica (base preço R$ 119 / custo R$ 55) — **não usar como âncora operacional**. Rebuild é do `financial-modeler`.
+> ⚠️ **DESATUALIZADO:** preço-âncora era R$ 119; recalcular para R$ 129 + custo âncora 4/4: R$43–55 · 2/2: R$36–47 (estimativa triangulada · 21/jun/2026) — recalcular MC com price R$129 e custo triangulado. As tabelas internas abaixo são referência histórica (base preço R$ 119 / custo R$ 55) — **não usar como âncora operacional**. Rebuild é do `financial-modeler`.
 
 > Documento complementar a `sourcing-planner-v1.md` e `prototipo-planner-v1.md`.
 > Foco: recompute das unit economics com o custo real da gráfica BR (pós-sourcing).
@@ -25,7 +25,7 @@ A contribuição por unidade **antes** de descontar o custo do produto segue a e
 | (−) Embalagem & manuseio | R$ 4,00 | R$ 4,00 |
 | **(=) Contrib. excl. produto** | **R$ 107,27** | **R$ 103,80** |
 
-`[confirmado — cálculo fechado com a âncora CLAUDE.md: MC direto R$57,59 a preço R$114/custo R$45 → ✓]`
+`[histórico — calculado com preço R$114 (mix antigo: R$119/R$109); com novos preços R$129/R$109 o blended muda — a recalcular pós-cotação · 21/jun/2026]`
 
 ---
 
@@ -114,6 +114,8 @@ No pior caso (R$68), chega a 33% — inviável.
 
 ### 4.3 Revelação importante: a âncora R$55 do modelo está errada como meta
 
+> ⚠️ Análise calculada ao preço R$119 (histórico). A R$129, os tetos de custo para cada meta de MC são ~R$8 mais folgados — a recalcular [a recalcular pós-cotação · 21/jun/2026].
+
 A âncora do CLAUDE.md/xlsx (`custo/un âncora R$ 55 → R$ 45`) usa R$55 como **custo do micro-lote**,
 mas a R$ 119 (não R$ 114 do preço médio), custo R$55 **entrega MC direta de 43,9% — abaixo da meta
 de 45%**. A âncora R$57,59 (50%) é válida ao preço médio de R$114 (mix com Treino R$109) e
@@ -167,7 +169,7 @@ declarada de 50%.
 
 ## 7. Conclusão
 
-O Planner v1 (Concurseiro) **é viável a R$ 119** — mas com condicionantes claros:
+O Planner v1 (Concurseiro) foi analisado a R$ 119 (histórico) — ver banner DESATUALIZADO; a viabilidade a R$ 129 com custo 4/4 R$43–55 / 2/2 R$36–47 [a recalcular pós-cotação · 21/jun/2026]. Condicionantes da análise histórica:
 
 1. **No micro-lote (~71 pp, protótipo):** o Tier A (Pólen Bold 90g + wire-o) funciona **se a
    gráfica cotar ≤ R$54/un**. O Tier B é o plano B seguro (MC ≥ 49% em qualquer caso).

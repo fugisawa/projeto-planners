@@ -1,5 +1,7 @@
 # Wireframes — Planner de Estudo v1
 
+> ⚠️ **PRÉ-2.0 PRO (19/jun/2026)**: dois itens superados pela decisão de 20/jun/2026: (1) dot-grid substrato abandonado — ver sintese-design-refinada.md §2.0 PRO; (2) Página 5 (Diagnóstico de Erro lite) é SOMENTE PROTÓTIPO — produto F1 (112pp) vai SEM ficha [Daniel · 21/jun/2026]. As demais páginas permanecem válidas.
+
 **v1 · 19/jun/2026 · validado no conceito (Mayara)**
 Módulo-âncora do sistema Concurseiro. Persona: Rafael, dedicação exclusiva (6–10 h/dia).
 Físico: A5 (148×210 mm) · dot grid · perpétuo · lay-flat · anti-culpa/flexível.
@@ -333,54 +335,17 @@ Tese: hub analógico harmônico (foco + síntese + reflexão) — dá liga ao di
 
 ---
 
-## PÁGINA 5 — Diagnóstico de Erro (*lite*, seção do planner v1)
+## PÁGINA 5 — [REMOVIDA · decisão Daniel 21/jun/2026]
 
-> **Princípio:** versão **enxuta** do caderno de erros (错题本/오답노트) embutida no v1 — captura o
-> *porquê* do erro + gatilho→ação + mini-revisão, **sem o peso** do módulo standalone (Fase 2 —
-> ficha completa em [`../caderno-de-erros/wireframe-ficha.md`](../caderno-de-erros/wireframe-ficha.md)).
-> O digital (QConcursos/Anki) diz *o quê*; o papel processa o *porquê* (`metodo-hub-analogico §6`).
-> Posição sugerida: bloco de ~24–32 fichas no fim do planner (a validar).
+> O Planner v1 **não inclui ficha de diagnóstico de erro**. Em seu lugar, há um **ponteiro impresso** "→ Caderno de Erros" na seção Pontes Digitais (Pág. 4) ou no endmatter. A ficha completa standalone é especificada em `../caderno-de-erros/wireframe-ficha.md` e será o produto de **Fase 2**. O wireframe e o código da ficha lite foram preservados no histórico do Git para referência futura.
 
-```
-+---------------------------------------------------------------+
-|  DIAGNOSTICO DE ERRO (lite)                                    |
-|  Materia [cor]   Fonte (banca/ano/assunto): ________   D-___ |
-|                                                               |
-|  Triagem (so registrar se):                                   |
-|     [ ] ponto-cego   [ ] armadilha   [ ] questao-modelo       |
-|                                                               |
-|  Causa:  [ ] Conceito   [ ] Interpretacao   [ ] Aplic./calc.  |
-|          [ ] Desatencao   [ ] Pegadinha de banca              |
-|                                                               |
-|  O QUE EU PENSEI (errado) — ANTES da solucao:                 |
-|  ____________________________________________________________ |
-|  ____________________________________________________________ |
-|                                                               |
-|  CERTO (raciocinio correto):                                  |
-|  ____________________________________________________________ |
-|                                                               |
-|  GATILHO -> ACAO:   quando ver ______ -> faco ______          |
-|                                                               |
-|  Revisao:   D+1 [ ]    D+7 [ ]    D+15 [ ]    D+30 [ ]         |
-+---------------------------------------------------------------+
-```
-
-**Notas de layout:**
-
-- **Triagem + causa** em checkboxes (marcação rápida) — convergência CN/KR/JP; evita virar
-  "depósito morto" (só ponto-cego/armadilha/questão-modelo entram).
-- **"O que eu pensei (errado)" ANTES do "Certo"** — o padrão inegociável dos 3 benchmarks; força reconstruir a falha.
-- **Gatilho → ação** (*implementation intention*, Gollwitzer d≈0,65) — transforma o erro em regra.
-- **Mini-revisão D+1/7/15/30** embutida — rastreio espaçado sem depender de app (Ebbinghaus).
-- **Lite × completa:** a *lite* prioriza atrito mínimo (cabe no planner); a **completa** (Fase 2)
-  acrescenta 2 colunas, "questão análoga", variante frente/verso (*testing effect*) e formato apaisado B5.
-- **Ponte:** o "ponto mais fraco" dos simulados (Pág. 4) e os erros do QConcursos viram entradas aqui.
+> ⚠️ SOMENTE NO PROTÓTIPO DE TESTE (71pp). O produto F1 (112pp) NÃO inclui ficha — só ponteiro → Caderno de Erros standalone (F2). [Daniel · 21/jun/2026]
 
 ---
 
 ## Convenções visuais (para o designer gráfico)
 
-- **Dot grid:** presente em todas as áreas livres (síntese, ajuste, reflexão). Não usar linhas lisas nas áreas de escrita — a grade de pontos respeita estilos de letra diferentes e não enrijece o espaço.
+- **Traçado de áreas livres:** linhas de escrita (`wline`/`dot`) por helpers do estilos.typ — sem dot-grid substrato de fundo (abandonado em 2.0 PRO: desalinhava elementos e duplicava a grade do time-log). Áreas de síntese/ajuste usam linhas pontilhadas ou sólidas finas. Dot-grid só em páginas de notas livres puras (se houver).
 - **Hierarquia tipográfica:** título de seção em caixa alta (sem serifa, bold); labels em caixa baixa regular; campos de preenchimento em linha pontilhada ou traço fino.
 - **Blocos do time-log:** quadradinhos pintáveis, ~4–5 mm de lado (compatível com A5 para pintar com marcador ou caneta). Agrupados visualmente em manhã (06–12h) / tarde (12–18h) / noite (18–22h) por espaçamento ou linha separadora leve.
 - **Campos de data:** sempre em branco — nenhuma data impressa em nenhuma página (perpétuo — Princípio 5).

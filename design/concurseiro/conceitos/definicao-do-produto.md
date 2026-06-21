@@ -32,8 +32,7 @@ Cada um **independente + complementar**:
 | **Caderno de Síntese** | resumos/mapas à mão de aula/lei seca | fixação (handwriting→memória) | complementa vídeo-aula/PDF |
 | **Bússola da Jornada** (leve) | commit semanal + reflexão mensal + visão macro + "meu stack" | navegação/constância | **deferente** ao cronograma do cursinho |
 
-> **v1 = o Planner de Estudo** (módulo-âncora: Diário de Foco + ciclo leve + **diagnóstico de erro
-> *lite***). O **Caderno de Erros completo** é módulo **standalone na Fase 2**. (Decisão de 19/jun/2026.)
+> **v1 = o Planner de Estudo** (módulo-âncora: Diário de Foco + ciclo leve + **ponteiro → Caderno de Erros**, sem ficha embutida). O **Caderno de Erros completo** é módulo **standalone na Fase 2**. `[Daniel · 21/jun/2026]` (Revisão da decisão de 19/jun/2026: ficha lite removida do v1.)
 
 ## 5. Fill / Replace / Adapt
 Recap (detalhe em `metodo-hub-analogico.md`): **preencher** foco/erros/síntese/macro; **substituir**
@@ -42,8 +41,11 @@ planner datado, caderno solto e o celular-de-mesa; **adaptar** a Anki/QConcursos
 ## 6. Persona v1
 **Dedicação exclusiva (full-time)** — recorte de alta intensidade da **P1**. Ver `personas-user-stories.md`.
 
-## 7. Decisões pendentes
-- **Quais módulos no v1** (depende da validação).
+## 7. Decisões tomadas (pós-21/jun/2026)
+- **v1 = Planner de Estudo** (Diário de Foco + ciclo leve + ponteiro → Caderno de Erros, **sem ficha embutida**). `[Daniel · 21/jun/2026]`
+- **Validação Mayara concluída** (tese anti-celular, caderno de erros, modularidade). `[Mayara · 19/jun/2026]`
+- **Módulos F2 definidos:** Caderno de Erros standalone + Treino de Força + Síntese/Bússola/capa. `[Daniel · 21/jun/2026]`
+
+**Pendente:**
 - **Capa/sistema de união:** formato + encadernação que permita módulos avulsos (liga ao **sourcing** —
-  multi-SKU + capa encarece; rodar `sourcing-analyst`/`financial-modeler`).
-- **Validar** o conjunto de módulos e a tese (anti-celular, caderno de erros, modularidade) com a Mayara.
+  multi-SKU + capa encarece; rodar `sourcing-analyst`/`financial-modeler` quando F1 estiver em produção).

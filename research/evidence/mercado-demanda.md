@@ -153,7 +153,7 @@ O padrão é apartidário: vale para qualquer vencedor das eleições de 2026, p
 | 1º ano pós-eleição | Forte retomada — demanda represada + novo governo sinaliza expansão |
 | 2º–4º ano pós-eleição | Progressão normal; grandes concursos estruturados (CNU, polícias, Receita) |
 
-**2027:** Retomada pós-eleitoral esperada, com CNU 3ª edição (confirmado pelas fontes) e liberação das nomeações represadas de concursos com homologação em 2026. [confirmado — Gran Cursos; Estratégia, 2026]
+**2027:** Retomada pós-eleitoral esperada, com CNU 3ª edição (confirmado pelas fontes) e liberação das nomeações represadas de concursos com homologação em 2026. [estimativa triangulada — Gran Cursos; Estratégia Concursos, 2026; padrão histórico. Não há decreto/portaria governamental confirmando CNU 3ª edição em jun/2026]
 
 ---
 
@@ -182,7 +182,7 @@ O padrão é apartidário: vale para qualquer vencedor das eleições de 2026, p
 - Tamanho: estruturalmente grande (4–6M ativos; mercado total R$ 8–12bi/ano em preparação). Robusto e persistente. [estimativa triangulada]
 - Sazonalidade: intra-anual (picos jan/fev e mar/mai); o lull do 2º semestre em ano eleitoral afeta NOVOS editais federais, não o engajamento dos candidatos já em preparação.
 - 2026: lull temporário e legal no 2º semestre para NOVAS nomeações/editais federais — não é retração estrutural. O concurseiro que já estuda CONTINUA estudando.
-- 2027: retomada cíclica histórica. CNU 3ª edição confirmado. Nomeações represadas de 2026 serão processadas. Momento de maior pico de engajamento de novos candidatos.
+- 2027: retomada cíclica histórica. CNU 3ª edição [estimativa triangulada — Gran Cursos; Estratégia Concursos, 2026; sem decreto/portaria gov. confirmando em jun/2026]. Nomeações represadas de 2026 serão processadas. Momento de maior pico de engajamento de novos candidatos.
 
 **Distinção crítica para o modelo de negócio:**
 | Dimensão | Realidade |
@@ -329,7 +329,7 @@ SAM (faixa): R$ 35M–80M/ano [estimativa triangulada]
 **Premissas conservadoras:**
 - Canal: 90% D2C (site próprio + Hotmart), 10% marketplace
 - Aquisição: orgânico (SEO, conteúdo, comunidades) = custo baixo, escala lenta
-- Meta realista ano 1: 200–600 unidades (baseada em R$ 5k capital inicial e ~R$ 45 custo/un)
+- Meta realista ano 1: 200–600 unidades VENDIDAS (inclui reposições ao longo do ano). Micro-lote inicial estimado: R$ 5k ÷ R$ 43–55/un (custo 4/4 atual [estimativa triangulada · 21/jun/2026]) = 90–116 un de estoque de abertura; reposições subsequentes financiadas pela receita gerada
 - Meta realista ano 2: 800–2.000 unidades
 
 ```
@@ -338,6 +338,8 @@ SOM concurseiro:
   Ano 2: 800–2.000 un × R$ 119 = R$ 95k–238k de receita
   Fatia do SAM: 0,05%–0,35% (irrelevante em %  — correto para bootstrap)
 ```
+
+> **Atualização 21/jun/2026:** SOM calculado com preço R$ 119 (pré-pivô de preço). Preço de lançamento atual do Concurseiro = R$ 129 [Daniel · 21/jun/2026]. Receitas do SOM revisadas: Ano 1 R$ 26k–77k; Ano 2 R$ 103k–258k. Impacto imaterial na análise qualitativa, mas deve ser propagado ao modelo financeiro [estimativa triangulada — recalcular formalmente no próximo ciclo].
 
 ---
 
@@ -457,7 +459,7 @@ SOM força:
 **TAM (gasto total preparação):** R$ 8–12 bi/ano [estimativa triangulada]
 **TAM (somente material físico/papelaria):** R$ 300M–800M/ano [a confirmar]
 **SAM (quem compraria planner premium ~R$ 110):** R$ 35M–80M/ano (~400–700k pessoas)
-**SOM anos 1–2 (D2C bootstrap, sem audiência):** R$ 24k–238k/ano (200–2.000 unidades)
+**SOM anos 1–2 (D2C bootstrap, sem audiência):** **R$ 26k–258k/ano** (200–2.000 unidades, launch R$ 129) `[Atualização 21/jun/2026]` *(valor original pré-pivô a R$ 119 era R$ 24k–238k)*
 **Confiança TAM/SAM:** estimativa triangulada | **Confiança SOM:** estimativa triangulada
 
 **Sazonalidade (leitura corrigida):** picos jan/fev (renovação anual) e mar/mai (editais 1º semestre). Em 2026, o pico de ago/out de NOVOS EDITAIS/NOMEAÇÕES federais é legalmente suprimido (janela eleitoral 4/jul–6/jan/2027), mas o engajamento do concurseiro em preparação contínua não para — demanda por material de estudo persiste.
@@ -465,7 +467,7 @@ SOM força:
 **Leitura de mercado 2026–2027 (corrigida):**
 - 2026 = mercado estruturalmente grande e persistente. Lull no 2º semestre de NOVOS editais federais executivo — legal, temporário, cíclico. NÃO é fraqueza de demanda por planner. SAM mantido (reflete estoque plurianual, não fluxo de um edital).
 - Limitação real do SOM ano 1 = CAPACIDADE DE AQUISIÇÃO (capital R$ 5k, audiência zero), não tamanho de mercado.
-- 2027 = retomada pós-eleitoral historicamente forte: CNU 3ª edição confirmado; nomeações represadas de 2026 processadas; candidatos reprovados em 2025–2026 iniciam novo ciclo. Melhor momento para escala.
+- 2027 = retomada pós-eleitoral historicamente forte: CNU 3ª edição [estimativa triangulada — Gran Cursos; Estratégia, 2026; sem decreto/portaria gov. em jun/2026]; nomeações represadas de 2026 processadas; candidatos reprovados em 2025–2026 iniciam novo ciclo. Melhor momento para escala.
 - Planner perpétuo (sem datas) é o formato mais resiliente ao ciclo eleitoral: não precisa ser relançado anualmente e serve o horizonte médio de 2+ anos de preparação. [confirmado — Censo 2025: duração média 2a 1m 14d]
 
 ### Treino de Força
@@ -487,3 +489,5 @@ SOM força:
 | Risco de educação de mercado | Baixo (produto já existe) | Médio (novo conceito) |
 | Sazonalidade | Intra-anual marcada (editais); lull legal no 2º sem em ano eleitoral — NÃO é fraqueza estrutural | Contínua (sem pico claro) |
 | Concurseiro valida preço | Sim — Juspodivm já vende R$ 119,90 | Sem referência BR |
+
+> **Atualização 21/jun/2026:** SAM calculado com preço proxy R$ 110 (pré-pivô). Com launch R$ 129 (Conc) / R$ 109 (Treino), o SAM central revisado seria ~R$ 58–64M (Conc) e ~R$ 25–27M (Treino) — mantém a ordem de grandeza. O valor-âncora R$ 55M/R$ 25M do CLAUDE.md prevalece até recálculo formal [estimativa triangulada · 21/jun/2026].

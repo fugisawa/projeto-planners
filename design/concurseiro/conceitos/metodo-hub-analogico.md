@@ -111,7 +111,7 @@ Fechar o loop **sem** trazer o celular para dentro da sessão:
 - **JetPens** elege o Kokuyo Campus como "melhor para estudantes" e o descreve como **"alternativa
   analógica aos apps de rastreamento de tempo... deixa o estudo mais focado"** — exatamente a nossa tese.
 
-## 10) Implicações de design (atualiza a Fase 3)
+## 10) Implicações de design (substitui §3 de `direcao-de-design-concurseiro.md`)
 - **Enxuto, não pesado:** cada seção precisa justificar por que é melhor no papel que no app.
 - **Sistema de páginas refinado** (substitui a tabela da §3 de `direcao-de-design-concurseiro.md`):
   - **Frontmatter:** identidade/meta · **painel da jornada** (macro, não checklist do edital) · **"meu stack"** (mapa das ferramentas que uso).

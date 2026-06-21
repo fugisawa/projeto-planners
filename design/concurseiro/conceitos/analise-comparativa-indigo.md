@@ -3,6 +3,8 @@
 **Síntese dos 5 teardowns** (`teardown-*.md`) **+ pesquisa de reviews** (`../pesquisa/fontes/reviews-uso-estudantes.md`).
 **19/jun/2026.** Fonte primária: infográficos oficiais indigostory.co.kr (ver `../pesquisa/fontes/indigo_manifest.json`).
 
+> **Status:** Pesquisa de base concluída. Implicações incorporadas em [direcao-de-design-concurseiro.md](direcao-de-design-concurseiro.md) e [wireframes-planner-v1.md](wireframes-planner-v1.md). Este doc é read-only — não editar.
+
 ---
 
 ## TL;DR
@@ -88,7 +90,7 @@
 - **Mercado BR:** líder **Juspodivm é datado** (608 p/ano) e **não informa gramatura**; **Thalyta
   Stamp** é sem-data mas **sem metodologia de ciclo**. → espaço para "**perpétuo + método codificado no layout**".
 
-## 8) Implicações de design para o Concurseiro (entram na Fase 3)
+## 8) Implicações de design para o Concurseiro (aplicadas ao design v1 — ver [direcao-de-design-concurseiro.md](direcao-de-design-concurseiro.md))
 1. **Timetable de 10–15 min + color-coding por matéria** — inegociável (núcleo emocional/viral).
 2. **Revisão espaçada integrada ao layout diário/semanal** (D+1/3/7/15/30) — maior diferencial vs. BR e vs. INDIGO.
 3. **Tracker de questões/simulados** (resolvidas, % acerto, por matéria) — métrica do concurso.
@@ -99,5 +101,4 @@
 8. **Metacognição** (entendi/confuso/não-entendi) — herdar do Meta, é barato e poderoso.
 9. **Reflexão/avaliação** mensal por matéria.
 
-> Estas implicações alimentam o **documento de direção de design** (Fase 3), que cruzará isto com
-> o benchmark japonês (Hobonichi/Kokuyo) e o posicionamento premium a R$ 119.
+> Esta análise alimentou o documento de direção de design — ver [direcao-de-design-concurseiro.md](direcao-de-design-concurseiro.md) (concluído em 19/jun/2026). Posicionamento: R$ 129 de lançamento `[Daniel · 21/jun/2026]`.

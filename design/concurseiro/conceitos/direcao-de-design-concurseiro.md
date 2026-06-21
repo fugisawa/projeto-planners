@@ -29,15 +29,14 @@ O mercado tem dois polos e um vazio:
 | **VAZIO → Concurseiro** | — | **R$ 129** `[Daniel · 21/jun/2026]` | — |
 
 O **método** (edital + ciclo + revisão espaçada + questões) é o valor — não só o objeto. Isso
-justifica R$ 119 (acima do funcional, abaixo de um Hobonichi completo) e sustenta a **recompra
+justifica R$ 129 `[Daniel · 21/jun/2026]` (acima do funcional, abaixo de um Hobonichi completo) e sustenta a **recompra
 3–4×/ano** (LTV ~R$ 374–397) já no dossiê.
 
 ## 2) Sete princípios de design (derivados da pesquisa)
 
 1. **Tornar o tempo visível** — time-log de 10–15 min, pintável por cor/matéria. É o núcleo
    emocional e o que vira post espontâneo no studygram (validado em Kokuyo + INDIGO + reviews).
-2. **Método embutido no layout** — o diferencial: ciclo de matérias, **revisão espaçada** e
-   **questões/simulados** impressos na estrutura (nenhum concorrente faz; é o que o concurseiro compra).
+2. **Método embutido no layout** — o diferencial: ciclo de matérias, **diagnóstico de erro** (porquê do erro), **síntese à mão** e **foco sem celular**. Revisão espaçada e tracker de questões ficam no digital (Anki/FSRS, QConcursos/TEC) — o papel decide e processa, não rastreia. `[revisado · 19/jun/2026 — ver metodo-hub-analogico.md]`
 3. **Anti-culpa / flexível** — não pressupor estudo full-time (timetable vazio = abandono em
    4–8 sem para quem trabalha — principal queixa dos reviews). Layout que acolhe janelas de 30–40 min.
 4. **Objeto premium como _threshold_** — papel ≥120 g anti-traspasse, **lay-flat**, capa boa.
@@ -59,15 +58,15 @@ justifica R$ 119 (acima do funcional, abaixo de um Hobonichi completo) e sustent
 | **Ciclo (repete)** | Mensal | calendário perpétuo + metas do mês | INDIGO/Kokuyo |
 | | Semanal — **ciclo de matérias** | rotação de disciplinas + metas + horas-alvo | **GAP BR** + Kokuyo weekly |
 | | **Diário** | time-log 10–15 min + tarefas por matéria + **metacognição** (entendi/confuso/não) + D-day | Kokuyo + INDIGO Meta |
-| | **Revisão espaçada** | tracker D+1/3/7/15/30 por tópico | **GAP BR (núcleo)** |
-| | **Questões & simulados** | resolvidas, % de acerto por matéria | **GAP BR (núcleo)** |
 | | Avaliação mensal | GOOD/BAD por matéria, horas, reflexão | INDIGO eval |
 | **Endmatter (×1)** | Registro de simulados | data, banca, nota, %, evolução | **GAP BR** |
 | | Notas livres (quadriculado) | anotações | todos |
 | | Conteúdo curado | rodapés + páginas de "pílulas" jurídicas | Hobonichi quotes |
 
-> **Os 3 itens "GAP BR" (edital, revisão espaçada, questões) são o coração competitivo** — o que
-> nenhum asiático nem o Juspodivm/Thalyta entregam de forma integrada.
+*(Revisão espaçada e tracker de questões movidos para digital — ver `metodo-hub-analogico.md`. O diferencial BR no papel é o Diagnóstico de Erro + Pontes Digitais, não o rastreamento em si.)* `[revisado · 19/jun/2026]`
+
+> **Os 2 itens "GAP BR" no papel (edital, diagnóstico de erro) são o coração competitivo** — o que
+> nenhum asiático nem o Juspodivm/Thalyta entregam de forma integrada. Revisão espaçada e questões = GAP BR digital (Anki/QConcursos).
 
 ## 4) Especificações físicas (recomendação inicial)
 
@@ -76,12 +75,12 @@ justifica R$ 119 (acima do funcional, abaixo de um Hobonichi completo) e sustent
 | Formato | **A5 (148×210 mm)** | espaço de escrita (queixa do A6 Hobonichi); padrão Meta/Cousin |
 | Encadernação | **lay-flat**: wire-o topo **ou** costura premium | reviews: espiral lateral machuca; lay-flat = threshold premium — **decisão a testar** |
 | Papel | **≥120 g**, anti-traspasse, **comunicado no marketing** | mín. de mercado; marcadores; Juspodivm não informa gramatura |
-| Duração/páginas | perpétuo, **~100–130 pp (≈3–4 meses)** como SKU principal | "enche em ~3 meses" → recompra (dossiê); escada por duração depois |
+| Duração/páginas | perpétuo, **~112 pp (≈3 meses)** como SKU F1 `[Daniel · 21/jun/2026]` | "enche em ~3 meses" → recompra (dossiê); escada por duração em F2+ |
 | Capa | 300 g + acabamento (UV/soft-touch); ecossistema futuro | INDIGO 584; capas/colabs (Hobonichi) = retenção |
 | Cor | sistema de **color-coding por matéria** (marcadores) | Kokuyo/INDIGO; vira identidade visual |
 
 > ⚙️ **Liga ao sourcing/financeiro:** nº de páginas + gramatura + encadernação definem o **custo/un**
-> (dossiê: micro-lote ~R$ 60 (~112 pp, sem ficha) `[estimativa pré-RFQ · 21/jun/2026]` → reposição R$ 45 (a confirmar); ref. histórica: protótipo 71 pp era R$ 55). Antes de fechar, rodar **sourcing-analyst** (gráfica BR,
+> (dossiê: custo/un — âncora atual: **4/4 R$ 43–55 · 2/2 R$ 36–47** `[estimativa triangulada · 21/jun/2026]`; reposição ~R$ 45 `[a confirmar]`; ref. histórica: protótipo 71 pp era ~R$ 55; ~~R$ 60 era estimativa pré-triangulação — DESATUALIZADO~~). Antes de fechar, rodar **sourcing-analyst** (gráfica BR,
 > NCM 4820.10.00) e **financial-modeler** (margem a R$ 129 `[Daniel · 21/jun/2026]`; recalcular pós-cotação). Lay-flat costurado encarece vs. wire-o.
 
 ## 5) Marca & estética

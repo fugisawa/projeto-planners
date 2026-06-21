@@ -27,7 +27,7 @@ produz entra com fonte e data ou é marcado `[a confirmar]`.
 | Câmbio | ≈ R$ 5,20/USD | planejamento (jun/2026) |
 | Investimento inicial | R$ 5.000 | 100% autofinanciado |
 | Preço lançamento | Concurseiro R$ 129 `[Daniel · 21/jun/2026]` · Treino R$ 109 | regime Concurseiro: ~R$ 139 `[Daniel · 21/jun/2026]`; Treino: R$ 119–129 |
-| Custo/un | micro-lote ~R$ 60 (~112 pp, sem ficha) `[estimativa pré-RFQ · 21/jun/2026]` → reposição R$ 45 (a confirmar); ref. histórica: protótipo 71 pp era R$ 55 | cai com volume |
+| Custo/un | micro-lote: 4/4 R$43–55 · 2/2 R$36–47 [estimativa triangulada · 21/jun/2026] → reposição R$45 (a confirmar); nota: estimativa ~R$60 superada; paleta fria Y=0 → miolo 2 cores corta ~15–20% sobre 4/4 | cai com volume |
 | Mix canal Fase 1 | 90% direto / 10% marketplace | Shopee/ML só para descoberta |
 | LTV margem estimado | R$ 374–397 | recompra 3–4×/ano (Conc) / ~2,5× (Treino) |
 | LTV:CAC estimado | ~7–8× | validar por coorte quando dados reais chegarem |
@@ -47,23 +47,33 @@ uma delas obviamente irrelevante — documente o motivo.
 
 ### Passo 1 — Ler o estado atual
 
+**OBRIGATÓRIO — ANTES de qualquer cálculo:** leia `CLAUDE.md §Fatos-âncora` e use esses
+valores como fonte da verdade. Se os valores da tabela "Contexto fixo do projeto" acima
+divergirem do CLAUDE.md, o CLAUDE.md prevalece. Nunca use uma cópia interna do agente
+que pode ter envelhecido.
+
 ```
-1a. Glob models/ → identificar versão ativa do .xlsx
-1b. Read scripts/build_model.py → entender premissas hard-coded
-1c. Grep deliverables/ para o número em questão → checar consistência com docs
-1d. Confirmar que os fatos-âncora do CLAUDE.md são os mesmos do modelo
+1a. Read CLAUDE.md §Fatos-âncora → carregar preço, custo, mix de canal, câmbio vigentes
+1b. Glob models/ → identificar versão ativa do .xlsx
+1c. Read scripts/build_model.py → entender premissas hard-coded
+1d. Grep deliverables/ para o número em questão → checar consistência com docs
+1e. Confirmar que os fatos-âncora do CLAUDE.md são os mesmos do modelo (se divergir → STOP)
 ```
 
-**STOP-and-ask aqui se:** o modelo não existe, a versão está corrompida, ou há 2+ versões
-concorrentes sem versionamento claro.
+**STOP-and-ask aqui se:** o modelo não existe, a versão está corrompida, há 2+ versões
+concorrentes sem versionamento claro, ou os valores do CLAUDE.md diferem dos do modelo
+sem explicação documentada.
 
-### Passo 2 — Calcular unit economics por canal
+### Passo 2a — Unit economics Fase 1 (só Concurseiro, preço R$129)
+
+**Fase 1 = SKU único: Concurseiro a R$129.** Não existe "preço médio" blended nesta fase —
+o SKU Treino ainda não foi lançado. Calcular tudo com preço R$129.
 
 Use a cascata de margens abaixo. Nunca pular uma linha — deduções omitidas são o erro
 mais comum em modelos D2C.
 
 ```
-Receita bruta (preço de tabela)
+Receita bruta (R$129 — preço único Fase 1)
 − Descontos/cupons
 = Receita líquida (NR)
 − COGS (produto + embalagem + perda/quebra estimada)
@@ -81,10 +91,21 @@ CM2
 = EBITDA por unidade
 ```
 
-**Calcule separadamente para cada canal:**
+**Calcule separadamente para cada canal (Fase 1):**
 - Direto (site próprio / link Mayara)
 - Marketplace (Shopee / Mercado Livre)
-- Blended (ponderado pelo mix 90/10 da Fase 1)
+- Blended Fase 1 (ponderado pelo mix 90/10)
+
+### Passo 2b — Unit economics Fase 2 (Concurseiro + Treino, blended)
+
+**Só aplicável após o lançamento do Treino de Força (F2).** Neste cenário existem dois SKUs
+e faz sentido calcular preço médio ponderado pelo mix de vendas. Marcar outputs desta etapa
+como `[Fase 2 — [a recalcular pós-cotação]]` até que dados reais de venda confirmem o mix.
+
+```
+Preço médio ponderado = (Concurseiro R$129 × mix_Conc%) + (Treino R$109 × mix_Treino%)
+Repetir cascata do Passo 2a com custo/un e mix próprios de cada SKU
+```
 
 **Benchmarks de referência D2C (2025–2026):**
 
@@ -137,10 +158,12 @@ Break-even (un) = investimento_inicial ÷ CM_blended_por_un
 Payback (dias)  = break-even ÷ velocidade_de_venda_estimada
 
 Sanity check rápido Fase 1:
-  [a recalcular pós-cotação · 21/jun/2026]: Lote inicial ~91 un × R$55 COGS = R$5.005
-  Receita 91 un × R$114 (preço médio) = R$10.374
-  CM bruta = R$5.369 (~52%) — payback < 1 ciclo de venda com CAC orgânico
-  (base era preço R$119/custo R$55; novo: Concurseiro R$129/custo ~R$60 → recalcular)
+  [DESATUALIZADO — a recalcular pós-cotação · 21/jun/2026]: Base: Concurseiro R$129;
+  custo micro-lote 4/4 midpoint ~R$49 (faixa R$43–55). Verba de material = ~R$3.000 (de R$5.000
+  totais; o resto é conteúdo+retargeting+reserva) → Lote estimado ~61 un (R$3.000÷R$49).
+  Receita ~R$7.869 (61×R$129). CM bruta ~R$4.870 (~62%).
+  Nota: recalcular com custo real pós-RFQ. Usar financial-modeler para rebuild.
+  O lote de 91 un foi calculado sobre custo R$55 obsoleto e preço R$119 desatualizado.
 ```
 
 **Separar sempre:** caixa (regime de caixa) vs resultado (competência). Declarar explicitamente

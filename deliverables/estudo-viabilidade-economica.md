@@ -1,4 +1,17 @@
 # Estudo de Viabilidade Econômico-Financeira (EVEF) — Projeto Planners
+
+> ## DOCUMENTO EM REVISÃO — baseline pré-pivô (a recalcular pós-cotação)
+> **Atualizado: 21/jun/2026.** Redigido em 19/jun/2026, **antes** das decisões travadas de 21/jun/2026. As **tabelas e indicadores numéricos** deste corpo (VPL/TIR, MC/un, ROI, break-even, preço médio R$ 114, custo R$ 55) refletem o **cenário pré-pivô (2 SKUs em paralelo · R$ 119)** e **serão refeitos** pelo `financial-modeler` após as cotações reais (Gate A). **Não usar os números deste corpo como âncora operacional** — a fonte da verdade é `CLAUDE.md` §Fatos-âncora + `design/concurseiro/planner-v1/ESTADO-RETOMADA.md`.
+>
+> **Decisões que prevalecem sobre o corpo abaixo:**
+> - **Lançamento sequencial:** F1 = **só o Concurseiro** (R$ 5.000 banca 1 SKU); **Treino de Força e Caderno de Erros = F2**, pagos pelo caixa gerado. (O corpo trata os 2 SKUs em paralelo — superado.)
+> - **Preço de lançamento Concurseiro = R$ 129** (regime ~R$ 139); Treino R$ 109 (regime R$ 119–129). `[Daniel · 21/jun/2026]`
+> - **SEM pré-venda · SEM empréstimo/aporte** — 100% autofinanciado. (Onde o corpo disser "pré-venda obrigatória" ou "aporte", está superado.)
+> - **Custo/un (~112 pp, micro-lote):** 4/4 R$ 43–55 · 2/2 (paleta fria) R$ 36–47 `[estimativa triangulada · 21/jun/2026]` (supera ~R$ 55–60).
+> - **Produto v1 = o Planner SEM ficha embutida** (só ponteiro → Caderno de Erros).
+>
+> ---
+
 ### Horizonte de 5 anos · Estratégia de pró-labore B (otimizadora) · pt-BR
 
 **Objeto:** linha D2C de dois planners perpétuos premium (Concurseiro e Treino de Força).
@@ -76,7 +89,7 @@ pagamento, devoluções e o custo do produto; ver aba Unit Economics.)*
 | **VPL @ 12% / 13,5% / 15%** | **R$ 406.685 / 385.088 / 364.957** | fortemente positivo em toda a faixa |
 | **TIR** | **~406% a.a.** | muito acima do custo de oportunidade — mas inflada pelo capital mínimo |
 | **Payback descontado** | **< 1 ano** | os R$ 5 mil voltam já no ano 1 |
-| Capital de giro (Ano 1 → 5) | R$ 2,9 mil → R$ 31,7 mil | cresce com a escala; pix/pré-venda reduz |
+| Capital de giro (Ano 1 → 5) | R$ 2,9 mil → R$ 31,7 mil | cresce com a escala; pix (caixa adiantado) reduz; produção make-to-demand mitiga estoque |
 | **Necessidade de capital operacional** | **~R$ 5 mil** | o caixa nunca fica negativo após o Ano 0 |
 
 ---

@@ -24,49 +24,76 @@ Estimativa **triangulada** de tabelas públicas (GIV Online, Graphimax, GraficaB
 ## MENSAGEM (copiar/colar)
 
 ```
-Assunto: Orçamento — Planner A5 Wire-o personalizado (miolo impresso)
+Assunto: Orçamento — Planner A5 Wire-o com miolo impresso (arte própria CMYK)
 
 Olá, tudo bem? Solicito orçamento para produção de um PLANNER PERPÉTUO (sem datas),
-miolo com arte própria. Especificação abaixo.
+miolo com arte própria em CMYK. Segue especificação completa. O PDF de arte está
+em ANEXO (protótipo final) — favor analisar antes de responder.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ESPECIFICAÇÃO TÉCNICA
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 FORMATO: A5 — 148 × 210 mm · vertical · sangria 3 mm em todos os lados.
 
+ARQUIVO DE ARTE:
+  • PDF/X-1a · perfil de cor FOGRA39 · CMYK · A5 com sangria 3 mm.
+  • Arquivo em ANEXO neste e-mail. Se precisarem de conversão de perfil ou
+    ajuste de sangria, informar antes de cotar.
+
 MIOLO:
   • 112 páginas (56 folhas, frente e verso).
-  • Papel: Pólen Bold 90 g/m² (creme/natural). Se indisponível, informar alternativa
-    creme mais próxima (ex.: Pólen Soft 80 g) + diferença de custo.
-  • Impressão: CMYK, paleta fria (preto + azul, sem amarelo/magenta). Arte própria
-    (envio PDF/X-1a finalizado). COTAR AS TRÊS OPÇÕES:
+  • Papel: Pólen Bold 90 g/m² — cor natural/creme (fundamental para a
+    identidade do produto). Se indisponível, informar alternativa creme mais
+    próxima (ex.: Pólen Soft 80 g) + diferença de custo estimada.
+  • Impressão CMYK, paleta fria. COTAR AS TRÊS OPÇÕES:
         - 4/4 (CMYK frente e verso)
-        - 2/2 (preto + azul/cyan)  ← provável escolha
+        - 2/2 (2 tintas CMYK: preto [K] + ciano/azul [C], sem amarelo nem
+          magenta significativo — confirmar após análise do PDF)  ← provável escolha
         - 1/1 (só preto)
+
 CAPA:
   • Couché 300 g/m² · impressão 4/0 (cotar 4/4 também) · laminação FOSCA
     (cotar SOFT-TOUCH como upgrade). Capa flexível-firme (não dura).
+
 ACABAMENTO:
-  • Wire-o duplo-anel, calibre p/ 56 folhas, pontas FECHADAS, abertura plana 180°.
-  • Corte reto. Embalagem individual em polybag + caixa master.
+  • Wire-o duplo-anel, calibre adequado para 56 folhas, pontas FECHADAS,
+    abertura plana 180°.
+  • Corte reto.
+  • Embalagem: individual em polybag + caixa master. Informar: quantidade de
+    unidades por master box e dimensões/peso estimado da master
+    (necessário para calcular frete).
+
 PROVA:
-  • Prova física (golden sample) ANTES do lote — informar custo e prazo.
-  • Prazo de produção após aprovação: ___ dias úteis.
+  • Prova física (golden sample) OBRIGATÓRIA antes do lote — informar custo
+    e prazo para a prova.
+  • Prazo de produção do lote após aprovação da prova: ___ dias úteis.
 
 ━━━━━━━━━━ ORÇAMENTO ESCALONADO (preço POR UNIDADE) ━━━━━━━━━━
   30 un = R$ ___/un   ·   50 un = R$ ___/un   ·   100 un = R$ ___/un
   300 un = R$ ___/un  ·   500 un = R$ ___/un  ·   1.000 un = R$ ___/un
-  MOQ (mínimo)? ___
+  MOQ (mínimo aceito)? ___
+  Validade desta cotação: ___ dias. (Solicito ao menos 30 dias para
+  comparação entre fornecedores.)
 
 ━━━━━━━━━━ PERGUNTAS ━━━━━━━━━━
-  1. Aceitam MIOLO com arte própria em CMYK (4/4 e 2/2)? Qual perfil (PDF/X-1a ou X-4)?
-  2. Pólen Bold 90 g disponível? Se não, qual alternativa creme e a diferença?
-  3. Frete + prazo para [CEP de destino]?
-  4. Pagamento (PIX/parcelado) e condições?
-  5. Política de retrabalho/troca em caso de defeito (páginas fora de ordem,
-     ponta de wire-o exposta, sangramento de tinta no verso)?
+  1. Vocês aceitam MIOLO com arte própria em CMYK (4/4 e 2/2)?
+     O arquivo está em PDF/X-1a · FOGRA39. Trabalham com esse perfil?
+     Se convertem para outro perfil, informar o delta de cor esperado.
 
-Posso enviar o PDF de arte por e-mail/link para a prova após sua proposta. Obrigado!
+  2. Pólen Bold 90 g disponível em estoque? Se não, qual alternativa creme
+     e qual a diferença de custo estimada?
+
+  3. Frete + prazo para [CEP de destino]?
+
+  4. Condições de pagamento (PIX/parcelado)?
+
+  5. Política de retrabalho/troca em caso de defeito (ex.: páginas fora de
+     ordem, ponta de wire-o exposta, sangramento de tinta no verso).
+     Qual o prazo para reclamação de defeitos após recebimento do lote?
+
+O arquivo de arte (PDF/X-1a · FOGRA39 · A5 · miolo 112 pp) está em anexo.
+Aguardo retorno com a proposta.
+
 [nome · WhatsApp · e-mail]
 ```
 

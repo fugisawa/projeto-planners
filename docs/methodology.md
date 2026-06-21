@@ -8,7 +8,7 @@ mostrar o que é fato, o que é estimativa e onde o plano pode falhar — não v
 Cada camada alimenta a próxima; nada "fecha" sem passar pela validação.
 
 1. **Evidência primeiro** — `research/evidence/`
-   - Pesquisa multi-fonte (skill `deep-research` / Exa + Tavily + WebSearch), **triangulando ≥2
+   - Pesquisa multi-fonte (skill `deep-research` / Exa para descoberta · Tavily para busca agêntica · Defuddle/Firecrawl para scraping — roteamento detalhado em `~/.claude/rules/common/web-research-routing.md`), **triangulando ≥2
      fontes** para todo número central. Cada tema vira uma nota: pergunta · método · achados ·
      tabela de fontes (nome · URL · data · trecho) · nível de confiança.
    - Frameworks de mercado: **TAM/SAM/SOM** (top-down + bottom-up), personas, **Porter (5 forças)**,

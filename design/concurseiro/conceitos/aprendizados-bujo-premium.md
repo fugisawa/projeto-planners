@@ -12,6 +12,7 @@ Distilação acionável. **19/jun/2026.** Fontes: `../pesquisa/fontes/uso-bullet
   **Collections**, **Migration**, cascata Future→Monthly→Daily, **Threading** (referência cruzada por nº de página).
 - **Dot grid** como pauta-base: o único traçado que serve a texto, listas, tabelas e desenho na
   mesma página, "sumindo" do campo visual. → **traçado-base do Concurseiro.**
+  `[revisado — dot-grid substrato abandonado na decisão 2.0 PRO de 20/jun/2026; ver sintese-design-refinada.md §2.0 PRO]`
 - **Evitar:** setup pesado, enfeite-em-vez-de-estudar ("BuJo Pinterest"), efeito cascata de 1 dia perdido → abandono.
 
 ## Cadernos premium — o que adotar e o que NÃO fazer

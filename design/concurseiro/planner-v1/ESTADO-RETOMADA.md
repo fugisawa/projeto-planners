@@ -39,7 +39,7 @@ calculou MC mais estrita — **reconciliar MC** `[a recalcular pós-cotação ·
 ## FEITO (2.0)
 - ✅ **Padronização das 4** (Semanal/Bússola/Pontes/Ficha) ao 2.0 — linhas sólidas, base, faixas largura cheia.
 - ✅ **Guia de uso / contracapa** (`guia.typ`) — onboarding (5 módulos) + legenda do time-log ("10 min") + símbolos (BuJo) + dicionário de cor + revisão espaçada. **Entra na FRENTE do booklet.**
-- ✅ **Booklet = 6 páginas** (guia+bussola+semanal+diario+pontes+ficha) em `planner-proto-pdfx1a.pdf` (CMYK/PDF-X-1a/FOGRA39).
+- ✅ **Booklet = 6 páginas** (guia+bussola+semanal+diario+pontes+ficha) em `planner-proto-pdfx1a.pdf` (CMYK/PDF-X-1a/FOGRA39). ⚠️ A `ficha` é **artefato de protótipo** — o **v1 (F1) vai SEM ficha** (só ponteiro → Caderno de Erros); ficha completa = **F2 standalone** `[Daniel · 21/jun/2026]`.
 
 ## PONTO DE RETOMADA
 1. **Teste de impressão real** (Gate A: + 3 orçamentos via `rfq-graficas.md`) — provar CMYK/papel/wire-o numa gráfica.

@@ -1,4 +1,5 @@
 # Configuração do Claude Code — para render como o do Daniel
+<!-- tom informal intencional: audiência leiga, onboarding -->
 
 Guia para o Claude Code da **Mayara** (ou de qualquer pessoa que abrir este projeto) ter o mesmo
 bom desempenho do setup original. Boa parte já **vem no repositório e funciona sozinha**; o resto
@@ -52,7 +53,7 @@ Ao rodar `claude` dentro da pasta do projeto, isto já está ativo automaticamen
 
 - **`CLAUDE.md`** — o contexto e as convenções do projeto. O Claude lê sozinho e passa a "conhecer"
   o negócio (fatos-âncora, regras, onde está cada coisa). **É a maior alavanca de desempenho.**
-- **`.claude/agents/`** — 5 **agentes especialistas** do projeto (rodam quando a tarefa pede, ou se
+- **`.claude/agents/`** — 7 **agentes especialistas** do projeto (rodam quando a tarefa pede, ou se
   você citar o nome):
 
   | Agente | Para que serve |
@@ -62,6 +63,8 @@ Ao rodar `claude` dentro da pasta do projeto, isto já está ativo automaticamen
   | `sourcing-analyst` | fornecedor (gráfica/China), custos, impostos |
   | `financial-modeler` | margens, viabilidade, planilha |
   | `business-validator` | revisar/criticar um material antes de "fechar" |
+  | `doc-updater` | atualizar documentos quando um número muda (propagação) |
+  | `conteudo-mayara` | roteiros TikTok/Reels, copy de produto, calendário de conteúdo |
 
 - **`.claude/settings.json`** — liga o **raciocínio alto** (`effort high`), roda **subagentes no modelo
   econômico** (Sonnet) e pré-aprova alguns comandos seguros (menos confirmações).

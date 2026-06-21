@@ -17,14 +17,16 @@ Todo padrão aqui foi compilado, inspecionado e impresso (CMYK/PDF-X). Design: s
 ## 1 · Toolchain (instalado e validado)
 | Passo | Comando | Nota |
 |---|---|---|
-| Compilar | `uv run --with typst python render.py <pagina>` | gera `<pagina>.pdf` + `<pagina>-1.png` 150 dpi; avisa se > 1 pág |
+| Compilar | `uv run --with typst python render.py <pagina>` | `typst.compile()` → `<pagina>.pdf`; PNG via `pdftoppm` (poppler) → `<pagina>-1.png` 150 dpi |
 | QA visual | Read o PNG | **obrigatório** — nunca confie no código sem olhar |
 | Fontes | `pdffonts <pagina>.pdf` | confirma peso estático embutido |
 | Merge + CMYK | `uv run --with pypdf python finalize.py [<key>…]` | junta PDFs → GS PDF/X-1a FOGRA39 |
 | CMYK ok? | `gs -o - -sDEVICE=inkcov a.pdf` | reporta C M Y K por página |
 
 Scripts: `render.py`, `finalize.py`, `PDFX_def.ps` (no dir typst/).
-Compilação direta: `typst.compile(src, output=pdf, root=d, font_paths=["/usr/share/fonts"])`.
+Compilação do PDF: `typst.compile(src, output=pdf, root=d, font_paths=["/usr/share/fonts"])`.
+**Rasterização do PNG (QA):** `render.py` chama `pdftoppm` (poppler) — **não** é o Typst. Pré-requisito:
+`poppler-utils` instalado (`apt install poppler-utils`). Sem ele, o PDF gera mas o PNG falha.
 
 ## 2 · Arquitetura de arquivos
 ```
@@ -116,6 +118,10 @@ Células/quadrados/chips/checkboxes/faixas = canto reto. Só círculos redondos.
 #let checkbox = box(baseline: 0.4mm, rect(width: 3mm, height: 3mm, stroke: (paint: hair, thickness: 0.6pt)))
 #let softband(body) = block(width: 100%, fill: band, inset: (x: 3.5mm, y: 3mm), body)   // sem radius
 ```
+**Faixa × `softband`:** o helper `softband` tem `inset x: 3.5mm` (recuo lateral) — bom para caixas
+autônomas (reflexão). Mas faixa que contém `studyrows`/listas a alinhar com a lista irmã usa
+`block(width:100%, fill: band, inset:(x:0mm, y:2.5mm))` — **x:0** para a divisória alinhar (ver G6).
+O Diário usa esse `block` inline, não `softband`.
 
 ## 4 · Fontes
 **Lato** (instalada): Regular/Medium/SemiBold/Bold/**Black 900**. Inter, EB Garamond também.
@@ -135,6 +141,8 @@ Texto K88; preto rico C60 M40 Y40 K100. Sangria: dimensões +3mm ou package `mar
 ## 6 · Packages (quando usar)
 `calendaring` (calendário) · `markly` (sangria/marcas) · `cetz` (gráficos/barras) ·
 `showybox` (caixas de dica) · `tablex` DEPRECATED. `grid` = layout; `table` = dados/grade.
+> `[VERIFICAR]` Hoje a sangria é feita por GS (`-dPDFXSETBLEEDBOXTOMEDIABOX`) ou dimensões +3mm. O PR
+> de bleed nativo do `markly` (#6357) estava "em revisão" em jun/2026 — checar se foi mergeado antes de adotar.
 
 ## 7 · Gotchas críticos
 - **G1 overflow:** `set par(spacing:0pt)` + `v()` explícito.
@@ -146,6 +154,8 @@ Texto K88; preto rico C60 M40 Y40 K100. Sangria: dimensões +3mm ou package `mar
 - **G7 linha de preenchimento no meio do texto:** use `align: bottom` no grid p/ a linha ficar na **base** (o número escrito senta na linha).
 - **G8 linter:** relê o arquivo após Write antes de Edit.
 - **G9 `pagebreak()` em container:** não funciona dentro de box/rect/grid.cell.
+- **G10 `let` valor × função:** bloco de conteúdo ESTÁTICO declara-se sem parênteses (`#let ficha-card = block(...)`). Com parênteses (`#let x() = ...`) vira função e exige chamada `#x()` — esquecer disso renderiza nada (silencioso).
+- **G11 PNG via poppler:** `render.py` rasteriza com `pdftoppm` (não Typst). Falta de `poppler-utils` → PDF ok, PNG falha.
 
 ## 8 · Referências
 `design/concurseiro/planner-v1/typst/` (arquivos reais 2.0) · `.claude/tooling-research/typst.md`

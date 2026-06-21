@@ -42,3 +42,4 @@ seu trabalho é dar **estrutura replicável** ao que hoje depende só da intuiç
 - [ ] Formato solicitado entregue, pronto para gravar/postar
 - [ ] Nenhum claim sem suporte no dossiê
 - [ ] (copy de produto) headline + benefícios + prova + CTA presentes
+- [ ] Preço mencionado no copy confere com CLAUDE.md §Fatos-âncora (lançamento Concurseiro R$129 — não R$119 nem R$114; Treino R$109 — apenas F2); ler §Fatos-âncora ANTES de incluir qualquer valor monetário

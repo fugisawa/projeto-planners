@@ -5,7 +5,7 @@
 
 ## Contexto do Job
 
-Estrutura 100% travada + mockups prontos (HTML/PDF) → gig de **execução/refino + print-prep**, não criação do zero.
+Estrutura 100% travada + protótipo print-ready em Typst (PDF/X-1a CMYK, `typst/planner-proto-pdfx1a.pdf`) → gig de **execução/refino + print-prep**, não criação do zero.
 
 **Entregáveis exigidos:** PDF/X (preferencialmente PDF/X-4), sangria 3 mm, CMYK, 300 dpi, arquivo-fonte editável (InDesign .indd ou Illustrator .ai), licença comercial total.
 
@@ -91,7 +91,7 @@ Estrutura 100% travada + mockups prontos (HTML/PDF) → gig de **execução/refi
 
 ### Perfil do job
 
-Planner perpétuo premium A5, produto físico R$ 129 `[Daniel · 21/jun/2026]`, público concurseiro brasileiro. Mockup HTML/PDF pronto — é gig de **refino + adaptação A5 + print-prep completo**, não criação do zero. Complexidade média-alta (grade de ciclo, revisão espaçada, tracker = múltiplos layouts únicos, não só páginas repetitivas).
+Planner perpétuo premium A5, produto físico R$ 129 `[Daniel · 21/jun/2026]`, público concurseiro brasileiro. Protótipo print-ready em Typst (PDF/X-1a CMYK, `typst/planner-proto-pdfx1a.pdf`) entregue — é gig de **refino + adaptação A5 + print-prep completo**, não criação do zero. Complexidade média-alta (grade de ciclo, revisão espaçada, tracker = múltiplos layouts únicos, não só páginas repetitivas).
 
 ### Estratégia recomendada: caminho duplo paralelo
 

@@ -1,7 +1,7 @@
 # Toolchain Tier-1 para Planner Premium A5 — Relatório Técnico
 
 **Data:** 20/jun/2026  
-**Contexto:** Planner Concurseiro A5, preço R$ 129 `[Daniel · 21/jun/2026]`, produção in-house sem designer, sem software proprietário. Referência atual: HTML/CSS → WeasyPrint (RGB, qualidade de rascunho).  
+**Contexto:** Planner Concurseiro A5, preço R$ 129 `[Daniel · 21/jun/2026]`, produção in-house sem designer, sem software proprietário. Referência ANTERIOR: HTML/CSS → WeasyPrint (RGB, rascunho). **Decisão tomada (20/jun/2026): Typst + Ghostscript.** Documento preservado como registro da análise.  
 **Objetivo:** Avaliar toolchains livres/abertos capazes de PDF print-ready com tipografia editorial, time-log em grade, CMYK/PDF-X, sangria 3 mm e marcas de corte.
 
 ---
@@ -14,7 +14,7 @@
 | **Teto tipográfico** | Baixo (sem microtypografia) | Médio (kerning via HarfBuzz, sem protrusion) | **Alto** (kerning, ligatures, hz-expansion, optical margins em PR ativo) | **Máximo** (microtype: protrusion + expansion + kerning em LuaLaTeX) | Muito alto | Médio | Baixo (sem hifenação avançada) |
 | **Grades/tabelas vetoriais** | HTML `<table>` (limitado) | HTML/CSS | `#table`, `cetz` (TikZ-like) | **TikZ nativo** (precisa máximo) | HTML/CSS | Python Scripter | API vetorial nativa |
 | **CMYK nativo** | Não (RGB) | Não | Sim (`cmyk()` no código) | Sim (`xcolor`, `CMYK`) | Sim | Sim | Sim (`CMYKColor`) |
-| **PDF/X** | Não | Não | **Não ainda** (issue #6012 aberto; esperado 2025–2026) | Sim (`pdfx` package, LuaLaTeX+XeLaTeX) | Sim (nativo) | Sim (PDFfile.version=11 para X-1a) | Parcial (sem metadados XMP nativos) |
+| **PDF/X** | Não | Não | **Não disponível** (issue #6012 ainda aberta em jun/2026; workaround: Ghostscript — ver seção 3.3) | Sim (`pdfx` package, LuaLaTeX+XeLaTeX) | Sim (nativo) | Sim (PDFfile.version=11 para X-1a) | Parcial (sem metadados XMP nativos) |
 | **Sangria + marcas de corte** | Hack frágil (margem negativa) | Sim (paged-page webcomp, crop+cross) | Sim (`markly` package; PR #6357 de bleed nativo em revisão) | Sim (`geometry`+`crop` packages) | Sim (nativo) | Sim (nativo DTP) | Manual (draws) |
 | **Fontes embutidas** | Sim | Sim (via Chromium) | Sim | Sim | Sim | Sim | Sim |
 | **Scriptabilidade** | Alta (Python/HTML) | Média (Node + CLI pagedjs-cli) | **Alta** (`.typ` puro texto, CI-friendly) | Média (`.tex`, buildable via Make/latexmk) | Alta (HTML input) | Média (Scribus `-g -py`) | **Alta** (Python puro) |
@@ -27,6 +27,8 @@
 ## 2. Análise individual
 
 ### 2.1 Melhorar o atual: HTML/CSS + Paged.js via Chromium headless
+
+> **Descartado pós-decisão de 20/jun/2026.** Mantido como referência histórica da análise.
 
 **O que muda em relação ao WeasyPrint:** Paged.js é um polyfill JS do W3C CSS Paged Media que roda sobre Chromium, adicionando suporte real a:
 - `@page` com `marks: crop cross` e `bleed: 3mm`
@@ -160,11 +162,13 @@
 - Server license: **USD $3.800/server** (one-time)
 - Non-commercial: **gratuito com watermark** + logo na primeira página + obrigação de link ao site — **incompatível com produto comercial**
 
-**Conclusão:** Inviável para nosso caso. O planner é vendido a R$ 119 — uso comercial imediato. Custo de USD $495 (desktop) ou $3.800 (server) é desproporcional para Fase 1. Eliminar.
+**Conclusão:** Inviável para nosso caso. O planner é vendido a R$ 129 — uso comercial imediato. Custo de USD $495 (desktop) ou $3.800 (server) é desproporcional para Fase 1. Eliminar.
 
 ---
 
 ### 2.5 Scribus + scripting Python
+
+> **Descartado pós-decisão de 20/jun/2026.** Mantido como referência histórica da análise.
 
 **Estado atual:**
 - Scribus roda headless: `scribus -g -py script.py -- arquivo.sla`

@@ -5,7 +5,7 @@
 
 ## Resumo executivo
 
-O projeto tem 5 agentes especializados e 2 skills de design maduros, mas ainda opera em modo ad-hoc: cada agente é acionado isoladamente, sem gatilhos formais de encadeamento, sem padrões de handoff e sem orquestrador. O resultado é retrabalho (números mudados em um agente que não se propagam), validação tardia (business-validator chamado depois do fato) e ausência de um pipeline claro para o módulo de design (typst-planner + planner-designer sem protocolo de QA).
+O projeto tem 7 agentes especializados e 2 skills de design maduros. Os agentes doc-updater e conteudo-mayara já foram implementados (jun/2026). Os workflows propostos neste documento estão parcialmente em vigor: cada agente ainda é acionado pontualmente, sem gatilhos formais de encadeamento, sem padrões de handoff e sem orquestrador. O resultado é retrabalho (números mudados em um agente que não se propagam), validação tardia (business-validator chamado depois do fato) e ausência de um pipeline claro para o módulo de design (typst-planner + planner-designer sem protocolo de QA).
 
 Esta proposta define: (a) mapa de capacidades com gatilhos claros; (b) 4 workflows reutilizáveis; (c) 3 novos agentes/skills justificados; (d) melhorias na tabela do CLAUDE.md.
 
@@ -37,8 +37,8 @@ Esta proposta define: (a) mapa de capacidades com gatilhos claros; (b) 4 workflo
 ```
 PESQUISA          DECISÃO                 EXECUÇÃO              VALIDAÇÃO
 ─────────         ───────                 ─────────             ──────────
-market-           pricing-strategist ─→  typst-planner    ─→   business-
-researcher   ─→   sourcing-analyst   ─→  planner-designer      validator
+market-           pricing-strategist ─→  planner-designer ─→   business-
+researcher   ─→   sourcing-analyst   ─→  typst-planner         validator
                   financial-modeler
 ```
 
@@ -135,7 +135,7 @@ financial-modeler (Supervisor Opus): integrar ambos; recalcular unit economics; 
     ↓
 business-validator: validação adversarial do modelo atualizado
     ↓
-[se aprovado] propagar para deliverables/ (business-plan, consultoria-sourcing, viabilidade)
+[se aprovado] propagar para deliverables/ (business-plan-planners.md, consultoria-sourcing-planners.md, estudo-viabilidade-economica.md)
 ```
 
 **Por que fan-out:** sourcing e pricing são independentes — não há dependência entre eles. Rodar em paralelo reduz latência pela metade.
@@ -144,11 +144,13 @@ business-validator: validação adversarial do modelo atualizado
 
 ---
 
-## (c) Novos Agentes/Skills a Criar
+## (c) Agentes/Skills implementados e propostos
 
-### Agente 1 — `doc-updater` (PRIORIDADE ALTA)
+### Implementados (jun/2026)
 
-**Justificativa:** O maior gap operacional atual. Quando um número-âncora muda (ex.: custo/un de R$55 → R$50), ele precisa ser propagado para todos os deliverables (business-plan, consultoria-sourcing, estudo-viabilidade, guia-do-negocio) E para o CLAUDE.md. Hoje isso é feito manualmente, gerando inconsistências. O `business-validator` detecta as divergências mas não as corrige — o `doc-updater` fecha esse loop.
+### Agente 1 — `doc-updater` (implementado · jun/2026)
+
+**Justificativa:** O maior gap operacional atual. Quando um número-âncora muda (ex.: custo/un 4/4 de R$43–55 → cotação real após RFQ), ele precisa ser propagado para todos os deliverables (business-plan, consultoria-sourcing, estudo-viabilidade, guia-do-negocio) E para o CLAUDE.md. Hoje isso é feito manualmente, gerando inconsistências. O `business-validator` detecta as divergências mas não as corrige — o `doc-updater` fecha esse loop.
 
 **Quando invocar:** após financial-modeler atualizar o .xlsx E o business-validator aprovar; após mudança confirmada em qualquer número-âncora do CLAUDE.md.
 
@@ -162,7 +164,7 @@ business-validator: validação adversarial do modelo atualizado
 
 ---
 
-### Agente 2 — `conteudo-mayara` (PRIORIDADE MÉDIA)
+### Agente 2 — `conteudo-mayara` (implementado · jun/2026)
 
 **Justificativa:** Mayara é o motor de aquisição (CAC ≈ R$0 via orgânico). Hoje não há nenhum suporte de IA para o trabalho dela — roteiros de TikTok, copy de produto, narrativa de lançamento, scripts de stories, briefings de parceria. Sem esse agente, a distribuição depende inteiramente da intuição dela, sem estrutura replicável.
 
@@ -179,6 +181,8 @@ business-validator: validação adversarial do modelo atualizado
 **Restrição:** não inventar claims sobre o produto (ex.: "reduz tempo de estudo em 40%") sem evidência; sempre checar com o dossiê antes de afirmar benefício mensurável.
 
 ---
+
+### Proposto (avaliar em 30d)
 
 ### Skill 3 — `dossi-navigator` (PRIORIDADE BAIXA — avaliar em 30 dias)
 
@@ -219,8 +223,8 @@ A tabela atual no CLAUDE.md é funcional mas incompleta — lista apenas "quando
 | `sourcing-analyst` | Novo fornecedor; confirmar NCM/alíquota; calcular landed cost; preparar RFQ; cronograma de produção | Tabela de decisão + landed cost | → financial-modeler (via Workflow PSF) |
 | `financial-modeler` | Qualquer número-âncora mudou; rebuild .xlsx; análise de sensibilidade; cenários | Laudo + .xlsx em `models/` | ← pricing/sourcing → business-validator → doc-updater |
 | `business-validator` | **SEMPRE** antes de marcar entregável pronto; após mudança em número do CLAUDE.md | Laudo CRÍTICO/ALTO/MÉDIO/BAIXO + veredito | ← financial-modeler → doc-updater |
-| `doc-updater` *(criar)* | Após business-validator aprovar mudança de número-âncora; propagação para deliverables e CLAUDE.md | Diff de alterações para revisão humana | ← business-validator |
-| `conteudo-mayara` *(criar)* | Preparar lançamento; roteiros TikTok/Reels; copy de produto; calendário de conteúdo; briefing de parceria | Roteiro / copy / calendário pronto para uso | ← pricing-strategist (posicionamento) |
+| `doc-updater` | Após business-validator aprovar mudança de número-âncora; propagação para deliverables e CLAUDE.md | Diff de alterações para revisão humana | ← business-validator |
+| `conteudo-mayara` | Preparar lançamento; roteiros TikTok/Reels; copy de produto; calendário de conteúdo; briefing de parceria | Roteiro / copy / calendário pronto para uso | ← pricing-strategist (posicionamento) |
 
 ---
 
@@ -245,7 +249,7 @@ A tabela atual no CLAUDE.md é funcional mas incompleta — lista apenas "quando
 
 ### sourcing-analyst
 - Adicionar `model: sonnet` está correto. Confirmar que o cálculo de landed cost usa `Bash + Python (uv)` — já especificado no body do agente.
-- Adicionar checklist de AQL no output padrão (já documentado em dominio.md, mas não está no system prompt do agente).
+- Adicionar checklist de AQL no output padrão (já documentado em `.claude/tooling-research/dominio.md`, mas não está no system prompt do agente).
 
 ---
 
@@ -253,12 +257,12 @@ A tabela atual no CLAUDE.md é funcional mas incompleta — lista apenas "quando
 
 | Ação | Prioridade | Esforço | Impacto |
 |---|---|---|---|
-| Criar `doc-updater` | Alta | Baixo (1 arquivo .md) | Elimina inconsistências entre deliverables |
+| `doc-updater` criado (jun/2026) | — implementado — | — | Elimina inconsistências entre deliverables |
 | Implementar Workflow PSF (fan-out sourcing+pricing → financial) | Alta | Nenhum (é protocolo) | Reduz latência em 50% ao mudar número |
 | Implementar Workflow VAP como regra inviolável | Alta | Nenhum (é protocolo) | Previne deliverables com erro |
 | Atualizar tabela de agentes no CLAUDE.md | Média | Baixo | Melhora acionamento proativo |
 | Corrigir `tools` do business-validator (remover Write) | Média | Mínimo | Princípio do menor privilégio |
-| Criar `conteudo-mayara` | Média | Baixo (1 arquivo .md) | Suporta motor de aquisição |
+| `conteudo-mayara` criado (jun/2026) | — implementado — | — | Suporta motor de aquisição |
 | Adicionar output tabular ao business-validator | Média | Médio (editar system prompt) | Rastreabilidade de premissas |
 | Criar hook Stop sugerindo business-validator | Baixa | Baixo | Boa prática de orquestração |
 | Criar `dossi-navigator` | Baixa (avaliar em 30d) | Médio | Só se inconsistências forem frequentes |
@@ -294,4 +298,4 @@ ENTRADA (dado novo / decisão / deliverable)
 
 ---
 
-*Fontes: meta.md (orquestração), dominio.md (rigor por agente), CLAUDE.md (fatos-âncora), agents/*.md (system prompts), skills/*/SKILL.md. Câmbio R$5,20 (jun/2026). Revisão recomendada: business-validator antes de implementar.*
+*Fontes: `.claude/tooling-research/meta.md` (orquestração), `.claude/tooling-research/dominio.md` (rigor por agente), `CLAUDE.md` (fatos-âncora), `.claude/agents/*.md` (system prompts), `.claude/skills/*/SKILL.md`. Câmbio R$5,20 (jun/2026). Revisão recomendada: business-validator antes de implementar.*

@@ -246,11 +246,11 @@ LTV:CAC = LTV ÷ CAC  [mínimo 3:1; projeto Planners estimado em 7–8× — val
 4. Preço médio de venda
 5. Mix de canal (% direto vs marketplace)
 
-**Payback inicial (Fase 1 — investimento R$5.000):**
+**Payback inicial (Fase 1 — investimento R$5.000):** `[ilustrativo · a recalcular pós-cotação · 21/jun/2026]`
 ```
-Estoque micro-lote ~45 un × R$55 = R$2.475 COGS
-Receita 45 un × R$114 (preço médio) = R$5.130
-MC bruta = R$2.655 (≈52%)
+Estoque micro-lote ~45 un × custo 4/4 R$43–55 (2/2 R$36–47)  [estimativa triangulada]
+Receita 45 un × R$129 (Concurseiro F1, lançamento)          = R$5.805
+MC bruta ≈ 48–62% (faixa 4/4 → 2/2)                          [a recalcular pós-cotação]
 Após CAC orgânico (R$0 via Mayara): payback < 1 ciclo de venda
 ```
 
@@ -307,7 +307,7 @@ Para cada premissa carregada no plano:
 |---|---|---|
 | **Demanda** | "O público quer planner físico, não só app" | Zero pré-vendas após 30d de conteúdo |
 | **Canal** | "Mayara converte seguidores em clientes" | CTR < 0.5% em posts de produto |
-| **Preço** | "R$119 é percebido como premium, não caro" | PSM coloca OPP abaixo de R$90 |
+| **Preço** | "R$129 é percebido como premium, não caro" `[Daniel · 21/jun/2026]` | PSM coloca OPP abaixo de R$99 |
 | **Sourcing** | "Gráfica BR entrega no prazo e qualidade" | Atraso > 2 semanas na 1ª entrega |
 | **Unit economics** | "LTV:CAC > 3× com CAC orgânico" | CAC pago >R$60 sem escala orgânica |
 | **Recompra** | "3–4× ao ano" | Cohort 3m mostra <1,5× na prática |

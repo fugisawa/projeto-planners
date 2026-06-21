@@ -299,14 +299,18 @@ Documentar 1 PNG de "versão boa" de cada página (diária, semanal, mensal, fic
 Script `check_module.py` que lê o arquivo `.typ` e verifica se todos os valores de `v()`, `row height` e margens são múltiplos de 4.5 mm (tolerância ±0.1 mm). Impede drift de módulo ao iterar.
 
 **H. Paleta nomeada como constante**
-No `config.typ`, nomear as cores com semântica de uso, não de aparência:
+No `config.typ`, nomear as cores com semântica de uso, não de aparência.
+> ⚠️ **Superado na implementação 2.0 (21/jun/2026):** o `config.typ` real usa **exclusivamente `cmyk()`**
+> (não `luma()`/`rgb()`), porque `luma`/`rgb` perdem informação na conversão GS→CMYK e podem alterar o
+> preto suave e o azul. O snippet abaixo é a ideia original (semântica de uso, ✔), mas com tokens CMYK.
 ```typst
-let cor-grade = luma(210)           // grade de fundo
-let cor-divisor = luma(160)         // divisor de seção
-let cor-acento = rgb("5B7FA6")      // azul-suave; 1 acento permitido
-let cor-chip = luma(240)            // faixa neutra (band)
+// IMPLEMENTAÇÃO REAL (CMYK-only) — ver config.typ:
+let grid-c  = cmyk(16%, 7%, 0%, 5%)   // grade de fundo
+let hair    = cmyk(20%, 9%, 0%, 20%)  // divisor / escrita
+let accent  = cmyk(52%, 22%, 0%, 4%)  // azul-suave; 1 acento permitido
+let band    = cmyk(9%, 4%, 0%, 3%)    // faixa neutra
 ```
-Nunca usar valores hex diretamente nas páginas — sempre via token.
+Nunca usar valores hex/`rgb`/`luma` diretamente nas páginas — sempre via token CMYK.
 
 **I. Variante de acabamento no Typst**
 Adicionar ao `config.typ` um flag `modo-prova` (bool) que, quando ativado, mostra apenas o contorno de corte e as marcas de sangria (sem conteúdo). Facilita envio de arquivo de prova para gráfica sem gerar um PDF separado do zero.

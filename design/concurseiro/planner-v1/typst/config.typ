@@ -24,8 +24,8 @@
 // Fonte: Lato (humanista, quente). Uso refinado: figuras tabulares (ver estilos).
 #let sans = "Lato"
 
-// Escala tipográfica.
-#let fs = (h1: 14pt, h2: 9.5pt, label: 8.5pt, body: 9.5pt, micro: 7pt, hour: 6.5pt, cell: 6pt)
+// Escala tipográfica. h1 = título de página (Lato Black, masthead).
+#let fs = (h1: 18pt, h2: 9.5pt, label: 8.5pt, body: 9.5pt, micro: 7pt, hour: 6.5pt, cell: 6pt)
 
 // Espessuras de fio (2.0: grade mais fina + hierarquia).
 #let wt = (hair: 0.4pt, rule: 0.7pt, grid: 0.3pt, gridh: 0.5pt, box: 0.6pt)

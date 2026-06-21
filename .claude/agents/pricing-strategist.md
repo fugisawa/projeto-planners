@@ -27,8 +27,8 @@ por Daniel + Mayara a partir de Brasília/DF.
 | Câmbio USD/BRL | ≈ R$ 5,20 | planejamento (spot ≈ R$ 5,18 em 17/jun/2026) |
 | Preço lançamento | Concurseiro **R$ 129** `[Daniel · 21/jun/2026]` · Treino **R$ 109** | |
 | Preço regime | ~R$ 139 (Conc) `[Daniel · 21/jun/2026]` · R$ 119–129 (Treino) | após validação |
-| Custo/un | micro-lote **~R$ 60** (~112 pp, sem ficha) `[estimativa pré-RFQ · 21/jun/2026]` → reposição **R$ 45** (a confirmar); ref. histórica: 71 pp era R$ 55 | Tier B |
-| MC/un direto | ~R$ 57,59 (50%) no preço médio R$ 114 | blended R$ 54,48 `[a recalcular pós-cotação · 21/jun/2026]` |
+| Custo/un | micro-lote: **4/4 R$43–55 · 2/2 R$36–47** [estimativa triangulada · 21/jun/2026] → reposição **R$45** (a confirmar); ref. pré-RFQ ~R$60 superada; paleta fria (Y=0) → miolo 2 cores corta ~15–20% | Tier B |
+| MC/un direto (Conc F1, R$129) | ~48–58% (4/4) · ~55–62% (2/2) [est. triangulada · 21/jun/2026] | blended Fase 1 [a recalcular pós-cotação] |
 | MC/un Shopee | ~R$ 6,48 | marketplace estruturalmente inviável como primário |
 | Mix canal Fase 1 | 90% direto / 10% marketplace | |
 | Concorrência Concurseiro | Planner Juspodivm ~R$ 103; genéricos R$ 28–57 | |
@@ -90,6 +90,13 @@ Limitação a registrar: PSM é hipotético → validar com Gabor-Granger ou ven
 ---
 
 ### Etapa 4 — Tabela de CM por Canal
+
+> **LEIA CLAUDE.md §Fatos-âncora ANTES de calcular** — não use cópias hardcoded de custo ou preço; use sempre os valores correntes das âncoras.
+>
+> **Separar obrigatoriamente dois cenários:**
+> - **F1 (agora):** apenas Concurseiro a R$129 — NÃO calcular preço médio blended nem incluir Treino.
+> - **F2 (futuro):** blended Concurseiro + Treino (calcular somente quando ambos estiverem no portfólio ativo).
+> O preço médio R$114 ou qualquer blended calculado a partir de dois SKUs é **inválido para Fase 1**.
 
 Calcular para **cada canal considerado** usando a fórmula de camadas:
 
@@ -153,7 +160,7 @@ O output está completo quando contém:
 - [ ] Canvas Dunford preenchido para **ambos** os SKUs (Concurseiro e Treino separados)
 - [ ] ≥5 alternativas reais por SKU com preço pesquisado e data
 - [ ] Tabela PSM com 4 pontos (ou flag de pendência com plano de execução)
-- [ ] Tabela de CM por canal (≥3 canais calculados)
+- [ ] Tabela de CM por canal (≥3 canais calculados) — com cenários F1 (só Conc R$129) e F2 (blended) separados
 - [ ] Recomendação de preço com justificativa nos 3 eixos (factível/viável/CAC)
 - [ ] Diferenciação explícita entre preço de lançamento e preço de regime
 - [ ] Regra de entrada em marketplace com preço mínimo calculado

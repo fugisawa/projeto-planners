@@ -3,6 +3,8 @@
 > Instruções concretas de layout, campos e execução Typst para cada página A5.
 > Cada página deve caber em 1 folha A5 (148 × 210 mm). Compilar com `render.py`
 > e inspecionar o PNG antes de qualquer ajuste de spacing.
+>
+> **Estado:** spec de referência + backlog de refinamentos para a próxima iteração. Seções marcadas "Problemas do v1 a corrigir" e "NOVO" = **PENDENTES** (não aplicadas no protótipo atual). Verificar com ESTADO-RETOMADA.md o que foi ou não implementado.
 
 ---
 
@@ -29,7 +31,7 @@ Nas páginas que usam listas longas (Diário, Semanal), usar `spacing: 0pt` e co
 - Bordura editorial accent (uso pontual, 1× por página): `2 pt`, cor `accent`
 
 ### Chips de matéria
-`width: 8mm` (reduzir de 9 mm — chip mais estreito alivia a linha). `radius: 1mm`. Borda `0.5 pt`, cor `hair`.
+`width: 8mm, height: 5mm` (reduzir de 9 mm — chip mais estreito alivia a linha). Sem radius — **TUDO RETO** (padrão 2.0 PRO). `stroke: hair 0.5pt`.
 
 ### Rótulos de campo
 7–8 pt, `ink-2`, tracking `+0.3 pt`. Labels de seção primária: 8–9 pt, bold, `ink-2`.
@@ -39,6 +41,46 @@ Sempre com zero à esquerda: "05", "06"... Já implementado em `timeblock()`.
 
 ### Itens que saem do corpo e vão para a contracapa interna (implementar 1× no miolo)
 Key de símbolos BuJo: `• tarefa · – nota · ○ evento · ✕ feito · → migrado · * prioridade` — 7 pt, 2 colunas, `ink-3`.
+
+---
+
+## Página 0 — Guia de Uso / Contracapa
+
+### Objetivo
+Onboarding do sistema. Preenchida uma única vez; serve de referência permanente durante o uso. Documenta os 5 módulos do planner, a legenda do time-log, os símbolos BuJo, o dicionário de cor e as regras de revisão espaçada. Corresponde ao arquivo `guia.typ` e é a **primeira página** no booklet (conforme `finalize.py` ORDER e ESTADO-RETOMADA.md).
+
+### Estrutura (topo → base)
+
+#### Cabeçalho
+`masthead("Guia de Uso")` — Lato Black 18pt, cor `title-c` (azul-ardósia).
+
+#### Bloco 1 — Os 5 Módulos
+Lista numerada compacta, 7–8 pt, `ink-2`:
+1. Diário de Estudo — unidade atômica (time-log + Estudar + Revisar + fechamento)
+2. Semanal — visão de ciclo (metas por matéria + rotação + migração)
+3. Bússola da Jornada — frontmatter estratégico (edital + stack digital + calendário)
+4. Pontes Digitais — sincronização papel ↔ app (Anki, QConcursos, simulados)
+5. Caderno de Erros — diagnóstico de erro (standalone, ver → Caderno de Erros)
+
+#### Bloco 2 — Legenda do Time-Log
+`lbl("Cada quadrinho = 10 min · pinte com a cor da matéria")` — 7 pt, `ink-3`.
+Esta instrução **DEVE estar aqui e não no corpo do Diário** (ver nota na Página 1).
+
+#### Bloco 3 — Símbolos BuJo
+2 colunas, 7 pt, `ink-3`:
+`• tarefa · – nota · ○ evento · ✕ feito · → migrado · * prioridade`
+
+#### Bloco 4 — Dicionário de Cor
+Instrução para o concurseiro definir sua paleta de matérias. Campo com 6–8 linhas de `subjrow` (chip 5 × 5 mm vazio + nome da matéria). Este é o **ponto de definição do color-coding** que percorre todo o planner.
+
+#### Bloco 5 — Revisão Espaçada (referência rápida)
+`D+1 · D+7 · D+15 · D+30` — tabela ou linha compacta, 7 pt, `ink-3`. Sem repetição da lógica completa — só os intervalos.
+
+### Execução Typst — pontos críticos
+- O arquivo `guia.typ` já existe no projeto. Esta seção documenta seu conteúdo para fins de consistência com as demais páginas.
+- A legenda do time-log deve estar **somente aqui** — removida do corpo do Diário (`diario.typ`).
+- O dicionário de cor com `subjrow` acopla visualmente com a coluna de chip da Bússola (Mapa do Edital) e da Semanal (tabela de metas) — garantir dimensões idênticas (chip 5 mm × 5 mm, `rect`, sem radius).
+- Verificar na ordem do booklet (`finalize.py`): Guia → Diário → Semanal → Bússola → Pontes → (Ficha standalone F2).
 
 ---
 
@@ -270,10 +312,10 @@ dot()  // linha extra para o "Faço"
 
 Antes de considerar qualquer página pronta:
 
-- [ ] Título da página em `masthead()` ou equivalente (EB Garamond ou Lato Regular ~22pt)
+- [ ] Título da página em `masthead()` — Lato Black (`weight: 900`) 18pt, cor `title-c` (azul-ardósia). Não usar Lato Regular nem EB Garamond.
 - [ ] Kicker no canto superior direito em caixa alta 7pt `ink-3`
 - [ ] Fios de seção: somente `0.4–0.7 pt`, cor `hair` ou `grid-c`
-- [ ] Chips de matéria: `8mm × 5mm`, `radius: 1mm`, `stroke: hair 0.5pt`
+- [ ] Chips de matéria: `8mm × 5mm`, sem radius (TUDO RETO — padrão 2.0 PRO), `stroke: hair 0.5pt`
 - [ ] Nenhum fundo de cor impresso em zona de time-log ou checklist
 - [ ] Nenhuma instrução de uso dentro do corpo principal da página (→ margem ou onboarding)
 - [ ] Campo de chip de cor presente nas seções que têm matéria

@@ -234,7 +234,7 @@ Nos formatos digitais (Notion): campos de fórmula calculam automaticamente a da
 
 ## 5. Imagens Coletadas
 
-Pasta: `/home/daniel/planners/design/concurseiro/caderno-de-erros/referencias/coreia/`
+Pasta: `design/concurseiro/caderno-de-erros/referencias/coreia/`
 
 | Arquivo | Descrição | Fonte | Dimensões |
 |---------|-----------|-------|-----------|

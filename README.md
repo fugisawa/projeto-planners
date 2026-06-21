@@ -6,7 +6,7 @@ sem datas) para nichos brasileiros de alto engajamento.
 | Produto | O que é | Preço de lançamento |
 |---|---|---|
 | **Concurseiro** | sistema de estudo para concursos (não "agenda") | R$ 129 `[Daniel · 21/jun/2026]` |
-| **Treino de Força** | diário de periodização (não "caderno") | R$ 109 |
+| **Treino de Força** | diário de periodização (não "caderno") | R$ 109 `[Daniel · 21/jun/2026]` |
 
 > ## ▶ Comece por aqui
 > **`deliverables/guia-do-negocio.pdf`** — o plano todo em **português claro, sem "economês"**
@@ -99,9 +99,9 @@ performar já está dentro de casa.
 
 - **Negócio recorrente:** o planner de estudo "enche" em ~3 meses → o cliente recompra **3–4×/ano**
   (LTV ~R$ 374–397 por cliente). A **retenção** é o motor.
-- **Vender direto** (Instagram/site + pix): preserva ~50% de margem; marketplace destrói.
+- **Vender direto** (Instagram/site + pix): preserva ~48–62% de margem bruta (faixa 4/4 a 2/2 cores) `[est. triangulada · 21/jun/2026]`; marketplace destrói.
 - **Aquisição orgânica primeiro** (o forte da casa).
-- **Crescimento 100% autofinanciado:** sem empréstimo, sem aporte que descapitalize.
+- **Crescimento 100% autofinanciado:** sem empréstimo, sem pré-venda, sem aporte externo.
 
 ## Estrutura do projeto
 
@@ -110,7 +110,7 @@ projeto-planners/
 ├── README.md                     ← você está aqui
 ├── CLAUDE.md                     instruções para a IA (Claude Code)
 ├── .mcp.json                     MCP servers do projeto (sequential-thinking, memory)
-├── deliverables/                 documentos finais (.pdf) + fontes (.md)
+├── deliverables/                 documentos finais (.pdf) + fontes editáveis (.md e .html) + assets/
 │   ├── guia-do-negocio.pdf       ← COMECE AQUI (linguagem simples)
 │   ├── business-plan-planners.pdf
 │   ├── estudo-de-mercado.pdf
@@ -128,7 +128,8 @@ projeto-planners/
 ├── docs/                         metodologia, premissas e claude-setup.md (config da IA)
 ├── sources/                      rascunhos originais (o "antes" — preservado, não editar)
 ├── scripts/                      ferramentas que geram o modelo e os PDFs (uso do autor)
-└── .claude/                      config da IA: agents/ (agentes) + settings.json
+├── design/                       módulo de design do produto (Concurseiro): pesquisa, conceitos, planner-v1/, caderno-de-erros/
+└── .claude/                      config da IA: agents/ · skills/ (planner-designer, typst-planner) · settings.json
 ```
 
 ## Índice dos documentos

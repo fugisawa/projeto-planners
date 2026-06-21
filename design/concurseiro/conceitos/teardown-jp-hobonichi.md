@@ -392,7 +392,7 @@ nele percebe a diferença. Para o Concurseiro:
 - O papel precisa ser bom o suficiente para caneta gel, caneta comum e marcador sem traspasse
 - Não precisa ser Tomoe River (custo proibitivo em escala BR), mas a escolha de papel precisa
   ser comunicada e justificada como decisão de qualidade
-- **Gramatura mínima recomendada:** 75–90 g/m² offset ou similar com boa resistência a marcador
+- **Gramatura mínima recomendada:** 75–90 g/m² offset ou similar com boa resistência a marcador (mínimo técnico do Hobonichi; para o Concurseiro, o alvo é 90g Pólen Bold — igual ao padrão INDIGO/Kokuyo de 120g em termos de performance com marcador. Ver âncora de produto e `financeiro-planner-v1.md` para análise de margem por gramatura.)
 - A experiência de escrita é diferencial que o cliente sente no primeiro uso — investir aqui é
   investir em retenção
 

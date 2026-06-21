@@ -1,6 +1,18 @@
 # Plano Estratégico — Projeto Planners
 ### Horizonte 3–5 anos · pt-BR · uso interno dos sócios
 
+> ## ⚠️ DOCUMENTO EM REVISÃO — baseline pré-pivô (a recalcular pós-cotação)
+> **Atualizado: 21/jun/2026.** Redigido em 19/jun/2026, **antes** das decisões travadas de 21/jun/2026. As **tabelas e indicadores numéricos** deste corpo (VPL/TIR, MC/un, ROI, break-even, preço médio R$ 114, custo R$ 55) refletem o **cenário pré-pivô (2 SKUs em paralelo · R$ 119)** e **serão refeitos** pelo `financial-modeler` após as cotações reais (Gate A). **Não usar os números deste corpo como âncora operacional** — a fonte da verdade é `CLAUDE.md` §Fatos-âncora + `design/concurseiro/planner-v1/ESTADO-RETOMADA.md`.
+>
+> **Decisões que prevalecem sobre o corpo abaixo:**
+> - **Lançamento sequencial:** F1 = **só o Concurseiro** (R$ 5.000 banca 1 SKU); **Treino de Força e Caderno de Erros = F2**, pagos pelo caixa gerado. (O corpo trata os 2 SKUs em paralelo — superado.)
+> - **Preço de lançamento Concurseiro = R$ 129** (regime ~R$ 139); Treino R$ 109 (regime R$ 119–129). `[Daniel · 21/jun/2026]`
+> - **SEM pré-venda · SEM empréstimo/aporte** — 100% autofinanciado. (Onde o corpo disser "pré-venda obrigatória" ou "aporte", está superado.)
+> - **Custo/un (~112 pp, micro-lote):** 4/4 R$ 43–55 · 2/2 (paleta fria) R$ 36–47 `[estimativa triangulada · 21/jun/2026]` (supera ~R$ 55–60).
+> - **Produto v1 = o Planner SEM ficha embutida** (só ponteiro → Caderno de Erros).
+>
+> ---
+
 **Data:** 19/jun/2026 · **Base:** business plan, estudo de mercado, EVEF e modelo
 `viabilidade-planners-v2.xlsx`. Marcações: `[confirmado]` · `[estimativa]` · `[a validar]`.
 
@@ -23,7 +35,7 @@ físico (barreira de entrada baixa), e sim **marca + método + comunidade + reco
 ## 2. Onde competimos (e onde não)
 
 - **Competimos** em: planner-**método** físico premium, perpétuo, nacional, para concurseiros de
-  alto desafio e praticantes sérios de força. Preço R$ 109–119 (vão entre genéricos e importados/apps).
+  alto desafio e praticantes sérios de força. Preço de lançamento R$ 109–129 (Treino R$ 109 · Concurseiro R$ 129) `[Daniel · 21/jun/2026]`; regime R$ 119–139 — vão entre genéricos e importados/apps, imediatamente acima do Juspodivm (R$ 85–120) e abaixo dos importados (R$ 130–200).
 - **Não competimos** em: preço (vs. genéricos/PDFs), volume commodity, nem em features de app. Não
   perseguimos o concurseiro casual de baixo gasto nem o treinador iniciante.
 - **Mercado:** grande e recorrente (ver estudo de mercado §3–4.5). O limite no curto prazo é
@@ -86,15 +98,14 @@ O **catálogo recorrente** (penetração + produto) é o caminho de maior retorn
 alavanca o mesmo público e a mesma marca.
 
 > **Produto (design) `[validado · Mayara · 19/jun/2026]`:** o "Desenvolvimento de produto" se concretiza como
-> **ecossistema modular** do Concurseiro — beachhead **Caderno de Erros** → módulos + capa → camada
-> **foto→app**. Roadmap: `design/concurseiro/conceitos/roadmap-faseado.md`.
+> **ecossistema modular** do Concurseiro — beachhead **Planner de Estudo (F1)** → **Caderno de Erros standalone (F2)** → módulos + capa → foto→app `[Daniel · 21/jun/2026]`. Roadmap: `design/concurseiro/conceitos/roadmap-faseado.md`.
 
 ---
 
 ## 7. Cenários 3–5 anos
 
 - **Base:** aquisição orgânica funciona; recompra ~60%; escala BR offset; China opcional no ano
-  3–4. Trajetória do EVEF (387 → 6.800 un); VPL R$ 365–407 mil. **Resultado: marca de nicho
+  3–4. Trajetória do EVEF (387 → 6.800 un); VPL **[a recalcular pós-cotação @ R$ 129 + custo triangulado · 21/jun/2026]**. **Resultado: marca de nicho
   rentável e autofinanciada.**
 - **Otimista:** conteúdo viraliza num nicho; recompra > 70%; LTV/CAC permite ligar pago com ROAS
   alto; 3º SKU no ano 2; vento de 2027. **Escala mais rápida, China antecipada para o ano 3.**
@@ -122,7 +133,7 @@ alavanca o mesmo público e a mesma marca.
 | **Proposta de valor** | Planner-**método** físico premium e perpétuo: estudar/treinar com método e constância sem montar planilha nem depender de tela. |
 | **Canais** | Orgânico (Instagram/TikTok) → **lista própria** → checkout próprio + pix (D2C). Marketplace só p/ descoberta; afiliados/micro-influenciadores na escala. |
 | **Relacionamento** | Comunidade + conteúdo de método; ciclo de **recompra** (lembrete/oferta de reposição, combos/assinatura); prova social. |
-| **Fontes de receita** | Venda direta dos 2 SKUs (R$ 109–119), **recorrente** (3–4×/ano Concurseiro; ~2,5× Treino); futuro: refis, 3º SKU, B2B. |
+| **Fontes de receita** | Venda direta: **Concurseiro R$ 129 (F1)** · **Treino R$ 109 (F2)** `[Daniel · 21/jun/2026]`; regime R$ 139/119–129; **recorrente** (3–4×/ano Conc.; ~2,5× Treino); futuro: refis, 3º SKU, B2B. |
 | **Recursos-chave** | Método proprietário + conteúdo dos fundadores; design in-house; marca/comunidade; caixa autofinanciado. |
 | **Atividades-chave** | Produção de **conteúdo orgânico**; desenvolvimento de método/produto; gestão de reposição (make-to-demand); atendimento/retenção. |
 | **Parcerias-chave** | Gráficas BR (3 cotações; offset na escala); micro-influenciadores de nicho; contador; (Fase 2) fornecedor China + despachante. |

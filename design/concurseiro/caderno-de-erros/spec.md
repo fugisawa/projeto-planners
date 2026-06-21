@@ -29,12 +29,8 @@ Layout em **2 colunas** (ou frente/verso para *testing effect*):
 - **Questão análoga** (refazer): referência + ☐ acertei.
 - **Revisão espaçada** (canto): `D+1 □  D+7 □  D+15 □  D+30 □` com status ○ / ◑ / ●.
 
-## 4. Versão LITE (seção dentro do Planner v1) `[proposta]`
-Compacta — captura o núcleo do método sem o peso do standalone:
-- 1 linha de cabeçalho (matéria/cor + fonte) + ☐ causa (5 checkboxes).
-- "Raciocínio errado" (2–3 linhas) → "Certo" (1–2 linhas).
-- "Gatilho→ação" (1 linha) + mini-revisão `□□□□`.
-- Alternativa **"오답 로그" / log de baixo atrito**: 1 linha sob a questão (p/ reta final).
+## 4. Nota sobre Planner v1 `[decisão · Daniel · 21/jun/2026]`
+O Planner v1 **não inclui ficha de erro** — contém apenas um **ponteiro impresso** "→ Caderno de Erros" (seção lite foi descartada). A especificação completa deste documento é exclusivamente para o **módulo standalone (Fase 2)**.
 
 ## 5. Taxonomia de erro (convergida — validar) `[proposta]`
 **Conceito/lacuna · Interpretação do enunciado · Aplicação/cálculo · Desatenção · Pegadinha de banca.**
@@ -49,4 +45,4 @@ Papel **≥120 g** anti-traspasse · **dot grid** · **lay-flat** · **perpétuo
 apaisado**, folha solta. Sistema de 3 cores de caneta como convenção de uso.
 
 ## 8. Pendências
-Wireframe da ficha (completa + lite) · taxonomia final · validar triagem/gatilho/revisão com usuários · custo (sourcing).
+✅ Wireframe da ficha completa (standalone, Fase 2): `wireframe-ficha.md`. ⏳ Pendentes: taxonomia final · validar triagem/gatilho/revisão com usuários · custo/sourcing do standalone. [lite descartada — decisão Daniel 21/jun/2026]
