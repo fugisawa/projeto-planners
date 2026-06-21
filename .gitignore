@@ -44,3 +44,11 @@ design/concurseiro/planner-v1/typst/*.pdf
 
 # Typst — arquivos de teste/scratch dos agentes
 design/concurseiro/planner-v1/typst/test_*.typ
+
+# Typst v2/v3 — intermediários de build (regeneráveis); mantém só o PDF/X-1a final
+design/concurseiro/planner-v2/typst/*.pdf
+!design/concurseiro/planner-v2/typst/planner-v2-proto-pdfx1a.pdf
+design/concurseiro/planner-v2/typst/test_*.typ
+design/concurseiro/planner-v3/typst/*.pdf
+!design/concurseiro/planner-v3/typst/planner-v3-proto-pdfx1a.pdf
+design/concurseiro/planner-v3/typst/test_*.typ

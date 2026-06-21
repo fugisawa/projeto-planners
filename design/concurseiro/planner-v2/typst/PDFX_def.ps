@@ -1,0 +1,20 @@
+%!
+% PDFX_def.ps — OutputIntent PDF/X-1a com perfil Coated FOGRA39 (couché).
+% Usado pelo Ghostscript (-dPDFX) para marcar o intent de saída do miolo.
+/ICCProfile (/usr/share/color/icc/colord/FOGRA39L_coated.icc) def
+
+[ /Title (Planner Concurseiro) /DOCINFO pdfmark
+
+[ /_objdef {icc_PDFX} /type /stream /OBJ pdfmark
+[ {icc_PDFX} << /N 4 >> /PUT pdfmark
+[ {icc_PDFX} ICCProfile (r) file /PUT pdfmark
+
+[ /_objdef {OutputIntent_PDFX} /type /dict /OBJ pdfmark
+[ {OutputIntent_PDFX} <<
+    /Type /OutputIntent
+    /S /GTS_PDFX
+    /OutputConditionIdentifier (FOGRA39)
+    /Info (Coated FOGRA39 \050ISO 12647-2:2004\051)
+    /DestOutputProfile {icc_PDFX}
+  >> /PUT pdfmark
+[ {Catalog} << /OutputIntents [ {OutputIntent_PDFX} ] >> /PUT pdfmark
