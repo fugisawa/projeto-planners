@@ -5,6 +5,21 @@
 
 ---
 
+## ⭐ 2.0 PRO — atualização (20/jun/2026) · onde houver conflito, vale ESTA seção
+
+O protótipo foi elevado ao nível "capricho" JP/KR. Deltas que **superam** o texto antigo abaixo:
+
+- **Título de página:** Lato **Black 18pt em azul-ardósia (`title-c`)** + "tab" de acento + eyebrow mutado — não "Regular 22–26pt". É o momento cromático, com propósito. **Diário:** sem título grande, só eyebrow "DIÁRIO · FOCO DO DIA" + tab.
+- **Hierarquia:** em página **sem título grande** (Diário), o cabeçalho de seção é **discreto** (`softhead`, 8.5pt ink-2) — não pode dominar.
+- **Cantos:** **TUDO RETO** (células, quadrados, chips, checkboxes e **faixas sombreadas**). Só círculos redondos. (Substitui a regra antiga de "chip/container arredondados".)
+- **Listas de escrita:** estilo **INDIGO** — coluna de matéria (sigla) │ **divisória vertical** │ tarefa na pauta │ ○ (helper `studyrows`). **Abandonados:** chip-box (tamanho não batia com células/dots) e dot-grid substrato (desalinhava elementos + duplicava a grade).
+- **Alinhamento:** divisórias de seções irmãs **alinham** (faixa do Revisar = largura cheia, sem recuo); linhas de preenchimento na **base do texto** (`align: bottom`).
+- **Cor mais quieta** (`grid-c` = cmyk 16/7/0/5) + **hierarquia de fios** no time-log (`grid-h` hora 0.5pt vs `grid-c` 10-min 0.3pt) + **figuras tabulares** (Lato `number-width: "tabular"`) em tudo.
+
+> Fonte de verdade do 2.0 = arquivos em `../planner-v1/typst/` + skills `planner-designer` e `typst-planner`.
+
+---
+
 ## 1. Princípio central
 
 O produto é um **campo em branco com andaimes invisíveis.**
@@ -67,19 +82,21 @@ Mínimo 4.5 mm (1 módulo); seções grandes separadas por 9 mm (2 módulos). Nu
 
 ## 4. Paleta e uso da cor
 
-### Tokens atuais (manter — validados)
+### Tokens atuais (2.0 — sincronizados com config.typ)
 
 | Token | CMYK | Uso |
 |---|---|---|
 | `ink` | C0 M0 Y0 K88 | texto principal |
 | `ink-2` | C32 M16 Y0 K56 | rótulos de campo, labels de seção |
 | `ink-3` | C28 M12 Y0 K40 | dicas, instruções, horas |
-| `accent` | C52 M22 Y0 K4 | azul suave — bordura editorial, círculo D-day |
-| `grid-c` | C24 M10 Y0 K8 | linhas da grade e time-log |
-| `hair` | C22 M9 Y0 K24 | fios de seção, bordas de campo |
-| `band` | C12 M5 Y0 K4 | faixa suave (seção Revisar) |
+| `title-c` | C68 M44 Y0 K48 | azul-ardósia — títulos de página (Lato Black) |
+| `accent` | C52 M22 Y0 K4 | azul suave — tab, círculo D-prova, setas (1 posição/página) |
+| `grid-c` | C16 M7 Y0 K5 | grade do time-log / divisões de 10 min (quieta) |
+| `grid-h` | C22 M10 Y0 K15 | linha de hora no time-log (hierarquia) |
+| `hair` | C20 M9 Y0 K20 | fios de seção, bordas de campo |
+| `band` | C9 M4 Y0 K3 | faixa sombreada (Revisar / Ajuste de Rota) |
 
-**Não adicionar novas cores ao sistema.** A cor dourada/cobre que aparece no semanal (accent quente) é o `tint`/acento secundário — verificar se está em config.typ e garantir uso apenas em 1 posição por página.
+**Não adicionar novas cores ao sistema.** Apenas **1 acento (azul)** por página — não há mais dourado/cobre; o acento do 2.0 é o azul-suave (`accent`).
 
 ### Regra de contenção (Hobonichi + INDIGO)
 - 1 acento cromático estrutural (`accent` azul) para bordas e destaques funcionais.

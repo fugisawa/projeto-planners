@@ -50,7 +50,6 @@
 #let ficha-card = block(
   width: 100%,
   fill: none,
-  radius: 1pt,
   inset: (x: 3.5mm, y: 2.2mm),
   stroke: (left: (paint: accent, thickness: 2pt), rest: (paint: hair, thickness: wt.box)),
   {

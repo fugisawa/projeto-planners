@@ -99,8 +99,9 @@ researcher   ─→   sourcing-analyst   ─→  planner-designer      validator
 **Sequência:**
 
 ```
-① planner-designer (SKILL) — decidir o que a página contém e como se hierarquiza
-      ↓ especificação: grid, tipo, cor, seções, mecânicas (time-log, chip, etc.)
+① planner-designer (SKILL) — decidir conteúdo + hierarquia (princípios 2.0: título azul-ardósia
+      + tab; cantos RETOS; listas INDIGO coluna+divisória; cor quieta; alinhamento de divisórias)
+      ↓ especificação: grid 4.5mm, tipo, cor, seções, mecânicas (time-log, studyrows)
 ② typst-planner (SKILL) — implementar em Typst
       ↓ .typ → compilar → PNG de QA
 ③ OLHAR o PNG (obrigatório; não confiar no código às cegas)
@@ -110,6 +111,8 @@ researcher   ─→   sourcing-analyst   ─→  planner-designer      validator
 ```
 
 **Separação crítica:** planner-designer decide, typst-planner executa. Nunca pedir ao typst-planner que "invente" o layout — é papel do planner-designer. O inverso (pedir ao planner-designer que compile) também é erro.
+
+**Hero-first:** acerte a página mais difícil primeiro, **valide com o usuário**, só então propague o sistema às demais. Itere render→olhar PNG→corrigir — o capricho mora na iteração (não no primeiro passe).
 
 **QA de impressão:** sempre verificar `pdffonts` (fonts embarcadas), `gs -o - -sDEVICE=inkcov` (CMYK OK) e nº de páginas (render.py avisa se passar de 1).
 
