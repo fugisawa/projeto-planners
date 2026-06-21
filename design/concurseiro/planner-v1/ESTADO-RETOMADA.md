@@ -1,7 +1,7 @@
 # Estado & retomada — Planner Concurseiro
 
-**20/jun/2026.** Estado vivo. **Diário elevado ao padrão 2.0 PRO (página-herói, validado pelo Daniel).**
-**Tarefa atual: padronizar as outras 4 páginas ao padrão 2.0 do Diário.** Mapa: [`README.md`](README.md).
+**20/jun/2026.** Estado vivo. **As 6 páginas no padrão 2.0 PRO** (5 módulos + Guia de uso/contracapa),
+print-ready (CMYK/PDF-X). **Próximo: teste de impressão (Gate A) + reconciliar RACI/MC.** Mapa: [`README.md`](README.md).
 
 ## Projeto em 30s
 Venture D2C "Planners" (Daniel = estratégia/ops · Mayara = aquisição/conteúdo, storytelling viral em
@@ -36,20 +36,19 @@ calculou MC mais estrita (R$55→44% vs "50%") — **reconciliar MC** (business-
 - Campos com **espaço real de escrita** (nem faltar nem sobrar); ≤4 linhas de reflexão.
 - Compilar → **olhar o PNG** → iterar até **1 página A5**.
 
-## PONTO DE RETOMADA — padronizar as 4 ao 2.0 (Diário = referência)
-- **Semanal** — totais/linha de semana na base; "Ajuste & reflexão" + "→ Migrar" ruled limpos; metas/rotação no módulo.
-- **Bússola** — "objetivo"/"por que" + reflexões com linha na base; calendário e mapa-do-edital alinhados; balanço.
-- **Pontes** — TODOS os campos (Banco/Anki/Aulas/Simulados) com linha na **base**; "Ajuste de Rota" faixa reta.
-- **Ficha** — origem / "o que pensei" / "raciocínio" como pauta na base; card já reto; checar densidade.
-- Depois: `finalize.py` → re-gerar `planner-proto-pdfx1a.pdf` + commitar.
+## FEITO (2.0)
+- ✅ **Padronização das 4** (Semanal/Bússola/Pontes/Ficha) ao 2.0 — linhas sólidas, base, faixas largura cheia.
+- ✅ **Guia de uso / contracapa** (`guia.typ`) — onboarding (5 módulos) + legenda do time-log ("10 min") + símbolos (BuJo) + dicionário de cor + revisão espaçada. **Entra na FRENTE do booklet.**
+- ✅ **Booklet = 6 páginas** (guia+bussola+semanal+diario+pontes+ficha) em `planner-proto-pdfx1a.pdf` (CMYK/PDF-X-1a/FOGRA39).
 
-## Pendências (pós-padronização)
-Onboarding/contracapa (key de símbolos + legenda "10 min") · teste de impressão (Gate A + 3 orçamentos
-via `rfq-graficas.md`) · reconciliar RACI/MC (business-validator) · (opcional) freelancer p/ acabamento.
+## PONTO DE RETOMADA
+1. **Teste de impressão real** (Gate A: + 3 orçamentos via `rfq-graficas.md`) — provar CMYK/papel/wire-o numa gráfica.
+2. **Reconciliar RACI/MC** no dossiê (`business-validator`) — flag da MC (R$55→44% vs "50%").
+3. (Opcional) **freelancer** p/ acabamento premium (`freelancers-pesquisa.md`) — vira polimento, não criação.
 
 ## Como gerar
 `cd typst && uv run --with typst python render.py <pagina>` · `uv run --with pypdf python finalize.py`.
 Detalhe: `README.md` + skill `typst-planner`.
 
 ## Git
-Repo `fugisawa/projeto-planners` · branch **main** · último: **8d5e2e0**. Commit/push só quando o Daniel pedir.
+Repo `fugisawa/projeto-planners` · branch **main** · último commit: ver `git log`. Commit/push só quando o Daniel pedir.

@@ -5,7 +5,7 @@ CMYK + PDF/X-1a com OutputIntent FOGRA39 (couché), via Ghostscript.
 Uso:
   uv run --with pypdf python finalize.py                 # ordem-amostra padrão
   uv run --with pypdf python finalize.py diario          # só uma página (teste)
-  uv run --with pypdf python finalize.py bussola semanal diario pontes ficha
+  uv run --with pypdf python finalize.py guia bussola semanal diario pontes ficha
 """
 
 import os
@@ -15,8 +15,8 @@ import sys
 D = os.path.dirname(os.path.abspath(__file__))
 ICC = "/usr/share/color/icc/colord/FOGRA39L_coated.icc"
 DEFPS = f"{D}/PDFX_def.ps"
-# Ordem-amostra do protótipo (uma de cada). Produção monta o ciclo completo à parte.
-ORDER = ["bussola", "semanal", "diario", "pontes", "ficha"]
+# Ordem-amostra do protótipo (guia/onboarding na frente). Produção monta o ciclo completo à parte.
+ORDER = ["guia", "bussola", "semanal", "diario", "pontes", "ficha"]
 
 
 def merge(order, out):
