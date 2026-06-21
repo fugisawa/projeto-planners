@@ -10,7 +10,7 @@
 // Hint micro itálico.
 #let fhint(s) = text(font: sans, size: fs.micro, fill: ink-3, style: "italic")[#s]
 
-// Cabeçalho de sub-seção: label + fio + hint opcional.
+// Cabeçalho de sub-seção: label + fio sólido + hint opcional.
 #let ihead(s, hint: none) = {
   grid(
     columns: (auto, 1fr, auto), column-gutter: 2mm,
@@ -22,9 +22,9 @@
   v(0.8mm)
 }
 
-// Linha pontilhada com altura de escrita confortável (4.2 mm, ligeiramente abaixo do baseline).
+// Linha de escrita sólida com altura de escrita confortável (4.2 mm, alinhada na base).
 #let drow = block(width: 100%, height: 4.2mm, above: 0pt, below: 0pt,
-  align(bottom, dot()))
+  align(bottom, wline()))
 
 // Checkbox + texto micro para Triagem / Causa / Revisão.
 #let chk(s) = box[#checkbox#h(1pt)#text(font: sans, size: fs.micro, fill: ink-2, tracking: 0.8pt)[#upper(s)]#h(2mm)]
@@ -32,17 +32,17 @@
 // Seta accent para o campo "→ Faço".
 #let arrow = text(font: sans, size: fs.label, fill: accent, weight: "medium")[→]
 
-// Linha de origem: Livro · p. · nº · Site · id
+// Linha de origem: Livro · p. · nº · Site · id — linhas sólidas (padrão 2.0)
 #let origem-line = {
   grid(
     columns: (auto, 24mm, auto, 7mm, auto, 9mm, 3mm, auto, 14mm, auto, 1fr),
-    align: horizon,
-    text(font: sans, size: fs.label, fill: ink-2)[Livro ], dot(),
-    text(font: sans, size: fs.label, fill: ink-2)[ p. ], dot(),
-    text(font: sans, size: fs.label, fill: ink-2)[ nº ], dot(),
+    align: bottom,
+    text(font: sans, size: fs.label, fill: ink-2)[Livro ], wline(),
+    text(font: sans, size: fs.label, fill: ink-2)[ p. ], wline(),
+    text(font: sans, size: fs.label, fill: ink-2)[ nº ], wline(),
     [],
-    text(font: sans, size: fs.label, fill: ink-2)[Site ], dot(),
-    text(font: sans, size: fs.label, fill: ink-2)[ id ], dot(),
+    text(font: sans, size: fs.label, fill: ink-2)[Site ], wline(),
+    text(font: sans, size: fs.label, fill: ink-2)[ id ], wline(),
   )
 }
 
@@ -53,16 +53,16 @@
   inset: (x: 3.5mm, y: 2.2mm),
   stroke: (left: (paint: accent, thickness: 2pt), rest: (paint: hair, thickness: wt.box)),
   {
-    // 1. Cabeçalho: chip de matéria + linha "MATÉRIA" + D–
+    // 1. Cabeçalho: chip de matéria + linha "MATÉRIA" + D– (base alinhada)
     grid(
       columns: (8mm, 1fr, auto), column-gutter: 2.5mm,
-      align: (left + horizon, left + horizon, right + horizon),
+      align: (left + horizon, left + bottom, right + bottom),
       chip,
-      box(width: 1fr, inset: (bottom: 1.2mm))[
+      box(width: 1fr)[
         #text(font: sans, size: fs.label, fill: ink-2, weight: 700, tracking: 0.6pt)[#upper("Matéria") ]
-        #dot()
+        #wline()
       ],
-      box[#text(font: sans, size: fs.label, fill: ink-2)[D– ]#box(width: 11mm, dot())],
+      box[#text(font: sans, size: fs.label, fill: ink-2)[D– ]#box(width: 11mm, wline())],
     )
     v(1.2mm)
 
@@ -108,13 +108,13 @@
 
     // 5. Quando vir → Faço (2 linhas para o "Faço" — ação é mais longa que o gatilho)
     block(width: 100%, height: 4.2mm, above: 0pt, below: 1.2mm,
-      align(bottom, grid(columns: (auto, 1fr), column-gutter: 1.5mm, align: horizon,
-        flbl("Quando vir"), dot())))
+      align(bottom, grid(columns: (auto, 1fr), column-gutter: 1.5mm, align: bottom,
+        flbl("Quando vir"), wline())))
     block(width: 100%, height: 4.2mm, above: 0pt, below: 1.2mm,
-      align(bottom, grid(columns: (auto, 1fr), column-gutter: 1.5mm, align: horizon,
-        arrow + h(1mm) + flbl("Faço"), dot())))
+      align(bottom, grid(columns: (auto, 1fr), column-gutter: 1.5mm, align: bottom,
+        arrow + h(1mm) + flbl("Faço"), wline())))
     block(width: 100%, height: 4.2mm, above: 0pt, below: 1.5mm,
-      align(bottom, dot()))
+      align(bottom, wline()))
 
     // 6. Revisão espaçada
     grid(columns: (auto, 1fr), column-gutter: 3mm, align: horizon,

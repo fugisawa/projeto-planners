@@ -8,10 +8,10 @@
 #let col-hd(s) = align(center + horizon,
   text(font: sans, size: 6pt, fill: ink-2, tracking: 0.06em, weight: 700)[#upper(s)])
 
-// Rótulo inline + linha pontilhada (para linha de totais e semana)
+// Rótulo inline + linha sólida (para linha de totais e semana)
 #let ifield(lbl-txt, w: 22mm, unit: none) = box(baseline: 0pt)[
   #text(font: sans, size: fs.label, fill: ink-2)[#lbl-txt ]
-  #box(width: w, dot())
+  #box(width: w, wline())
   #if unit != none { text(font: sans, size: fs.label, fill: ink-2)[ #unit] }
 ]
 
@@ -25,10 +25,10 @@
 // Linha: Semana ___ a ___ · D-prova ___ · Prova ___
 #grid(columns: (auto, 14mm, auto, 14mm, auto, 10mm, auto, 1fr),
   column-gutter: 1.6mm, align: bottom,
-  text(font: sans, size: fs.label, fill: ink-2)[Semana], dot(w: 14mm),
-  text(font: sans, size: fs.label, fill: ink-2)[ a ], dot(w: 14mm),
-  text(font: sans, size: fs.label, fill: ink-2)[· D-prova], dot(w: 10mm),
-  text(font: sans, size: fs.label, fill: ink-2)[· Prova], dot(w: 1fr),
+  text(font: sans, size: fs.label, fill: ink-2)[Semana], wline(w: 14mm),
+  text(font: sans, size: fs.label, fill: ink-2)[ a ], wline(w: 14mm),
+  text(font: sans, size: fs.label, fill: ink-2)[· D-prova], wline(w: 10mm),
+  text(font: sans, size: fs.label, fill: ink-2)[· Prova], wline(w: 1fr),
 )
 #v(3mm)
 
@@ -117,15 +117,15 @@
 #v(3mm)
 
 // ─── SEÇÃO: AJUSTE & REFLEXÃO SEMANAL ────────────────────────────────────────
-#softband[
+#block(width: 100%, fill: band, inset: (x: 0mm, y: 3mm))[
   #grid(columns: (1fr, auto), align: (left + horizon, right + horizon),
     seclbl("Ajuste & reflexão semanal"),
     text(font: sans, size: fs.micro, fill: ink-3, style: "italic")[o que funcionou · o que ajustar])
   #v(2.5mm)
-  #dot() #v(7mm)
-  #dot() #v(7mm)
-  #dot() #v(7mm)
-  #dot()
+  #wline() #v(7mm)
+  #wline() #v(7mm)
+  #wline() #v(7mm)
+  #wline()
 ]
 #v(3mm)
 
@@ -134,6 +134,6 @@
 #v(1.5mm)
 #text(font: sans, size: 6.5pt, fill: ink-3, tracking: 1pt)[→ MIGRAR]
 #v(2mm)
-#dot() #v(7mm)
-#dot() #v(7mm)
-#dot()
+#wline() #v(7mm)
+#wline() #v(7mm)
+#wline()

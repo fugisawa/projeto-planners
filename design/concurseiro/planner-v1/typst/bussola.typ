@@ -17,23 +17,25 @@
 #let th(s) = text(font: sans, size: 5.5pt, fill: ink-2, weight: 700, tracking: 0.5pt)[#upper(s)]
 
 // Célula peso (linha de escrita + %), para a tabela do edital.
-#let pesocell = box[#box(width: 4mm, line(length: 100%, stroke: (paint: hair, thickness: wt.hair, dash: "dotted")))#h(0.6mm)#text(font: sans, size: 5.5pt, fill: ink-3)[%]]
+#let pesocell = box[#box(width: 4mm, line(length: 100%, stroke: (paint: hair, thickness: wt.hair)))#h(0.6mm)#text(font: sans, size: 5.5pt, fill: ink-3)[%]]
 
-// Célula KPI com largura fixa.
-#let kpic(label, w: 20mm) = box(width: w)[
-  #text(font: sans, size: 5pt, fill: ink-2, weight: 700, tracking: 0.3pt)[#upper(label)]
-  #v(0.8mm)
-  #line(length: 100%, stroke: (paint: hair, thickness: wt.hair, dash: "dotted"))
+// Célula KPI com largura fixa — rótulo acima, linha na BASE (align: bottom).
+#let kpic(label, w: 20mm) = box(width: w, height: 6.5mm, clip: false)[
+  #stack(dir: ttb, spacing: 0pt,
+    text(font: sans, size: 5pt, fill: ink-2, weight: 700, tracking: 0.3pt)[#upper(label)],
+    v(1fr),
+    line(length: 100%, stroke: (paint: hair, thickness: wt.hair)),
+  )
 ]
 
-// Linha pontilhada de escrita em bloco próprio.
-#let dline = block(width: 100%, above: 0pt, below: 0pt, spacing: 0pt, dot())
+// Linha sólida de escrita em bloco próprio (substitui dline pontilhado).
+#let dline = block(width: 100%, above: 0pt, below: 0pt, spacing: 0pt, wline())
 
-// Linha do stack digital.
+// Linha do stack digital — sólida.
 #let stack-row(label) = {
   text(font: sans, size: fs.micro, fill: ink-3, style: "italic")[#label]
   v(0.8mm)
-  line(length: 100%, stroke: (paint: hair, thickness: wt.hair, dash: "dotted"))
+  line(length: 100%, stroke: (paint: hair, thickness: wt.hair))
   v(2mm)
 }
 
@@ -48,8 +50,8 @@
 #v(3mm)
 #text(font: sans, size: fs.micro, fill: ink-3, style: "italic")[Por que quero isso?]
 #v(2mm)
-#dline #v(2.5mm) #dline #v(2.5mm) #dline #v(2.5mm) #dline
-#v(4mm)
+#dline #v(4.5mm) #dline #v(4.5mm) #dline #v(4.5mm) #dline
+#v(3.5mm)
 
 // ── Duas colunas ───────────────────────────────────────────────────────────────
 #grid(
@@ -64,7 +66,7 @@
     )
     #for i in range(12) {
       ecells.push(align(center + horizon, rect(width: 4mm, height: 3.4mm, fill: none, stroke: (paint: hair, thickness: wt.box))))
-      ecells.push(align(left + horizon, dot()))
+      ecells.push(align(left + horizon, wline()))
       ecells.push(align(right + horizon, pesocell))
       ecells.push(align(right + horizon, prog5))
     }
@@ -106,22 +108,22 @@
       rows: (auto,) + (5.6mm,) * 4,
       inset: (x, y) => (x: 1mm, y: 0.6mm),
       align: (left + horizon, left + horizon, left + horizon, right + horizon),
-      stroke: (x, y) => if y == 0 { (bottom: (paint: hair, thickness: wt.hair)) } else { (top: (paint: grid-c, thickness: wt.hair)) },
+      stroke: (x, y) => (bottom: (paint: hair, thickness: wt.hair)),
       th("Concurso"), th("Fase"), th("Data"), th("D-"),
-      dot(), dot(), dot(), dot(),
-      dot(), dot(), dot(), dot(),
-      dot(), dot(), dot(), dot(),
-      dot(), dot(), dot(), dot(),
+      [], [], [], [],
+      [], [], [], [],
+      [], [], [], [],
+      [], [], [], [],
     )
   ],
 )
 
-#v(4mm)
+#v(3mm)
 
 // ── Balanço mensal ─────────────────────────────────────────────────────────────
 #sechead("Balanço mensal", hint: "replicar a cada fechamento")
 
-#softband[
+#block(width: 100%, fill: band, inset: (x: 0mm, y: 2.5mm))[
   #box(width: 100%)[
     #kpic("Mês", w: 11mm)
     #h(3mm)
@@ -133,7 +135,7 @@
     #h(3mm)
     #kpic("Discursivas", w: 20mm)
   ]
-  #v(3.5mm)
+  #v(2mm)
   #box(width: 100%)[
     #kpic("Anki criados", w: 25mm)
     #h(3mm)
@@ -141,7 +143,7 @@
   ]
 ]
 
-#v(4mm)
+#v(3mm)
 
 // ── Reflexão mensal ────────────────────────────────────────────────────────────
 #grid(
@@ -152,14 +154,14 @@
     #v(2.5mm)
     #line(length: 100%, stroke: (paint: hair, thickness: wt.hair))
     #v(2.5mm)
-    #dline #v(5mm) #dline #v(5mm) #dline #v(5mm) #dline
+    #dline #v(4.5mm) #dline #v(4.5mm) #dline #v(4.5mm) #dline
   ],
   [
     #seclbl("O que precisa mudar")
     #v(2.5mm)
     #line(length: 100%, stroke: (paint: hair, thickness: wt.hair))
     #v(2.5mm)
-    #dline #v(5mm) #dline #v(5mm) #dline #v(5mm) #dline
+    #dline #v(4.5mm) #dline #v(4.5mm) #dline #v(4.5mm) #dline
   ],
 )
 
@@ -169,5 +171,5 @@
 #line(length: 100%, stroke: (paint: hair, thickness: wt.hair))
 #v(2.5mm)
 #text(font: sans, size: fs.micro, fill: ink-3, tracking: 0.5pt)[#upper("→ Foco do próximo ciclo")]
-#v(3mm)
-#dline #v(5mm) #dline #v(5mm) #dline
+#v(2.5mm)
+#dline #v(4.5mm) #dline #v(4.5mm) #dline
