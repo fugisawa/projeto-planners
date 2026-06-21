@@ -1,51 +1,55 @@
 # Estado & retomada — Planner Concurseiro
 
-**20/jun/2026.** Estado vivo para retomar o trabalho. **Protótipo Tier-1 das 5 páginas já construído**
-(Typst, print-ready). Mapa do diretório + como gerar: [`README.md`](README.md).
+**20/jun/2026.** Estado vivo. **Diário elevado ao padrão 2.0 PRO (página-herói, validado pelo Daniel).**
+**Tarefa atual: padronizar as outras 4 páginas ao padrão 2.0 do Diário.** Mapa: [`README.md`](README.md).
 
 ## Projeto em 30s
-Venture D2C "Planners" (Daniel = estratégia/ops · Mayara = aquisição/conteúdo, **storytelling viral em
-vídeo IA no TikTok**). Produto em foco: **Concurseiro** — não é agenda nem caderno: é um **sistema de
-estudo / "hub analógico"** que mantém o concurseiro focado (sem celular) e **dá liga** com o digital
-(Anki, QConcursos, cursinho) **sem replicá-lo nem colidir**.
+Venture D2C "Planners" (Daniel = estratégia/ops · Mayara = aquisição/conteúdo, storytelling viral em
+vídeo IA no TikTok). Produto: **Concurseiro** — **sistema de estudo / hub analógico** (não agenda),
+focado, sem celular, que dá liga com o digital (Anki/QConcursos/cursinho) sem replicá-lo nem colidir.
 
 ## Decisões TRAVADAS
-- **Arquitetura:** ecossistema modular. **v1 = o PLANNER** (com diagnóstico de erro *lite*). Caderno de Erros completo = F2.
-- **Persona v1:** concurseiro **dedicação exclusiva** ("Rafael", 6–10 h/dia). **Validado com a Mayara** (19/jun).
-- **Mayara NÃO faz design** (só conteúdo/vídeo-IA). Arte: **eu (programático/Typst)** no protótipo ·
-  **freelancer** (Upwork-Leste-Europeu ~R$ 800–1,8k OU Fiverr-Bangladesh ~R$ 400–800, com golden sample)
-  p/ acabamento premium. → **furo no RACI do dossiê a reconciliar.**
-- **Tema visual:** planner de estudo coreano — **Lato**, grade azul-clara suave, cantos arredondados,
-  impressão sóbria (a cor vem do marca-texto). Skills: `typst-planner` + `planner-designer`.
-- Roadmap: F0 pesquisa ✅ · **F1 = Planner v1** · F2 ecossistema · F3 foto→app.
+- **Arquitetura:** ecossistema modular. **v1 = o PLANNER** (com diagnóstico de erro *lite*). Caderno de Erros = F2.
+- **Persona v1:** concurseiro dedicação exclusiva ("Rafael"). **Validado com a Mayara** (19/jun).
+- **Mayara NÃO faz design** (só conteúdo/vídeo-IA). Arte: **eu (Typst)** no protótipo · freelancer p/
+  acabamento premium (Upwork-Leste-Europeu ~R$800–1,8k ou Fiverr-BD ~R$400–800, golden sample). → furo no RACI a reconciliar.
+- **Tema = 2.0 PRO (blend JP/KR):** Lato + **figuras tabulares**; título Lato **Black azul-ardósia
+  (`title-c`) + tab de acento + eyebrow**; **CANTOS RETOS** (só círculos redondos); cor **quieta** (a
+  cor é do marca-texto); time-log com **hierarquia de fios**; listas de escrita estilo **INDIGO**
+  (`studyrows`: matéria │ divisória vertical │ pauta │ ○). Codificado nos skills **`planner-designer`**
+  + **`typst-planner`** e em `conceitos/sintese-design-refinada.md` (seção "2.0 PRO"). **Fonte de
+  verdade = `typst/*.typ`** (Diário = referência canônica).
+- Roadmap: F0 ✅ · **F1 = Planner v1** · F2 ecossistema · F3 foto→app.
 
 ## Fatos-âncora
-- Preço **R$ 119** · custo/un alvo **R$ 45–55**. Físico: **A5 (148×210)** · papel **Pólen Bold 90 g
-  creme** (fallback Soft 80 g; F2 = Munken) · capa **couché 300 g + laminação fosca** · **wire-o duplo**
-  · **perpétuo**. Protótipo = **1 ciclo (~72 pp)**; produção ~110–130 pp.
-- ⚠️ **Flag:** `conceitos/financeiro-planner-v1.md` calculou MC mais estrita que o dossiê (R$ 55→44% vs
-  "50%"). **Reconciliar a definição de MC** (business-validator) antes de mexer em âncora.
+Preço **R$119** · custo/un alvo **R$45–55**. Físico: A5 (148×210) · papel Pólen Bold 90g creme · capa
+couché 300g fosca · wire-o duplo · perpétuo. Protótipo = 1 ciclo (~72pp). ⚠️ **Flag:** `conceitos/financeiro-planner-v1.md`
+calculou MC mais estrita (R$55→44% vs "50%") — **reconciliar MC** (business-validator) antes de mexer em âncora.
 
-## As 5 páginas (construídas em `typst/`)
-1. **Diário** — time-log 3 blocos (6×10 min contíguos) · Estudar/Revisar (chip+linha) · Sessões · "Hoje·".
-2. **Semanal** — metas por matéria (chip+volume) · rotação M1–M4×dias · Ajuste & reflexão · → Migrar.
-3. **Bússola** (frontmatter) — objetivo · "por que" (4 linhas) · mapa do edital (chip+peso+progresso) · stack · calendário · balanço mensal.
-4. **Pontes Digitais** — banco de questões · Anki · aulas · simulados · Ajuste de Rota.
-5. **Diagnóstico de Erro (lite)** — origem · **"o que eu pensei" ANTES** · triagem/causa · raciocínio · gatilho→ação · D+1/7/15/30.
-> Fonte: `typst/*.typ`; saída: `typst/planner-proto-pdfx1a.pdf` (CMYK · PDF/X-1a · FOGRA39). Spec: `typst/INSTRUCOES-PAGINAS.md`. Design: `../conceitos/sintese-design-refinada.md`.
+## PADRÃO 2.0 (checklist — aplicar em toda página; referência = Diário)
+- Título azul-ardósia + tab + eyebrow (`masthead`); seção forte = `sechead`; **página sem título grande usa `softhead` (discreto)**.
+- **Tudo reto** (cells/chips/checkboxes/faixas); só círculos redondos.
+- Listas matéria+conteúdo = **INDIGO** (`studyrows`: coluna+divisória+pauta+○); senão, ruled limpo.
+- **Linhas de preenchimento na BASE do texto** (`align: bottom`) — nunca no meio.
+- **Alinhamento:** divisórias/colunas de seções irmãs alinham; faixa **largura cheia** quando precisa alinhar com conteúdo fora dela.
+- **Figuras tabulares**; cor quieta; 1 acento/página; `fill:none` em grade/checklist.
+- Campos com **espaço real de escrita** (nem faltar nem sobrar); ≤4 linhas de reflexão.
+- Compilar → **olhar o PNG** → iterar até **1 página A5**.
 
-## PONTO DE RETOMADA
-Protótipo Tier-1 **construído e print-ready**. Próximos passos:
-1. **Micro-polish** das 5 páginas (rodar `render.py`, olhar PNGs, ajustar).
-2. **Página de onboarding/contracapa** — key de símbolos BuJo + legenda "10 min" (que saiu do corpo do Diário).
-3. **Teste de impressão real** (Gate A: + 3 orçamentos via `rfq-graficas.md`).
-4. Reconciliar **RACI/MC** no dossiê (business-validator).
-5. (Opcional) **freelancer** p/ acabamento premium (ver `freelancers-pesquisa.md`) — vira polimento, não criação.
+## PONTO DE RETOMADA — padronizar as 4 ao 2.0 (Diário = referência)
+- **Semanal** — totais/linha de semana na base; "Ajuste & reflexão" + "→ Migrar" ruled limpos; metas/rotação no módulo.
+- **Bússola** — "objetivo"/"por que" + reflexões com linha na base; calendário e mapa-do-edital alinhados; balanço.
+- **Pontes** — TODOS os campos (Banco/Anki/Aulas/Simulados) com linha na **base**; "Ajuste de Rota" faixa reta.
+- **Ficha** — origem / "o que pensei" / "raciocínio" como pauta na base; card já reto; checar densidade.
+- Depois: `finalize.py` → re-gerar `planner-proto-pdfx1a.pdf` + commitar.
+
+## Pendências (pós-padronização)
+Onboarding/contracapa (key de símbolos + legenda "10 min") · teste de impressão (Gate A + 3 orçamentos
+via `rfq-graficas.md`) · reconciliar RACI/MC (business-validator) · (opcional) freelancer p/ acabamento.
 
 ## Como gerar
-`cd typst && uv run --with typst python render.py <pagina>` (1 página → PDF+PNG) ·
-`uv run --with pypdf python finalize.py` (merge 5 → PDF/X-1a CMYK). Detalhe no `README.md` + skill `typst-planner`.
+`cd typst && uv run --with typst python render.py <pagina>` · `uv run --with pypdf python finalize.py`.
+Detalhe: `README.md` + skill `typst-planner`.
 
 ## Git
-Repo `fugisawa/projeto-planners` · branch **main**. Commit/push só quando o Daniel pedir. Imagens de
-concorrentes (`pesquisa/capturas/`, `caderno-de-erros/referencias/`) gitignored; intermediários `typst/*.pdf` (menos o proto) gitignored.
+Repo `fugisawa/projeto-planners` · branch **main** · último: **8d5e2e0**. Commit/push só quando o Daniel pedir.
