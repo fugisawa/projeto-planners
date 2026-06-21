@@ -25,17 +25,17 @@ sócios (uso interno e honesto — não é pitch para investidor).
 | Parâmetro | Valor | Nota |
 |---|---|---|
 | Câmbio USD/BRL | ≈ **R$ 5,20** | planejamento (spot ≈ R$ 5,18 em 17/jun/2026) |
-| Investimento inicial | **R$ 5.000** | é o teste; **100% autofinanciado** depois |
-| Preço de lançamento | Concurseiro **R$ 119** · Treino **R$ 109** | regime depois: R$ 129–139 / 119–129 |
-| Custo/un | micro-lote **R$ 55** → reposição **R$ 45** | Tier B; cai com volume |
-| MC/un (preço médio R$ 114) | direto **R$ 57,59 (50%)** · blended **R$ 54,48** | marketplace destrói (Shopee R$ 6,48) |
-| Recorrência | recompra **3–4×/ano** (Conc) / ~2,5 (Treino) | **LTV margem ~R$ 374–397**; LTV/CAC ~7–8× |
+| Investimento inicial | **R$ 5.000** | é o teste; **100% autofinanciado** depois; **banca 1 SKU: Concurseiro (F1); Caderno e Treino = F2** `[Daniel · 21/jun/2026]` |
+| Preço de lançamento | Concurseiro **R$ 129** · Treino **R$ 109** | **lançamento sequencial (Conc. F1)** `[Daniel · 21/jun/2026]`; regime: ~R$ 139 / 119–129 |
+| Custo/un (Conc., ~112 pp) | micro-lote **~R$ 60** → reposição **R$ 45** | `[estimativa pré-RFQ · 21/jun/2026]`; protótipo 71 pp era R$ 55; cai com volume/Tier B |
+| MC/un Conc. (R$ 129 / custo ~R$ 60) | direto **~44%** `[est.]` · blended **[a recalcular]** | `[a recalcular pós-cotação · 21/jun/2026]`; marketplace destrói (Shopee ~R$ 6) |
+| Recorrência | recompra **3–4×/ano** (Conc) / ~2,5 (Treino) | **LTV margem ~R$ 374–397** (mantém-se a R$ 129) `[est.]`; LTV/CAC ~7–8× |
 | Mercado recorrente | **~2,3 M un/ano (~R$ 267 M)** | SAM ~R$ 55 M (Conc) / ~R$ 25 M (Treino) |
 | Mix de canal (Fase 1) | **90% direto / 10% marketplace** | vender direto; marketplace só p/ descoberta |
 | Pró-labore (**Estratégia B**) | ano 1 = **0** → ano 2 **R$ 500→2.000/sócio** → ano 3 ~R$ 3.000 | reinveste 100% no ano 1 |
 | Escala / China | só ao cruzar **gatilho ~R$ 135 mil** + volume ≥ ~5.000 un | **sem pré-venda, sem empréstimo** |
 | Sourcing | **NCM 4820.10.00** (tributado, sem imunidade de livro) · **AFRMM 8%** · landed 2,0–2,7× FOB · crossover China **~3.000–5.000 un** | Fase 1 gráfica BR; Fase 2 China |
-| EVEF (5 anos, taxa 12–15%) | VPL **R$ 365–407 mil** · TIR ~406% · payback < 1 ano | anos 3–5 ilustrativos |
+| EVEF (5 anos, taxa 12–15%) | **[a recalcular pós-cotação @ R$ 129 / ~R$ 60 · 21/jun/2026]** (era VPL R$ 365–407 mil · TIR ~406%) | anos 3–5 ilustrativos |
 
 > Ao mudar um número-chave, **propague para todos os documentos** e rode o `business-validator`.
 > Premissas detalhadas: `docs/premissas-do-negocio.md`.
@@ -90,7 +90,7 @@ verticalizado/cronograma). *Nuance a reconciliar com `## O que é`:* revisão es
 questões tendem a ficar **no digital**; o papel **decide e processa** (o que ankificar, o porquê do erro).
 - **Arquitetura:** ecossistema **modular** (módulos independentes + complementares sob uma capa).
 - **Roadmap** (`design/concurseiro/conceitos/roadmap-faseado.md`): **F0** pesquisa ✅ · **F1 = o
-  Planner de Estudo** (com diagnóstico de erro *lite*) · **F2** ecossistema (Caderno de Erros standalone, Síntese, Bússola + capa) · **F3** foto→app.
+  Planner de Estudo** (3 meses, ~112 pp, **SEM ficha**; só ponteiro "→ Caderno de Erros") · **F2** (lançamento sequencial, pago pelo caixa): **Caderno de Erros standalone** + **Treino de Força** + Síntese/Bússola/capa · **F3** foto→app. `[Daniel · 21/jun/2026]`
 - **Persona v1:** dedicação exclusiva (recorte de alta intensidade da **P1**).
 
 ## Convenções (inegociáveis)

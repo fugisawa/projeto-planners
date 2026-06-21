@@ -26,7 +26,7 @@ O mercado tem dois polos e um vazio:
 |---|---|---|---|
 | Funcional barato | Kokuyo (¥350–594), INDIGO (₩3,5–9,8 mil) | R$ 12–38 | objeto premium; método de concurso |
 | Premium lifestyle | Hobonichi | R$ 80–300+ | **qualquer** sistema de estudo |
-| **VAZIO → Concurseiro** | — | **R$ 119** | — |
+| **VAZIO → Concurseiro** | — | **R$ 129** `[Daniel · 21/jun/2026]` | — |
 
 O **método** (edital + ciclo + revisão espaçada + questões) é o valor — não só o objeto. Isso
 justifica R$ 119 (acima do funcional, abaixo de um Hobonichi completo) e sustenta a **recompra
@@ -81,8 +81,8 @@ justifica R$ 119 (acima do funcional, abaixo de um Hobonichi completo) e sustent
 | Cor | sistema de **color-coding por matéria** (marcadores) | Kokuyo/INDIGO; vira identidade visual |
 
 > ⚙️ **Liga ao sourcing/financeiro:** nº de páginas + gramatura + encadernação definem o **custo/un**
-> (dossiê: micro-lote R$ 55 → reposição R$ 45). Antes de fechar, rodar **sourcing-analyst** (gráfica BR,
-> NCM 4820.10.00) e **financial-modeler** (margem a R$ 119). Lay-flat costurado encarece vs. wire-o.
+> (dossiê: micro-lote ~R$ 60 (~112 pp, sem ficha) `[estimativa pré-RFQ · 21/jun/2026]` → reposição R$ 45 (a confirmar); ref. histórica: protótipo 71 pp era R$ 55). Antes de fechar, rodar **sourcing-analyst** (gráfica BR,
+> NCM 4820.10.00) e **financial-modeler** (margem a R$ 129 `[Daniel · 21/jun/2026]`; recalcular pós-cotação). Lay-flat costurado encarece vs. wire-o.
 
 ## 5) Marca & estética
 - **Tom:** sério-aspiracional (concurso é projeto de vida), mas leve o suficiente para o studygram.
@@ -110,5 +110,5 @@ justifica R$ 119 (acima do funcional, abaixo de um Hobonichi completo) e sustent
 ## 8) Próximos passos
 1. **Wireframes** das páginas-chave (diário, semanal-ciclo, revisão espaçada, questões, mapa do edital).
 2. ✅ **Validado com a Mayara** (19/jun/2026).
-3. **Sourcing + custo** (sourcing-analyst / financial-modeler) para travar specs viáveis a R$ 119.
+3. **Sourcing + custo** (sourcing-analyst / financial-modeler) para travar specs viáveis a R$ 129 `[Daniel · 21/jun/2026]`.
 4. **Protótipo físico** (1 ciclo) para teste de uso real.

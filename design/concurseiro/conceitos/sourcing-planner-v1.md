@@ -4,8 +4,8 @@
 
 > Documento complementar a `consultoria-sourcing-planners.md` e `prototipo-planner-v1.md`.
 > Foco: especificação de papel, capa e encadernação para o protótipo A5 (~71 pp / ~36 folhas)
-> e para a produção comercial (~110–130 pp). Âncoras de custo do dossiê:
-> micro-lote ~R$ 55/un · reposição ~R$ 45/un · preço de venda R$ 119.
+> e para a produção comercial (~112 pp, Concurseiro, sem ficha) `[Daniel · 21/jun/2026]`. Âncoras de custo do dossiê:
+> micro-lote ~R$ 60/un (~112 pp, sem ficha) `[estimativa pré-RFQ · 21/jun/2026]` · reposição ~R$ 45/un (a confirmar); ref. histórica: protótipo 71 pp era ~R$ 55 · preço de venda R$ 129 `[Daniel · 21/jun/2026]`.
 
 ---
 
@@ -138,7 +138,7 @@ O brief pede: **creme/quente** (não branco frio), **liso o suficiente** (não p
 | Produção ~54 un, ~120 pp, Tier A | **R$ 52–68** | R$ 51–67 | 43–56% | Viável com atenção — confirmar |
 | Produção ~54 un, ~120 pp, Tier B | **R$ 40–55** | R$ 64–79 | 54–66% | **Boa margem** |
 
-> MC bruta = R$ 119 − custo/un (sem marketplace, sem frete saída). O modelo blended do dossiê (`MC/un blended ~R$ 54,48`) é alcançável com Tier A no micro-lote e Tier B na produção. Com Tier A na produção de ~120 pp o número fica pressionado — **confirmar cotação antes de fechar spec**.
+> MC bruta = R$ 129 `[Daniel · 21/jun/2026]` − custo/un (sem marketplace, sem frete saída). O modelo blended do dossiê (`MC/un blended ~R$ 54,48`) `[a recalcular pós-cotação · 21/jun/2026]` — base era preço R$ 119/custo R$ 55; preço subiu para R$ 129 e custo estimado ~R$ 60. Com Tier A na produção de ~112 pp o número fica pressionado — **confirmar cotação antes de fechar spec**.
 
 **Conclusão:** a margem de R$ 119 suporta papel creme de qualidade (Pólen Bold 90g) + capa couchê 300g + laminação fosca/soft-touch + wire-o, **desde que o custo seja confirmado por cotação real e fique dentro de R$ 55–65/un no micro-lote**. O papel premium Munken na Fase 2 deve ser avaliado contra o aumento de custo esperado.
 

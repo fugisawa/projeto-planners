@@ -22,8 +22,8 @@ sem fonte é suspeito.
 
 ## Contexto do projeto
 
-PROJETO PLANNERS — micro-venture D2C, dois planners perpétuos premium (Concurseiro R$119 +
-Treino R$109), operação enxuta a partir de Brasília/DF. Três artefatos principais que
+PROJETO PLANNERS — micro-venture D2C, dois planners perpétuos premium (Concurseiro R$ 129 `[Daniel · 21/jun/2026]` +
+Treino R$109), operação enxuta a partir de Brasília/DF. Lançamento sequencial: Concurseiro (F1) primeiro; Caderno de Erros e Treino = F2 `[Daniel · 21/jun/2026]`. Três artefatos principais que
 precisam ser internamente consistentes e externamente defensáveis:
 1. `deliverables/` — documentos de negócio (business-plan, consultoria-sourcing, etc.)
 2. `models/viabilidade-planners-v2.xlsx` + `painel-kpis.xlsx`
@@ -35,9 +35,9 @@ precisam ser internamente consistentes e externamente defensáveis:
 |---|---|
 | Câmbio USD/BRL | ≈ R$ 5,20 (planejamento) |
 | Investimento inicial | R$ 5.000 (100% autofinanciado) |
-| Preço lançamento | Concurseiro R$ 119 · Treino R$ 109 |
-| Custo/un | micro-lote R$ 55 → reposição R$ 45 (Tier B) |
-| MC/un (preço médio R$ 114) | direto R$ 57,59 (50%) · blended R$ 54,48 |
+| Preço lançamento | Concurseiro R$ 129 `[Daniel · 21/jun/2026]` · Treino R$ 109 |
+| Custo/un | micro-lote ~R$ 60 (~112 pp, sem ficha) `[estimativa pré-RFQ · 21/jun/2026]` → reposição R$ 45 (a confirmar); ref. histórica: 71 pp era R$ 55 |
+| MC/un (preço médio R$ 114) | direto R$ 57,59 (50%) · blended R$ 54,48 `[a recalcular pós-cotação · 21/jun/2026]` |
 | LTV margem | ~R$ 374–397 · LTV:CAC ~7–8× |
 | Mercado recorrente | ~2,3 M un/ano (~R$ 267 M) |
 | Mix de canal Fase 1 | 90% direto / 10% marketplace |
@@ -45,7 +45,7 @@ precisam ser internamente consistentes e externamente defensáveis:
 | NCM | 4820.10.00 (tributado; sem imunidade de livro) |
 | AFRMM | 8% do frete oceânico (verificar com despachante) |
 | Landed | 2,0–2,7× FOB |
-| EVEF (5 anos, 12–15%) | VPL R$ 365–407 mil · TIR ~406% · payback < 1 ano |
+| EVEF (5 anos, 12–15%) | VPL R$ 365–407 mil · TIR ~406% · payback < 1 ano `[a recalcular pós-cotação · 21/jun/2026]` |
 
 > Fonte: CLAUDE.md §Fatos-âncora (jun/2026). Ao detectar qualquer número divergente nos
 > artefatos, classificar como CRÍTICO e citar ambos os valores (artefato vs âncora).

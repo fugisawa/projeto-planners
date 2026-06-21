@@ -1,7 +1,7 @@
 # Toolchain Tier-1 para Planner Premium A5 — Relatório Técnico
 
 **Data:** 20/jun/2026  
-**Contexto:** Planner Concurseiro A5, preço R$ 119, produção in-house sem designer, sem software proprietário. Referência atual: HTML/CSS → WeasyPrint (RGB, qualidade de rascunho).  
+**Contexto:** Planner Concurseiro A5, preço R$ 129 `[Daniel · 21/jun/2026]`, produção in-house sem designer, sem software proprietário. Referência atual: HTML/CSS → WeasyPrint (RGB, qualidade de rascunho).  
 **Objetivo:** Avaliar toolchains livres/abertos capazes de PDF print-ready com tipografia editorial, time-log em grade, CMYK/PDF-X, sangria 3 mm e marcas de corte.
 
 ---

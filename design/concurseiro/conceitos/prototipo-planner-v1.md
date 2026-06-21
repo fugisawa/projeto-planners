@@ -5,7 +5,7 @@
 
 ## Objetivo
 Imprimir 1 unidade de teste (1 ciclo) para uso por ~1 mês e medir: ritual anti-celular, time-log,
-diagnóstico de erro (lite), conforto de escrita (papel/capa/encadernação) e o encaixe com o stack digital.
+ponteiro → Caderno de Erros (sem ficha interna; Caderno standalone = F2), conforto de escrita (papel/capa/encadernação) e o encaixe com o stack digital.
 
 ## Formato físico
 - **Tamanho:** A5 (148 × 210 mm) `[proposta]`.
@@ -27,7 +27,7 @@ diagnóstico de erro (lite), conforto de escrita (papel/capa/encadernação) e o
 | | **TOTAL** | **~71 pp (≈ 36 folhas)** | |
 
 > **Produção (SKU de venda, não-protótipo):** cobre **~3 ciclos (≈3 meses)** — "enche em ~3 meses",
-> recompra 3–4×/ano (dossiê). Estimativa **~110–130 pp**. Fechar com o custo (#2).
+> recompra 3–4×/ano (dossiê). Estimativa **~112 pp** (Concurseiro, sem ficha) `[Daniel · 21/jun/2026]`. Fechar com o custo (#2).
 
 ## Papel — brief para sourcing `[a confirmar fornecedor BR]`
 - **Aceita marca-texto** sem traspassar/borrar (anti-bleed/ghosting).
@@ -35,7 +35,7 @@ diagnóstico de erro (lite), conforto de escrita (papel/capa/encadernação) e o
 - **Tom creme / branco quente** — **não branco frio**.
 - **Referência de sonho:** Rhodia/Clairefontaine · Leuchtturm1917 · Kokuyo.
 - **Gramatura:** ideal 90–120 g/m²; **90 g serve** se cumprir o resto.
-- **Restrição econômica (decisória):** não encarecer a ponto de furar a margem (R$ 119) nem depender
+- **Restrição econômica (decisória):** não encarecer a ponto de furar a margem (R$ 129 `[Daniel · 21/jun/2026]`) nem depender
   de fornecedor inexistente no Brasil. **Se conflitar → papel "bom o suficiente" no v1; upgrade premium na Fase 2.**
 
 ## Capa — brief `[a confirmar]`
@@ -49,11 +49,11 @@ Lay-flat obrigatório. **Wire-o (espiral dupla), topo ou lateral** (barato, abre
 (brochura cosida)** (premium, abre plano). Trade-off custo × premium → decidir no sourcing.
 
 ## O que o protótipo testa
-Foco sem celular · usabilidade do time-log · diagnóstico de erro (lite) · não-colisão (dá liga sem
+Foco sem celular · usabilidade do time-log · ponteiro → Caderno de Erros (sem ficha) · não-colisão (dá liga sem
 replicar) · conforto de escrita (papel/capa/encadernação) · vontade de recomprar.
 
 ## Pendências → #2 (sourcing & custo)
 1. Papel BR que cumpra o brief (amostras: gramatura · tom creme · anti-marca-texto).
 2. Capa firme-não-dura viável.
 3. Encadernação lay-flat (wire-o × costura) e custo.
-4. **Custo/un**: protótipo (~71 pp) e produção (~110–130 pp) vs. âncora R$ 45–55 e margem a R$ 119.
+4. **Custo/un**: protótipo (~71 pp; ref. histórica ~R$ 55) e produção (~112 pp, sem ficha) vs. âncora ~R$ 60 pré-RFQ `[estimativa pré-RFQ · 21/jun/2026]` e margem a R$ 129 `[Daniel · 21/jun/2026]`.

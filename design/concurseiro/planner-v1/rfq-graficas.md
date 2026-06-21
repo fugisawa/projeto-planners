@@ -20,7 +20,7 @@ unitário por quantidade, prazo e condições**?
 | Produto | Planner/caderno de estudo, A5 |
 | Formato final | **A5 — 148 × 210 mm** |
 | Miolo (protótipo) | **~72 páginas** (36 folhas) |
-| Miolo (produção) | **~110–130 páginas** (a confirmar no fechamento) |
+| Miolo (produção) | **~112 páginas** (Concurseiro, sem ficha) `[Daniel · 21/jun/2026]` |
 | Papel do miolo | **Offset creme tipo "Pólen Bold" 90 g/m²** (creme/quente, opaco, baixa transparência p/ marca-texto). *Alternativa:* Pólen Soft 80 g/m² — cotar as duas |
 | Impressão do miolo | Cotar **1 cor (preto)** e **2 cores (preto + 1 acento azul)** |
 | Capa | **Cartão couché 300 g/m² + laminação fosca (BOPP)**; cotar também **soft-touch**. Capa **flexível-firme** (não dura, não plástica) |
@@ -48,5 +48,5 @@ Retorno até **[data]**, por favor. Obrigado!
 ## Checklist interno (não enviar à gráfica)
 - [x] Anexar o PDF do protótipo A5 (`typst/planner-proto-pdfx1a.pdf`) — pronto (CMYK/PDF-X-1a/FOGRA39).
 - [ ] Enviar às 3 gráficas; registrar as respostas (aqui ou em `models/`).
-- [ ] Comparar custo/un com a âncora **R$ 45–55** e a margem a **R$ 119** (ver `conceitos/financeiro-planner-v1.md`).
+- [ ] Comparar custo/un com a âncora **~R$ 60 pré-RFQ** `[estimativa pré-RFQ · 21/jun/2026]` e a margem a **R$ 129** `[Daniel · 21/jun/2026]` (ver `conceitos/financeiro-planner-v1.md` — nota: tabelas desse doc são referência histórica a preço R$ 119; recalcular).
 - [ ] **Gate A** (dossiê): 3 orçamentos fechados **+** sample aprovado → imprimir micro-lote.

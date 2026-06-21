@@ -43,8 +43,7 @@ documentos. Audiência: **uso interno dos dois sócios** (decisão honesta, não
 - **Recorrência (premissa de domínio do sócio):** o planner de estudo "enche" em ~3 meses → o
   concurseiro **recompra 3–4×/ano**; o de treino, ~2,5×/ano. `[a confirmar por survey]` É a
   **alavanca central** do negócio (LTV ~R$ 374–397/cliente; retenção > aquisição).
-- **Lançar os 2 SKUs em paralelo** (mesma plataforma física, custo incremental baixo), com
-  **conteúdo equilibrado** nos dois nichos — a evidência decide a prioridade conforme a tração.
+- **Lançamento sequencial: Concurseiro (F1) primeiro; Caderno de Erros e Treino de Força = F2**, pagos pelo caixa gerado; R$ 5.000 banca 1 SKU `[Daniel · 21/jun/2026]`. Com **conteúdo equilibrado** nos dois nichos — a evidência decide a prioridade conforme a tração.
 
 ## Objetivo & horizonte
 - **Construir para escalar** (não é projeto paralelo): crescimento sério, Fase 2 (China) e catálogo
@@ -60,6 +59,6 @@ documentos. Audiência: **uso interno dos dois sócios** (decisão honesta, não
 
 ## Premissas a validar (abertas)
 - **Taxa de recompra** (3–4×/ano) — survey com o público.
-- **Custo da gráfica** (micro-lote ~R$ 55? reposição ~R$ 45?) — **3 orçamentos reais** antes de comprometer capital.
+- **Custo da gráfica** (micro-lote ~R$ 60 Concurseiro, ~112 pp, sem ficha `[estimativa pré-RFQ · 21/jun/2026]`; reposição ~R$ 45, a confirmar; ref. histórica: protótipo 71 pp era ~R$ 55) — **3 orçamentos reais** antes de comprometer capital.
 - **% do público elegível a premium** e o nº de concurseiros únicos (sem dupla contagem).
 - **Split societário**, dedicação de cada sócio e a fonte de renda dos sócios no ano 1.

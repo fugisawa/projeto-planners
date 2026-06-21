@@ -51,7 +51,7 @@ Fatos-âncora CRÍTICOS (não alterar sem fonte + data + aprovação dos sócios
 | Mercado recorrente | ~2,3 M un/ano (~R$ 267 M) | dossiê jun/2026 |
 | SAM Concurseiro | ~R$ 55 M | dossiê jun/2026 |
 | SAM Treino | ~R$ 25 M | dossiê jun/2026 |
-| Preço lançamento | Concurseiro R$ 119 · Treino R$ 109 | jun/2026 |
+| Preço lançamento | Concurseiro R$ 129 `[Daniel · 21/jun/2026]` · Treino R$ 109 | jun/2026 |
 | Recompra Concurseiro | 3–4×/ano | dossiê jun/2026 |
 | Recompra Treino | ~2,5×/ano | dossiê jun/2026 |
 | LTV margem | ~R$ 374–397 | dossiê jun/2026 |

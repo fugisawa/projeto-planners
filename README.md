@@ -5,7 +5,7 @@ sem datas) para nichos brasileiros de alto engajamento.
 
 | Produto | O que é | Preço de lançamento |
 |---|---|---|
-| **Concurseiro** | sistema de estudo para concursos (não "agenda") | R$ 119 |
+| **Concurseiro** | sistema de estudo para concursos (não "agenda") | R$ 129 `[Daniel · 21/jun/2026]` |
 | **Treino de Força** | diário de periodização (não "caderno") | R$ 109 |
 
 > ## ▶ Comece por aqui

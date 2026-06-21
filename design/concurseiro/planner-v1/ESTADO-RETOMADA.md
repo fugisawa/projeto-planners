@@ -9,7 +9,7 @@ vídeo IA no TikTok). Produto: **Concurseiro** — **sistema de estudo / hub ana
 focado, sem celular, que dá liga com o digital (Anki/QConcursos/cursinho) sem replicá-lo nem colidir.
 
 ## Decisões TRAVADAS
-- **Arquitetura:** ecossistema modular. **v1 = o PLANNER** (com diagnóstico de erro *lite*). Caderno de Erros = F2.
+- **Arquitetura:** ecossistema modular. **v1 = o PLANNER** **SEM ficha** (só ponteiro → Caderno de Erros); **Caderno de Erros standalone = F2** (lançamento sequencial) `[Daniel · 21/jun/2026]`.
 - **Persona v1:** concurseiro dedicação exclusiva ("Rafael"). **Validado com a Mayara** (19/jun).
 - **Mayara NÃO faz design** (só conteúdo/vídeo-IA). Arte: **eu (Typst)** no protótipo · freelancer p/
   acabamento premium (Upwork-Leste-Europeu ~R$800–1,8k ou Fiverr-BD ~R$400–800, golden sample). → furo no RACI a reconciliar.
@@ -22,9 +22,9 @@ focado, sem celular, que dá liga com o digital (Anki/QConcursos/cursinho) sem r
 - Roadmap: F0 ✅ · **F1 = Planner v1** · F2 ecossistema · F3 foto→app.
 
 ## Fatos-âncora
-Preço **R$119** · custo/un alvo **R$45–55**. Físico: A5 (148×210) · papel Pólen Bold 90g creme · capa
-couché 300g fosca · wire-o duplo · perpétuo. Protótipo = 1 ciclo (~72pp). ⚠️ **Flag:** `conceitos/financeiro-planner-v1.md`
-calculou MC mais estrita (R$55→44% vs "50%") — **reconciliar MC** (business-validator) antes de mexer em âncora.
+Preço **R$129** `[Daniel · 21/jun/2026]` · custo/un alvo **~R$60 pré-RFQ** `[estimativa pré-RFQ · 21/jun/2026]` (ref. histórica: protótipo 71 pp era R$45–55). Físico: A5 (148×210) · papel Pólen Bold 90g creme · capa
+couché 300g fosca · wire-o duplo · perpétuo · **~112 pp, sem ficha**. Protótipo = 1 ciclo (~72pp). ⚠️ **Flag:** `conceitos/financeiro-planner-v1.md`
+calculou MC mais estrita — **reconciliar MC** `[a recalcular pós-cotação · 21/jun/2026]` (business-validator) antes de mexer em âncora.
 
 ## PADRÃO 2.0 (checklist — aplicar em toda página; referência = Diário)
 - Título azul-ardósia + tab + eyebrow (`masthead`); seção forte = `sechead`; **página sem título grande usa `softhead` (discreto)**.
@@ -43,7 +43,7 @@ calculou MC mais estrita (R$55→44% vs "50%") — **reconciliar MC** (business-
 
 ## PONTO DE RETOMADA
 1. **Teste de impressão real** (Gate A: + 3 orçamentos via `rfq-graficas.md`) — provar CMYK/papel/wire-o numa gráfica.
-2. **Reconciliar RACI/MC** no dossiê (`business-validator`) — flag da MC (R$55→44% vs "50%").
+2. **Reconciliar RACI/MC** no dossiê (`business-validator`) — flag da MC `[a recalcular pós-cotação · 21/jun/2026]`.
 3. (Opcional) **freelancer** p/ acabamento premium (`freelancers-pesquisa.md`) — vira polimento, não criação.
 
 ## Como gerar

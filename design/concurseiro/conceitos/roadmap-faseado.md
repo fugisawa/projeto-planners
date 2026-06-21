@@ -10,19 +10,18 @@ JetPens, stack BR, BuJo, premium) → tese do **hub analógico**, **definição 
 Docs em `conceitos/` e `pesquisa/fontes/`.
 
 ## Fase 1 — v1: **o Planner de Estudo** (módulo-âncora)
-O **planner** em si (o que dá nome ao projeto), com **diagnóstico de erro integrado (lite)**.
+O **planner** em si (o que dá nome ao projeto), **SEM ficha de diagnóstico de erro** (só ponteiro → Caderno de Erros); **Caderno de Erros standalone = F2** (lançamento sequencial) `[Daniel · 21/jun/2026]`.
 Núcleo: **Diário de Foco** (time-log 10–15 min anti-celular + tarefas puxadas do digital + síntese +
 reflexão) + **camada semanal/ciclo leve** (comprometer/adaptar o plano do cursinho — **não** gerá-lo)
-+ **seção *lite* de diagnóstico de erro**. Workspace do módulo de erros: [`../caderno-de-erros/`](../caderno-de-erros/README.md). **Etapas (gates):**
++ **ponteiro "→ Caderno de Erros"** (sem ficha interna). Workspace do módulo de erros: [`../caderno-de-erros/`](../caderno-de-erros/README.md). **Etapas (gates):**
 1. ✅ **Validado com a Mayara** (19/jun/2026): conceito do planner aprovado.
 2. **Wireframe** das páginas-âncora → **protótipo** (1 ciclo de uso).
-3. **Sourcing & custo** (`sourcing-analyst` + `financial-modeler`): papel ≥120 g, lay-flat, preço a R$ 119.
+3. **Sourcing & custo** (`sourcing-analyst` + `financial-modeler`): papel ≥120 g, lay-flat, preço a R$ 129 `[Daniel · 21/jun/2026]`.
 4. **Lançar** no teste + medir uso/recompra.
 > **Gate p/ Fase 2:** tração + viabilidade comprovadas.
 
 ## Fase 2 — Ecossistema modular
-Acrescentar módulos **independentes**: **Caderno de Erros** (versão completa standalone), **Caderno
-de Síntese**, **Bússola da Jornada** (leve, deferente ao cursinho) + **capa/sistema** unificador.
+Acrescentar módulos **independentes** pagos pelo caixa gerado pela F1: **Caderno de Erros** (versão completa standalone) + **Treino de Força**, **Caderno de Síntese**, **Bússola da Jornada** (leve, deferente ao cursinho) + **capa/sistema** unificador `[Daniel · 21/jun/2026]`.
 Recompra de refis + capas/colabs (motor Mayara).
 > **Gate p/ Fase 3:** base de usuários ativa.
 

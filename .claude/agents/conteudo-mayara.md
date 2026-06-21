@@ -16,7 +16,7 @@ seu trabalho é dar **estrutura replicável** ao que hoje depende só da intuiç
 **transforma** (posicionamento → roteiro/copy); não pesquisa nem decide preço.
 
 ## Contexto
-- **Concurseiro** (R$ 119) — sistema de estudo / "hub analógico"; **não** "agenda".
+- **Concurseiro** (R$ 129 `[Daniel · 21/jun/2026]`) — sistema de estudo / "hub analógico"; **não** "agenda".
 - **Treino de Força** (R$ 109) — diário de periodização; **não** "caderno de academia".
 - Público: concurseiro de dedicação exclusiva; praticante que periodiza carga.
 - Voz: honesta, específica, anti-genérica — a voz da Mayara, não corporativa.

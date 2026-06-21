@@ -2,6 +2,8 @@
 
 **Data:** 20/jun/2026 | **Analista:** financial-modeler (Claude Code) | **Câmbio ref.:** USD/BRL ≈ R$ 5,20
 
+> ⚠️ **DESATUALIZADO:** preço-âncora era R$ 119; recalcular para R$ 129 + custo ~R$ 60 pós-cotação `[21/jun/2026]`. As tabelas internas abaixo são referência histórica (base preço R$ 119 / custo R$ 55) — **não usar como âncora operacional**. Rebuild é do `financial-modeler`.
+
 > Documento complementar a `sourcing-planner-v1.md` e `prototipo-planner-v1.md`.
 > Foco: recompute das unit economics com o custo real da gráfica BR (pós-sourcing).
 > **Não altera o `.xlsx`** — são estimativas pré-RFQ; células a atualizar listadas na Seção 6.

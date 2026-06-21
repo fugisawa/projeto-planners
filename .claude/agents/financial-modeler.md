@@ -26,13 +26,13 @@ produz entra com fonte e data ou é marcado `[a confirmar]`.
 |---|---|---|
 | Câmbio | ≈ R$ 5,20/USD | planejamento (jun/2026) |
 | Investimento inicial | R$ 5.000 | 100% autofinanciado |
-| Preço lançamento | Concurseiro R$ 119 · Treino R$ 109 | regime: R$ 129–139 / 119–129 |
-| Custo/un | micro-lote R$ 55 → reposição R$ 45 | cai com volume |
+| Preço lançamento | Concurseiro R$ 129 `[Daniel · 21/jun/2026]` · Treino R$ 109 | regime Concurseiro: ~R$ 139 `[Daniel · 21/jun/2026]`; Treino: R$ 119–129 |
+| Custo/un | micro-lote ~R$ 60 (~112 pp, sem ficha) `[estimativa pré-RFQ · 21/jun/2026]` → reposição R$ 45 (a confirmar); ref. histórica: protótipo 71 pp era R$ 55 | cai com volume |
 | Mix canal Fase 1 | 90% direto / 10% marketplace | Shopee/ML só para descoberta |
 | LTV margem estimado | R$ 374–397 | recompra 3–4×/ano (Conc) / ~2,5× (Treino) |
 | LTV:CAC estimado | ~7–8× | validar por coorte quando dados reais chegarem |
 | Gatilho China | ~R$ 135 mil + ≥ 5.000 un | sem pré-venda, sem empréstimo |
-| EVEF (5 anos, 12–15%) | VPL R$ 365–407 k · TIR ~406% · payback < 1 ano | anos 3–5 ilustrativos |
+| EVEF (5 anos, 12–15%) | VPL R$ 365–407 k · TIR ~406% · payback < 1 ano `[a recalcular pós-cotação · 21/jun/2026]` | anos 3–5 ilustrativos |
 | Modelo ativo | `models/viabilidade-planners-v2.xlsx` | 10 abas |
 
 **REGRA DE ORO:** qualquer divergência entre seus cálculos e os fatos-âncora acima exige
@@ -137,9 +137,10 @@ Break-even (un) = investimento_inicial ÷ CM_blended_por_un
 Payback (dias)  = break-even ÷ velocidade_de_venda_estimada
 
 Sanity check rápido Fase 1:
-  Lote inicial ~91 un × R$55 COGS = R$5.005
+  [a recalcular pós-cotação · 21/jun/2026]: Lote inicial ~91 un × R$55 COGS = R$5.005
   Receita 91 un × R$114 (preço médio) = R$10.374
   CM bruta = R$5.369 (~52%) — payback < 1 ciclo de venda com CAC orgânico
+  (base era preço R$119/custo R$55; novo: Concurseiro R$129/custo ~R$60 → recalcular)
 ```
 
 **Separar sempre:** caixa (regime de caixa) vs resultado (competência). Declarar explicitamente

@@ -25,10 +25,10 @@ por Daniel + Mayara a partir de Brasília/DF.
 | Parâmetro | Valor | Nota |
 |---|---|---|
 | Câmbio USD/BRL | ≈ R$ 5,20 | planejamento (spot ≈ R$ 5,18 em 17/jun/2026) |
-| Preço lançamento | Concurseiro **R$ 119** · Treino **R$ 109** | |
-| Preço regime | R$ 129–139 (Conc) · R$ 119–129 (Treino) | após validação |
-| Custo/un | micro-lote **R$ 55** → reposição **R$ 45** | Tier B |
-| MC/un direto | ~R$ 57,59 (50%) no preço médio R$ 114 | blended R$ 54,48 |
+| Preço lançamento | Concurseiro **R$ 129** `[Daniel · 21/jun/2026]` · Treino **R$ 109** | |
+| Preço regime | ~R$ 139 (Conc) `[Daniel · 21/jun/2026]` · R$ 119–129 (Treino) | após validação |
+| Custo/un | micro-lote **~R$ 60** (~112 pp, sem ficha) `[estimativa pré-RFQ · 21/jun/2026]` → reposição **R$ 45** (a confirmar); ref. histórica: 71 pp era R$ 55 | Tier B |
+| MC/un direto | ~R$ 57,59 (50%) no preço médio R$ 114 | blended R$ 54,48 `[a recalcular pós-cotação · 21/jun/2026]` |
 | MC/un Shopee | ~R$ 6,48 | marketplace estruturalmente inviável como primário |
 | Mix canal Fase 1 | 90% direto / 10% marketplace | |
 | Concorrência Concurseiro | Planner Juspodivm ~R$ 103; genéricos R$ 28–57 | |
@@ -124,8 +124,8 @@ Cada recomendação de preço deve ser justificada em **exatamente 3 eixos**:
 3. **Sustenta o CAC esperado** — LTV/CAC > 3× mesmo com CAC pago? Quanto de CAC máximo o preço suporta antes de quebrar CM2?
 
 Diferenciar sempre:
-- **Preço de lançamento** (validação, micro-lote) → R$ 119/109 conforme fatos-âncora
-- **Preço de regime** (escala, reposição) → R$ 129–139/119–129 conforme fatos-âncora
+- **Preço de lançamento** (validação, micro-lote) → Concurseiro R$ 129 `[Daniel · 21/jun/2026]` / Treino R$ 109 conforme fatos-âncora
+- **Preço de regime** (escala, reposição) → Concurseiro ~R$ 139 `[Daniel · 21/jun/2026]` / Treino R$ 119–129 conforme fatos-âncora
 
 Mudança de preço proposta fora dessa faixa exige: (a) evidência PSM ou venda real, (b) recálculo de CM e LTV, (c) aprovação pelo business-validator.
 
