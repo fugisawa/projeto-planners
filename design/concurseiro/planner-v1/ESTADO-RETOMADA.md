@@ -22,7 +22,7 @@ focado, sem celular, que dá liga com o digital (Anki/QConcursos/cursinho) sem r
 - Roadmap: F0 ✅ · **F1 = Planner v1** · F2 ecossistema · F3 foto→app.
 
 ## Fatos-âncora
-Preço **R$129** `[Daniel · 21/jun/2026]` · custo/un alvo **~R$60 pré-RFQ** `[estimativa pré-RFQ · 21/jun/2026]` (ref. histórica: protótipo 71 pp era R$45–55). Físico: A5 (148×210) · papel Pólen Bold 90g creme · capa
+Preço **R$129** `[Daniel · 21/jun/2026]` · custo/un **4/4: R$43–55 · 2/2: R$36–47** `[estimativa triangulada · 21/jun/2026]` (paleta fria → 2 cores corta ~15–20%). Físico: A5 (148×210) · papel Pólen Bold 90g creme · capa
 couché 300g fosca · wire-o duplo · perpétuo · **~112 pp, sem ficha**. Protótipo = 1 ciclo (~72pp). ⚠️ **Flag:** `conceitos/financeiro-planner-v1.md`
 calculou MC mais estrita — **reconciliar MC** `[a recalcular pós-cotação · 21/jun/2026]` (business-validator) antes de mexer em âncora.
 

@@ -27,8 +27,8 @@ sócios (uso interno e honesto — não é pitch para investidor).
 | Câmbio USD/BRL | ≈ **R$ 5,20** | planejamento (spot ≈ R$ 5,18 em 17/jun/2026) |
 | Investimento inicial | **R$ 5.000** | é o teste; **100% autofinanciado** depois; **banca 1 SKU: Concurseiro (F1); Caderno e Treino = F2** `[Daniel · 21/jun/2026]` |
 | Preço de lançamento | Concurseiro **R$ 129** · Treino **R$ 109** | **lançamento sequencial (Conc. F1)** `[Daniel · 21/jun/2026]`; regime: ~R$ 139 / 119–129 |
-| Custo/un (Conc., ~112 pp) | micro-lote **~R$ 60** → reposição **R$ 45** | `[estimativa pré-RFQ · 21/jun/2026]`; protótipo 71 pp era R$ 55; cai com volume/Tier B |
-| MC/un Conc. (R$ 129 / custo ~R$ 60) | direto **~44%** `[est.]` · blended **[a recalcular]** | `[a recalcular pós-cotação · 21/jun/2026]`; marketplace destrói (Shopee ~R$ 6) |
+| Custo/un (Conc., ~112 pp, micro-lote) | **4/4: R$ 43–55 · 2/2: R$ 36–47** → cai com volume | `[estimativa triangulada · 21/jun/2026]`; paleta fria (Y=0) → miolo 2 cores corta ~15–20% |
+| MC/un Conc. (R$ 129) | direto **~48–58% (4/4) · ~55–62% (2/2)** `[est.]` · blended **[a recalcular]** | `[estimativa triangulada · 21/jun/2026]`; marketplace destrói (Shopee ~R$ 6) |
 | Recorrência | recompra **3–4×/ano** (Conc) / ~2,5 (Treino) | **LTV margem ~R$ 374–397** (mantém-se a R$ 129) `[est.]`; LTV/CAC ~7–8× |
 | Mercado recorrente | **~2,3 M un/ano (~R$ 267 M)** | SAM ~R$ 55 M (Conc) / ~R$ 25 M (Treino) |
 | Mix de canal (Fase 1) | **90% direto / 10% marketplace** | vender direto; marketplace só p/ descoberta |
