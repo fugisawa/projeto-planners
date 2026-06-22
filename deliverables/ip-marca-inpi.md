@@ -19,6 +19,8 @@
 - **Nome da marca** (a definir) — verifique também o **domínio `.com.br`** (em registro.br) e os
   **@ das redes sociais** *antes* de fechar o nome; de nada adianta a marca livre se o domínio/handle
   não estiver.
+- ⏰ **Depositar o nome no INPI ANTES de divulgar o produto pela marca** (inclui qualquer post da
+  Mayara que identifique o produto pelo nome). Divulgar antes do depósito enfraquece a proteção.
 - **Tipo de marca** (recomendado registrar dois pedidos):
   - **Nominativa** — só o nome (protege a palavra em qualquer estilo).
   - **Mista** — nome + logotipo (protege o conjunto visual).
@@ -30,7 +32,7 @@ Cada classe é um pedido/taxa separado. Para o Projeto Planners:
 | Classe | Cobre | Prioridade |
 |---|---|---|
 | **16** | Papel e papelaria — **planners, agendas, cadernos** impressos | **Essencial** |
-| **35** | Comércio/varejo, e-commerce, publicidade | Recomendada (protege a loja/marca no varejo online) |
+| **35** | Comércio/varejo, e-commerce, publicidade | **Essencial para D2C** (protege o serviço de e-commerce sob a marca; sem ela, um terceiro pode registrar a 35 e operar loja com o nome) |
 | **41** | Educação, conteúdo educacional, treinamento | Opcional (se vender curso/conteúdo/método como serviço) |
 
 > Comece pela **16** (o produto). Avalie **35** se a marca também é a "loja". A **41** só se houver

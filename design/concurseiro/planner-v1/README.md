@@ -1,5 +1,10 @@
 # Planner v1 — design & produção
 
+> ⚠️ **Status (21/jun/2026):** esta é a **referência de estilos (2.0 PRO)** — tokens, Lato, cantos
+> retos. **Não é mais o produto candidato:** o candidato atual é **`planner-v3/`** (redesign por
+> ciclo). Decisão v1×v3 para produção: **a definir**. Índice: [`../README.md`](../README.md).
+> `ficha.typ`/`ficha-1.png` aqui são **artefato de teste** — a F1 vai **SEM ficha** `[Daniel]`.
+
 Direção de produto + **fonte de verdade do protótipo** do Planner Concurseiro (estilo planner de
 estudo coreano, A5, perpétuo, impressão sóbria — a cor vem do marca-texto do aluno).
 

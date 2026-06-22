@@ -63,15 +63,15 @@ disponibilidade podem mudar sem aviso; vale o preço no momento da compra. Pagam
 `[pix/cartão]`, processado por gateway parceiro. O pedido se confirma após a aprovação do pagamento.
 
 **4. Entrega e frete.** Enviamos para `[abrangência]` via `[Correios/transportadora]`. Prazos são
-estimativas a partir da confirmação do pagamento e da produção (quando aplicável a pré-venda/lote);
+estimativas a partir da confirmação do pagamento e da produção (quando aplicável a lote/produção);
 o frete é informado no checkout.
 
 **5. Trocas, devoluções e direito de arrependimento (CDC).** Em compras pela internet, você tem
 **até 7 dias corridos** após o recebimento para **desistir** (CDC art. 49) e receber reembolso.
 Produtos com **defeito** são trocados/reparados conforme o CDC. Para solicitar: `[E-MAIL DE CONTATO]`.
 
-**6. Pré-venda.** Na **Fase 1 não há pré-venda** — os produtos são vendidos a partir de estoque já
-pronto `[decisão: sem pré-venda · Daniel · 21/jun/2026]`. *(Cláusula completa mantida inativa em rascunho abaixo, caso a política mude.)*
+**6. Disponibilidade e envio.** Os produtos são vendidos a partir de **estoque pronto** e enviados
+após a confirmação do pagamento, no prazo informado na oferta.
 <!-- [PREPARATÓRIO — NÃO ATIVAR; decisão travada: SEM pré-venda na Fase 1.] Se um dia houver pré-venda:
 Itens em pré-venda têm prazo de produção/envio informado na oferta; ao comprar, você concorda com esse
 prazo. O direito de arrependimento (item 5) é contado do recebimento. -->

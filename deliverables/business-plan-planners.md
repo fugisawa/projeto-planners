@@ -63,7 +63,7 @@
 
 Dois SKUs sobre a **mesma plataforma física** (reduz custo de insumo e MOQ): **A5, wire-o capa dura, perpétuo (sem datas)**, miolo offset 90 g, capa soft-touch + hot stamping.
 
-- **Concurseiro** — não é agenda, é um **sistema de estudo**: grade de ciclo (não cronograma datado), registro diário (tópico/tempo/questões/% acerto), **revisão espaçada** (24h/7d/30d), tracker de simulados por banca, edital verticalizado, página de constância.
+- **Concurseiro** — não é agenda, é um **sistema de estudo**: grade de **ciclo** (compromete/adapta o plano — não gera cronograma datado nem edital verticalizado, que ficam no digital), registro diário (matéria/tempo/questões/% acerto), **decisão de revisão** (o quê e quando revisar; a execução fica no Anki), tracker de simulados, página de constância.
 - **Treino de Força** — não é caderno, é um **diário de periodização**: bloco/mesociclo, template de sessão (séries×reps, **carga, RPE/RIR**, descanso), PRs, tonelagem, *deload*, métricas corporais.
 
 **Por que perpétuo (decisão crítica):** zero obsolescência de ano, zero estoque morto, venda o ano inteiro. E casa com o comportamento real do cliente: o concurseiro **estuda em média 2 anos e 1 mês** `[confirmado — Censo dos Concursos 2025, n=13.128]` e o praticante de força periodiza em ciclos contínuos — ambos têm horizonte plurianual, que um produto datado atende mal.
@@ -81,7 +81,7 @@ Dois SKUs sobre a **mesma plataforma física** (reduz custo de insumo e MOQ): **
 - **Gasto médio anual com preparação:** ~R$ 2.011 (média; mediana ~R$ 800–1.200) `[confirmado — Censo 2025]`. Plataformas: Gran R$ 838/ano, QConcursos Elite R$ 779/ano `[confirmado, jun/2026]`.
 - **Validação de categoria:** o Planner do Concurseiro (Juspodivm) existe, custa R$ 119,90 e tem 177 avaliações 99% positivas `[confirmado, jun/2026]` — o mercado **paga por método no papel**.
 
-> **⚠️ Correção importante de leitura (vs. rascunho original).** Não haverá CNU em 2026, mas **isso não é fraqueza de demanda — é uma vedação legal de ano eleitoral**: a Lei 9.504/97 (art. 73, V) proíbe nomeações de **4/jul/2026 a ~6/jan/2027**, e a LRF (art. 21) veda aumento de despesa de pessoal nos 180 dias finais de mandato `[confirmado]`. Editais, provas e homologações continuam o ano todo. O **ciclo pós-eleição (2027) historicamente retoma com força** — em 2023, após a eleição de 2022, foram **9.116 vagas federais autorizadas, +47% que os 4 anos anteriores somados**; a PLOA 2026 já prevê ~89 mil provimentos e o **CNU 3ª edição é previsto para 2027** `[a confirmar — sinalizado por fontes de cursinhos; sem decreto publicado]`. Enquadramento **apartidário**: o padrão vale para qualquer vencedor. **Conclusão estratégica: 2026 = construir audiência e validar; 2027 = escalar no vento de cauda.**
+> **⚠️ Correção importante de leitura (vs. rascunho original).** Não haverá CNU em 2026, mas **isso não é fraqueza de demanda — é uma vedação legal de ano eleitoral**: a Lei 9.504/97 (art. 73, V) proíbe nomeações de **4/jul/2026 a ~25/jan/2027** (3 meses após o 2º turno previsto), e a LRF (art. 21) veda aumento de despesa de pessoal nos 180 dias finais de mandato `[confirmado]`. Editais, provas e homologações continuam o ano todo. O **ciclo pós-eleição (2027) historicamente retoma com força** — em 2023, após a eleição de 2022, foram **9.116 vagas federais autorizadas, +47% que os 4 anos anteriores somados**; a PLOA 2026 já prevê ~89 mil provimentos e o **CNU 3ª edição é previsto para 2027** `[a confirmar — sinalizado por fontes de cursinhos; sem decreto publicado]`. Enquadramento **apartidário**: o padrão vale para qualquer vencedor. **Conclusão estratégica: 2026 = construir audiência e validar; 2027 = escalar no vento de cauda.**
 
 - **ICP:** concurseiro de alto desafio (Senado, Câmara, tribunais, fiscais, polícias), 25–40 anos, estuda 15–30 h/semana, já gasta com cursos, valoriza método e estética, ativo em comunidades (Instagram, Telegram, fóruns).
 - **TAM/SAM/SOM** `[estimativa triangulada, mercado-demanda.md]`: TAM material físico R$ 300–800 M/ano · **SAM (compraria planner ~R$ 110) R$ 35–80 M/ano** (~400–700 k pessoas; usa proxy de renda familiar — pode estar ~14% superestimado, imaterial ao SOM) · **SOM ano 1 R$ 24–71 k (200–600 un); ano 2 R$ 95–238 k (800–2.000 un)**.
@@ -105,7 +105,7 @@ Lançar os dois em paralelo seria a decisão natural — compartilham a platafor
 | Etapa | Concurseiro | Treino de Força |
 |---|---|---|
 | **Alternativas** | Juspodivm (R$ 85–120, **datado**); perpétuos sem marca (Tche Decor R$ 71–77); PDFs (R$ 35–60); agendas genéricas (R$ 28–57); apps/planilhas | Logbooks importados (R$ 130–200 no BR); nacional genérico (Amor Impresso R$ 77–85, **sem periodização**); apps Strong/Hevy (R$ 130–165/ano); Canva; caderno comum |
-| **Atributos únicos** | Ciclo + revisão espaçada **embutidos**; **perpétuo** (vs. Juspodivm datado); feito por quem é concurseiro **e** atleta; acabamento premium | Periodização + RPE/RIR + PRs + tonelagem (não só "registro"); **perpétuo**; **único premium nacional**; tátil (não depende de tela na academia) |
+| **Atributos únicos** | Ciclo + **decisão de revisão** (papel decide, Anki executa); **perpétuo** (vs. Juspodivm datado); feito por quem é concurseiro **e** atleta; acabamento premium | Periodização + RPE/RIR + PRs + tonelagem (não só "registro"); **perpétuo**; **único premium nacional**; tátil (não depende de tela na academia) |
 | **Valor** | Estudar com método e constância sem montar planilha; sem comprar exemplar novo todo ano | Progredir carga com método sem celular na academia; rápido, durável; economiza vs. assinatura de app |
 | **Cliente best-fit** | Concurseiro de alto desafio, focado em método e estética | Praticante sério de força, orientado a progressão |
 | **Categoria** | "Planner-sistema de estudo para concursos" | "Diário de força com periodização" |
@@ -167,7 +167,7 @@ O desafio nº 1 é **construir distribuição** — e aqui está a maior vantage
 
 | Item | R$ | Nota |
 |---|---|---|
-| Material / 1º lote | 3.000 | ~54 un (custo micro-lote R$ 55) |
+| Material / 1º lote | 3.000 | ~54 un (custo teto 4/4 R$ 55; com 2/2 paleta fria R$ 36–47 → ~64–83 un) |
 | Conteúdo + amostras + *seeding* | 800 | fotos, brindes a micro-perfis |
 | Mídia paga (retargeting, a partir do mês 4) | 800 | **não** tráfego frio |
 | Reserva operacional | 400 | embalagem, frete-teste, checkout |
@@ -268,7 +268,7 @@ Quanto e **quando** os sócios retiram pró-labore quase não mexe na margem, ma
 ## 10. Roadmap & decision gates
 
 - **Fase 0 — Construção (meses 1–3):** conteúdo orgânico (foco no Concurseiro, F1) → lista de espera → golden sample → **abertura de vendas após Gate A** (sem pré-venda).
-  - **Gate A:** ≥ 200–500 inscritos na lista de espera **e** engajamento ativo (DMs, comentários pedindo compra) **e** 3 orçamentos de gráfica fechados (custo/un confirmado) → imprimir o micro-lote e abrir vendas imediatamente.
+  - **Gate A:** ≥ 200–500 inscritos na lista de espera **e** engajamento ativo (DMs, comentários pedindo compra) **e** 3 orçamentos de gráfica fechados (custo/un confirmado) **e** golden sample aprovado → imprimir o micro-lote e abrir vendas imediatamente.
 - **Fase 1 — Validação (meses 4–12):** vender ~387 un **direto**; ligar retargeting (mês 4+); medir sell-through, CAC, recompra/indicação. **Estratégia B: pró-labore zero no ano 1** (reinveste 100%).
   - **Gate B:** sell-through ≥ 75% **e** CAC ≤ R$ 45 → reordenar lote maior no Brasil (300–500 un), ampliar conteúdo e **iniciar o pró-labore no ano 2** (R$ 500 → R$ 2.000 por sócio).
 - **Fase 2 — Escala autofinanciada (a partir de ~2027, com capital + dados):** surfar a **retomada do ciclo de concursos**; escalar em **lotes BR (offset) crescentes, pagos pela receita** (já ~R$ 18–32/un no volume); **importar da China só ao cruzar o gatilho de capitalização** — caixa acumulado ≥ custo do lote + colchão de 3 meses (100% próprio, ~R$ 135 mil; fim do ano 3/ano 4), **sem pré-venda e sem empréstimo**; abrir CNPJ + Radar quando importar; marketplace como canal de volume (preço de regime); **ampliar o pró-labore no ano 3** (≈ R$ 3.000 por sócio); avaliar 3º SKU.

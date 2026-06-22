@@ -34,7 +34,7 @@ Dois motivos eliminatórios para a China no início:
 
 > **⚠️ Correção vs. rascunho original.** O rascunho colocava o ponto de virada da China em ~1.000 un. Com a conta refeita (AFRMM correto de **8%**, não 25%; frete LCL real; ICMS-DF "por dentro"; e **ICMS não creditável no MEI/Simples**), o **crossover real é ~3.000–5.000 un** (conforme o tier de gráfica BR: ~3.000 contra gráfica premium; ~5.000+ contra offset de baixo custo) `[sourcing-tributos.md]`. Isso reforça: **ficar no Brasil por mais tempo.**
 
-**Perpétuo** é a decisão certa: estoque nunca "vence", então micro-lotes pequenos são possíveis sem risco de encalhe. (Pré-venda é tecnicamente possível mas não é o plano padrão — ver decisão dos sócios.)
+**Perpétuo** é a decisão certa: estoque nunca "vence", então micro-lotes pequenos são viáveis sem risco de encalhe. **Decisão travada: sem pré-venda na Fase 1.** `[Daniel · 21/jun/2026]`
 
 ### Plano em fases (risco assimétrico)
 
@@ -42,7 +42,7 @@ Dois motivos eliminatórios para a China no início:
 |---|---|---|---|---|
 | **0 — Validação** | Lista de espera + golden sample + abertura de vendas pós-lote | — | Gráfica BR (POD) | mínimo |
 | **1 — 1º lote comercial** | Micro-lote + reposição *make-to-demand* | ~54 → 300–500 un | **Gráfica BR** | ≤ R$ 3k/SKU |
-| **2 — Escala** | Reposição com margem maior | **≥ 3.000 un** | **China (importação formal)** | CNPJ + Radar + capital |
+| **2 — Escala** | Reposição com margem maior | **~3.000–5.000 un** (varia por tier de gráfica BR) | **China (importação formal)** | CNPJ + Radar + capital |
 
 > O 1º lote **não é o negócio** — é experimento pago para **provar demanda, gerar conteúdo de unboxing e financiar a Fase 1**.
 
@@ -77,7 +77,7 @@ Padrão de mercado premium, ambos **perpétuos**. Para F2 (quando Treino for ati
 | Miolo | ~112 pp, **Polen Bold 90g creme** | 90 g evita transparência da caneta; 75 g "vaza". Polen Bold é linha Suzano — confirmar disponibilidade e preço na gráfica escolhida. |
 | Capa | Cartão empastado + **soft-touch** + **hot stamping** | Soft-touch escurece a cor → peça prova física; verniz localizado é alternativa mais barata |
 | Acabamentos | Elástico + marcador de fita + cantos arredondados | Cada acabamento sobe custo e MOQ na China |
-| Conteúdo | Grade de ciclo (não cronograma fixo) · registro diário (tópico, tempo, nº questões, % acerto) · **ponteiros para sistema de revisão** (→ Anki / QConcursos) · registro simplificado de questões (tracker completo fica no digital) · edital verticalizado · visão semanal/mensal · página de constância | — |
+| Conteúdo | Grade de ciclo (não cronograma fixo) · registro diário (tópico, tempo, nº questões, % acerto) · **ponteiros para sistema de revisão** (→ Anki / QConcursos) · registro simplificado de questões (tracker completo fica no digital) · visão semanal/mensal · página de constância | — |
 
 ### Planner 2 — Treino de Força
 
@@ -129,7 +129,7 @@ Padrão de mercado premium, ambos **perpétuos**. Para F2 (quando Treino for ati
 | (+) II 14,4% | 2,85 | × CIF |
 | (+) IPI 9,75% | 2,21 | × (CIF + II) |
 | (+) PIS/COFINS-Imp 11,75% | 2,33 | × CIF |
-| (+) **ICMS-DF 20% "por dentro"** | **7,30** | maior componente |
+| (+) **ICMS-DF 20% "por dentro"** | **7,30** | maior componente `[conferir alíquota vigente — Sefaz-DF/despachante]` |
 | (+) AFRMM 8% | 0,33 | × frete marítimo |
 | (+) Despachante + armazenagem | 2,00 | rateio |
 | **= Landed/un** | **36,83** | **≈ 2,36× o FOB** |
@@ -150,7 +150,7 @@ Padrão de mercado premium, ambos **perpétuos**. Para F2 (quando Treino for ati
 1. **F1: Feche ficha técnica e conteúdo do Concurseiro** antes de cotar — cotação sem spec fechada gera preço inútil. **F2 (futuro):** feche também a spec do Treino de Força quando F2 for ativado — a spec do Treino (§3.2) é preparatória.
 2. **Habilite o CNPJ** (MEI já serve para vender na Fase 1; para importação formal na Fase 2, **Radar/Habilitação no Siscomex**, modalidade Expressa cobre importadores pequenos).
 3. **Cote no Brasil (3 gráficas)** especializadas em agenda/planner wire-o capa dura. Peça preço para **100 / 300 / 500 / 1.000 un**, prazo e **prova física** (não só PDF). Termos usuais: 50% sinal / 50% na entrega.
-4. **Cote na China em paralelo** (Alibaba + Made-in-China) já mirando a Fase 2 (≥ 3.000 un). Filtre por **Trade Assurance**, anos de operação, fábrica vs. trading. Mesmo RFQ para **5–8 fornecedores**.
+4. **Cote na China em paralelo** (Alibaba + Made-in-China) já mirando a Fase 2 (~3.000–5.000 un). Filtre por **Trade Assurance**, anos de operação, fábrica vs. trading. Mesmo RFQ para **5–8 fornecedores**.
 5. **No RFQ peça:** FOB **e** CIF (Santos/Itajaí/Paranaguá), MOQ real, preço escalonado (500/1k/3k/5k), lead time, **custo de amostra** e Incoterm.
 6. **Incoterm:** comece em **FOB** (você controla frete e desembaraço com despachante) ou peça **DDP** só para enxergar o teto de custo "na porta". Evite EXW no início.
 7. **Pagamento:** **T/T 30% sinal / 70% antes do embarque**; prefira **Trade Assurance** ou L/C no 1º pedido. Evite Western Union/PayPal para valores altos.

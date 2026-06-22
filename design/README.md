@@ -5,22 +5,30 @@ Espaço de trabalho do **design do produto**: o objeto físico e o sistema de p�
 repositório — enquanto o dossiê responde *"o negócio fecha?"*, este módulo responde
 *"como o planner é, por dentro e por fora?"*.
 
-> **Status (21/jun/2026):** **protótipo Tier-1 das 6 páginas construído** — gerado **por código**
-> (Typst, in-house, sem InDesign/Affinity) e **print-ready** (CMYK · PDF/X-1a · FOGRA39). É um
-> **sistema de estudo modular** ("hub analógico"); **v1 = o Planner de Estudo** (SEM ficha integrada
-> — só ponteiro "→ Caderno de Erros"; `ficha.typ` no protótipo é artefato de teste, não entrará no
-> produto final `[Daniel · 21/jun/2026]`); **Caderno de Erros** standalone = Fase 2. Fonte de
-> verdade + como gerar: [`concurseiro/planner-v1/`](concurseiro/planner-v1/README.md). Validado com
-> a Mayara (19/jun). Próximo: micro-polish · teste de impressão real.
+> **Status (21/jun/2026):** existem **três versões** do planner, todas print-ready por código (Typst,
+> in-house · CMYK · PDF/X-1a · FOGRA39). É um **sistema de estudo modular** ("hub analógico"), **F1
+> SEM ficha integrada** (só ponteiro "→ Caderno de Erros" = Fase 2; `ficha.typ` na v1 é artefato de
+> teste, **não** entra no produto `[Daniel · 21/jun/2026]`).
+>
+> | Versão | Status | O que é |
+> |---|---|---|
+> | `planner-v1` | **referência de estilos** (2.0 PRO) | 1º protótipo; tokens/Lato/cantos retos — base de estilo, **não é o produto final** |
+> | `planner-v2` | **preterida** | iteração "só melhorias" (eyebrow + seletor ○△→×); arquivada |
+> | **`planner-v3`** | **★ candidato atual (em avaliação)** | redesign "por ciclo": Ciclo · Registro de Matérias (ledger) · calibração · Sessão com time-log pintável. Fundamento: `conceitos/pesquisa-v3-sintese.md` + `spec-v3-refino.md` |
+>
+> **Decisão v1×v3 para produção/RFQ: a definir.** Índice/navegação: [`concurseiro/README.md`](concurseiro/README.md).
+> Validado com a Mayara (19/jun). Próximo: teste de impressão real.
 
 ## Estrutura
 
 ```
 design/
-└── concurseiro/                  o planner de estudos
-    ├── planner-v1/               ★ PROTÓTIPO (fonte de verdade) — ver planner-v1/README.md
+└── concurseiro/                  o planner de estudos  (ver concurseiro/README.md = índice)
+    ├── planner-v3/   ★ CANDIDATO ATUAL (em avaliação) — redesign por ciclo · 6 páginas
     │   └── typst/                config/estilos + 6 páginas + render/finalize → PDF/X-1a CMYK
-    ├── conceitos/                definição, direção, síntese de design, teardowns, instruções
+    ├── planner-v1/               referência de estilos (2.0 PRO) — não é o produto final
+    ├── planner-v2/               preterida (arquivada)
+    ├── conceitos/                definição, roadmap, síntese, teardowns, pesquisa-v3, spec-v3
     ├── caderno-de-erros/         módulo standalone (Fase 2)
     ├── referencias/              imagens do exemplar real (base visual)   ← VOCÊ ENVIA
     └── pesquisa/                 evidência de pesquisa (fontes/ datadas + capturas/ gitignored)
@@ -32,9 +40,9 @@ design/
 ## Fluxo de trabalho (o valor flui numa direção)
 
 `referencias/` (exemplar) + `pesquisa/` (Exa · Tavily · Playwright)
-→ **análise** → `conceitos/` (definição, direção, **síntese de design refinada**)
-→ **build paramétrico** em [`planner-v1/typst/`](concurseiro/planner-v1/typst/) (Typst)
-→ `planner-proto-pdfx1a.pdf` (print-ready) → RFQ/gráfica.
+→ **análise** → `conceitos/` (definição, direção, **síntese de design** + `pesquisa-v3-sintese` + `spec-v3-refino`)
+→ **build paramétrico** em [`planner-v3/typst/`](concurseiro/planner-v3/typst/) (Typst · candidato atual)
+→ `planner-v3-proto-pdfx1a.pdf` (print-ready) → teste de impressão → RFQ/gráfica.
 
 Skills de apoio: **`typst-planner`** (execução) e **`planner-designer`** (princípios de design).
 

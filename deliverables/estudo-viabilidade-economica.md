@@ -30,7 +30,7 @@
 
 **O projeto é economicamente viável com folga — mas por razões que exigem leitura cuidadosa.**
 A R$ 5 mil de capital, qualquer trajetória de venda minimamente bem-sucedida gera VPL e TIR
-altíssimos, porque **o capital em risco é mínimo**. O VPL fica em **R$ 365–407 mil** em toda a
+altíssimos, porque **o capital em risco é mínimo**. `[DESATUALIZADO — a recalcular @ R$ 129 · 21/jun/2026]` O VPL fica em **R$ 365–407 mil** em toda a
 faixa de desconto (12–15%), a TIR é de **~406% a.a.** e o **payback descontado é inferior a 1
 ano**. Isso **não** significa "negócio fácil": significa que **a viabilidade não é decidida pela
 matemática financeira, e sim pela execução** — construir audiência (o gargalo nº 1) e financiar
@@ -50,11 +50,13 @@ o salto de escala (o lote China no ano 3). O EVEF, portanto, serve menos para "v
   início, o FCF dos primeiros anos **superestima** o retorno puro de capital (parte é trabalho
   diferido). `[estimativa]`
 - **Capital de giro:** estoque médio = COGS × (dias de estoque ÷ 360), com **60 dias** editáveis.
-  Pré-venda + pix (caixa adiantado) tendem a **reduzir** essa necessidade.
-- **Tributos:** Ano 1 em **MEI** (DAS fixo); anos 2–5 em **ME/Simples** (a receita ultrapassa o
-  teto MEI já no ano 2), com alíquota efetiva crescente (5% → 10%) `[estimativa]`.
+  O **pix** (caixa imediato na venda direta) tende a **reduzir** essa necessidade. *(Sem pré-venda — decisão travada.)*
+- **Tributos:** `[a revisar — com 2 sócios não cabe MEI; é ME/Simples desde o ano 1]` o corpo modela
+  Ano 1 em MEI (DAS fixo) e anos 2–5 em **ME/Simples**, com alíquota efetiva crescente (5% → 10%)
+  `[estimativa]`. O impacto tributário do enquadramento entra no rebuild do `financial-modeler`.
 - **Trajetória de unidades (combinada, 2 SKUs):** 387 / 1.440 / 3.000 / 4.800 / 6.800 — anos 1–2
-  dentro do SOM pesquisado; anos 3–5 `[ilustrativo]`.
+  dentro do SOM pesquisado; anos 3–5 `[ilustrativo]`. `[DESATUALIZADO — F1 = só Concurseiro: o ano 1
+  (387 un) é de 1 SKU; o Treino entra em F2. Distribuição por SKU a recalcular pelo financial-modeler.]`
 
 ---
 

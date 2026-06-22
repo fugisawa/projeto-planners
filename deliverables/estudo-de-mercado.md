@@ -2,7 +2,7 @@
 ### Planners premium para concurseiros e praticantes de força · Brasil · pt-BR
 
 > ## ⚠️ DOCUMENTO EM REVISÃO — baseline pré-pivô (a recalcular pós-cotação)
-> **Atualizado: 21/jun/2026.** Redigido em 19/jun/2026, **antes** das decisões travadas de 21/jun/2026. As **tabelas e indicadores numéricos** deste corpo (VPL/TIR, MC/un, ROI, break-even, preço médio R$ 114, custo R$ 55) refletem o **cenário pré-pivô (2 SKUs em paralelo · R$ 119)** e **serão refeitos** pelo `financial-modeler` após as cotações reais (Gate A). **Não usar os números deste corpo como âncora operacional** — a fonte da verdade é `CLAUDE.md` §Fatos-âncora + `design/concurseiro/planner-v1/ESTADO-RETOMADA.md`.
+> **Atualizado: 21/jun/2026.** Redigido em 19/jun/2026, **antes** das decisões travadas de 21/jun/2026. As **tabelas e indicadores numéricos** deste corpo (LTV, SOM, mapa de preços a R$ 119) refletem o **cenário pré-pivô (2 SKUs em paralelo · R$ 119)** e **serão refeitos** pelo `financial-modeler` após as cotações reais (Gate A). **Não usar os números deste corpo como âncora operacional** — a fonte da verdade é `CLAUDE.md` §Fatos-âncora + `design/concurseiro/planner-v1/ESTADO-RETOMADA.md`.
 >
 > **Decisões que prevalecem sobre o corpo abaixo:**
 > - **Lançamento sequencial:** F1 = **só o Concurseiro** (R$ 5.000 banca 1 SKU); **Treino de Força e Caderno de Erros = F2**, pagos pelo caixa gerado. (O corpo trata os 2 SKUs em paralelo — superado.)
@@ -35,7 +35,7 @@ Dois mercados grandes e estruturalmente sólidos, com perfis de risco opostos e 
 
 **O tamanho não é o gargalo.** O SAM somado é da ordem de **R$ 50–120 M/ano**; o SOM do ano 1
 (200–1.100 un) é limitado por **capacidade de aquisição** — construir audiência do zero, num
-ticket (R$ 109–129) em que **tráfego pago frio é inviável** (CAC R$ 120–333). A vitória depende
+ticket (Concurseiro **R$ 129** em F1; Treino R$ 109 em F2) em que **tráfego pago frio é inviável** (CAC R$ 120–333). A vitória depende
 de **conteúdo orgânico** (a força dos sócios), não de mídia paga.
 
 ---
@@ -115,6 +115,8 @@ nicho: menos concorrência, menos âncora de preço, **recompra** (o logbook "ac
 > o tamanho real do mercado. (Modelo: aba `LTV & Recorrência`.)
 
 **LTV por cliente** `[estimativa — premissas a validar com survey]`:
+
+> **DESATUALIZADO / a recalcular @ R$ 129 · [21/jun/2026].** A tabela abaixo está a **R$ 119** (pré-pivô). A **R$ 129**, o LTV (margem) do Concurseiro fica **~R$ 397** e o LTV (receita) **~R$ 774**. Mantida como referência histórica; rebuild pelo `financial-modeler` pós-cotação.
 
 | | Concurseiro | Treino de Força |
 |---|--:|--:|
@@ -244,8 +246,7 @@ entrada** → o fosso precisa ser marca/conteúdo/audiência; (3) **substitutos 
 concursos** (favorável a partir de 2027).
 
 **Implicações estratégicas:**
-- **Lançar os dois em paralelo**, com **conteúdo equilibrado** (constrói o fosso onde a barreira
-  é a audiência).
+- **Lançar o Concurseiro (F1)** com conteúdo prioritário neste nicho e preparar o Treino para **F2** — lançamento **sequencial** `[Daniel · 21/jun/2026]`. *(A versão "os dois em paralelo" foi superada.)*
 - **Orgânico primeiro** (força do time), marketplace e mídia paga como apoio.
 - **Construir marca e comunidade desde o dia 1** — é o ativo defensável.
 - **Cronograma a favor:** validar em 2026, escalar com o vento de 2027.

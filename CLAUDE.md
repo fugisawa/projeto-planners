@@ -52,7 +52,7 @@ sócios (uso interno e honesto — não é pitch para investidor).
 - `sources/` — 3 rascunhos originais (o "antes", **read-only**).
 - `scripts/` — geradores (`build_model.py`, `build_painel.py`, `build_pdfs.py`, `build_legal.py`).
 - `.claude/agents/` (agentes) · `.claude/skills/` (planner-designer, typst-planner) · `.mcp.json` (MCP servers do projeto).
-- `design/` — **módulo de design do produto** (Concurseiro): pesquisa + conceitos + o módulo **`caderno-de-erros/`** (standalone F2). Ver `design/README.md` e `design/concurseiro/conceitos/roadmap-faseado.md`.
+- `design/` — **módulo de design do produto** (Concurseiro): pesquisa + conceitos + `caderno-de-erros/` (standalone F2) + **3 versões do planner**: `planner-v1` (referência de estilos 2.0 PRO), `planner-v2` (preterida), **`planner-v3` (candidato atual em avaliação)**. Índice e navegação: `design/concurseiro/README.md`. Ver também `design/README.md` e `conceitos/roadmap-faseado.md`.
 
 ## Comandos (regenerar — requer `uv`; não há openpyxl/markdown global)
 ```bash
@@ -62,22 +62,27 @@ uv run --with markdown --with matplotlib --with numpy python scripts/build_pdfs.
 uv run --with markdown python scripts/build_legal.py     # HTML dos docs jurídicos
 # PDF a partir do HTML:
 uv run --with weasyprint --with pypdf python ~/.claude/skills/briefing-designer/templates/render.py <in.html> <out.pdf>
+# Design do produto (planner-v3 = candidato atual em avaliação):
+uv run --with typst python design/concurseiro/planner-v3/typst/render.py <pagina>   # PDF + PNG de QA
+uv run --with pypdf python design/concurseiro/planner-v3/typst/finalize.py          # merge → PDF/X-1a CMYK
 ```
 Conferir fórmulas do modelo: `uv run --with openpyxl --with formulas python ...` (recalcular e comparar com o texto).
 Git: **commit/push só quando o usuário pedir.**
 
 ## Agentes & skills do projeto (`.claude/`)
-| Agente | Quando acionar |
-|---|---|
-| `market-researcher` | mercado (TAM/SAM/SOM), concorrência, demanda, taxas |
-| `pricing-strategist` | preço, posicionamento (Dunford), oferta/SKU |
-| `sourcing-analyst` | gráfica BR × China, NCM, landed cost, RFQ, QA |
-| `financial-modeler` | unit economics, viabilidade, sensibilidade, rebuild do `.xlsx` |
-| `business-validator` | **antes de dar algo por pronto** — checagem adversarial cruzada (read-only) |
-| `doc-updater` | propagar número-âncora por deliverables/CLAUDE.md (após validar; diff p/ revisão) |
-| `conteudo-mayara` | conteúdo/lançamento (roteiros TikTok/Reels, copy, calendário) — motor de aquisição |
+| Agente | Quando acionar | Encadeia com → |
+|---|---|---|
+| `market-researcher` | mercado (TAM/SAM/SOM), concorrência, demanda, taxas | → pricing-strategist, financial-modeler |
+| `pricing-strategist` | preço, posicionamento (Dunford), oferta/SKU | ← market-researcher → financial-modeler |
+| `sourcing-analyst` | gráfica BR × China, NCM, landed cost, RFQ, QA | → financial-modeler (Workflow PSF) |
+| `financial-modeler` | unit economics, viabilidade, sensibilidade, rebuild do `.xlsx` | ← pricing/sourcing → business-validator → doc-updater |
+| `business-validator` | **antes de dar algo por pronto** — checagem adversarial cruzada (read-only) | ← financial-modeler → doc-updater |
+| `doc-updater` | propagar número-âncora por deliverables/CLAUDE.md (após validar; diff p/ revisão) | ← business-validator |
+| `conteudo-mayara` | conteúdo/lançamento (roteiros TikTok/Reels, copy, calendário) — motor de aquisição | ← pricing-strategist |
 
 **Skills** (`.claude/skills/`): `planner-designer` (decide design) + `typst-planner` (executa o build print-ready) — par decide→executa do módulo de design.
+
+**Ferramentas — usar por padrão em tarefa substancial** (não improvisar): **`sequential-thinking`** (planejar/decompor o difícil) · **`exa`/`tavily`** (pesquisa web datada — pesquisa-primeiro antes de criar do zero) · **`context7`** (doc atual de libs). Em **design**, seguir o pipeline `planner-designer` → `typst-planner` → **QA visual do PNG** (hero-first). Antes de "pronto": `business-validator` (Workflow VAP).
 
 Subagentes rodam em Sonnet (config); `financial-modeler` e `business-validator` em Opus
 (`model: inherit`). **Orquestração** (mapa de capacidades + workflows P→S→B · VAP · PSF · design): `docs/orquestracao.md`. Skills, MCPs e desempenho: `docs/claude-setup.md`.
@@ -92,6 +97,7 @@ questões tendem a ficar **no digital**; o papel **decide e processa** (o que an
 - **Roadmap** (`design/concurseiro/conceitos/roadmap-faseado.md`): **F0** pesquisa ✅ · **F1 = o
   Planner de Estudo** (3 meses, ~112 pp, **SEM ficha**; só ponteiro "→ Caderno de Erros") · **F2** (lançamento sequencial, pago pelo caixa): **Caderno de Erros standalone** + **Treino de Força** + Síntese/Bússola/capa · **F3** foto→app. `[Daniel · 21/jun/2026]`
 - **Persona v1:** dedicação exclusiva (recorte de alta intensidade da **P1**).
+- **Design candidato:** **`planner-v3`** (redesign "por ciclo" · print-ready · PDF/X-1a gerado em 21/jun/2026 · fundamentado em `conceitos/pesquisa-v3-sintese.md` + `spec-v3-refino.md`). 6 páginas: Guia · Bússola+**Registro de Matérias** (ledger/dicionário de cor) · **Ciclo** · Sessão (time-log pintável + **calibração**) · Semanal · Pontes. **v1 = referência de estilos** (não é o produto final); v2 = preterida. Próximo gate: teste de impressão. **Decisão v1×v3 para produção/RFQ: a definir.**
 
 ## Convenções (inegociáveis)
 - **Todo número leva fonte + data**; triangular ≥2 fontes para números centrais. Confiança:

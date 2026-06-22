@@ -91,7 +91,7 @@ Porter mostra **barreira de entrada baixa** (qualquer um imprime um planner) —
 |---|---|---|
 | **Penetração de mercado** | Vender mais aos 2 nichos atuais; maximizar **recompra** e indicação | Anos 1–2 (foco) |
 | **Desenvolvimento de produto** | Refis/variações (capas, temas), **3º SKU** (ex.: planner de idiomas/OAB ou diário de corrida); combos/assinatura | Ano 2–3 |
-| **Desenvolvimento de mercado** | Novos nichos de estudo/treino; marketplace como canal de volume; B2B (cursinhos/academias) com co-branding | Ano 3+ |
+| **Desenvolvimento de mercado** | Novos nichos de estudo/treino; marketplace como canal de volume; B2B (cursinhos/academias) com co-branding `[a avaliar: precificação/margem/dados de cliente final — não desenvolver até Gate C]` | Ano 3+ |
 | **Diversificação** | Evitar no horizonte; só após marca consolidada | — |
 
 O **catálogo recorrente** (penetração + produto) é o caminho de maior retorno e menor risco —

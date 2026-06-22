@@ -10,5 +10,17 @@
       "Bash(git diff:*)",
       "Bash(ls:*)"
     ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git -C \"$CLAUDE_PROJECT_DIR\" status --porcelain deliverables models 2>/dev/null | grep -q . && echo '🔎 deliverables/ ou models/ têm alterações pendentes — rode o business-validator (Workflow VAP) e regenere os PDFs antes de dar por pronto/commitar.' || true"
+          }
+        ]
+      }
+    ]
   }
 }

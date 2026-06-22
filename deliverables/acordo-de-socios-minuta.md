@@ -19,7 +19,7 @@ planners/cadernos-método premium, D2C). **Data:** [__/__/____].
 continuidade do negócio sobre interesses individuais.
 
 ## Cláusula 2 — Capital e participação
-2.1. Participação societária: **Sócio 1 [50]%** · **Sócio 2 [50]%** `[a definir]`.
+2.1. Participação societária: **[a definir pelos sócios — proposta de trabalho: 50% / 50%]**.
 2.2. *Observação sobre 50/50:* divisão igualitária pode gerar **impasse (deadlock)**; por isso a
 Cl. 8 prevê mecanismo de desempate. Alternativa: [51/49] ou pesos por função/aporte.
 2.3. As participações observam o **vesting** da Cl. 6.
@@ -50,7 +50,7 @@ prestação de contas seguem a periodicidade do plano de gestão (semanal/mensal
 longo do tempo**: proposta de **[4 anos, com *cliff* de 12 meses]** `[a definir]`.
 6.2. Saída antes do *cliff* → participação não adquirida retorna à sociedade/ao outro sócio pelo
 valor de aporte. Após o *cliff*, vesting **[mensal/trimestral]** proporcional.
-6.3. *(Para irmãos, é comum simplificar; ainda assim, algum vesting protege ambos.)*
+6.3. *(Mesmo entre sócios com laços de confiança, algum vesting protege a continuidade do negócio.)*
 
 ## Cláusula 7 — Propriedade intelectual (crítico)
 7.1. **Tudo criado para o negócio pertence à sociedade**, não ao indivíduo: a **marca**, o

@@ -43,7 +43,7 @@ Este plano é o **sistema operacional** do Projeto Planners: define o que será 
 
 | Fase | Período | Entregas | Gate |
 |---|---|---|---|
-| **0 — Construção** | Meses 1–3 | Audiência/lista de espera; conteúdo equilibrado; miolo + golden sample; 3 orçamentos de gráfica; loja/checkout; CNPJ/MEI | **Gate A:** lista ≥ 200–500 **e** 3 orçamentos fechados **e** sample aprovado → imprimir micro-lote |
+| **0 — Construção** | Meses 1–3 | Audiência/lista de espera; conteúdo (foco Concurseiro F1); miolo + golden sample; 3 orçamentos de gráfica; loja/checkout; CNPJ (ME/Ltda) | **Gate A:** lista ≥ 200–500 **e** engajamento qualitativo (DMs/comentários pedindo compra) **e** 3 orçamentos fechados **e** golden sample aprovado → imprimir micro-lote |
 | **1 — Validação** | Meses 4–12 | Golden sample → micro-lote (após Gate A) (~54 un) → vender ~387 un direto; retargeting (mês 4+); medir CAC/sell-through; iniciar recompra. Pró-labore **zero** (Estratégia B) | **Gate B:** sell-through ≥ 75% **e** CAC ≤ R$ 45 → lote maior BR (300–500 un) + iniciar pró-labore no ano 2 (R$ 500→2.000/sócio) |
 | **2 — Escala autofinanciada** | ~2027+ | Lotes BR offset crescentes pagos pela receita; vento do ciclo de concursos; 3º SKU; marketplace de volume | **Gate C (capitalização):** importar da China só com caixa ≥ lote + colchão (~R$ 135 mil, 100% próprio) **e** volume ≥ ~5.000 un/ano |
 
@@ -53,14 +53,16 @@ Eixo de **produto** (complementar ao cronograma de sourcing acima): lançamento 
 de estudo modular. **F1 — v1: o Planner de Estudo** (módulo-âncora, SEM ficha embutida; apenas ponteiro → Caderno de Erros (F2); cabe no teste
 de R$ 5k) → **F2 — ecossistema** (Caderno de Erros standalone, Síntese, Bússola + capa) → **F3 — foto→app**
 (recorrência/serviço). Detalhe e gates em `design/concurseiro/conceitos/roadmap-faseado.md`.
-*(PDF regenerado em 19/jun/2026; `business-validator` opcional para esta adição.)*
+*(PDF regenerado em 19/jun/2026.)*
 
 ---
 
 ## 3. Matriz RACI `[proposta — ajustar entre os sócios]`
 
 R = Responsável (faz) · A = Aprova (presta contas) · C = Consultado · I = Informado.
-**S1** e **S2** = os dois sócios; **Ext** = terceirizado (contador, gráfica, freelancer).
+**S1 = Daniel** (estratégia · finanças · pesquisa · **sourcing** · **operação** · conteúdo/método) ·
+**S2 = Mayara** (conteúdo social · marketing orgânico · marca · design/arte) ·
+**Ext** = terceirizado (contador, gráfica, freelancer). *(Realinhado aos papéis do CLAUDE.md; permanece proposta a ajustar.)*
 
 | Atividade | S1 | S2 | Ext |
 |---|---|---|---|
@@ -68,9 +70,9 @@ R = Responsável (faz) · A = Aprova (presta contas) · C = Consultado · I = In
 | Design / arte print-ready | C | A/R | — |
 | Marketing & conteúdo social (orgânico) | C | A/R | — |
 | Vendas & atendimento (D2C) | R | A | — |
-| Operação & expedição | C | A/R | I |
+| Operação & expedição | A/R | C | I |
 | Finanças & fluxo de caixa | A/R | C | C (contador) |
-| Fornecedor & produção (gráfica) | C | A/R | R (gráfica) |
+| Fornecedor & produção (gráfica) | A/R | C | R (gráfica) |
 | Decisões estratégicas (preço, capital, SKU) | A | A | — |
 
 > A divisão é uma proposta baseada nas competências (ambos cobrem conteúdo+design; lacunas em
@@ -98,13 +100,13 @@ Prob/Impacto: A=alto, M=médio, B=baixo. Revisar a cada gate.
 | # | Risco | Prob | Imp | Dono | Mitigação | Gatilho/indicador |
 |---|---|:--:|:--:|---|---|---|
 | R1 | **Aquisição/audiência nos nichos** | M | A | S2 | **Conteúdo orgânico — forte da Mayara (viralização comprovada)**; lista própria; retargeting só quente; afiliados | Lista < 100 em 60 d **ou** CAC > R$ 60 |
-| R2 | **Custo da gráfica > previsto** | M | A | S2 | 3 orçamentos antes do lote; recuar p/ Tier B; ajustar preço | Cotação > R$ 60/un no micro-lote |
+| R2 | **Custo da gráfica > previsto** | M | A | S1 | 3 orçamentos antes do lote; recuar p/ Tier B; ajustar preço | Cotação > R$ 60/un no micro-lote |
 | R3 | Sell-through baixo → encalhe | M | A | S1 | micro-lote inicial pequeno (~54–83 un); Gate A (lista ≥ 200–500) antes de imprimir; perpétuo não vence | Sell-through < 60% |
 | R4 | Dependência de plataforma (algoritmo/ban) | M | A | S1 | Multi-canal (IG+TikTok) + **lista de e-mail própria** | Queda > 40% de alcance |
 | R5 | Recompra abaixo do esperado | M | A | S1 | Lembrete de fim de ciclo; combos/assinatura; comunidade | Recompra < 20% no Q4 |
 | R6 | Execução (time de 2 pessoas) | M | M | S1/S2 | Calendário enxuto/reaproveitável; terceirizar com caixa | Atraso > 1 gate |
-| R7 | Teto MEI / tributário | M | M | S1 | Contador; migrar a ME/Simples | Receita acum. ≈ R$ 68 mil |
-| R8 | Câmbio/qualidade na escala (China) | M | M | S2 | Só com Gate C; despachante; inspeção; sem empréstimo | — (só Fase 2) |
+| R7 | Enquadramento tributário (ME/Simples desde o início — 2 sócios, sem MEI) | B | M | S1 | Contador; alíquota efetiva cresce com o faturamento | Faturamento muda de faixa no Simples |
+| R8 | Câmbio/qualidade na escala (China) | M | M | S1 | Só com Gate C; despachante; inspeção; sem empréstimo | — (só Fase 2) |
 | R9 | Concorrência reage (Juspodivm/cópias) | B-M | M | S1 | Moat: método + marca + recompra; Treino é whitespace | Entrante premium no nicho |
 
 ---

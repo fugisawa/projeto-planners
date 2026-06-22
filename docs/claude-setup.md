@@ -96,6 +96,12 @@ Para pesquisa de mercado forte, conecte na conta (claude.ai → **Settings → C
 **Exa** e **Tavily** (busca na web) e **Context7** (documentação técnica atualizada). Depois de
 conectados, ficam disponíveis também no Claude Code.
 
+> **No setup do Daniel já estão conectados** (escopo do usuário, em `~/.claude.json` — **não** no
+> `.mcp.json` do projeto, que é versionado: chaves de API nunca entram no Git). Junto com o
+> `sequential-thinking` do projeto, são as ferramentas-padrão de trabalho: **`exa`/`tavily` para
+> pesquisa**, **`context7` para doc de libs**, **`sequential-thinking` para planejar**. O CLAUDE.md
+> instrui a IA a usá-las por padrão em tarefas substanciais.
+
 ## 3. Como obter BOM DESEMPENHO (os hábitos que fazem diferença)
 
 1. **Profundidade sob demanda.** O projeto já vem em `effort high`. Para algo difícil, digite
