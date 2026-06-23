@@ -24,7 +24,7 @@ O método da v3 está sólido; o **acabamento** não. A v3 parece uma **planilha
 - **Bússola · chip do Registro:** `colorsq` 4mm some ao pintar → **chip 8mm** (é o dicionário de cor, elemento de longa duração).
 
 ### ALTO
-- **Sessão · "Estudar" (planorows):** sem coluna de cor → adicionar **chip de cor** (conecta plano → time-log → cor da matéria; unifica o sistema "cor = matéria").
+- **Sessão · "Estudar" (planorows):** ~~sem coluna de cor → adicionar **chip de cor**~~ **[REVERTIDO · 22/jun/2026]** — o chip-box nas LISTAS de escrita já fora abandonado na v1 (2.0 PRO, `sintese-design-refinada.md:15`): o box não batia de tamanho com as células do time-log/dots e **duplicava** o color-coding. Vale o modelo **INDIGO** (`studyrows`): a cor vai na **própria coluna de matéria** (pinta-se a sigla), sem box. O `colorsq` fica só nas **tabelas-dicionário** (Registro de Matérias, Semanal, Mapa do Edital). Aplicado a Estudar **e** Revisar.
 - **Sessão · "Amanhã":** 1 linha quase invisível → **2 linhas + rótulo leve** (é a transição D→D+1, criação de hábito).
 - **Semanal · duplicação:** `calibtable` + `weekhours` = duas tabelas empilhadas (ar de planilha; ambas listam matérias). → **fundir numa só**: `cor · matéria · horas · prevejo% · obtive%`. *(NB: NÃO reintroduzir paintchart semanal — o diário já pinta as horas; pintar 2× foi reprovado pelo dono.)*
 - **Guia · "Cores":** redundante com o Registro → trocar por **mini-exemplo preenchido** (1 linha mostrando o sistema em ação).
@@ -41,7 +41,7 @@ O método da v3 está sólido; o **acabamento** não. A v3 parece uma **planilha
 1. **Guia** — título distinto por tratamento; sistema em 5 módulos; ○△→×; mini-exemplo de cor; revisar/praticar amplo (Anki+questões+discursiva+lei seca). nº de página.
 2. **Bússola** — alvo + porquê (4) + fase + **3 matérias críticas** + **meu stack** + Registro de Matérias (chip 8mm) + calendário (6.5mm).
 3. **Ciclo** — fila de blocos (mantida); "Como rodar" suavizado; "Duração" reorganizado.
-4. **Sessão (HERO)** — faixa Data·D-prova·Horas; intenção; Estudar (com chip de cor); time-log 06–23 pintável; output (questões/acerto + foco 1–5); Revisar/praticar; Amanhã (2 linhas).
+4. **Sessão (HERO)** — faixa Data·D-prova·Horas; intenção; Estudar (lista INDIGO, cor na coluna de matéria — **sem chip-box**); time-log 06–23 pintável; **Revisar/praticar = grade-irmã do Estudar** (cor·matéria·o que revisei·`min`·`fiz`·`corr.` — o quê + quanto, com o mesmo peso; modos viram lembrete; erro → Caderno); fechar o dia (foco 1–5); Amanhã (2 linhas). *`[ajuste 22/jun/2026: Revisar deixou de ser checkbox de modalidade e virou registro de matéria+volume; o volume de questões vive só aqui (removido o output duplicado).]`*
 5. **Semanal** — tabela única por matéria (horas + calibração prevejo/obtive); reflexão fechada; → Migrar.
 6. **Pontes** — *ritual de ponte por ferramenta* (sinal→decisão de Anki/QConcursos/cursinho/simulados) — distinto do Semanal (que analisa MEUS dados). **[a confirmar: manter separada vs. fundir no Semanal]**
 

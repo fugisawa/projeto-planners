@@ -99,7 +99,7 @@ Configurações recomendadas pela comunidade em 2026:
 
 ### Onde NÃO substitui
 
-- Síntese e elaboração: escrever à mão o card **força mais retenção** do que digitar (evidência de memória tátil/motora)
+- Síntese e elaboração: escrever o card **força elaboração** (gerar/reformular) — o ganho é a elaboração, não a caligrafia `[revisto 23/jun/2026 — "à mão grava mais" é fraca/contestada: g≈0,14–0,25, Morehead 2019]`
 - Criação de mapas mentais e conexões entre conceitos (Anki é atômico — um conceito por card)
 - Leitura analítica de lei seca com marcações e anotações no papel
 - O Anki é ferramenta de **revisão** (pressupõe aprendizado inicial feito por outro meio) [confirmado]
@@ -186,7 +186,7 @@ Inclui nativamente:
 | Função | Por quê o papel vence |
 |---|---|
 | **Foco sem distração** | Celular/tablet = fonte de notificações, redes sociais, WhatsApp. O caderno físico não interrompe. É o único ambiente de estudo 100% silencioso. [confirmado, citado em múltiplas fontes de bullet journal para concursos] |
-| **Escrita à mão para memorização** | Neurocientificamente, escrever à mão ativa mais áreas cerebrais (motora + semântica) do que digitar. Especialmente eficaz para lei seca, conceitos-chave, mnemônicos. [estimativa triangulada — base em literatura de ciências cognitivas] |
+| **Escrita à mão = foco + elaboração** (não "memoriza mais") | O ganho de memória da caligrafia por si é **pequeno e contestado** (g≈0,14–0,25; some sem revisão — Morehead 2019; Flanigan 2024). O que vale é **foco sem tela** + **síntese ativa** (gerar) — úteis p/ lei seca/conceitos via reformulação, não pelo ato motor. `[revisto 23/jun/2026 — ver revisao-evidencia-2026-06.md]` |
 | **Síntese ativa e personalizada** | Fazer resumo/esquema no papel FORÇA processamento profundo do conteúdo — diferente de ler PDF ou assistir aula. É uma técnica de aprendizagem (elaboração), não de registro. [confirmado] |
 | **Reflexão e planejamento macro** | Visão de semana/mês em papel: o concurseiro vê "de um olhar" onde está na jornada. Apps fragmentam em telas; o papel dá perspectiva. [estimativa triangulada] |
 | **Ritual de abertura/fechamento do estudo** | O ato físico de abrir o planner, registrar a sessão, marcar o progresso cria um ritual cognitivo de transição (modo "trabalho" → modo "estudo"). Notificações no app não têm o mesmo efeito. [estimativa triangulada] |
@@ -213,7 +213,7 @@ Inclui nativamente:
 
 6. **Análise de bancas e incidência de assuntos** — não incluir percentuais de cobranças por assunto. Raio-X (QC), Passo Estratégico (Estratégia) fazem isso com dados reais de centenas de provas.
 
-7. **Flashcards/fichas de revisão de conteúdo** — não incluir espaço para "fichas de memorização" do conteúdo das matérias. O Anki + decks prontos fazem melhor, com algoritmo. O papel só vale aqui para a *criação* dos cards (escrever à mão para memorizar), não para a *revisão*.
+7. **Flashcards/fichas de revisão de conteúdo** — não incluir espaço para "fichas de memorização" do conteúdo das matérias. O Anki + decks prontos fazem melhor, com algoritmo. O papel só vale aqui para a *criação* dos cards (escrever o card = **gerar/elaborar**; o ganho é a geração, não a caligrafia per se `[revisto 23/jun/2026]`), não para a *revisão*.
 
 ### Onde o planner AGREGA como hub analógico harmônico
 
@@ -227,7 +227,7 @@ Inclui nativamente:
 
 5. **Mapa macro da jornada** — visão do mês/fase de preparação; marcos importantes (data do edital, data da prova, fases); perspectiva de longo prazo que as telas fragmentam.
 
-6. **Espaço de escrita de síntese** — uma ou duas frases sobre o conteúdo mais importante estudado hoje, escrito à mão. Consolida a memória. É a "ponte" entre o conteúdo digital e o cérebro.
+6. **Espaço de escrita de síntese** — uma ou duas frases sobre o conteúdo mais importante estudado hoje. **Ajuda a processar** (o ganho é a síntese ativa/**geração**, não a caligrafia per se `[revisto 23/jun/2026]`). É a "ponte" entre o conteúdo digital e o cérebro.
 
 7. **Hub de integração com o stack digital** — espaço físico que APONTA para o digital (não replica): "hoje no Anki: 30 cards de Dir. Const.; no TEC: caderno de erros de Adm.". O planner é o centro nervoso, não o banco de dados.
 

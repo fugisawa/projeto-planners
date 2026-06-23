@@ -29,7 +29,7 @@ Cada um **independente + complementar**:
 |---|---|---|---|
 | **Caderno de Erros** ⭐ (错题본/오답노트) | diagnóstico do *porquê* do erro + gatilho→ação + padrões | o maior gap | complementa QConcursos/Anki (eles dizem *o quê*) |
 | **Diário de Foco** | sessão sem celular: time-log 10–15 min + síntese + reflexão do dia | foco anti-celular + processamento | não duplica timer-app/Notion |
-| **Caderno de Síntese** | resumos/mapas à mão de aula/lei seca | fixação (handwriting→memória) | complementa vídeo-aula/PDF |
+| **Caderno de Síntese** | resumos/**mapas de setas** à mão de aula/lei seca | processamento (gerar/mapear → aprender; construir mapa *g*≈0,72 — lab, direção não magnitude) | complementa vídeo-aula/PDF |
 | **Bússola da Jornada** (leve) | commit semanal + reflexão mensal + visão macro + "meu stack" | navegação/constância | **deferente** ao cronograma do cursinho |
 
 > **v1 = o Planner de Estudo** (módulo-âncora: Diário de Foco + ciclo leve + **ponteiro → Caderno de Erros**, sem ficha embutida). O **Caderno de Erros completo** é módulo **standalone na Fase 2**. `[Daniel · 21/jun/2026]` (Revisão da decisão de 19/jun/2026: ficha lite removida do v1.)

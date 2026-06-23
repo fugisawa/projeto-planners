@@ -198,7 +198,7 @@ As 인강 (aulas online gravadas) são o backbone do conteúdo de aprendizagem: 
 - Para, pausa, anota, resume em papel
 - O papel é o lugar de **síntese ativa** — as 인강 apenas fornecem a matéria-prima
 
-A coexistência não é conflito: o digital entrega conteúdo; o analógico processa e retém.
+A coexistência não é conflito: o digital entrega conteúdo; o analógico **processa e registra** (o ganho vem da elaboração ativa/geração — não da caligrafia per se `[revisto 23/jun/2026]`).
 
 ---
 
@@ -241,7 +241,7 @@ O timer Yeolpumta representa uma contradição estrutural: o mesmo dispositivo q
 
 A solução coreana é **técnica** (bloqueio de apps) mas **impõe fricção**: o celular permanece visível na mesa, o que per si reduz foco mesmo sem uso ativo (pesquisas de distração de smartphone documentam o "efeito de presença" — ver o telefone mesmo desligado degrada cognição).
 
-O papel cumpre um papel diferente: **não tem app de distração instalado**. Um planner físico aberto na mesa não tem notificação. O ato de escrever à mão ativa o córtex motor e cria engajamento cognitivo mais profundo que o tipo digital. O estudo da KAIST (2023, apud etmusso79.tistory.com) cita que escrita manual tem ativação cerebral 67% maior e retenção 2,3× superior à digitação. [estimativa triangulada — citado em blog especializado; confirmar com publicação original da KAIST]
+O papel cumpre um papel diferente: **não tem app de distração instalado**. Um planner físico aberto na mesa não tem notificação — esse é o valor central (**foco sem tela**). ~~O estudo da KAIST (2023, apud blog) cita ativação 67% maior e retenção 2,3× superior à digitação.~~ **`[DESCARTADO 23/jun/2026]`** — número de blog não confirmado e **incompatível** com a meta-análise (o ganho de memória da caligrafia é pequeno: g≈0,14–0,25, some sem revisão — Morehead 2019; Flanigan 2024). Não usar como claim.
 
 O modelo coreano ideal documentado é: **celular virado para baixo (ou fora da mesa) durante sessões deep; YPT pausado; ao final da sessão, registrar o tempo**. Na prática, isso é difícil para a maioria — daí a persistência do papel.
 

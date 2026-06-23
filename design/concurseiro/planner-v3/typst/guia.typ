@@ -101,15 +101,27 @@
 #sechead("Revisar e praticar", hint: "revisão não é só Anki")
 #grid(columns: (auto, 1fr), column-gutter: 5mm, align: horizon,
   {
-    for d in ("D+1", "D+3", "D+7", "D+15", "D+30") {
+    for d in ("D+3", "D+7", "D+15") {
       box(inset: (x: 2.2mm, y: 1.3mm), stroke: (paint: hair, thickness: wt.box),
         text(font: sans, size: fs.micro, fill: ink-2, weight: 700)[#d])
       h(2mm)
     }
   },
   text(font: sans, size: fs.micro, fill: ink-3)[
-    O que você estuda hoje volta nestes dias. Revisar é *Anki + resolver questões
-    (QConcursos) + treinar discursivas + lei seca*. O papel decide o quê e quando;
-    o digital executa e cobra.
+    O erro volta nestes intervalos — *no Anki*. Revisar é *Anki + resolver questões
+    (QConcursos) + treinar discursivas + lei seca*. O papel decide *o quê* ankificar;
+    o digital agenda *quando* e cobra.
   ],
 )
+
+#v(3mm)
+
+// ── Síntese: mapa de setas (construir > olhar pronto) + recordação livre ───────
+#sechead("Síntese: mapa de setas", hint: "construa você — não copie o pronto")
+#text(font: sans, size: fs.micro, fill: ink-3)[
+  Para institutos que você confunde (controle de constitucionalidade, espécies
+  normativas, competências das Casas): desenhe um *mapa de setas rotuladas* — nós =
+  conceitos, setas = a relação (“exige”, “não atinge”). *Construir* o mapa rende mais
+  que olhar um pronto. E ao fim do dia, *de memória*, escreva o que ficou (recordação
+  livre) — as lacunas viram card no Anki.
+]
