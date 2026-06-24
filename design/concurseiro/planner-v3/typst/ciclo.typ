@@ -46,7 +46,7 @@
     v(2.6mm)
   }
   #rule("1", [Estudou parte de um bloco? Retome de onde parou — *o bloco continua amanhã*, não recomeça.])
-  #rule("2", [*Intercale naturezas diferentes:* nunca lógica logo após constitucional, nem português após exatas.])
+  #rule("2", [*Tema novo:* bloco primeiro (aprenda em sequência até pegar o básico). *Já domina:* intercale naturezas diferentes — nunca lógica logo após constitucional.])
   #rule("3", [Fechou o último bloco? *Reinicie a fila* — independente de quantos dias levou. Sem dia perdido.])
 ]
 #v(3.5mm)

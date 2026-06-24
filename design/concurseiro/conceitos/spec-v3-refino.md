@@ -23,6 +23,10 @@ O método da v3 está sólido; o **acabamento** não. A v3 parece uma **planilha
 - **Bússola · vazio + incompleta:** ~40% de página morta. Adicionar **Meu stack** (Anki/QConcursos/cursinho/outro) + **3 matérias críticas da fase**. Vira mapa pessoal, não frontmatter técnico.
 - **Bússola · chip do Registro:** `colorsq` 4mm some ao pintar → **chip 8mm** (é o dicionário de cor, elemento de longa duração).
 
+> **Semanal — refino 23/jun/2026:** colunas `matéria · tópico/item (edital) · horas · % acerto
+> prevejo × obtive`. **Sem chip de cor** (pinta na sigla da matéria — INDIGO); header com respiro
+> vertical; deixado explícito que o % é **acerto em questões**, não progresso de edital.
+
 ### ALTO
 - **Sessão · "Estudar" (planorows):** ~~sem coluna de cor → adicionar **chip de cor**~~ **[REVERTIDO · 22/jun/2026]** — o chip-box nas LISTAS de escrita já fora abandonado na v1 (2.0 PRO, `sintese-design-refinada.md:15`): o box não batia de tamanho com as células do time-log/dots e **duplicava** o color-coding. Vale o modelo **INDIGO** (`studyrows`): a cor vai na **própria coluna de matéria** (pinta-se a sigla), sem box. O `colorsq` fica só nas **tabelas-dicionário** (Registro de Matérias, Semanal, Mapa do Edital). Aplicado a Estudar **e** Revisar.
 - **Sessão · "Amanhã":** 1 linha quase invisível → **2 linhas + rótulo leve** (é a transição D→D+1, criação de hábito).

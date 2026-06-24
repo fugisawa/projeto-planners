@@ -83,7 +83,7 @@
 // A pintura mostra a DISTRIBUIÇÃO das horas entre matérias e o gap plano-vs-real.
 #grid(columns: (1fr, auto), align: (left + horizon, right + bottom),
   text(font: sans, size: 8.5pt, fill: ink-2, weight: 700, tracking: 0.3pt)[Tempo de estudo],
-  text(font: sans, size: fs.micro, fill: ink-3, style: "italic")[pinte o tempo REAL na cor da matéria · 1 quadradinho = 10 min])
+  text(font: sans, size: fs.micro, fill: ink-3, style: "italic")[pinte o tempo REAL — onde foi, não quanto somou · 1 quadradinho = 10 min])
 #v(1mm)
 #line(length: 100%, stroke: (paint: hair, thickness: wt.hair))
 #v(1.5mm)
