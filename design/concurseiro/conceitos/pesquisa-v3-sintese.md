@@ -27,7 +27,7 @@ planner coreano pesquisado — nenhum implementa isso. É o coração do v3.
 
 | Achado | Força | Decisão de design |
 |---|---|---|
-| **Spacing effect** (Cepeda 2006/2008; Dunlosky 2013 — utilidade ALTA) | Muito alta | Pré-imprimir 4–5 marcos de revisão por tópico (~D+1·D+3·D+7·D+15·D+30, defensável p/ janela de 30 d). Não deixar o intervalo a cargo do aluno. |
+| **Spacing effect** (Cepeda 2006/2008; Dunlosky 2013 — utilidade ALTA) | Muito alta | ~~Pré-imprimir 4–5 marcos de revisão por tópico (D+1·D+3·D+7·D+15·D+30)~~ **[revisto · 23/jun/2026 → `reconciliacao-estudo-asia.md` T5]:** o intervalo ótimo cresce com o horizonte e o **FSRS/Anki agenda melhor que escada fixa em papel**. Papel **decide o que ankificar**; Anki agenda. Espaçamento entra como copy do Guia, não como grade. |
 | **Testing effect / recall** (Roediger&Karpicke 2006; Dunlosky — ALTA) | Muito alta | A página diária **nunca** tem "páginas lidas". Centro = questões feitas/acertos/%. Aluno escolhe recall, não releitura. |
 | **Interleaving** (Rohrer&Taylor 2007, d=1.34) | Alta | O **ciclo** já é interleaving. Reforçar: nunca 1 matéria/dia inteiro; intercalar naturezas diferentes (lógica ≠ depois de constitucional). |
 | **Output + tempo** (Locke&Latham, d=.42–.80; Ariely 2002) | Alta | Slot diário = bloco de tempo (quando) + meta de output (o quê) + acerto real (resultado). Metas proximais (dia/semana) > distais (a prova). |

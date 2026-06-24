@@ -92,7 +92,7 @@
 
 ## 8) Implicações de design para o Concurseiro (aplicadas ao design v1 — ver [direcao-de-design-concurseiro.md](direcao-de-design-concurseiro.md))
 1. **Timetable de 10–15 min + color-coding por matéria** — inegociável (núcleo emocional/viral).
-2. **Revisão espaçada integrada ao layout diário/semanal** (D+1/3/7/15/30) — maior diferencial vs. BR e vs. INDIGO.
+2. **Revisão espaçada** ~~integrada ao layout (D+1/3/7/15/30)~~ **[revisto · T5 · 23/jun → `reconciliacao-estudo-asia.md`: NÃO imprimimos escada fixa — o papel DECIDE o que ankificar; Anki/FSRS agenda. Diferencial = camada de decisão + diagnóstico de erro, não a escada]** — vs. BR e vs. INDIGO.
 3. **Tracker de questões/simulados** (resolvidas, % acerto, por matéria) — métrica do concurso.
 4. **Ciclo de matérias** semanal (rotação de disciplinas) — organização que o concurseiro já usa.
 5. **Mapa do edital** (conteúdo programático → progresso) no frontmatter.

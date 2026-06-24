@@ -27,8 +27,8 @@ sócios (uso interno e honesto — não é pitch para investidor).
 | Câmbio USD/BRL | ≈ **R$ 5,20** | planejamento (spot ≈ R$ 5,18 em 17/jun/2026) |
 | Investimento inicial | **R$ 5.000** | é o teste; **100% autofinanciado** depois; **banca 1 SKU: Concurseiro (F1); Caderno e Treino = F2** `[Daniel · 21/jun/2026]` |
 | Preço de lançamento | Concurseiro **R$ 129** · Treino **R$ 109** | **lançamento sequencial (Conc. F1)** `[Daniel · 21/jun/2026]`; regime: ~R$ 139 / 119–129 |
-| Custo/un (Conc., ~112 pp, micro-lote) | **4/4: R$ 43–55 · 2/2: R$ 36–47** → cai com volume | `[estimativa triangulada · 21/jun/2026]`; paleta fria (Y=0) → miolo 2 cores corta ~15–20% |
-| MC/un Conc. (R$ 129) | **contribuição direta** (líq. do cascade do canal: devoluções 4% + pagamento 2,5% + embalagem R$ 4 → contrib. ~R$ 116,61) **~48–58% (4/4) · ~55–62% (2/2)** `[est.]` · blended **[a recalcular]** | `[estimativa triangulada · 21/jun/2026]`; marketplace destrói (Shopee ~R$ 6) |
+| Custo/un (Conc., **~120 pp**, micro-lote) | **4/4: R$ 43–55 · 2/2: R$ 36–47** → cai com volume | `[estimativa triangulada · 21/jun/2026]`; **~120 pp = 112 + Ficha C ×8** `[financial-modeler · 23/jun/2026; delta +R$1,45–1,93/un]`; paleta fria (Y=0) → miolo 2 cores corta ~15–20%; confirmar por RFQ |
+| MC/un Conc. (R$ 129) | **contribuição direta** (líq. do cascade do canal: devoluções 4% + pagamento 2,5% + embalagem R$ 4 → contrib. ~R$ 116,61) **mediano/otimista ~48–58% (4/4) · ~55–62% (2/2)**; pior caso pós-Ficha C **~46% (4/4) · ~53% (2/2)** `[est. · 23/jun/2026]` · blended **[a recalcular]** | `[estimativa triangulada · 21/jun/2026]`; marketplace destrói (Shopee ~R$ 6) |
 | Recorrência | recompra **3–4×/ano** (Conc) / ~2,5 (Treino) | **LTV margem ~R$ 374–397** (mantém-se a R$ 129) `[est.]`; LTV/CAC ~7–8× |
 | Mercado recorrente | **~2,3 M un/ano (~R$ 267 M)** | SAM ~R$ 55 M (Conc) / ~R$ 25 M (Treino) |
 | Mix de canal (Fase 1) | **90% direto / 10% marketplace** | vender direto; marketplace só p/ descoberta |
@@ -95,9 +95,9 @@ verticalizado/cronograma). *Nuance a reconciliar com `## O que é`:* revisão es
 questões tendem a ficar **no digital**; o papel **decide e processa** (o que ankificar, o porquê do erro).
 - **Arquitetura:** ecossistema **modular** (módulos independentes + complementares sob uma capa).
 - **Roadmap** (`design/concurseiro/conceitos/roadmap-faseado.md`): **F0** pesquisa ✅ · **F1 = o
-  Planner de Estudo** (3 meses, ~112 pp, **SEM ficha**; só ponteiro "→ Caderno de Erros") · **F2** (lançamento sequencial, pago pelo caixa): **Caderno de Erros standalone** + **Treino de Força** + Síntese/Bússola/capa · **F3** foto→app. `[Daniel · 21/jun/2026]`
+  Planner de Estudo** (3 meses, ~120 pp, **SEM ficha de erro**; só ponteiro "→ Caderno de Erros") · **F2** (lançamento sequencial, pago pelo caixa): **Caderno de Erros standalone** + **Treino de Força** + Síntese/Bússola/capa · **F3** foto→app. `[Daniel · 21/jun/2026]`
 - **Persona v1:** dedicação exclusiva (recorte de alta intensidade da **P1**).
-- **Design candidato:** **`planner-v3`** (redesign "por ciclo" · print-ready · PDF/X-1a gerado em 21/jun/2026 · fundamentado em `conceitos/pesquisa-v3-sintese.md` + `spec-v3-refino.md`). 6 páginas: Guia · Bússola+**Registro de Matérias** (ledger/dicionário de cor) · **Ciclo** · Sessão (time-log pintável + **calibração**) · Semanal · Pontes. **v1 = referência de estilos** (não é o produto final); v2 = preterida. Próximo gate: teste de impressão. **Decisão v1×v3 para produção/RFQ: a definir.**
+- **Design candidato:** **`planner-v3`** (redesign "por ciclo" · print-ready · PDF/X-1a gerado em 21→23/jun/2026 · fundamentado em `conceitos/pesquisa-v3-sintese.md` + `spec-v3-refino.md` + `reconciliacao-estudo-asia.md`). **7 páginas:** Guia · Bússola+**Registro de Matérias** (ledger/dicionário de cor) · **Ciclo** · Sessão (time-log pintável + **calibração** + se-então) · Semanal · **Integração** (mapa conceitual, +23/jun) · Pontes. **v1 = referência de estilos** (não é o produto final); v2 = preterida. Próximo gate: teste de impressão. **Decisão v1×v3 para produção/RFQ: a definir.**
 
 ## Convenções (inegociáveis)
 - **Todo número leva fonte + data**; triangular ≥2 fontes para números centrais. Confiança:

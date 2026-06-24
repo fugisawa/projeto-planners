@@ -37,6 +37,10 @@ O método da v3 está sólido; o **acabamento** não. A v3 parece uma **planilha
 - **Bússola · calendário:** inset comprime escrita → `rows: 6.5mm, inset y:0`.
 - **Guia · título 22pt** quebra o sistema (h1=18pt) → **18–20pt + subtítulo + régua de acento** (diferencia o Guia pelo tratamento, não pelo tamanho gritante).
 
+> **Atualização `[23/jun/2026]`:** o conjunto passa a **7 páginas** — entra a **Ficha C · Integração
+> (mapa conceitual de setas rotuladas)**, posicionada **após a Semanal**. Spec da página em
+> [`reconciliacao-estudo-asia.md` §T4](reconciliacao-estudo-asia.md). Demais decisões (T2/T3/T5) no mesmo doc.
+
 ## Página a página (conjunto de 6 — confirmar Pontes)
 1. **Guia** — título distinto por tratamento; sistema em 5 módulos; ○△→×; mini-exemplo de cor; revisar/praticar amplo (Anki+questões+discursiva+lei seca). nº de página.
 2. **Bússola** — alvo + porquê (4) + fase + **3 matérias críticas** + **meu stack** + Registro de Matérias (chip 8mm) + calendário (6.5mm).

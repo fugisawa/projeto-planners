@@ -15,7 +15,7 @@ Núcleo: **Diário de Foco** (time-log 10–15 min anti-celular + tarefas puxada
 reflexão) + **camada semanal/ciclo leve** (comprometer/adaptar o plano do cursinho — **não** gerá-lo)
 + **ponteiro "→ Caderno de Erros"** (sem ficha interna). Workspace do módulo de erros: [`../caderno-de-erros/`](../caderno-de-erros/README.md). **Etapas (gates):**
 1. ✅ **Validado com a Mayara** (19/jun/2026): conceito do planner aprovado.
-2. ✅ **Protótipo print-ready** das páginas-âncora gerado — **planner-v3** (redesign por ciclo · 6 páginas · PDF/X-1a · 21/jun/2026). **Pendente:** teste de impressão real + decisão **v1×v3 para produção/RFQ** `[Daniel · a definir]`. (v1 = referência de estilos; v2 preterida.)
+2. ✅ **Protótipo print-ready** das páginas-âncora gerado — **planner-v3** (redesign por ciclo · **7 páginas** [+Integração/Ficha C · 23/jun/2026] · PDF/X-1a · 21→23/jun/2026). **Pendente:** teste de impressão real + decisão **v1×v3 para produção/RFQ** `[Daniel · a definir]`. (v1 = referência de estilos; v2 preterida.) Reconciliação do estudo asiático em `conceitos/reconciliacao-estudo-asia.md`.
 3. **Sourcing & custo** (`sourcing-analyst` + `financial-modeler`): papel ≥120 g, lay-flat, preço a R$ 129 `[Daniel · 21/jun/2026]`.
 4. **Lançar** no teste + medir uso/recompra.
 > **Gate p/ Fase 2:** tração + viabilidade comprovadas.

@@ -1,5 +1,9 @@
 # Caderno de Erros — wireframe da ficha (v0)
 
+> **✅ Reconciliado e aplicado `[23/jun/2026]`** — taxonomia **K/M/R/S/T + flag ⚑banca**, campo
+> **confiança 1–5** e revisão por **status `refiz/acertou/dominado` + `→ Anki`** (timing do FSRS) já no
+> wireframe abaixo. Fonte: [`../conceitos/reconciliacao-estudo-asia.md`](../conceitos/reconciliacao-estudo-asia.md).
+
 Estrutural (ASCII), derivado de [`spec.md`](spec.md) + os 3 benchmarks. **19/jun/2026 · validado no conceito (Mayara).**
 Aqui está a **ficha completa** (módulo standalone, **Fase 2**). A versão lite para o Planner v1 foi **descartada** [Daniel · 21/jun/2026] — o v1 tem apenas ponteiro "→ Caderno de Erros".
 
@@ -10,13 +14,15 @@ Aqui está a **ficha completa** (módulo standalone, **Fase 2**). A versão lite
 | FICHA DE ERRO     Data __/__/__    Matéria [▮ cor]     D-___    |
 | Fonte: banca / ano / assunto ________________________________   |
 | Triagem — só registrar se:  [ ] ponto-cego  [ ] armadilha  [ ] questão-modelo |
+| Confiança no erro:  |1 |2 |3 |4 |5|  (⃝ no nº — erro confiante = prioridade)  |
 +-------------------------------+---------------------------------+
-| CAUSA (marque + cor)          |  REVISÃO ESPAÇADA               |
-|  [ ] Conceito / lacuna        |   D+1[ ]  D+7[ ]  D+15[ ]  D+30[ ] |
-|  [ ] Interpretação do enunc.  |   status:  o = não / @ = meio / * = ok |
-|  [ ] Aplicação / cálculo      +---------------------------------+
-|  [ ] Desatenção               |  QUESTÃO ANÁLOGA (refazer)      |
-|  [ ] Pegadinha de banca       |   ref: __________   [ ] acertei |
+| TIPO (marque + cor) ⚑=banca   |  CICLO DE REVISÃO (status)      |
+|  [ ] K conhecimento           |   refiz fechado __  [ ] acertou |
+|  [ ] M método / confusão      |   [ ] dominado (acertou 2×)     |
+|  [ ] R raciocínio do enunc.   |   → Anki [ ] (agendado · FSRS)  |
+|  [ ] S execução (diga onde)   +---------------------------------+
+|  [ ] T estratégia  [ ] ⚑banca |  QUESTÃO ANÁLOGA (refazer)      |
+|                               |   ref: __________   [ ] acertei |
 +-------------------------------+---------------------------------+
 | O QUE EU ESTAVA PENSANDO  (raciocínio errado — ANTES da solução)|
 |  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  |

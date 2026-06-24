@@ -24,8 +24,8 @@ repositório — enquanto o dossiê responde *"o negócio fecha?"*, este módulo
 ```
 design/
 └── concurseiro/                  o planner de estudos  (ver concurseiro/README.md = índice)
-    ├── planner-v3/   ★ CANDIDATO ATUAL (em avaliação) — redesign por ciclo · 6 páginas
-    │   └── typst/                config/estilos + 6 páginas + render/finalize → PDF/X-1a CMYK
+    ├── planner-v3/   ★ CANDIDATO ATUAL (em avaliação) — redesign por ciclo · 7 páginas [+Integração · 23/jun]
+    │   └── typst/                config/estilos + 7 páginas + render/finalize → PDF/X-1a CMYK
     ├── planner-v1/               referência de estilos (2.0 PRO) — não é o produto final
     ├── planner-v2/               preterida (arquivada)
     ├── conceitos/                definição, roadmap, síntese, teardowns, pesquisa-v3, spec-v3

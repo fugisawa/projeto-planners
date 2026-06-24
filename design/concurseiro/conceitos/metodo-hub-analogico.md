@@ -77,7 +77,9 @@ e **questão-modelo/típica**. **Descuido puro não entra** — é o que separa 
 5. **Reagregação mensal** dos **padrões de erro** ("onde mais caio?").
 
 **Dois formatos:** **completo** (dupla-página, estudo regular) e **log de baixo atrito** (uma linha
-sob a questão — o "오답 로그" coreano — para sprint pré-prova). **Ritmo de revisão:** D+3 · D+14 · D+30 (verde/amarelo/vermelho).
+sob a questão — o "오답 로그" coreano — para sprint pré-prova). **Ritmo de revisão:** ~~D+3 · D+14 · D+30~~
+**[revisto · 23/jun/2026 → `reconciliacao-estudo-asia.md` T5]:** papel rastreia **status** (`refiz/acertou/dominado`);
+o **timing é do FSRS/Anki** — sem escada fixa impressa.
 
 > **Por que é o coração do produto:** o digital (QConcursos/Anki) diz **O QUE** você errou; só o
 > papel processa **POR QUE** você raciocinou errado e o transforma em **regra de ação**. É

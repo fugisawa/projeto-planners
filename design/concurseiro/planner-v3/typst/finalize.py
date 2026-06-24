@@ -14,7 +14,7 @@ import sys
 D = os.path.dirname(os.path.abspath(__file__))
 ICC = "/usr/share/color/icc/colord/FOGRA39L_coated.icc"
 DEFPS = f"{D}/PDFX_def.ps"
-ORDER = ["guia", "bussola", "ciclo", "sessao", "semanal", "pontes"]
+ORDER = ["guia", "bussola", "ciclo", "sessao", "semanal", "integracao", "pontes"]
 
 
 def merge(order: list[str], out: str) -> str:

@@ -51,7 +51,7 @@ planner datado, caderno solto e o celular-de-mesa; **adaptar** a Anki/QConcursos
   multi-SKU + capa encarece; rodar `sourcing-analyst`/`financial-modeler` quando F1 estiver em produção).
 
 ## 8. Atualização v3 (21/jun/2026) — o protótipo construído
-O candidato atual (`planner-v3/`) materializou a F1 em **6 páginas** (não mais "4 módulos conceituais"):
+O candidato atual (`planner-v3/`) materializou a F1 em **7 páginas** `[6 originais + Integração · 23/jun/2026]` (não mais "4 módulos conceituais"):
 
 | Página | Papel | Mecânica-chave |
 |---|---|---|
@@ -60,6 +60,7 @@ O candidato atual (`planner-v3/`) materializou a F1 em **6 páginas** (não mais
 | **Ciclo** | a cada ciclo | **fila de blocos numerados** (matéria · carga · ○), avança por bloco — **não** por dia da semana |
 | **Sessão** | diário | intenção pré-sessão · Estudar (plano, cor=matéria) · **time-log pintável** (distribuição) · output (questões/acerto + foco 1–5) · Revisar/praticar |
 | **Semanal** | toda semana | **calibração** prevejo/obtive + horas por matéria + reflexão fechada + próxima semana |
+| **Integração** | a cada nó confundível | **mapa de setas rotuladas** (construir > olhar pronto, g≈0,72) · modos: mapa / explicar (Feynman) / desenhar — para institutos confundíveis FGV/CEBRASPE `[23/jun/2026]` |
 | **Pontes** | semanal | sinal do app → **decisão** (não transcrição) por ferramenta |
 
 Confirma a **fronteira de fase**: F1 **SEM ficha** de erro (Sessão só aponta "→ Caderno de Erros" = F2).

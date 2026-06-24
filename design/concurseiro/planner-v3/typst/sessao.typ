@@ -35,9 +35,15 @@
 #v(3.5mm)
 
 // ── Intenção do dia (implementation intention — escrever ANTES) ───────────────
+// + plano "se–então" de obstáculo (Gollwitzer d≈0,65): antecipar o tropeço é o que
+//   mais protege a execução (estudo aprendizagem-papelaria-asia §5.2).
 #text(font: sans, size: fs.micro, fill: ink-3, style: "italic")[Antes de começar — esta sessão é para:]
 #v(1.6mm)
 #wline()
+#v(2.4mm)
+#grid(columns: (auto, 1fr), column-gutter: 2mm, align: bottom,
+  text(font: sans, size: fs.micro, fill: ink-3, style: "italic")[se distrair / travar → então],
+  box(width: 1fr, line(length: 100%, stroke: (paint: hair, thickness: wt.hair))))
 #v(3.5mm)
 
 // ── ESTUDAR — o plano (cor = matéria; marque a cor e use a mesma no time-log) ──

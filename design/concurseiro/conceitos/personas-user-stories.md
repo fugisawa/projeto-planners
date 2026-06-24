@@ -34,7 +34,7 @@ Alinhado à **P1** do estudo de mercado (§5), com zoom no recorte full-time.
 - Como Rafael, quero **triar** só os erros que importam (ponto-cego/armadilha/modelo), p/ não virar depósito morto.
 - ...registrar **meu raciocínio errado ANTES da solução**, p/ enxergar a falha.
 - ...definir um **gatilho→ação** ("quando vir X → faço Y"), p/ corrigir no automático.
-- ...revisar no ritmo **D+3/14/30** e ver **padrões mensais**, p/ atacar minhas fraquezas.
+- ...revisar ~~no ritmo **D+3/14/30**~~ **[revisto · T5 · 23/jun: papel = status; Anki/FSRS agenda o timing]** e ver **padrões mensais**, p/ atacar minhas fraquezas.
 
 **Diário de Foco**
 - ...abrir o caderno e **largar o celular**, marcando o **time-log** por matéria, p/ foco e prova de esforço.
