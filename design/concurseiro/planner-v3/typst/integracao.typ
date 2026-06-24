@@ -2,11 +2,13 @@
 #show: planner-page
 #set par(spacing: 0pt)
 
-// ── INTEGRAÇÃO (Ficha C) — mapa conceitual de setas rotuladas ─────────────────
-// Construir o mapa (g≈0,72) supera olhar um pronto (0,43); setas ROTULADAS forçam
-// nomear a relação, não só os conceitos. Para institutos confundíveis FGV/CEBRASPE.
-// Fonte: research/evidence/aprendizagem-papelaria-asia.md §3.5 (Schroeder 2018 ·
-// Nesbit & Adesope 2006). Decisão T4 · reconciliacao-estudo-asia.md.
+// ── MAPA DE SETAS (Ficha C) — protótipo do CADERNO DE SÍNTESE (Fase 2) ────────
+// NÃO é página do planner-v3 (F1 = 6 páginas; mapa fica como instrução no Guia +
+// páginas do Caderno de Síntese F2). Realiza a decisão D5 de
+// `conceitos/revisao-evidencia-2026-06.md` (mapa construído pelo aluno · g≈0,72).
+// Construir o mapa supera olhar um pronto (0,43); setas ROTULADAS forçam nomear a
+// relação. Fonte: research/evidence/aprendizagem-papelaria-asia.md §3.5
+// (Schroeder 2018 · Nesbit & Adesope 2006). NÃO incluir no ORDER do finalize.py.
 
 // ── Helpers locais ────────────────────────────────────────────────────────────
 #let lb(s) = text(font: sans, size: fs.label, fill: ink-2)[#s]

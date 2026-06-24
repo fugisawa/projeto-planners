@@ -20,7 +20,7 @@ faz melhor — é **pensar, focar e processar**. O planner ocupa esse vazio.
 | Fica **DIGITAL** (não replicar no papel) | Fica no **PAPEL** (o que o planner faz) |
 |---|---|
 | Repetição espaçada (Anki/FSRS) | **Foco sem celular** (ritual + time-log analógico) |
-| Banco de questões + estatística (QConcursos/TEC/UWorld) | **Síntese à mão** (escrever = memorizar) |
+| Banco de questões + estatística (QConcursos/TEC/UWorld) | **Síntese à mão** (gerar/transformar = aprender) |
 | Edital verticalizado (Gran/Estratégia/Meu Organizado) | **Diagnóstico de erro** (o *porquê* — 错题본) |
 | Ciclo de estudos auto-gerado (Estudaqui, Gran IA) | **Reflexão/metacognição** (fim de dia/semana) |
 | Cronograma "o que estudar" (trilhas dos cursinhos) | **Visão macro** da jornada (command center) |
@@ -34,9 +34,13 @@ faz melhor — é **pensar, focar e processar**. O planner ocupa esse vazio.
   visível** derruba memória de trabalho e inteligência fluida — **mesmo desligado**. ("brain drain").
 - **Custo de troca** comprovado (UAlbany 2024, 27 RCTs). 34,4% dos coreanos citam o celular como
   maior distração. O paradoxo: Anki e Instagram moram no mesmo aparelho.
-- **Escrever à mão ativa mais o cérebro** que digitar (EEG, *Frontiers in Psychology*, 2024:
-  maior conectividade hipocampo/parietal). U. Tóquio (2021): **+velocidade e +ativação do
-  hipocampo** no papel vs. tela.
+- **O que fixa é GERAR, não a caligrafia.** Produzir/reformular da própria cabeça supera copiar ou
+  reler (efeito de geração + recuperação ativa) — **esse** é o pilar, não o ato motor de escrever.
+  A alegação forte "escrever à mão grava muito mais" **não replica** (Mueller&Oppenheimer 2014 →
+  falha em Morehead 2019; meta-análise *g* ≈ 0,14–0,25 que **some sem revisão**, Flanigan 2024). À
+  mão há ganho real de **afeto e conectividade neural** (Van der Meer 2024 — ressalva: não mediu
+  memória), úteis como **adesão/foco**, não como promessa de memória superior. `[Moderada]`
+  `[corrigido 23/jun/2026 — ver revisao-evidencia-2026-06.md]`
 - → **O planner que substitui o celular como objeto de referência é uma intervenção cognitiva
   mensurável.** Mote candidato: **"Celular fora. Planner aberto. Foco total."**
 
@@ -53,7 +57,7 @@ O planner **aponta** para essas fontes e **sintetiza o sinal-chave** — não as
 ## 5) O que o planner FAZ (os trabalhos analógicos)
 1. **Ritual de foco sem celular** — abrir o planner = entrar em sessão; time-log analógico
    (pintar blocos por matéria) é a versão *phone-free* do timer coreano (열품타, 5 mi de usuários, mas no celular).
-2. **Síntese à mão** — espaço para resumir/processar a vídeo-aula/PDF (handwriting → retenção).
+2. **Síntese à mão** — espaço para resumir/processar a vídeo-aula/PDF (gerar/processar → aprender; o ganho é a elaboração, não a caligrafia).
 3. **Diagnóstico de erro (错题본 adaptado)** — ver §6: a feature-âncora.
 4. **Reflexão/metacognição** — "3 linhas" ao fim do dia; balanço semanal (entendi/confuso/não).
 5. **Command center / visão macro** — o painel da jornada que nenhum app agrega: sinais do
@@ -70,16 +74,15 @@ e **questão-modelo/típica**. **Descuido puro não entra** — é o que separa 
 "depósito passivo". → *checkbox de triagem* no topo da ficha.
 
 **Campos da ficha (a ordem importa):**
-1. Referência da questão + **classificação do erro** (taxonomia + cor).
+1. Referência da questão + **classificação do erro** (taxonomia **K/M/R/S/T** + cor) + **confiança no erro (1–5)** — erro cometido com alta confiança é prioridade (hipercorreção; Butterfield&Metcalfe 2001).
 2. **"Meu raciocínio errado"** — campo amplo (**4–5 linhas**), **ANTES** da solução (força reconstruir o erro).
 3. **Solução / raciocínio correto.**
 4. **Gatilho → Ação** (*implementation intention* / 행동 강령): *"quando eu vir X → faço Y"* (Gollwitzer 2006, d≈0,65).
 5. **Reagregação mensal** dos **padrões de erro** ("onde mais caio?").
 
 **Dois formatos:** **completo** (dupla-página, estudo regular) e **log de baixo atrito** (uma linha
-sob a questão — o "오답 로그" coreano — para sprint pré-prova). **Ritmo de revisão:** ~~D+3 · D+14 · D+30~~
-**[revisto · 23/jun/2026 → `reconciliacao-estudo-asia.md` T5]:** papel rastreia **status** (`refiz/acertou/dominado`);
-o **timing é do FSRS/Anki** — sem escada fixa impressa.
+sob a questão — o "오답 로그" coreano — para sprint pré-prova). **Ritmo de revisão (executado pelo
+Anki/FSRS — o papel não agenda):** D+3 · D+7 · D+15. `[ciclo único · D1 · 23/jun/2026]`
 
 > **Por que é o coração do produto:** o digital (QConcursos/Anki) diz **O QUE** você errou; só o
 > papel processa **POR QUE** você raciocinou errado e o transforma em **regra de ação**. É

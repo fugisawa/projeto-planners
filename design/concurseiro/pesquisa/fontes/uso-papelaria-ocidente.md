@@ -95,7 +95,7 @@ Esta é a área com **maior suporte científico convergente** de todas as invest
 
 - **Autores:** Van der Weel & Van der Meer, Norwegian University of Science and Technology.
 - **Método:** EEG de alta densidade em 36 universitários escrevendo à mão vs. digitando.
-- **Resultado:** A escrita à mão produziu **conectividade neural muito mais ampla** — especialmente nas regiões parietais e centrais associadas à formação de memória — padrões que a digitação simplesmente não replicou.
+- **Resultado:** A escrita à mão produziu **conectividade neural muito mais ampla** — especialmente nas regiões parietais e centrais associadas à formação de memória — padrões que a digitação simplesmente não replicou. *(Ressalva 23/jun/2026: conectividade ≠ retenção testada — o estudo **não mediu memória/aprendizagem** (crítica Pinet&Longcamp 2025); o ganho de memória da caligrafia por si é pequeno — ver §3.2 e tabela-resumo.)*
 - **Citação dos autores:** a escrita à mão cria "optimal conditions for learning" por meio de engajamento sensoriomotor mais rico.
 
 **Fonte:** Frontiers in Psychology, 26 jan. 2024. https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1219945/full [confirmado]
@@ -103,7 +103,7 @@ Esta é a área com **maior suporte científico convergente** de todas as invest
 ### 3.2 Estudo da Universidade de Tokyo (2021)
 
 - Estudantes que usaram papel completaram o registro de informações **~25% mais rápido** que usuários de tablets ou smartphones.
-- Participantes com papel exibiram **maior atividade no hipocampo** (área crítica para memória e navegação espacial) uma hora depois.
+- Participantes com papel exibiram **maior atividade no hipocampo** (área crítica para memória e navegação espacial) uma hora depois. *(Ressalva 23/jun/2026: maior atividade/conectividade ≠ mais memória — esses estudos de EEG/fMRI não mediram retenção; o ganho de memória da caligrafia por si é pequeno, *g*≈0,14–0,25 e some sem revisão — Morehead 2019; Flanigan 2024.)*
 - **Mecanismo:** o papel físico contém "informação espacial complexa" — a irregularidade das marcas, a posição fixa na página, o tato — que o papel digital uniforme e scrollável não replica.
 
 **Fonte:** Universidade de Tokyo, comunicado de imprensa, 19 mar. 2021: https://www.u-tokyo.ac.jp/focus/en/press/z0508_00168.html [confirmado]
@@ -261,8 +261,8 @@ Da psicologia comportamental aplicada ao produtivismo:
 | Alegação | Evidência | Força |
 |---|---|---|
 | Celular visível reduz cognição | Ward et al. 2017, UT Austin, n≈800 | Alta |
-| Escrita à mão ativa mais o cérebro | Van der Weel & Van der Meer 2024, Frontiers in Psych | Alta |
-| Papel melhora memória espacial | Universidade de Tokyo 2021 | Alta |
+| Escrita à mão ativa mais conectividade neural (**≠ mais memória**; o EEG **não** mediu aprendizagem — crítica Pinet&Longcamp 2025) | Van der Weel & Van der Meer 2024, Frontiers in Psych | **Baixa p/ memória** `[revisto 23/jun/2026]` |
+| Papel ativa mais o hipocampo (atividade ≠ retenção testada) | Universidade de Tokyo 2021 | **Baixa p/ memória** `[revisto 23/jun/2026]` |
 | Escrita forçada melhora compreensão | Mueller & Oppenheimer 2014 | Média (replicações mistas) |
 | 72h sem celular muda dopamina | Citado em mídia, 2025 | Baixa (fonte primária não verificada) |
 

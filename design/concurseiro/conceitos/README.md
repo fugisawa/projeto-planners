@@ -13,6 +13,7 @@ do que o título sugere — abaixo o índice por domínio.
 - `definicao-do-produto.md` — o que o Concurseiro é (e não é)
 - `roadmap-faseado.md` — F0 pesquisa ✅ · F1 Planner v1 · F2 Caderno + Treino · F3 foto→app
 - `metodo-hub-analogico.md` — racional do hub analógico complementar ao digital
+- `revisao-evidencia-2026-06.md` — **ata 23/jun/2026**: o que o estudo/kit de papelaria obriga a rever (corrige claim de handwriting; ciclo D+3/D+7/D+15; taxonomia K/M/R/S/T + confiança-no-erro; A·recordação e C·mapa; eixo sistema-de-geração) `[D1–D8 EXECUTADAS · validado: PRONTO — research/validation/validation-2026-06-23.md]`
 
 ### (2) Personas / UX
 

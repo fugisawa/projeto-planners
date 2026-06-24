@@ -76,7 +76,7 @@
 ## 6) LACUNAS (o espaço do Concurseiro BR) — cruzando teardowns + reviews
 | Lacuna na INDIGO | Por que importa p/ concurseiro | Fonte |
 |---|---|---|
-| **Sem revisão espaçada** (D+1/3/7/15/30) | é o método central do concurseiro | teardowns 1752/1753; reviews |
+| **Sem revisão espaçada** | central no concurso — mas no **nosso produto fica no Anki/FSRS**, não no papel `[D1 · 23/jun/2026]` | teardowns 1752/1753; reviews |
 | **Sem tracker de questões/simulados** (% acerto) | métrica-rainha do concurso | teardowns |
 | **Sem ciclo de matérias semanal** ("ciclo de estudos") | organização típica BR | teardowns; reviews |
 | **Layout pressupõe full-time** (timetable vazio = culpa) | concurseiro trabalha; abandono em 4–8 sem | reviews `[confirmado]` |
@@ -92,7 +92,7 @@
 
 ## 8) Implicações de design para o Concurseiro (aplicadas ao design v1 — ver [direcao-de-design-concurseiro.md](direcao-de-design-concurseiro.md))
 1. **Timetable de 10–15 min + color-coding por matéria** — inegociável (núcleo emocional/viral).
-2. **Revisão espaçada** ~~integrada ao layout (D+1/3/7/15/30)~~ **[revisto · T5 · 23/jun → `reconciliacao-estudo-asia.md`: NÃO imprimimos escada fixa — o papel DECIDE o que ankificar; Anki/FSRS agenda. Diferencial = camada de decisão + diagnóstico de erro, não a escada]** — vs. BR e vs. INDIGO.
+2. **Revisão espaçada delegada ao Anki/FSRS** (papel decide *o quê* ankificar; o digital agenda *quando* — `[D1 · 23/jun/2026]`). O diferencial do papel passa a ser o **sistema de geração** (recordação livre + caderno de erros + mapa de setas), não replicar o espaçamento que o algoritmo faz melhor.
 3. **Tracker de questões/simulados** (resolvidas, % acerto, por matéria) — métrica do concurso.
 4. **Ciclo de matérias** semanal (rotação de disciplinas) — organização que o concurseiro já usa.
 5. **Mapa do edital** (conteúdo programático → progresso) no frontmatter.

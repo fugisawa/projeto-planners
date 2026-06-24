@@ -4,15 +4,15 @@ PROVENIÊNCIA: estudo externo recebido (inbox jun/2026), incorporado à base de 
 PROTÓTIPO IRMÃO: `design/concurseiro/referencias/kit-analogico-prototipo-v2.pdf` (14 pp print-ready
 que implementam os 4 artefatos A/B/C/D descritos na §5.6).
 
-RELAÇÃO COM O DOSSIÊ (mapeamento — ver `research/validation/` para a reconciliação datada):
-- CONFIRMA: hub analógico, ciclo=interleaving, tempo líquido/calibração, se-então (Gollwitzer),
-  divisão papel/digital (Anki agenda), 错题本 como peça central, premium = adesão.
-  → `design/concurseiro/conceitos/{metodo-hub-analogico,pesquisa-v3-sintese}.md`.
-- ACRESCENTA: (a) rigor de evidência com effect sizes [munição p/ posicionamento]; (b) **Ficha C —
-  mapa conceitual construído** (g≈0,72), artefato faltante → vira página do planner-v3 [T1·23/jun];
-  (c) **escala de confiança 1–5 (hipercorreção)** ausente da spec do Caderno de Erros.
-- TENSÕES RECONCILIADAS em `design/concurseiro/conceitos/reconciliacao-estudo-asia.md` (23/jun):
-  taxonomia de erro · priorização (confiança × triagem) · cadência de revisão (imprimir × FSRS).
+DECISÕES (ata canônica): `design/concurseiro/conceitos/revisao-evidencia-2026-06.md` (D1–D8,
+martelo Daniel+Mayara · 23/jun) + laudo `research/validation/validation-2026-06-23.md`.
+- CONFIRMA: hub analógico, ciclo=interleaving, tempo=calibração, se→então com obstáculo (D6),
+  divisão papel/digital (Anki/FSRS agenda), 错题本 + hipercorreção como peça central, premium = adesão.
+- ACRESCENTA (executado D1–D8): (a) confiança no erro 1–5 (D3) + taxonomia K/M/R/S/T (D2) no Caderno de
+  Erros; (b) recordação livre (A · D4) no fechar-o-dia da Sessão; (c) **mapa de setas (C, g≈0,72)** como
+  **instrução no Guia (F1) + páginas no Caderno de Síntese (F2)** — protótipo em `planner-v3/typst/integracao.typ`;
+  (d) correção factual "handwriting→memória" → efeito de geração (D0); (e) kit A4 = lead magnet (D8).
+- O planner-v3 (F1) permanece em **6 páginas** (o mapa NÃO é página do planner — é Guia+F2).
 -->
 
 # Papelaria que funciona: um estudo sobre métodos analógicos de estudo no Leste Asiático e sua adaptação ao concurso brasileiro

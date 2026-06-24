@@ -24,7 +24,7 @@ Alinhado à **P1** do estudo de mercado (§5), com zoom no recorte full-time.
 ## Jobs-to-be-done (JTBD)
 - Quando inicio um bloco de 2 h, quero **entrar em foco profundo sem o celular**, para render de verdade.
 - Quando **erro questões**, quero entender **por que** errei e transformar em **regra**, p/ não repetir.
-- Quando assisto uma **aula longa**, quero **sintetizar à mão** o essencial, p/ fixar.
+- Quando assisto uma **aula longa**, quero **sintetizar à mão** o essencial, p/ processar e entender (o ganho é gerar, não a caligrafia).
 - Ao **fim do dia**, quero ver como/quanto estudei e **refletir**, p/ ajustar amanhã.
 - Ao longo dos **meses**, quero **sentir progresso** sem me perder no edital, p/ manter a motivação.
 - Quero que o papel **converse** com Anki/QConcursos/cursinho **sem retrabalho** nem replicar o digital.
@@ -34,15 +34,15 @@ Alinhado à **P1** do estudo de mercado (§5), com zoom no recorte full-time.
 - Como Rafael, quero **triar** só os erros que importam (ponto-cego/armadilha/modelo), p/ não virar depósito morto.
 - ...registrar **meu raciocínio errado ANTES da solução**, p/ enxergar a falha.
 - ...definir um **gatilho→ação** ("quando vir X → faço Y"), p/ corrigir no automático.
-- ...revisar ~~no ritmo **D+3/14/30**~~ **[revisto · T5 · 23/jun: papel = status; Anki/FSRS agenda o timing]** e ver **padrões mensais**, p/ atacar minhas fraquezas.
+- ...revisar no ritmo **D+3/D+7/D+15 (no Anki)** e ver **padrões mensais**, p/ atacar minhas fraquezas.
 
 **Diário de Foco**
 - ...abrir o caderno e **largar o celular**, marcando o **time-log** por matéria, p/ foco e prova de esforço.
-- ...**sintetizar** ao lado o que estudei, p/ fixar.
+- ...**sintetizar** ao lado o que estudei, p/ processar e entender.
 - ...fechar com **3 linhas de reflexão**, p/ calibrar o dia seguinte.
 
 **Caderno de Síntese**
-- ...transformar aula/lei seca em **resumo/mapa à mão**, p/ memorizar e revisar rápido.
+- ...transformar aula/lei seca em **resumo/mapa de setas à mão**, p/ entender, relacionar e revisar rápido.
 
 **Bússola da Jornada** (deferente ao digital)
 - ...**comprometer** a semana a partir da trilha do cursinho (sem reescrever o cronograma), p/ executar.

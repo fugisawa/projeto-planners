@@ -98,11 +98,30 @@
 #v(3mm)
 
 // ── Revisar e praticar ────────────────────────────────────────────────────────
-#sechead("Revisar e praticar", hint: "revise espaçado — quem agenda é o Anki")
-#text(font: sans, size: fs.micro, fill: ink-2)[
-  *Revisar* é decidir *o que vira card* — não reler. O espaçamento funciona (revisar com
-  intervalos que crescem conforme a prova se aproxima), mas *quem agenda é o Anki/FSRS*:
-  ele traz cada item na hora certa, melhor que qualquer calendário no papel. No papel você
-  *decide* (o que ankificar) e *pratica*: resolver questões (QConcursos) + treinar
-  discursivas + lei seca. *Gerar* — recuperar da própria cabeça — vence reler e grifar.
+#sechead("Revisar e praticar", hint: "revisão não é só Anki")
+#grid(columns: (auto, 1fr), column-gutter: 5mm, align: horizon,
+  {
+    for d in ("D+3", "D+7", "D+15") {
+      box(inset: (x: 2.2mm, y: 1.3mm), stroke: (paint: hair, thickness: wt.box),
+        text(font: sans, size: fs.micro, fill: ink-2, weight: 700)[#d])
+      h(2mm)
+    }
+  },
+  text(font: sans, size: fs.micro, fill: ink-3)[
+    O erro volta nestes intervalos — *no Anki*. Revisar é *Anki + resolver questões
+    (QConcursos) + treinar discursivas + lei seca*. O papel decide *o quê* ankificar;
+    o digital agenda *quando* e cobra.
+  ],
+)
+
+#v(3mm)
+
+// ── Síntese: mapa de setas (construir > olhar pronto) + recordação livre ───────
+#sechead("Síntese: mapa de setas", hint: "construa você — não copie o pronto")
+#text(font: sans, size: fs.micro, fill: ink-3)[
+  Para institutos que você confunde (controle de constitucionalidade, espécies
+  normativas, competências das Casas): desenhe um *mapa de setas rotuladas* — nós =
+  conceitos, setas = a relação (“exige”, “não atinge”). *Construir* o mapa rende mais
+  que olhar um pronto. E ao fim do dia, *de memória*, escreva o que ficou (recordação
+  livre) — as lacunas viram card no Anki.
 ]

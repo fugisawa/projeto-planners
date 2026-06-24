@@ -29,7 +29,7 @@ Cada um **independente + complementar**:
 |---|---|---|---|
 | **Caderno de Erros** ⭐ (错题본/오답노트) | diagnóstico do *porquê* do erro + gatilho→ação + padrões | o maior gap | complementa QConcursos/Anki (eles dizem *o quê*) |
 | **Diário de Foco** | sessão sem celular: time-log 10–15 min + síntese + reflexão do dia | foco anti-celular + processamento | não duplica timer-app/Notion |
-| **Caderno de Síntese** | resumos/mapas à mão de aula/lei seca | fixação (handwriting→memória) | complementa vídeo-aula/PDF |
+| **Caderno de Síntese** | resumos/**mapas de setas** à mão de aula/lei seca | processamento (gerar/mapear → aprender; construir mapa *g*≈0,72 — lab, direção não magnitude) | complementa vídeo-aula/PDF |
 | **Bússola da Jornada** (leve) | commit semanal + reflexão mensal + visão macro + "meu stack" | navegação/constância | **deferente** ao cronograma do cursinho |
 
 > **v1 = o Planner de Estudo** (módulo-âncora: Diário de Foco + ciclo leve + **ponteiro → Caderno de Erros**, sem ficha embutida). O **Caderno de Erros completo** é módulo **standalone na Fase 2**. `[Daniel · 21/jun/2026]` (Revisão da decisão de 19/jun/2026: ficha lite removida do v1.)
@@ -51,7 +51,7 @@ planner datado, caderno solto e o celular-de-mesa; **adaptar** a Anki/QConcursos
   multi-SKU + capa encarece; rodar `sourcing-analyst`/`financial-modeler` quando F1 estiver em produção).
 
 ## 8. Atualização v3 (21/jun/2026) — o protótipo construído
-O candidato atual (`planner-v3/`) materializou a F1 em **7 páginas** `[6 originais + Integração · 23/jun/2026]` (não mais "4 módulos conceituais"):
+O candidato atual (`planner-v3/`) materializou a F1 em **6 páginas** (não mais "4 módulos conceituais"):
 
 | Página | Papel | Mecânica-chave |
 |---|---|---|
@@ -60,7 +60,6 @@ O candidato atual (`planner-v3/`) materializou a F1 em **7 páginas** `[6 origin
 | **Ciclo** | a cada ciclo | **fila de blocos numerados** (matéria · carga · ○), avança por bloco — **não** por dia da semana |
 | **Sessão** | diário | intenção pré-sessão · Estudar (plano, cor=matéria) · **time-log pintável** (distribuição) · output (questões/acerto + foco 1–5) · Revisar/praticar |
 | **Semanal** | toda semana | **calibração** prevejo/obtive + horas por matéria + reflexão fechada + próxima semana |
-| **Integração** | a cada nó confundível | **mapa de setas rotuladas** (construir > olhar pronto, g≈0,72) · modos: mapa / explicar (Feynman) / desenhar — para institutos confundíveis FGV/CEBRASPE `[23/jun/2026]` |
 | **Pontes** | semanal | sinal do app → **decisão** (não transcrição) por ferramenta |
 
 Confirma a **fronteira de fase**: F1 **SEM ficha** de erro (Sessão só aponta "→ Caderno de Erros" = F2).
