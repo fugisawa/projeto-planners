@@ -87,7 +87,9 @@ planner coreano pesquisado — nenhum implementa isso. É o coração do v3.
 6. **Pontes Digitais** — sinal do app → **decisão** (não transcrição); Anki/questões/aulas/simulados; ajuste de rota.
 
 > Mantido do que funcionou no v1/v2: paleta CMYK fria, Lato, cantos retos, eyebrow/masthead,
-> time-log 10-min, seletor ○△→× (genuinamente inédito), helpers Typst. **Tudo o resto é novo.**
+> time-log 10-min, seletor ○△→× (inédito como seletor PRÉ-IMPRESSO por linha), helpers Typst. **Tudo o resto é novo.**
+>
+> *Correção de 26/07/2026: o conjunto ○/→/△ com estas semânticas é convenção viva de usuários coreanos (blog oficial MOTEMOTE, jan/2023, depoimento de usuário: círculo=feito, seta=passa ao dia seguinte, triângulo=incompleto); o próprio teardown da INDIGO já registrava "não há legenda impressa — convenção informal dos usuários". O que é genuinamente inédito é a legenda IMPRESSA linha a linha, não os símbolos.*
 
 ## 5. Fontes
 academic: Cepeda 2006/2008 · Dunlosky 2013 · Roediger&Karpicke 2006 · Rohrer&Taylor 2007 · Locke&Latham
